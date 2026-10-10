@@ -1,0 +1,344 @@
+{
+  "date": "2026-10-10T18:38:34.296Z",
+  "results": [
+    {
+      "width": 1440,
+      "project": 1,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976807, 0.052336, 0.207627, 0, -0.0511923, 0.99863, -0.0108813, 0, -0.207912, 0, 0.978148, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 1,
+      "progress": 0.55,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 1,
+      "progress": 1,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 1,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976806, 0.0523394, 0.20763, 0, -0.051196, 0.998629, -0.0108804, 0, -0.207915, -1.82394e-06, 0.978147, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 2,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976807, -0.052336, -0.207627, 0, 0.0511923, 0.99863, -0.0108813, 0, 0.207912, 0, 0.978148, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 2,
+      "progress": 0.55,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 2,
+      "progress": 1,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 2,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976806, -0.0523394, -0.20763, 0, 0.051196, 0.998629, -0.0108804, 0, 0.207915, -1.82394e-06, 0.978147, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 3,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976807, 0.052336, 0.207627, 0, -0.0511923, 0.99863, -0.0108813, 0, -0.207912, 0, 0.978148, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 3,
+      "progress": 0.55,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 3,
+      "progress": 1,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 3,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976806, 0.0523394, 0.20763, 0, -0.051196, 0.998629, -0.0108804, 0, -0.207915, -1.82394e-06, 0.978147, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 4,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.989665, -0.0348995, 0.139088, 0, 0.0345599, 0.999391, 0.00485707, 0, -0.139173, 0, 0.990268, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 4,
+      "progress": 0.55,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 4,
+      "progress": 1,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "project": 4,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.989665, -0.0349005, 0.13909, 0, 0.0345605, 0.999391, 0.00486014, 0, -0.139175, -2.88648e-06, 0.990268, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 1,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976807, 0.052336, 0.207627, 0, -0.0511923, 0.99863, -0.0108813, 0, -0.207912, 0, 0.978148, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 1,
+      "progress": 0.55,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 1,
+      "progress": 1,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 1,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976806, 0.0523394, 0.20763, 0, -0.051196, 0.998629, -0.0108804, 0, -0.207915, -1.82394e-06, 0.978147, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 2,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976807, -0.052336, -0.207627, 0, 0.0511923, 0.99863, -0.0108813, 0, 0.207912, 0, 0.978148, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 2,
+      "progress": 0.55,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 2,
+      "progress": 1,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 2,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976806, -0.0523394, -0.20763, 0, 0.051196, 0.998629, -0.0108804, 0, 0.207915, -1.82394e-06, 0.978147, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 3,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976807, 0.052336, 0.207627, 0, -0.0511923, 0.99863, -0.0108813, 0, -0.207912, 0, 0.978148, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 3,
+      "progress": 0.55,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 3,
+      "progress": 1,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 3,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.976806, 0.0523394, 0.20763, 0, -0.051196, 0.998629, -0.0108804, 0, -0.207915, -1.82394e-06, 0.978147, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 4,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.989665, -0.0348995, 0.139088, 0, 0.0345599, 0.999391, 0.00485707, 0, -0.139173, 0, 0.990268, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 4,
+      "progress": 0.55,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 4,
+      "progress": 1,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "project": 4,
+      "progress": 0,
+      "title": true,
+      "link": true,
+      "loaded": true,
+      "transform": "matrix3d(0.989665, -0.0349005, 0.13909, 0, 0.0345605, 0.999391, 0.00486014, 0, -0.139175, -2.88648e-06, 0.990268, 0, 0, 0, 0, 1)",
+      "overflow": false
+    },
+    {
+      "reducedWidth": 320
+    },
+    {
+      "reducedWidth": 375
+    },
+    {
+      "reducedWidth": 390
+    },
+    {
+      "reducedWidth": 768
+    },
+    {
+      "reducedWidth": 1024
+    },
+    {
+      "reducedWidth": 1440
+    }
+  ],
+  "errors": []
+}

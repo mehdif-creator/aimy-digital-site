@@ -1,6 +1,26 @@
 # Progression de la refonte Aimy Digital
 
-## Correction hero V2 — 10 octobre 2026 — VALIDATION EN ATTENTE
+## Placement et netteté — correction prioritaire du 10 octobre 2026
+
+Le parcours cinématique complet est réservé à **/portfolio/**. L’accueil présente seulement SC Rénovation et HT Créa Jeux via `ProjectPreview`, puis le CTA « Découvrir toutes nos réalisations » et le contenu commercial existant. Ne pas réintroduire les quatre chapitres sur l’accueil.
+
+Le hero reste identique dans sa composition, son CSS et son animation. Seules ses sources image/variantes sont remplacées pour la netteté ; le lien des quatre projets cible /portfolio/. La page portfolio conserve son URL, title, description et canonical. Le composant et ScrollTrigger existants sont réutilisés.
+
+Diagnostic : anciennes captures de 548–779 px affichées jusqu’à environ 854 px, variantes insuffisantes pour Retina, zoom 104 % et interpolation 3D. Aucun filtre blur sur les interfaces. Solution : captures directes 2880 × 3600 de HT Créa Jeux, My NutriZen, SC Rénovation ; original Lambert 1920 × 945 publié sur le site Aimy actuel (la capture live a été rejetée car le CSS ne chargeait pas correctement). Provenance dans `docs/qa/portfolio/capture-sources.json`. Pas d’agrandissement des fichiers sources ; variantes adaptées, compression WebP 90, zoom supprimé et plans plats à la fin du mouvement. Le lien externe Lambert du showcase reprend le domaine actuel vérifié sur l’accueil publié.
+
+Tests et captures : `docs/qa/placement-sharpness/`. **Attendre l’approbation visuelle des deux pages avant toute nouvelle phase.** Aucun déploiement ni modification du blog ou de l’infrastructure SEO.
+
+## Portfolio immersif — 10 octobre 2026 — historique avant correction de placement
+
+Le hero V2 est **conditionnellement approuvé** comme fondation. Son jalon Git `b96b9c5` reste intact. Seule correction du hero : « Découvrez leurs univers. »
+
+Autorisation actuelle : développer uniquement le portfolio immédiatement suivant. Quatre chapitres en grand format remplacent la grille d’accueil : HT Créa Jeux, My NutriZen, SC Rénovation, Lambert Digital Pulse. Captures vérifiées, descriptions issues des données existantes, mobile SC réel. Aucun projet exclu réintroduit, aucun résultat ou témoignage ajouté.
+
+GSAP/ScrollTrigger existants : redressement des interfaces, découverte de leur contenu au scroll, progression des chapitres et superposition desktop/mobile SC. Navigation directe, sortie de parcours, liens projets/sites, réduction système/manuelle, mode compact sur écran court et HTML sans JS. Aucun changement des autres pages, articles ou infrastructure SEO. Aucun service payant ni déploiement.
+
+Vérifications et mesures dans `docs/qa/portfolio/rapport.md`. Aperçu : http://127.0.0.1:4322/?portfolio=immersif#realisations-accueil. **Arrêt pour approbation visuelle ; ne pas poursuivre les autres sections.**
+
+## Correction hero V2 — 10 octobre 2026 — historique, approbation conditionnelle reçue
 
 La dernière instruction « Cinematic Hero Review » rejette le hero précédent. Travail limité au hero et à sa transition ; **ne pas poursuivre le portfolio sans approbation visuelle explicite**.
 

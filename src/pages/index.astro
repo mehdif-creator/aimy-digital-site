@@ -1,13 +1,11 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
+import ProjectPreview from "../components/ProjectPreview.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import FAQ from "../components/FAQ.astro";
 import CTA from "../components/CTA.astro";
 import { services } from "../lib/site";
 import CinematicHero from "../components/CinematicHero.astro";
-const projects = await getCollection("cases");
 ---
 
 <BaseLayout
@@ -23,25 +21,8 @@ const projects = await getCollection("cases");
     <span>Bressuire</span>
     <span>Les Herbiers</span>
   </div>
-  <section class="section container" id="realisations-accueil">
-    <div class="section-heading">
-      <h2>
-        Des projets concrets.
-        <br />
-        Des métiers différents.
-      </h2>
-      <p class="lead">
-        Une boutique, une application ou une vitrine d’artisan : chaque projet
-        appelle ses propres choix.
-      </p>
-    </div>
-    <div class="projects-grid">
-      {projects.map((project) => (
-        <ProjectCard project={project} />
-      ))}
-    </div>
-  </section>
-  <section class="section service-section">
+  <ProjectPreview />
+  <section class="section service-section" id="apres-realisations">
     <div class="container">
       <div class="section-heading">
         <h2>

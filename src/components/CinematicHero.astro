@@ -1,9 +1,9 @@
 ---
 import "../styles/cinematic-hero.css";
 import { Image } from "astro:assets";
-import sc from "../../public/images/hero/sc-renovation-screen.webp";
-import nutri from "../../public/images/hero/my-nutrizen-screen.webp";
-import games from "../../public/images/hero/ht-crea-jeux-screen.webp";
+import sc from "../../public/images/showcase/sc-renovation.webp";
+import nutri from "../../public/images/showcase/my-nutrizen.webp";
+import games from "../../public/images/showcase/ht-crea-jeux.webp";
 ---
 
 <section
@@ -80,9 +80,10 @@ import games from "../../public/images/hero/ht-crea-jeux-screen.webp";
                 src={nutri}
                 fetchpriority="low"
                 width={720}
-                widths={[360, 480, 720]}
+                widths={[360, 480, 720, 1000]}
                 sizes="(max-width: 759px) 240px, 490px"
                 format="webp"
+                quality={90}
                 alt="Capture du site My NutriZen"
                 loading="eager"
                 decoding="async"
@@ -98,9 +99,10 @@ import games from "../../public/images/hero/ht-crea-jeux-screen.webp";
                 src={games}
                 fetchpriority="low"
                 width={720}
-                widths={[360, 480, 720]}
+                widths={[360, 480, 720, 1000]}
                 sizes="(max-width: 759px) 240px, 490px"
                 format="webp"
+                quality={90}
                 alt="Capture de la boutique HT Créa Jeux"
                 loading="eager"
                 decoding="async"
@@ -119,9 +121,10 @@ import games from "../../public/images/hero/ht-crea-jeux-screen.webp";
               <Image
                 src={sc}
                 width={720}
-                widths={[360, 480, 720]}
+                widths={[360, 480, 720, 1000]}
                 sizes="(max-width: 759px) 320px, 490px"
                 format="webp"
+                quality={90}
                 alt="Site SC Rénovation : présentation du métier, réalisations et demande de devis"
                 loading="eager"
                 fetchpriority="high"
@@ -177,9 +180,9 @@ import games from "../../public/images/hero/ht-crea-jeux-screen.webp";
   <div class="container">
     <span>CHAQUE MÉTIER A SON UNIVERS.</span>
     <p>
-      Entrez dans les leurs.<span aria-hidden="true">↘</span>
+      Découvrez leurs univers.<span aria-hidden="true">↘</span>
     </p>
-    <a href="#realisations-accueil">
+    <a href="/portfolio/">
       Découvrir les quatre projets <span aria-hidden="true">↓</span>
     </a>
   </div>
