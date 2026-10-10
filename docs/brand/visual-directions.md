@@ -1,5 +1,7 @@
 # Deux directions visuelles
 
+**Document historique : le choix éditorial ci-dessous a été rejeté le 10 octobre 2026.** La proposition actuelle est `hero-cinematique.md`, limitée au hero et en attente d'approbation. Ne pas reprendre le choix A comme direction validée.
+
 ## A. Éditorial premium
 
 Palette : papier froid #f5f7f8, encre #173040, bleu historique #0686ce, bleu de lecture #00649b, gris #52636c. Typographie : Manrope 400/500/600/700/800, servie localement. Titres à interlignage serré, corps 17 à 19 px et largeur 65 caractères. Grille 12 colonnes, largeur 1280 px, marges mobiles 20 px, espaces 8/16/24/40/64/96.

@@ -2,6 +2,10 @@
 
 Date : 10 octobre 2026.
 
+- Reprise créative : direction précédente non approuvée. Nouveau hero seul, puis arrêt imposé pour validation avant tout changement du portfolio ou des autres pages. Sauvegarde `sauvegarde/avant-hero-cinematique` poussée au commit `a44f04f`.
+- GSAP/ScrollTrigger explicitement demandés : exception à l'ancienne décision « pas de GSAP en V1 ». Package 3.15.0 compilé localement, seulement à l'accueil ; API `matchMedia` et nettoyage vérifiés via documentation officielle GSAP/Context7.
+- Budget JS révisé pour cette dépendance : maximum 125 ko bruts / 50 ko gzip pour tous les scripts distribués, contrôle de non-chargement du hero sur les autres routes. Cette concession est mesurée et documentée, sans moteur 3D ni vidéo.
+
 - Le master prompt fourni dans cette conversation prévaut sur les anciens prompts du dossier source, limités à P0/P1.
 - Le dépôt existant est conservé. Le code sera placé à sa racine ; le dossier de cadrage reste intact.
 - Branche de travail : `refonte/astro-premium`. Aucun déploiement en production.

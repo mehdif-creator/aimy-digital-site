@@ -1,6 +1,7 @@
 import { readdir, readFile, stat, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { loadEnv } from "vite";
+import { gzipSync } from "node:zlib";
 const walk = async (dir) =>
   (
     await Promise.all(
@@ -93,12 +94,26 @@ for (const file of files)
     errors.push(`Fichier interdit : ${file}`);
 const scripts = files.filter((f) => f.endsWith(".js"));
 let jsBytes = 0;
+let jsGzipBytes = 0;
 for (const f of scripts) jsBytes += (await stat(f)).size;
-if (jsBytes > 50000) errors.push(`Budget JavaScript dépassé : ${jsBytes}`);
+for (const f of scripts) jsGzipBytes += gzipSync(await readFile(f)).length;
+// GSAP et ScrollTrigger sont demandés pour le hero et chargés uniquement à l'accueil.
+if (jsBytes > 125000 || jsGzipBytes > 50000)
+  errors.push(
+    `Budget JavaScript cinématique dépassé : ${jsBytes} brut / ${jsGzipBytes} gzip`,
+  );
+for (const file of files.filter(
+  (f) => f.endsWith(".html") && f.replaceAll("\\", "/") !== "dist/index.html",
+)) {
+  const html = await readFile(file, "utf8");
+  if (/src="[^"]*CinematicHero[^\"]*\.js"/.test(html))
+    errors.push(`Animation chargée hors accueil : ${file}`);
+}
 const report = {
   environment: production ? "production" : "staging",
   htmlPages: count,
   jsBytes,
+  jsGzipBytes,
   errors: [...new Set(errors)],
 };
 await mkdir("docs/qa", { recursive: true });

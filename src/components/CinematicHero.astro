@@ -1,0 +1,193 @@
+---
+import "../styles/cinematic-hero.css";
+---
+
+<section class="cinema" aria-labelledby="cinema-title" data-cinematic-hero>
+  <div class="cinema-stage">
+    <div class="cinema-grain" aria-hidden="true"></div>
+    <div class="cinema-horizon" aria-hidden="true"></div>
+    <div class="cinema-watermark" aria-hidden="true">
+      AIMY
+    </div>
+    <div class="cinema-topline container" aria-hidden="true">
+      <span>
+        <i></i> AIMY DIGITAL · STUDIO WEB
+      </span>
+      <span>MAULÉON / CHOLET</span>
+    </div>
+
+    <div class="cinema-layout container">
+      <div class="cinema-copy">
+        <p class="cinema-eyebrow">L’impact commence au premier regard.</p>
+        <h1 id="cinema-title">
+          <span class="cinema-line">
+            <span>Votre ambition.</span>
+          </span>
+          <span class="cinema-line">
+            <span>En pleine</span>
+          </span>
+          <span class="cinema-line cinema-line-light">
+            <span>lumière.</span>
+            <b aria-hidden="true">↗</b>
+          </span>
+        </h1>
+        <p class="cinema-description">
+          Des sites web qui donnent du relief à votre entreprise. Design,
+          développement et visibilité locale, de Mauléon à Cholet.
+        </p>
+      </div>
+
+      <div class="cinema-art-hit" aria-hidden="true">
+        <div class="cinema-art">
+          <div class="cinema-aura"></div>
+          <svg class="cinema-traces" viewBox="0 0 620 650" fill="none">
+            <defs>
+              <linearGradient
+                id="cinema-ray"
+                x1="140"
+                y1="540"
+                x2="490"
+                y2="60"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#0686ce" stop-opacity="0" />
+                <stop offset=".6" stop-color="#30b8ff" />
+                <stop offset="1" stop-color="#dcf6ff" />
+              </linearGradient>
+              <linearGradient
+                id="cinema-fill"
+                x1="190"
+                y1="550"
+                x2="490"
+                y2="60"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#0686ce" stop-opacity="0" />
+                <stop offset="1" stop-color="#30b8ff" stop-opacity=".18" />
+              </linearGradient>
+            </defs>
+            <path
+              class="cinema-ray-fill"
+              d="M90 600 370 65 455 65 575 600Z"
+              fill="url(#cinema-fill)"
+            />
+            <path
+              class="cinema-ray"
+              d="M90 600 370 65 455 65 575 600 M208 385 525 385"
+              stroke="url(#cinema-ray)"
+              stroke-width="2"
+            />
+            <path
+              class="cinema-wire"
+              d="m70 514 406-122 110 61-402 128Z M70 514v32l114 66 402-126v-33 M184 581v31"
+              stroke="#2a608d"
+              stroke-width="1"
+            />
+            <path
+              class="cinema-wire"
+              d="m114 452 375-111 72 44-373 111Z M114 452v23l74 44 373-109v-25 M188 496v23"
+              stroke="#387fb0"
+              stroke-width="1"
+            />
+            <path
+              class="cinema-wire"
+              d="m157 395 344-101 48 32-342 102Z"
+              stroke="#57bbf3"
+              stroke-width="1"
+            />
+            <path
+              class="cinema-signal"
+              d="m412 73 54 247-291 85 27 87-66 17"
+              stroke="#b7edff"
+              stroke-width="2"
+            />
+            <circle
+              class="cinema-signal-dot"
+              cx="412"
+              cy="73"
+              r="4"
+              fill="#d6f5ff"
+            />
+          </svg>
+          <div class="cinema-plane cinema-plane-back">
+            <span>01 / L’IMAGE</span>
+            <div class="plane-sample plane-sample-image">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+            <b>
+              Une identité.
+              <br />
+              Qui se remarque.
+            </b>
+          </div>
+          <div class="cinema-plane cinema-plane-middle">
+            <span>02 / LE MESSAGE</span>
+            <div class="plane-sample plane-sample-type">
+              Aa<span>Votre différence.</span>
+            </div>
+          </div>
+          <div class="cinema-plane cinema-plane-front">
+            <span>03 / LE CONTACT</span>
+            <div class="plane-sample plane-sample-contact">
+              <span>On en parle ?</span>
+              <b>↗</b>
+            </div>
+            <div class="plane-rule"></div>
+            <small>Le prochain pas devient évident.</small>
+          </div>
+          <div class="cinema-art-caption">
+            <span class="cinema-cross">+</span> UNE PRÉSENCE QUI PREND UNE AUTRE
+            DIMENSION.
+          </div>
+        </div>
+      </div>
+
+      <div class="cinema-settle" aria-hidden="true">
+        <span>LE DESIGN OUVRE LA CONVERSATION.</span>
+        <p>
+          Du premier regard.
+          <br />
+          <em>Au premier contact.</em>
+        </p>
+      </div>
+      <div class="cinema-actions">
+        <a class="cinema-cta" href="/contact/">
+          <span>Discuter de mon projet</span>
+          <span class="cinema-cta-arrow" aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a class="cinema-link" href="/portfolio/">
+          Voir les réalisations <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="cinema-bottom container">
+      <a href="#realisations-accueil" class="cinema-scroll">
+        <span aria-hidden="true">↓</span> Faire défiler pour découvrir
+      </a>
+      <span class="cinema-chapter" aria-hidden="true">
+        01{" "}
+        <span class="cinema-progress">
+          <i></i>
+        </span>{" "}
+        02
+      </span>
+      <button
+        class="cinema-motion-toggle"
+        type="button"
+        aria-pressed="false"
+        hidden
+      >
+        Réduire les animations
+      </button>
+    </div>
+  </div>
+</section>
+<script>
+  import { initCinematicHero } from "../lib/cinematic-hero";
+  initCinematicHero();
+</script>

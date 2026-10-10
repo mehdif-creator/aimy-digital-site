@@ -1,45 +1,21 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Button from "../components/Button.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import ServiceCard from "../components/ServiceCard.astro";
 import FAQ from "../components/FAQ.astro";
 import CTA from "../components/CTA.astro";
 import { services } from "../lib/site";
+import CinematicHero from "../components/CinematicHero.astro";
 const projects = await getCollection("cases");
 ---
 
 <BaseLayout
   title="Création de sites web et SEO local à Mauléon"
   description="Aimy Digital conçoit des sites internet pour artisans et PME à Mauléon, Cholet, Bressuire et Les Herbiers. Design, clarté et visibilité locale."
+  cinematicHero
 >
-  <section class="hero container">
-    <div>
-      <p class="location">Agence web dans le Bocage, proche de votre métier</p>
-      <h1>Votre savoir-faire. Un site à sa hauteur.</h1>
-      <p class="lead">
-        Des sites internet pour les artisans et les entreprises qui veulent
-        présenter clairement leur activité et donner envie de les contacter.
-      </p>
-      <div class="actions">
-        <Button href="/contact/">Discuter de mon projet</Button>
-        <Button href="/portfolio/" secondary>
-          Voir les réalisations
-        </Button>
-      </div>
-    </div>
-    <div class="brand-orbit" aria-hidden="true">
-      <div class="orbit-copy">
-        Une image juste.
-        <br />
-        Une offre claire.
-        <br />
-        Le contact facile.
-      </div>
-      <span class="orbit-tag">Design & stratégie web</span>
-    </div>
-  </section>
+  <CinematicHero />
   <div class="container region-band">
     <span>Ancrés près de chez vous.</span>
     <span>Mauléon</span>
@@ -47,7 +23,7 @@ const projects = await getCollection("cases");
     <span>Bressuire</span>
     <span>Les Herbiers</span>
   </div>
-  <section class="section container">
+  <section class="section container" id="realisations-accueil">
     <div class="section-heading">
       <h2>
         Des projets concrets.

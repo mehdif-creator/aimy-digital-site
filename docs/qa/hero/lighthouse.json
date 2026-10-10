@@ -1,0 +1,15 @@
+{
+  "version": "13.5.0",
+  "date": "2026-10-10T15:48:56.408Z",
+  "mode": "mobile simulé, Chrome headless, staging local",
+  "scores": {
+    "performance": 97,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "lcpMs": 2370.82625,
+  "cls": 0.009916122084720785,
+  "tbtMs": 3.5,
+  "bytes": 654226,
+  "warnings": []
+}

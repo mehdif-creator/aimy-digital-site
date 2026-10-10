@@ -2,6 +2,8 @@
 
 Version de travail locale, **non publiée et non prête pour la bascule WordPress**. Lire `PROGRESS.md` avant toute reprise : la correction du portfolio y est prioritaire.
 
+Le hero cinématique est maintenant une proposition à valider. Ouvrir `http://127.0.0.1:4322/`, recharger en haut de page pour voir l'entrée puis faire défiler lentement et revenir au début. Le réglage système de réduction des mouvements désactive la séquence ; une commande de réduction est également présente dans le hero. La suite du design attend l'approbation explicite de l'utilisateur. Voir `docs/brand/hero-cinematique.md` et `docs/qa/hero/rapport.md`.
+
 ## Démarrer
 
 Node **24** recommandé (minimum 22.12). Le Node 20 système de l'environnement initial n'est pas compatible avec Astro 7.
