@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { services } from "../lib/site";
+import ServiceCard from "../components/ServiceCard.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<BaseLayout
+  title="Nos prestations web et digitales"
+  description="Création, refonte, e-commerce, SEO local, publicité et maintenance : les prestations Aimy Digital pour votre entreprise."
+>
+  <div class="container">
+    <header class="page-intro">
+      <h1>Partir de votre besoin. Choisir les bons outils.</h1>
+      <p class="lead">
+        Un site à créer, une visibilité à travailler ou une présence existante à
+        faire évoluer.
+      </p>
+    </header>
+    <section class="section" aria-label="Prestations">
+      {services.map((service) => (
+        <ServiceCard service={service} />
+      ))}
+    </section>
+  </div>
+  <CTA />
+</BaseLayout>

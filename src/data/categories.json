@@ -1,0 +1,50 @@
+[
+  {
+    "id": 27,
+    "name": "Automatisation & Outils no-code",
+    "slug": "automatisation-outils-no-code",
+    "count": 0
+  },
+  {
+    "id": 29,
+    "name": "Conseils business & ROI",
+    "slug": "conseils-business-roi",
+    "count": 0
+  },
+  {
+    "id": 3,
+    "name": "Création de sites web",
+    "slug": "creation-de-sites-web",
+    "count": 7
+  },
+  {
+    "id": 30,
+    "name": "Maintenance & Sécurité",
+    "slug": "maintenance-securite",
+    "count": 1
+  },
+  {
+    "id": 1,
+    "name": "Publicité & Acquisition client",
+    "slug": "publicite-acquisition-client",
+    "count": 1
+  },
+  {
+    "id": 4,
+    "name": "Référencement & SEO",
+    "slug": "referencement-seo",
+    "count": 2
+  },
+  {
+    "id": 26,
+    "name": "Stratégie digitale pour TPE/PME",
+    "slug": "strategie-digitale-pour-tpe-pme",
+    "count": 0
+  },
+  {
+    "id": 28,
+    "name": "Tendances & innovations web",
+    "slug": "tendances-innovations-web",
+    "count": 1
+  }
+]

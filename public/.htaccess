@@ -1,0 +1,26 @@
+# À fusionner avec la configuration serveur existante après revue.
+Options -Indexes
+ErrorDocument 404 /404.html
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^maintenance-de-site-web-pourquoi-cest-essentiel-pour-votre-activite/?$ /maintenance-site-web-essentielle-2025/ [R=301,L]
+RewriteRule ^pourquoi-votre-entreprise-a-besoin-dun-site-web-professionnel-en-2025/?$ /site-web-professionnel-2025/ [R=301,L]
+RewriteRule ^publicite-digitale-comment-maximiser-votre-roi-avec-google-ads-et-facebook-ads/?$ /publicite-digitale-roi-google-ads-facebook-ads/ [R=301,L]
+RewriteRule ^creation-de-sites-e-commerce/?$ /creation-de-sites-internet/creation-de-sites-e-commerce/ [R=301,L]
+RewriteRule ^refonte-de-sites-internet/?$ /creation-de-sites-internet/refonte-de-sites-internet/ [R=301,L]
+RewriteRule ^creation-de-sites-vitrines/?$ /creation-de-sites-internet/creation-de-sites-vitrines/ [R=301,L]
+RewriteRule ^blog/seo-local-optimiser-site-clients-locaux/?$ /seo-local-optimiser-site-clients-locaux/ [R=301,L]
+RewriteRule ^seo-local-comment-optimiser-votre-site-pour-attirer-des-clients-locaux/?$ /seo-local-optimiser-site-clients-locaux/ [R=301,L]
+RewriteRule ^blog/pourquoi-entreprise-besoin-site-web-professionnel-2025/?$ /site-web-professionnel-2025/ [R=301,L]
+RewriteRule ^blog/publicite-digitale-maximiser-roi-google-ads-facebook-ads/?$ /publicite-digitale-roi-google-ads-facebook-ads/ [R=301,L]
+RewriteRule ^blog/optimiser-site-wordpress-seo-2025-ia/?$ /optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/ [R=301,L]
+RewriteRule ^blog/category/conseils-business-roi/?$ /category/conseils-business-roi/ [R=301,L]
+RewriteRule ^blog/category/referencement-seo/?$ /category/referencement-seo/ [R=301,L]
+RewriteRule ^blog/category/strategie-digitale-tpe-pme/?$ /category/strategie-digitale-pour-tpe-pme/ [R=301,L]
+RewriteRule ^blog/category/creation-sites-web/?$ /category/creation-de-sites-web/ [R=301,L]
+</IfModule>

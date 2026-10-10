@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import { site } from "../lib/site";
+---
+
+<BaseLayout
+  title="Discutons de votre projet web"
+  description="Contactez Aimy Digital pour votre site internet, votre refonte ou votre visibilité locale. Présentez votre activité et vos priorités."
+>
+  <div class="container">
+    <header class="page-intro">
+      <h1>Votre prochain site commence ici.</h1>
+      <p class="lead">
+        Une idée précise ou un besoin à clarifier ? Présentez-nous votre
+        activité et ce que vous souhaitez faire évoluer.
+      </p>
+    </header>
+    <section class="contact-layout section">
+      <div>
+        <h2>Faisons connaissance.</h2>
+        <p>
+          Quelques lignes suffisent pour ouvrir la discussion. Indiquez votre
+          activité, votre site actuel si vous en avez un et les priorités de
+          votre projet.
+        </p>
+        <div class="contact-links">
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <a href={`tel:${site.tel}`}>{site.phone}</a>
+        </div>
+        <p>
+          Mauléon et le Bocage.
+          <br />
+          Deux-Sèvres, Maine-et-Loire, Vendée.
+        </p>
+      </div>
+      <ContactForm />
+    </section>
+  </div>
+</BaseLayout>

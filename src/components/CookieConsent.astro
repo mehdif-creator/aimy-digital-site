@@ -1,0 +1,34 @@
+<details class="privacy-settings">
+  <summary>Préférences de confidentialité</summary>
+  <div>
+    <p>
+      Aucun outil de mesure d’audience publicitaire n’est chargé sur cette
+      version. Votre choix est conservé sur cet appareil et peut être modifié
+      ici.
+    </p>
+    <button type="button" data-consent="denied">
+      Refuser la mesure
+    </button>
+    <button type="button" data-consent="granted">
+      Autoriser la mesure facultative
+    </button>
+    <p id="consent-status" role="status"></p>
+  </div>
+</details>
+<script>
+  import { setConsent } from "../lib/analytics";
+  document
+    .querySelectorAll<HTMLButtonElement>("[data-consent]")
+    .forEach((button) =>
+      button.addEventListener("click", () => {
+        const saved = setConsent(
+          button.dataset.consent === "granted" ? "granted" : "denied",
+        );
+        const status = document.getElementById("consent-status");
+        if (status)
+          status.textContent = saved
+            ? "Votre choix est enregistré. Aucun outil de mesure n’est actuellement activé."
+            : "Votre choix est appliqué pour cette visite. Le stockage de votre navigateur est indisponible.";
+      }),
+    );
+</script>

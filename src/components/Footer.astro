@@ -1,0 +1,40 @@
+---
+import { site, navigation } from "../lib/site";
+import CookieConsent from "./CookieConsent.astro";
+---
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="footer-name" href="/">
+        Aimy Digital
+      </a>
+      <p>
+        Des sites pensés pour votre métier.
+        <br />
+        Mauléon, Cholet, Bressuire, Les Herbiers.
+      </p>
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <br />
+      <a href={`tel:${site.tel}`}>{site.phone}</a>
+    </div>
+    <nav aria-label="Pages du site">
+      {navigation.map((l) => (
+        <a href={l.href}>{l.label}</a>
+      ))}
+      <a href="/contact/">Contact</a>
+    </nav>
+    <nav aria-label="Services complémentaires">
+      <a href="/nos-prestations/">Toutes les prestations</a>
+      <a href="/publicites-sea/">Publicité digitale</a>
+      <a href="/maintenance-et-securite/">Maintenance</a>
+      <a href="/faq/">Questions fréquentes</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {new Date().getFullYear()} Aimy Digital</span>
+    <a href="/mentions-legales/">Mentions légales</a>
+    <a href="/politique-de-confidentialite/">Confidentialité</a>
+    <CookieConsent />
+  </div>
+</footer>

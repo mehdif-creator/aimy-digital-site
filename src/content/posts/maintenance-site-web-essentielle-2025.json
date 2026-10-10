@@ -1,0 +1,11 @@
+{
+  "title": "Maintenance de site web : ce qu’il faut prévoir",
+  "description": "La maintenance dépend des technologies utilisées. Un site WordPress, une boutique et un site statique ne demandent pas les mêmes interventions. Recensez l’",
+  "path": "maintenance-site-web-essentielle-2025",
+  "date": "2025-08-05T11:35:51",
+  "modified": "2026-10-10T00:00:00",
+  "html": "<h2>Identifier ce qui doit être suivi</h2><p>La maintenance dépend des technologies utilisées. Un site WordPress, une boutique et un site statique ne demandent pas les mêmes interventions. Recensez l’hébergement, le domaine, les extensions, les intégrations et les personnes disposant d’un accès. Ce relevé permet de définir un suivi adapté et d’éviter qu’un service indispensable soit oublié.</p><h2>Sauvegarder et savoir restaurer</h2><p>Une sauvegarde n’est utile que si elle permet de retrouver un fonctionnement connu. Pour WordPress, les fichiers et la base de données sont complémentaires. Conservez une copie séparée du site public et vérifiez la procédure de restauration dans un environnement isolé. Le rythme et la durée de conservation doivent tenir compte de la fréquence de modification des contenus.</p><h2>Contrôler après une intervention</h2><p>Une mise à jour peut modifier l’affichage ou le comportement d’une extension. Vérifiez au minimum l’accueil, les pages importantes, le menu mobile et le contact. Pour une boutique, ajoutez le panier et la commande. Notez les changements réalisés et prévoyez un retour arrière avant une opération sensible.</p><h2>Définir la responsabilité et le périmètre</h2><p>Un contrat de maintenance doit préciser les opérations prévues, la fréquence et les modalités d’intervention. Distinguez correction technique, ajout de contenu et nouvelle fonctionnalité. Les engagements de disponibilité ou de délai doivent être écrits ; ils ne se déduisent pas d’une simple mention de maintenance sur une page commerciale.</p><p>Pour cadrer votre besoin, découvrez nos <a href=\"/nos-prestations/\">prestations</a> ou <a href=\"/contact/\">présentez-nous votre projet</a>.</p>",
+  "categories": [30],
+  "source": "https://aimy-digital.fr/maintenance-site-web-essentielle-2025/",
+  "image": "/wp-content/uploads/2025/08/Maintenance-de-site-web-2025-1.png"
+}

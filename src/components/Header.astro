@@ -1,0 +1,41 @@
+---
+import { navigation } from "../lib/site";
+import MobileNav from "./MobileNav.astro";
+import Button from "./Button.astro";
+import { Image } from "astro:assets";
+import logo from "../../aimy-digital-refonte-codex/assets/logo-source.png";
+---
+
+<a class="skip-link" href="#main">
+  Aller au contenu
+</a>
+<header class="site-header container">
+  <a class="brand" href="/" aria-label="Aimy Digital, accueil">
+    <Image
+      src={logo}
+      width={94}
+      height={94}
+      widths={[94, 188]}
+      sizes="94px"
+      format="webp"
+      loading="eager"
+      alt="Aimy Digital"
+    />
+  </a>
+  <nav class="desktop-nav" aria-label="Navigation principale">
+    {navigation.map((link) => (
+      <a
+        href={link.href}
+        aria-current={
+          Astro.url.pathname.startsWith(link.href) ? "page" : undefined
+        }
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+  <div class="header-cta">
+    <Button href="/contact/">Parlons de votre projet</Button>
+  </div>
+  <MobileNav />
+</header>
