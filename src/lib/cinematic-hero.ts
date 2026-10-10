@@ -11,15 +11,20 @@ export function initCinematicHero() {
   )!;
   const hit = hero.querySelector<HTMLElement>(".cinema-art-hit")!;
   const art = hero.querySelector<HTMLElement>(".cinema-art")!;
-  const ray = hero.querySelector<SVGPathElement>(".cinema-ray")!;
-  const length = ray.getTotalLength();
+  const copies = [...hero.querySelectorAll<HTMLElement>("[data-copy]")];
   let manualReduced = false;
   let introduced = false;
   let media: gsap.MatchMedia;
-
+  function scene(number: number) {
+    hero.dataset.scene = String(number);
+    copies.forEach((copy, index) =>
+      copy.setAttribute("aria-hidden", String(index !== number - 1)),
+    );
+  }
   function configure() {
     media?.revert();
     hero.dataset.motion = "reduced";
+    scene(1);
     media = gsap.matchMedia();
     media.add(
       {
@@ -30,121 +35,157 @@ export function initCinematicHero() {
       },
       (context) => {
         const { mobile, reduce, pointer } = context.conditions!;
-        const reduced = reduce || manualReduced;
         toggle.hidden = !!reduce;
         toggle.setAttribute("aria-pressed", String(manualReduced));
         toggle.textContent = manualReduced
           ? "Activer les animations"
           : "Réduire les animations";
-        hero.dataset.motion = reduced ? "reduced" : "full";
+        hero.dataset.motion = reduce || manualReduced ? "reduced" : "full";
         hero.dataset.ready = "true";
-        if (reduced) return;
-
+        scene(1);
+        if (reduce || manualReduced) return;
         const select = gsap.utils.selector(hero);
-        // Les contenus sont visibles dans le HTML ; seul le JS disponible joue l'entrée.
-        if (!introduced && scrollY < hero.offsetTop + 80) {
-          const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
-          intro
-            .from(
-              select(".cinema-topline"),
-              { autoAlpha: 0, y: -8, duration: 0.5 },
-              0,
-            )
-            .fromTo(
-              ray,
-              { strokeDasharray: length, strokeDashoffset: length },
-              { strokeDashoffset: 0, duration: 1.2, ease: "power2.inOut" },
-              0,
-            )
-            .from(
-              select(".cinema-eyebrow"),
-              { autoAlpha: 0, y: 12, duration: 0.6 },
-              0.08,
-            )
+        if (!mobile && !introduced && scrollY < hero.offsetTop + 80) {
+          gsap
+            .timeline({ defaults: { ease: "power3.out" } })
             .from(
               select(".cinema-line > span"),
-              { yPercent: 112, duration: 0.85, stagger: 0.12 },
-              0.14,
+              { yPercent: 106, duration: 0.65, stagger: 0.08 },
+              0,
             )
+            .from(art, { y: 35, duration: 1 }, 0)
             .from(
-              select(".cinema-line-light b"),
-              { autoAlpha: 0, x: -14, y: 14, duration: 0.6 },
-              0.6,
-            )
-            .from(art, { autoAlpha: 0, y: 40, duration: 1.1 }, 0.12)
-            .from(
-              select(".cinema-description"),
-              { autoAlpha: 0, y: 12, duration: 0.65 },
-              0.55,
-            )
-            .from(
-              select(".cinema-actions, .cinema-bottom"),
-              { autoAlpha: 0, y: 12, duration: 0.55, stagger: 0.08 },
-              0.75,
+              select(".cinema-light"),
+              { scaleX: 0.1, transformOrigin: "right", duration: 1.15 },
+              0,
             );
         }
         introduced = true;
-
+        // Le titre principal et le CTA ne sont jamais atténués ni déplacés au scroll.
         const story = gsap.timeline({
-          defaults: { ease: "none" },
+          defaults: { ease: "power1.inOut" },
           scrollTrigger: {
             id: "aimy-hero",
             trigger: hero,
             start: "top top",
             end: "bottom bottom",
-            scrub: mobile ? 0.25 : 0.65,
+            scrub: mobile ? 0.16 : 0.35,
             invalidateOnRefresh: true,
+            onUpdate: (self) =>
+              scene(self.progress < 0.33 ? 1 : self.progress < 0.73 ? 2 : 3),
           },
         });
         story
           .to(
-            select(".cinema-copy"),
-            { y: mobile ? -45 : -90, autoAlpha: 0, duration: 0.42 },
-            0.08,
+            select(".shot-main"),
+            {
+              rotationX: 0,
+              rotationY: 0,
+              rotationZ: 0,
+              x: -20,
+              y: -25,
+              scale: 0.94,
+              duration: 0.24,
+            },
+            0.12,
           )
           .to(
-            hit,
-            { y: mobile ? 40 : -45, x: mobile ? -25 : 30, duration: 1 },
-            0,
+            select(".shot-nutri"),
+            { x: 70, y: -25, autoAlpha: 0.25, duration: 0.22 },
+            0.15,
           )
-          .to(select(".cinema-plane-back"), { y: -45, x: 16, duration: 1 }, 0)
           .to(
-            select(".cinema-plane-middle"),
-            { y: -10, x: -12, duration: 1 },
-            0,
-          )
-          .to(select(".cinema-plane-front"), { y: 26, x: 20, duration: 1 }, 0)
-          .to(
-            select(".cinema-watermark"),
-            { xPercent: -7, yPercent: 12, autoAlpha: 0.4, duration: 1 },
-            0,
+            select(".shot-games"),
+            { x: 70, y: 40, autoAlpha: 0.18, duration: 0.22 },
+            0.15,
           )
           .fromTo(
-            select(".cinema-settle"),
-            { autoAlpha: 0, y: 45 },
-            { autoAlpha: 1, y: 0, duration: 0.38 },
-            0.48,
+            select(".shot-phone"),
+            { autoAlpha: 0, y: 85, rotationZ: 8 },
+            { autoAlpha: 1, y: 0, rotationZ: 0, duration: 0.2 },
+            0.25,
+          )
+          .to(select(".shot-main img"), { y: -180, duration: 0.2 }, 0.36)
+          .set(copies[1], { visibility: "visible" }, 0.28)
+          .to(copies[0], { yPercent: -110, duration: 0.1 }, 0.28)
+          .fromTo(
+            copies[1],
+            { yPercent: 110 },
+            { yPercent: 0, duration: 0.1 },
+            0.28,
+          )
+          .fromTo(
+            select(".cinema-contact-note"),
+            { autoAlpha: 0, y: 15 },
+            { autoAlpha: 1, y: 0, duration: 0.12 },
+            0.38,
           )
           .to(
-            select(".cinema-horizon"),
-            { rotation: -10, y: 80, duration: 1 },
-            0,
+            select(".shot-phone, .cinema-contact-note"),
+            { autoAlpha: 0, y: 30, duration: 0.12 },
+            0.62,
           )
-          .to(select(".cinema-progress i"), { scaleX: 1, duration: 1 }, 0);
-
+          .to(select(".shot-main img"), { y: 0, duration: 0.18 }, 0.67)
+          .to(
+            select(".shot-main"),
+            { x: -70, y: 45, rotationZ: 0, scale: 0.62, duration: 0.25 },
+            0.67,
+          )
+          .to(
+            select(".shot-nutri"),
+            {
+              x: 38,
+              y: 100,
+              rotationZ: 0,
+              scale: 0.66,
+              autoAlpha: 1,
+              duration: 0.25,
+            },
+            0.67,
+          )
+          .to(
+            select(".shot-games"),
+            {
+              x: 34,
+              y: 38,
+              rotationZ: 0,
+              scale: 0.66,
+              autoAlpha: 1,
+              duration: 0.25,
+            },
+            0.67,
+          )
+          .set(copies[2], { visibility: "visible" }, 0.68)
+          .to(copies[1], { yPercent: -110, duration: 0.1 }, 0.68)
+          .fromTo(
+            copies[2],
+            { yPercent: 110 },
+            { yPercent: 0, duration: 0.1 },
+            0.68,
+          )
+          .to(
+            select(".cinema-light"),
+            { rotation: 0, y: 100, duration: 0.3 },
+            0.65,
+          )
+          .to(
+            select(".cinema-watermark"),
+            { xPercent: 8, duration: 1, ease: "none" },
+            0,
+          );
         if (pointer && !mobile) {
           const tiltX = gsap.quickTo(art, "rotationX", {
-            duration: 0.55,
+            duration: 0.5,
             ease: "power3.out",
           });
           const tiltY = gsap.quickTo(art, "rotationY", {
-            duration: 0.55,
+            duration: 0.5,
             ease: "power3.out",
           });
           const move = (event: PointerEvent) => {
             const box = hit.getBoundingClientRect();
-            tiltX(((event.clientY - box.top) / box.height - 0.5) * -8);
-            tiltY(((event.clientX - box.left) / box.width - 0.5) * 10);
+            tiltX(((event.clientY - box.top) / box.height - 0.5) * -4);
+            tiltY(((event.clientX - box.left) / box.width - 0.5) * 5);
           };
           const leave = () => {
             tiltX(0);
@@ -161,10 +202,8 @@ export function initCinematicHero() {
     );
     ScrollTrigger.refresh();
   }
-
   configure();
   toggle.addEventListener("click", () => {
-    // Conserver la position relative au contenu suivant quand la scène se raccourcit.
     const distance = hero.getBoundingClientRect().top;
     manualReduced = !manualReduced;
     configure();

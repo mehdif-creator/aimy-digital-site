@@ -19,7 +19,7 @@ const r = JSON.parse(await readFile(output, "utf8"));
 const report = {
   version: r.lighthouseVersion,
   date: r.fetchTime,
-  mode: "mobile simulé, Chrome headless, staging local",
+  mode: "mobile simulé, Chrome headless, build de production local",
   scores: Object.fromEntries(
     Object.entries(r.categories).map(([k, v]) => [
       k,
@@ -33,7 +33,7 @@ const report = {
   warnings: r.runWarnings,
 };
 await writeFile(
-  "docs/qa/hero/lighthouse.json",
+  "docs/qa/hero-v2/lighthouse.json",
   JSON.stringify(report, null, 2),
 );
 console.log(JSON.stringify(report, null, 2));

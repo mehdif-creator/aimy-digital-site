@@ -1,6 +1,17 @@
 # Progression de la refonte Aimy Digital
 
-## Reprise créative prioritaire — 10 octobre 2026
+## Correction hero V2 — 10 octobre 2026 — VALIDATION EN ATTENTE
+
+La dernière instruction « Cinematic Hero Review » rejette le hero précédent. Travail limité au hero et à sa transition ; **ne pas poursuivre le portfolio sans approbation visuelle explicite**.
+
+- Cartes UI fictives remplacées par les captures vérifiées SC Rénovation, My NutriZen et HT Créa Jeux ; vue mobile SC capturée directement sur le site réel. Sources et récit dans `docs/brand/hero-cinematique-v2.md`.
+- Trois scènes : impact / transformation desktop vers mobile et contact / introduction des réalisations. Titre exact demandé et CTA continuellement lisibles. Logo sans pastille blanche. Astro, GSAP, ScrollTrigger et alternatives accessibles conservés.
+- Portfolio, articles et infrastructure SEO inchangés. Les quatre seuls projets autorisés restent HT Créa Jeux, My NutriZen, SC Rénovation et Lambert Digital Pulse. Toutes les exclusions antérieures restent obligatoires.
+- Vérification : 9 tests, Astro check sans diagnostic, builds production et staging de 40 pages, audits sans erreur ; recette navigateur et captures dans `docs/qa/hero-v2/`.
+- Mesure finale Lighthouse mobile locale : performance 97, accessibilité 100, bonnes pratiques 100 ; LCP 2,488 s, CLS 0,000331, TBT 5,5 ms. Pas une mesure terrain.
+- Aperçu : http://127.0.0.1:4322/?hero=recit. **Arrêt à ce jalon pour validation utilisateur.** Aucun déploiement.
+
+## Reprise créative prioritaire — 10 octobre 2026 (historique V1)
 
 **La direction visuelle précédente est rejetée par l'utilisateur.** Nouvelle source prioritaire : prompt « Critical Creative Redesign & Project Recovery ». Phase autorisée limitée au hero cinématique. **Arrêter après la proposition fonctionnelle et attendre son approbation avant le portfolio ou les autres pages.** Ne pas appliquer le plan global précédent au-delà de ce périmètre.
 

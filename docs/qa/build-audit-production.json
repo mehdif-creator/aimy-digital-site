@@ -1,6 +1,7 @@
 {
   "environment": "production",
   "htmlPages": 40,
-  "jsBytes": 1794,
+  "jsBytes": 117846,
+  "jsGzipBytes": 46391,
   "errors": []
 }
