@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import CTA from "../../components/CTA.astro";
+const projects = await getCollection("cases");
+---
+
+<BaseLayout
+  title="Réalisations web"
+  description="Découvrez HT Créa Jeux, My NutriZen, SC Rénovation et Lambert Digital Pulse, quatre projets présentés par Aimy Digital."
+>
+  <div class="container">
+    <header class="page-intro">
+      <p class="breadcrumb">
+        <a href="/">Accueil</a> / Réalisations
+      </p>
+      <h1>Un métier. Un univers. Un site qui lui ressemble.</h1>
+      <p class="lead">
+        Quatre projets pour découvrir différentes façons de présenter une
+        activité, un catalogue ou une application.
+      </p>
+    </header>
+    <section class="projects-grid section" aria-label="Nos réalisations">
+      {projects.map((project, index) => (
+        <ProjectCard project={project} heading="h2" priority={index === 0} />
+      ))}
+    </section>
+  </div>
+  <CTA />
+</BaseLayout>

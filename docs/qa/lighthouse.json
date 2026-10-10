@@ -1,0 +1,110 @@
+[
+  {
+    "name": "accueil",
+    "route": "/",
+    "formFactor": "mobile",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-10T12:01:51.827Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 1696.8058,
+    "cls": 0.001508190646105397,
+    "tbtMs": 0,
+    "bytes": 575263,
+    "warnings": []
+  },
+  {
+    "name": "creation",
+    "route": "/creation-de-sites-internet/",
+    "formFactor": "mobile",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-10T12:02:03.968Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 1383.56685,
+    "cls": 0.001478996160346393,
+    "tbtMs": 0,
+    "bytes": 69290,
+    "warnings": []
+  },
+  {
+    "name": "portfolio",
+    "route": "/portfolio/",
+    "formFactor": "mobile",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-10T12:02:15.822Z",
+    "scores": {
+      "performance": 93,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 3168.4947999999995,
+    "cls": 0.0007891648989555447,
+    "tbtMs": 0,
+    "bytes": 573638,
+    "warnings": []
+  },
+  {
+    "name": "contact",
+    "route": "/contact/",
+    "formFactor": "mobile",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-10T12:02:27.844Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 1382.36355,
+    "cls": 0.01457254564176389,
+    "tbtMs": 0,
+    "bytes": 70009,
+    "warnings": []
+  },
+  {
+    "name": "article",
+    "route": "/maintenance-site-web-essentielle-2025/",
+    "formFactor": "mobile",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-10T12:02:39.799Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 1374.3401999999999,
+    "cls": 0.001254226929372078,
+    "tbtMs": 0,
+    "bytes": 69007,
+    "warnings": []
+  },
+  {
+    "name": "accueil-desktop",
+    "route": "/",
+    "formFactor": "desktop",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-10T12:02:51.606Z",
+    "scores": {
+      "performance": 100,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    "lcpMs": 401.41020000000003,
+    "cls": 0.0007907501470639588,
+    "tbtMs": 0,
+    "bytes": 572633,
+    "warnings": []
+  }
+]

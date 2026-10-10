@@ -1,0 +1,19 @@
+---
+import { questions } from "../lib/site";
+interface Props {
+  items?: typeof questions;
+}
+const { items = questions } = Astro.props;
+---
+
+<div class="faq-list">
+  {items.map((item) => (
+    <details>
+      <summary>
+        {item.question}
+        <span aria-hidden="true">+</span>
+      </summary>
+      <p>{item.answer}</p>
+    </details>
+  ))}
+</div>

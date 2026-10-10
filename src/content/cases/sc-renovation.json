@@ -1,0 +1,14 @@
+{
+  "title": "SC Rénovation",
+  "path": "sc-renovation",
+  "category": "Site vitrine",
+  "website": "https://sc-renovation.com/",
+  "description": "La rénovation extérieure présentée à travers les prestations et les chantiers.",
+  "mission": "Clarifier l’offre d’un artisan et rendre la demande de devis accessible.",
+  "details": [
+    "Une présentation des prestations de rénovation extérieure.",
+    "Des réalisations avant et après pour comprendre le travail proposé.",
+    "Des accès à la prise de contact dans le parcours."
+  ],
+  "image": "/images/projects/sc-renovation.webp"
+}

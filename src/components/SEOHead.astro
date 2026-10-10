@@ -1,0 +1,56 @@
+---
+import { site } from "../lib/site";
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+  image?: string;
+  article?: { date: string; modified: string };
+}
+const {
+  title,
+  description,
+  noindex = false,
+  image = "/images/logo-source.png",
+  article,
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const hidden = noindex || import.meta.env.PUBLIC_SITE_ENV !== "production";
+const schema = article
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: title,
+      datePublished: article.date,
+      dateModified: article.modified,
+      mainEntityOfPage: canonical,
+      publisher: { "@type": "Organization", name: site.name, url: site.url },
+    }
+  : {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: site.name,
+      url: site.url,
+      logo: new URL("/images/logo-source.png", site.url).href,
+    };
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title} | Aimy Digital</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content={hidden ? "noindex, nofollow" : "index, follow"} />
+<meta name="theme-color" content="#f5f7f8" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:type" content={article ? "article" : "website"} />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:image" content={new URL(image, site.url).href} />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="/images/logo-source.png" type="image/png" />
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(schema).replaceAll("<", "\u003c")}
+/>

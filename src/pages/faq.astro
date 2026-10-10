@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FAQ from "../components/FAQ.astro";
+import CTA from "../components/CTA.astro";
+---
+
+<BaseLayout
+  title="Questions fréquentes sur votre projet web"
+  description="Budget, délai, propriété, refonte, SEO et maintenance : les questions à poser avant de créer votre site internet."
+>
+  <div class="container">
+    <header class="page-intro">
+      <h1>Les bonnes questions font les bons projets.</h1>
+    </header>
+    <section class="section">
+      <FAQ />
+    </section>
+  </div>
+  <CTA />
+</BaseLayout>

@@ -1,0 +1,105 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+import FAQ from "../components/FAQ.astro";
+import CTA from "../components/CTA.astro";
+import { services, type Service } from "../lib/site";
+import type { CollectionEntry } from "astro:content";
+export async function getStaticPaths() {
+  return [
+    ...services.map((service) => ({
+      params: { path: service.path },
+      props: { service, post: undefined },
+    })),
+    ...(await getCollection("posts")).map((post) => ({
+      params: { path: post.data.path },
+      props: { post, service: undefined },
+    })),
+  ];
+}
+const { service, post } = Astro.props as {
+  service?: Service;
+  post?: CollectionEntry<"posts">;
+};
+const title = service?.title || post!.data.title;
+const description = service?.description || post!.data.description;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  article={
+    post ? { date: post.data.date, modified: post.data.modified } : undefined
+  }
+>
+  <div class="container">
+    <header class="page-intro">
+      <p class="breadcrumb">
+        <a href="/">Accueil</a> /{" "}
+        <a href={post ? "/blog/" : "/nos-prestations/"}>
+          {post ? "Le journal" : "Prestations"}
+        </a>{" "}
+        / {title}
+      </p>
+      <h1>{service?.headline || title}</h1>
+      {service && (
+        <>
+          <p class="lead">{service.intro}</p>
+          <Button href="/contact/">Parler de mon projet</Button>
+        </>
+      )}
+    </header>
+    {service ? (
+      <>
+        <section class="content-grid section">
+          <div>
+            <h2>Un projet adapté à votre situation.</h2>
+            <p class="lead">{service.audience}</p>
+            <h3>Ce que nous cadrons avec vous</h3>
+            <ul class="checklist">
+              {service.deliverables.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <aside class="content-panel">
+            <h2>Comment avancer</h2>
+            <ol class="steps">
+              {service.steps.map((step) => (
+                <li>{step}</li>
+              ))}
+            </ol>
+          </aside>
+        </section>
+        <section class="section">
+          <h2>Vos questions, avant de décider.</h2>
+          <FAQ />
+          <nav class="subnav" aria-label="Autres prestations">
+            {services
+              .filter((s) => s.path !== service.path)
+              .map((s) => (
+                <a href={`/${s.path}/`}>{s.title}</a>
+              ))}
+          </nav>
+        </section>
+      </>
+    ) : (
+      post && (
+        <article class="prose section">
+          <p class="article-meta">
+            Publié le{" "}
+            <time datetime={post.data.date}>
+              {new Date(post.data.date).toLocaleDateString("fr-FR")}
+            </time>
+          </p>
+          <div set:html={post.data.html} />
+          <p>
+            <a href="/blog/">Tous les articles</a>
+          </p>
+        </article>
+      )
+    )}
+  </div>
+  <CTA />
+</BaseLayout>

@@ -1,0 +1,131 @@
+---
+const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
+---
+
+<form
+  class="contact-form"
+  action="/api/contact.php"
+  method="post"
+  data-enabled={enabled}
+>
+  <div class="field">
+    <label for="name">Votre nom *</label>
+    <input
+      id="name"
+      name="name"
+      autocomplete="name"
+      required
+      minlength="2"
+      maxlength="100"
+    />
+  </div>
+  <div class="field">
+    <label for="company">Votre entreprise</label>
+    <input
+      id="company"
+      name="company"
+      autocomplete="organization"
+      maxlength="150"
+    />
+  </div>
+  <div class="field">
+    <label for="email">Votre e-mail *</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      autocomplete="email"
+      required
+      maxlength="254"
+    />
+  </div>
+  <div class="field">
+    <label for="phone">Votre téléphone</label>
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      autocomplete="tel"
+      maxlength="30"
+    />
+  </div>
+  <div class="field full">
+    <label for="need">Votre besoin *</label>
+    <select id="need" name="need" required>
+      <option value="">Choisir un sujet</option>
+      <option>Créer un site</option>
+      <option>Refondre un site</option>
+      <option>Créer une boutique</option>
+      <option>Améliorer ma visibilité</option>
+      <option>Maintenance et suivi</option>
+      <option>Autre projet</option>
+    </select>
+  </div>
+  <div class="field full">
+    <label for="message">Parlez-nous de votre projet *</label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      minlength="20"
+      maxlength="5000"
+      placeholder="Votre activité, ce que vous souhaitez améliorer, votre calendrier…"
+    ></textarea>
+  </div>
+  <div class="honeypot" aria-hidden="true">
+    <label for="website">Ne pas remplir</label>
+    <input id="website" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+  <div class="form-foot">
+    <p>
+      Les champs marqués * sont nécessaires pour répondre à votre demande.{" "}
+      <a href="/politique-de-confidentialite/">Utilisation de vos données</a>.
+    </p>
+    {!enabled && (
+      <p class="notice">
+        Le formulaire est en cours de préparation. Pour nous joindre, utilisez
+        l’e-mail ou le téléphone indiqués sur cette page.
+      </p>
+    )}
+    <button class="button" type="submit" disabled={!enabled}>
+      Envoyer ma demande <span aria-hidden="true">↗</span>
+    </button>
+    <p class="form-status" role="status" hidden></p>
+    <noscript>
+      <p>Vous pouvez nous écrire directement à contact@aimy-digital.fr.</p>
+    </noscript>
+  </div>
+</form>
+<script>
+  import { track } from "../lib/analytics";
+  const form = document.querySelector<HTMLFormElement>(".contact-form");
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (form.dataset.enabled !== "true" || !form.reportValidity()) return;
+    const button = form.querySelector<HTMLButtonElement>(
+      'button[type="submit"]',
+    )!;
+    const status = form.querySelector<HTMLParagraphElement>('[role="status"]')!;
+    button.disabled = true;
+    status.hidden = false;
+    status.textContent = "Envoi en cours…";
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        signal: AbortSignal.timeout(20000),
+      });
+      const result = await response.json();
+      if (!response.ok || result.ok !== true) throw new Error();
+      status.textContent =
+        "Votre demande a été acceptée par le serveur de messagerie. Merci pour votre message.";
+      track("form_submit_success");
+      form.reset();
+    } catch {
+      status.textContent =
+        "L’envoi n’a pas pu être confirmé. Vos informations restent dans le formulaire. Vous pouvez nous écrire à contact@aimy-digital.fr ou nous appeler.";
+    } finally {
+      button.disabled = false;
+    }
+  });
+</script>

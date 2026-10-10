@@ -1,0 +1,43 @@
+---
+import SEOHead from "../components/SEOHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "@fontsource/manrope/latin-400.css";
+import "@fontsource/manrope/latin-500.css";
+import "@fontsource/manrope/latin-600.css";
+import "@fontsource/manrope/latin-700.css";
+import "@fontsource/manrope/latin-800.css";
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+  image?: string;
+  article?: { date: string; modified: string };
+  cinematicHero?: boolean;
+}
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <SEOHead {...Astro.props} />
+  </head>
+  <body class:list={{ "cinematic-home": Astro.props.cinematicHero }}>
+    <Header cinematic={Astro.props.cinematicHero} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+<script>
+  import { track } from "../lib/analytics";
+  document
+    .querySelectorAll<HTMLAnchorElement>('a[href^="tel:"],a[href^="mailto:"]')
+    .forEach((link) =>
+      link.addEventListener("click", () =>
+        track(link.href.startsWith("tel:") ? "phone_click" : "email_click"),
+      ),
+    );
+</script>

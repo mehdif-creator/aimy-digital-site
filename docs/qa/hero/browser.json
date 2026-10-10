@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-10T15:49:34.359Z",
+  "results": [
+    {
+      "check": "scroll-desktop",
+      "before": {
+        "opacity": "1",
+        "transform": "none"
+      },
+      "after": {
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, 0, -90)"
+      },
+      "settle": 0.4996
+    },
+    {
+      "check": "hover-desktop",
+      "changed": true
+    },
+    {
+      "check": "axe-home",
+      "violations": []
+    },
+    {
+      "check": "responsive-reduced",
+      "width": 320,
+      "overflow": false,
+      "staticScene": "reduced"
+    },
+    {
+      "check": "responsive-reduced",
+      "width": 375,
+      "overflow": false,
+      "staticScene": "reduced"
+    },
+    {
+      "check": "responsive-reduced",
+      "width": 390,
+      "overflow": false,
+      "staticScene": "reduced"
+    },
+    {
+      "check": "responsive-reduced",
+      "width": 768,
+      "overflow": false,
+      "staticScene": "reduced"
+    },
+    {
+      "check": "responsive-reduced",
+      "width": 1024,
+      "overflow": false,
+      "staticScene": "reduced"
+    },
+    {
+      "check": "responsive-reduced",
+      "width": 1440,
+      "overflow": false,
+      "staticScene": "reduced"
+    },
+    {
+      "check": "scroll-mobile-touch",
+      "settle": 0.841
+    },
+    {
+      "check": "sans-javascript",
+      "titleVisible": true,
+      "ctaVisible": true
+    }
+  ],
+  "errors": []
+}

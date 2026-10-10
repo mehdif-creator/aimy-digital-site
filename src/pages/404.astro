@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+---
+
+<BaseLayout
+  title="Page introuvable"
+  description="Cette adresse ne correspond pas à une page disponible. Retrouvez les prestations ou contactez Aimy Digital."
+  noindex
+>
+  <section class="container empty-page">
+    <p>Erreur 404</p>
+    <h1>Cette page n’est pas ici.</h1>
+    <p>
+      L’adresse a peut-être changé. Retrouvez les prestations ou dites-nous ce
+      que vous cherchiez.
+    </p>
+    <div class="actions">
+      <Button href="/">Retour à l’accueil</Button>
+      <Button secondary href="/contact/">
+        Nous contacter
+      </Button>
+    </div>
+  </section>
+</BaseLayout>

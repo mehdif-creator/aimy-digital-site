@@ -1,0 +1,14 @@
+{
+  "title": "My NutriZen",
+  "path": "my-nutrizen",
+  "category": "Application web",
+  "website": "https://mynutrizen.fr/",
+  "description": "Une application pour organiser les repas et les courses.",
+  "mission": "Réunir menus personnalisés, recettes et listes de courses dans une interface responsive.",
+  "details": [
+    "Une organisation des menus selon les préférences.",
+    "Des recettes et une liste de courses regroupées.",
+    "Une interface adaptée à la consultation sur mobile."
+  ],
+  "image": "/images/projects/my-nutrizen.webp"
+}

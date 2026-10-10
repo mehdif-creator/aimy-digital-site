@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const posts = (await getCollection("posts")).sort((a, b) =>
+  b.data.date.localeCompare(a.data.date),
+);
+---
+
+<BaseLayout
+  title="Le journal : sites web, SEO et vie digitale"
+  description="Les articles d’Aimy Digital pour comprendre la création de sites, le référencement, la maintenance et les outils numériques."
+>
+  <div class="container">
+    <header class="page-intro">
+      <p class="breadcrumb">
+        <a href="/">Accueil</a> / Le journal
+      </p>
+      <h1>Comprendre avant de choisir.</h1>
+      <p class="lead">
+        Sites web, référencement et outils numériques : des sujets pour éclairer
+        vos décisions.
+      </p>
+    </header>
+    <section class="blog-grid section" aria-label="Articles">
+      {posts.map(({ data }) => (
+        <article class="article-card">
+          <time datetime={data.date}>
+            {new Date(data.date).toLocaleDateString("fr-FR", {
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+            })}
+          </time>
+          <h2>
+            <a href={`/${data.path}/`}>{data.title}</a>
+          </h2>
+          <p>{data.description}</p>
+          <a class="text-link" href={`/${data.path}/`}>
+            Lire l’article
+          </a>
+        </article>
+      ))}
+    </section>
+  </div>
+</BaseLayout>
