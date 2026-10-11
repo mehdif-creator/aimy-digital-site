@@ -1,0 +1,313 @@
+---
+import { Picture, Image } from "astro:assets";
+import home from "../../public/images/cases/ht/home.webp";
+import product from "../../public/images/cases/ht/product.webp";
+import mobile from "../../public/images/cases/ht/mobile.webp";
+import "../styles/ht-case.css";
+---
+
+<article class="ht-case" data-ht-case>
+  <header class="ht-intro">
+    <div class="container">
+      <nav class="ht-breadcrumb" aria-label="Fil d’Ariane">
+        <a href="/portfolio/">Toutes les réalisations</a>
+        <span aria-hidden="true">/</span>
+        <span>HT Créa Jeux</span>
+      </nav>
+      <div class="ht-title-row">
+        <p>E-commerce · Jeux pédagogiques</p>
+        <p>
+          Un univers à découvrir.
+          <br />
+          Une boutique à parcourir.
+        </p>
+      </div>
+      <h1>
+        HT Créa <span>Jeux.</span>
+      </h1>
+      <div class="ht-opening">
+        <p class="ht-hook">
+          Apprendre.
+          <br />
+          Jouer.
+          <br />
+          <em>Recommencer.</em>
+        </p>
+        <div class="ht-opening-copy">
+          <p>
+            Une boutique qui met le jeu au premier plan pour faire découvrir une
+            autre façon d’aborder les tables de multiplication.
+          </p>
+          <a class="ht-link" href="#ht-parcours">
+            Explorer le projet <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+      <figure class="ht-main-view">
+        <div class="ht-window-label">
+          <span>htcreajeux.fr</span>
+          <span>La découverte</span>
+        </div>
+        <Picture
+          src={home}
+          width={1440}
+          widths={[480, 800, 1200, 1600, 2400]}
+          sizes="(max-width: 759px) 90vw, (min-width: 1440px) 1120px, 80vw"
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          quality={85}
+          loading="eager"
+          fetchpriority="high"
+          alt="Accueil réel HT Créa Jeux, avec son univers orange et une famille autour des jeux."
+        />
+        <figcaption>Une porte d’entrée dans l’univers de la marque.</figcaption>
+      </figure>
+      <span class="ht-times" aria-hidden="true">
+        ×
+      </span>
+    </div>
+  </header>
+  <section
+    class="ht-context"
+    id="ht-parcours"
+    aria-labelledby="ht-context-title"
+  >
+    <div class="container ht-context-grid">
+      <p class="ht-kicker">Le point de départ</p>
+      <div>
+        <h2 id="ht-context-title">
+          Faire comprendre le jeu.
+          <br />
+          <span>Donner envie de le découvrir.</span>
+        </h2>
+        <p class="ht-lead">
+          HT Créa Jeux propose des jeux autour des tables de multiplication. Le
+          site présente cet univers pédagogique et relie l’explication des jeux
+          à leur découverte en boutique.
+        </p>
+      </div>
+      <dl class="ht-scope">
+        <div>
+          <dt>Projet</dt>
+          <dd>Boutique en ligne</dd>
+        </div>
+        <div>
+          <dt>Mission</dt>
+          <dd>
+            Présentation des jeux
+            <br />
+            Parcours vers le catalogue
+          </dd>
+        </div>
+        <div>
+          <dt>Supports</dt>
+          <dd>Ordinateur & mobile</dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+  <section class="ht-approach container" aria-labelledby="ht-approach-title">
+    <div class="ht-section-heading">
+      <p class="ht-kicker">Notre approche</p>
+      <h2 id="ht-approach-title">
+        Le plaisir de jouer,
+        <br />
+        le chemin pour choisir.
+      </h2>
+    </div>
+    <ol class="ht-decisions">
+      <li>
+        <span class="ht-step">01</span>
+        <h3>Installer l’univers.</h3>
+        <p>
+          Une entrée visuelle centrée sur les jeux et le partage en famille.
+          L’orange et les illustrations donnent au site son caractère.
+        </p>
+      </li>
+      <li>
+        <span class="ht-step">02</span>
+        <h3>Expliquer simplement.</h3>
+        <p>
+          Les présentations distinguent les jeux et leur utilisation.
+          L’information accompagne la découverte avant l’accès aux produits.
+        </p>
+      </li>
+      <li>
+        <span class="ht-step">03</span>
+        <h3>Relier à la boutique.</h3>
+        <p>
+          Les liens vers les fiches produits prolongent la lecture. Le visiteur
+          peut passer de l’univers de marque au détail du jeu.
+        </p>
+      </li>
+    </ol>
+  </section>
+  <section class="ht-showcase" aria-labelledby="ht-showcase-title">
+    <div class="container">
+      <div class="ht-section-heading">
+        <div>
+          <p class="ht-kicker">Le site en situation</p>
+          <h2 id="ht-showcase-title">
+            Du premier regard
+            <br />
+            <span>au choix du jeu.</span>
+          </h2>
+        </div>
+        <button class="ht-motion" type="button" aria-pressed="false" hidden>
+          Réduire les animations
+        </button>
+      </div>
+      <div class="ht-exhibit" data-ht-exhibit>
+        <div class="ht-exhibit-notes">
+          <div class="ht-note">
+            <span>01 / Comprendre</span>
+            <h3>Le jeu, en détail.</h3>
+            <p>
+              La fiche Easy Peasy Multi associe le visuel du produit, sa
+              présentation et les informations pour le choisir.
+            </p>
+          </div>
+          <div class="ht-note">
+            <span>02 / Parcourir</span>
+            <h3>Une lecture continue.</h3>
+            <p>
+              Le catalogue et les fiches produits donnent une place centrale aux
+              jeux. Les actions restent proches de leur présentation.
+            </p>
+          </div>
+          <div class="ht-note">
+            <span>03 / Emporter</span>
+            <h3>
+              Le même univers.
+              <br />
+              Un autre écran.
+            </h3>
+            <p>
+              La version mobile conserve l’identité de la boutique et adapte la
+              navigation à un écran étroit.
+            </p>
+          </div>
+        </div>
+        <div class="ht-exhibit-stage">
+          <div class="ht-stage-orbit" aria-hidden="true"></div>
+          <figure class="ht-desktop">
+            <div class="ht-window-label">
+              <span>htcreajeux.fr</span>
+              <span>Easy Peasy Multi</span>
+            </div>
+            <div class="ht-desktop-window">
+              <Image
+                src={product}
+                width={1440}
+                widths={[640, 960, 1440, 1920]}
+                sizes="(max-width: 759px) 90vw, (min-width: 1440px) 760px, 55vw"
+                quality={90}
+                loading="lazy"
+                alt="Fiche produit réelle Easy Peasy Multi : visuel du jeu et présentation dans la boutique."
+              />
+            </div>
+            <figcaption>La fiche produit sur ordinateur.</figcaption>
+          </figure>
+          <figure class="ht-mobile">
+            <Image
+              src={mobile}
+              width={390}
+              widths={[260, 390, 520, 780]}
+              sizes="(max-width: 759px) 140px, 210px"
+              quality={90}
+              loading="lazy"
+              alt="Accueil réel HT Créa Jeux sur téléphone, avec sa navigation et son introduction adaptées."
+            />
+            <figcaption>Le site sur mobile.</figcaption>
+          </figure>
+          <div class="ht-exhibit-progress" aria-hidden="true">
+            <i></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ht-details container" aria-labelledby="ht-details-title">
+    <div class="ht-section-heading">
+      <p class="ht-kicker">Les détails qui relient l’ensemble</p>
+      <h2 id="ht-details-title">
+        Une identité qui se joue
+        <br />
+        <span>sur chaque écran.</span>
+      </h2>
+    </div>
+    <div class="ht-detail-grid">
+      <div
+        class="ht-palette"
+        aria-label="Palette inspirée des couleurs du site"
+      >
+        <span class="ht-swatch-orange">Un orange énergique.</span>
+        <span class="ht-swatch-paper">Des fonds lumineux.</span>
+        <p>
+          Une couleur de marque qui accompagne la navigation et les actions.
+        </p>
+      </div>
+      <div class="ht-detail-copy">
+        <h3>Voir, lire, puis choisir.</h3>
+        <p>
+          Les photographies et illustrations présentent le produit. Les titres
+          guident la lecture, les explications précisent l’usage et les liens
+          conduisent vers la boutique.
+        </p>
+        <h3>La découverte se prolonge.</h3>
+        <p>
+          Le site rassemble une boutique, des pages de présentation, un blog et
+          un accès au contact. Autant de points d’entrée visibles dans sa
+          navigation.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="ht-outcome">
+    <div class="container">
+      <p class="ht-kicker">Le projet, aujourd’hui</p>
+      <h2>
+        Un univers de jeu.
+        <br />
+        <span>Une boutique à explorer.</span>
+      </h2>
+      <div class="ht-outcome-bottom">
+        <p>
+          Retrouvez les jeux, leurs présentations et le catalogue directement
+          sur le site HT Créa Jeux.
+        </p>
+        <a
+          class="ht-external"
+          href="https://htcreajeux.fr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visiter HT Créa Jeux <span aria-hidden="true">↗</span>
+          <span class="sr-only"> (nouvel onglet)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="ht-next container">
+    <div>
+      <p class="ht-kicker">Et votre univers ?</p>
+      <h2>
+        Donnons-lui
+        <br />
+        une place à part.
+      </h2>
+    </div>
+    <div>
+      <a class="ht-contact" href="/contact/">
+        Discuter de mon projet <span aria-hidden="true">↗</span>
+      </a>
+      <a class="ht-return" href="/portfolio/">
+        Retour aux réalisations
+      </a>
+    </div>
+  </section>
+</article>
+<script>
+  import { initHtCase } from "../lib/ht-case";
+  initHtCase();
+</script>

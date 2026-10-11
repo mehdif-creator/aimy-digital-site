@@ -1,5 +1,17 @@
 # Progression de la refonte Aimy Digital
 
+## Gate 2 — HT Créa Jeux — prêt pour validation visuelle, 11 octobre 2026
+
+Réserves Gate 1 traitées et enregistrées dans 21dc128, après approbation visuelle de 11acdb9. Mesures et limite autour du seuil LCP dans docs/qa/gate1-technical/rapport.md.
+
+Un seul cas réalisé : /portfolio/ht-crea-jeux/. Introduction typographique bleu nuit/orange, contexte, approche, captures réelles desktop/produit/mobile, ScrollTrigger contrôlé sans pin, détails de l’interface, lien externe et contact. Sources fraîches consignées. Aucune métrique, fonctionnalité ou témoignage inventé.
+
+Recette Chrome 320/375/390/768/1440 px, clavier, mouvements réduits, scroll retour et sans JS ; zéro erreur console et zéro violation axe. Build production 40 pages, audit et 9 tests réussis, Astro check 69 fichiers sans diagnostic. Lighthouse mobile local : performance 98, accessibilité 100, bonnes pratiques 100 ; LCP 2,366 s, CLS 0,00913, TBT 0 ms. Rapport : docs/qa/ht-case/rapport.md.
+
+Aperçu : http://127.0.0.1:4322/portfolio/ht-crea-jeux/?cas=reference
+
+**STOP — attendre l’approbation visuelle de HT Créa Jeux avant Gate 3.** Les trois autres cas, le design approuvé de l’accueil, les articles et la migration SEO restent inchangés. Aucun déploiement.
+
 ## 11 octobre 2026 — accueil approuvé et réserves techniques traitées
 
 Le design de 11acdb9 est explicitement approuvé. Le conserver. LCP corrigé par variantes et encodage des images du hero et initialisation différée des animations des sections suivantes ; aucune refonte visuelle.

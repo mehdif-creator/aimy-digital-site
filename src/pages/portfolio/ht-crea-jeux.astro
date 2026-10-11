@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HtCaseStudy from "../../components/HtCaseStudy.astro";
+const { data } = (await getCollection("cases")).find(
+  (project) => project.data.path === "ht-crea-jeux",
+)!;
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  image={data.image}
+>
+  <HtCaseStudy />
+</BaseLayout>

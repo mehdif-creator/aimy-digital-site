@@ -4,10 +4,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Button from "../../components/Button.astro";
 import CTA from "../../components/CTA.astro";
 export async function getStaticPaths() {
-  return (await getCollection("cases")).map((project) => ({
-    params: { slug: project.data.path },
-    props: { project },
-  }));
+  return (await getCollection("cases"))
+    .filter((project) => project.data.path !== "ht-crea-jeux")
+    .map((project) => ({
+      params: { slug: project.data.path },
+      props: { project },
+    }));
 }
 const { data } = Astro.props.project;
 ---
