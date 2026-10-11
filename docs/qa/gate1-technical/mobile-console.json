@@ -1,0 +1,531 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "images": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/my-nutrizen.CxzqP2vT_Z1WPB9b.webp",
+          "natural": 200,
+          "box": 172.9411163330078,
+          "sizes": "(max-width: 759px) 200px, 490px"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ht-crea-jeux.CQc0tJ3__Z1H4LLJ.webp",
+          "natural": 200,
+          "box": 158.03237915039062,
+          "sizes": "(max-width: 759px) 200px, 490px"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/sc-renovation.BwcJQh6y_23eYrT.avif",
+          "natural": 250,
+          "box": 232.34771728515625,
+          "sizes": "(max-width: 360px) 250px, (max-width: 759px) 280px, 490px"
+        }
+      ],
+      "menuTargets": [
+        {
+          "text": "Menu ☰",
+          "height": 44,
+          "width": 71.953125
+        },
+        {
+          "text": "Sites internet",
+          "height": 49.59375,
+          "width": 230
+        },
+        {
+          "text": "SEO local",
+          "height": 49.59375,
+          "width": 230
+        },
+        {
+          "text": "Réalisations",
+          "height": 49.59375,
+          "width": 230
+        },
+        {
+          "text": "L’agence",
+          "height": 49.59375,
+          "width": 230
+        },
+        {
+          "text": "Le journal",
+          "height": 49.59375,
+          "width": 230
+        },
+        {
+          "text": "Discuter de mon projet",
+          "height": 49.59375,
+          "width": 230
+        }
+      ],
+      "targets": [
+        {
+          "text": "01Créer un site.Création de sites internet+",
+          "width": 280,
+          "height": 65.1875
+        },
+        {
+          "text": "02Faire évoluer.Refonte de sites internet+",
+          "width": 280,
+          "height": 65.1875
+        },
+        {
+          "text": "03Être trouvé.Référencement SEO local+",
+          "width": 280,
+          "height": 65.1875
+        },
+        {
+          "text": "Quel budget prévoir pour mon site ?+",
+          "width": 280,
+          "height": 98
+        },
+        {
+          "text": "Pouvez-vous reprendre mon site actuel ?+",
+          "width": 280,
+          "height": 98
+        },
+        {
+          "text": "Combien de temps prend la création ?+",
+          "width": 280,
+          "height": 98
+        },
+        {
+          "text": "Pourrai-je faire évoluer mon site ?+",
+          "width": 280,
+          "height": 98
+        },
+        {
+          "text": "Le référencement et la maintenance sont-ils inclus ?+",
+          "width": 280,
+          "height": 98
+        },
+        {
+          "text": "Discuter de mon projet ↗",
+          "width": 263.015625,
+          "height": 79
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.DFxSqRFc.css",
+          "start": 8.899999999906868,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/index.Csee5ntS.css",
+          "start": 8.899999999906868,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/CinematicHero.astro_astro_type_script_index_0_lang.r0jJDCgw.js",
+          "start": 9.100000000093132,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/HomeExperience.astro_astro_type_script_index_0_lang.BLCLdiQM.js",
+          "start": 9.100000000093132,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/CookieConsent.astro_astro_type_script_index_0_lang.Cgokk9ss.js",
+          "start": 9.200000000186265,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.1eLn_ZZD.js",
+          "start": 9.200000000186265,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollTrigger.CoLNslfx.js",
+          "start": 11.700000000186265,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/analytics.Bfqu0c-l.js",
+          "start": 11.899999999906868,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/manrope-latin-400-normal.PaqtzbVb.woff2",
+          "start": 13.299999999813735,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/manrope-latin-600-normal.4f0koTD-.woff2",
+          "start": 13.299999999813735,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/manrope-latin-800-normal.BfWYOv1c.woff2",
+          "start": 13.399999999906868,
+          "duration": 0,
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "images": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/my-nutrizen.CxzqP2vT_Z1WPB9b.webp",
+          "natural": 200,
+          "box": 197.64697265625,
+          "sizes": "(max-width: 759px) 200px, 490px"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ht-crea-jeux.CQc0tJ3__Z1H4LLJ.webp",
+          "natural": 200,
+          "box": 180.60842895507812,
+          "sizes": "(max-width: 759px) 200px, 490px"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/sc-renovation.BwcJQh6y_23eYrT.avif",
+          "natural": 280,
+          "box": 265.5402526855469,
+          "sizes": "(max-width: 360px) 250px, (max-width: 759px) 280px, 490px"
+        }
+      ],
+      "menuTargets": [
+        {
+          "text": "Menu ☰",
+          "height": 44,
+          "width": 71.953125
+        },
+        {
+          "text": "Sites internet",
+          "height": 49.59375,
+          "width": 285
+        },
+        {
+          "text": "SEO local",
+          "height": 49.59375,
+          "width": 285
+        },
+        {
+          "text": "Réalisations",
+          "height": 49.59375,
+          "width": 285
+        },
+        {
+          "text": "L’agence",
+          "height": 49.59375,
+          "width": 285
+        },
+        {
+          "text": "Le journal",
+          "height": 49.59375,
+          "width": 285
+        },
+        {
+          "text": "Discuter de mon projet",
+          "height": 49.59375,
+          "width": 285
+        }
+      ],
+      "targets": [
+        {
+          "text": "01Créer un site.Création de sites internet+",
+          "width": 335,
+          "height": 65.1875
+        },
+        {
+          "text": "02Faire évoluer.Refonte de sites internet+",
+          "width": 335,
+          "height": 65.1875
+        },
+        {
+          "text": "03Être trouvé.Référencement SEO local+",
+          "width": 335,
+          "height": 65.1875
+        },
+        {
+          "text": "Quel budget prévoir pour mon site ?+",
+          "width": 335,
+          "height": 86
+        },
+        {
+          "text": "Pouvez-vous reprendre mon site actuel ?+",
+          "width": 335,
+          "height": 98
+        },
+        {
+          "text": "Combien de temps prend la création ?+",
+          "width": 335,
+          "height": 86
+        },
+        {
+          "text": "Pourrai-je faire évoluer mon site ?+",
+          "width": 335,
+          "height": 86
+        },
+        {
+          "text": "Le référencement et la maintenance sont-ils inclus ?+",
+          "width": 335,
+          "height": 98
+        },
+        {
+          "text": "Discuter de mon projet ↗",
+          "width": 263.015625,
+          "height": 79
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.DFxSqRFc.css",
+          "start": 5.5,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/index.Csee5ntS.css",
+          "start": 5.5,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/CinematicHero.astro_astro_type_script_index_0_lang.r0jJDCgw.js",
+          "start": 5.7000000001862645,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/HomeExperience.astro_astro_type_script_index_0_lang.BLCLdiQM.js",
+          "start": 5.7999999998137355,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/CookieConsent.astro_astro_type_script_index_0_lang.Cgokk9ss.js",
+          "start": 5.7999999998137355,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.1eLn_ZZD.js",
+          "start": 5.7999999998137355,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollTrigger.CoLNslfx.js",
+          "start": 8.100000000093132,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/analytics.Bfqu0c-l.js",
+          "start": 8.100000000093132,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/manrope-latin-400-normal.PaqtzbVb.woff2",
+          "start": 9.399999999906868,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/manrope-latin-600-normal.4f0koTD-.woff2",
+          "start": 9.5,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/manrope-latin-800-normal.BfWYOv1c.woff2",
+          "start": 9.5,
+          "duration": 0,
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "images": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/my-nutrizen.CxzqP2vT_Z1WPB9b.webp",
+          "natural": 200,
+          "box": 197.64697265625,
+          "sizes": "(max-width: 759px) 200px, 490px"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ht-crea-jeux.CQc0tJ3__Z1H4LLJ.webp",
+          "natural": 200,
+          "box": 180.60842895507812,
+          "sizes": "(max-width: 759px) 200px, 490px"
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/sc-renovation.BwcJQh6y_23eYrT.avif",
+          "natural": 280,
+          "box": 265.5402526855469,
+          "sizes": "(max-width: 360px) 250px, (max-width: 759px) 280px, 490px"
+        }
+      ],
+      "menuTargets": [
+        {
+          "text": "Menu ☰",
+          "height": 44,
+          "width": 71.953125
+        },
+        {
+          "text": "Sites internet",
+          "height": 49.59375,
+          "width": 300
+        },
+        {
+          "text": "SEO local",
+          "height": 49.59375,
+          "width": 300
+        },
+        {
+          "text": "Réalisations",
+          "height": 49.59375,
+          "width": 300
+        },
+        {
+          "text": "L’agence",
+          "height": 49.59375,
+          "width": 300
+        },
+        {
+          "text": "Le journal",
+          "height": 49.59375,
+          "width": 300
+        },
+        {
+          "text": "Discuter de mon projet",
+          "height": 49.59375,
+          "width": 300
+        }
+      ],
+      "targets": [
+        {
+          "text": "01Créer un site.Création de sites internet+",
+          "width": 350,
+          "height": 65.1875
+        },
+        {
+          "text": "02Faire évoluer.Refonte de sites internet+",
+          "width": 350,
+          "height": 65.1875
+        },
+        {
+          "text": "03Être trouvé.Référencement SEO local+",
+          "width": 350,
+          "height": 65.1875
+        },
+        {
+          "text": "Quel budget prévoir pour mon site ?+",
+          "width": 350,
+          "height": 86
+        },
+        {
+          "text": "Pouvez-vous reprendre mon site actuel ?+",
+          "width": 350,
+          "height": 86
+        },
+        {
+          "text": "Combien de temps prend la création ?+",
+          "width": 350,
+          "height": 86
+        },
+        {
+          "text": "Pourrai-je faire évoluer mon site ?+",
+          "width": 350,
+          "height": 86
+        },
+        {
+          "text": "Le référencement et la maintenance sont-ils inclus ?+",
+          "width": 350,
+          "height": 98
+        },
+        {
+          "text": "Discuter de mon projet ↗",
+          "width": 263.015625,
+          "height": 79
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.DFxSqRFc.css",
+          "start": 7.7999999998137355,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/index.Csee5ntS.css",
+          "start": 7.7999999998137355,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/CinematicHero.astro_astro_type_script_index_0_lang.r0jJDCgw.js",
+          "start": 8.100000000093132,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/HomeExperience.astro_astro_type_script_index_0_lang.BLCLdiQM.js",
+          "start": 8.100000000093132,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/CookieConsent.astro_astro_type_script_index_0_lang.Cgokk9ss.js",
+          "start": 8.199999999720603,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/BaseLayout.astro_astro_type_script_index_0_lang.1eLn_ZZD.js",
+          "start": 8.199999999720603,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/ScrollTrigger.CoLNslfx.js",
+          "start": 10.799999999813735,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/analytics.Bfqu0c-l.js",
+          "start": 11.100000000093132,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/manrope-latin-400-normal.PaqtzbVb.woff2",
+          "start": 12.399999999906868,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/manrope-latin-600-normal.4f0koTD-.woff2",
+          "start": 12.5,
+          "duration": 0,
+          "bytes": 0
+        },
+        {
+          "url": "http://127.0.0.1:4322/_astro/manrope-latin-800-normal.BfWYOv1c.woff2",
+          "start": 12.5,
+          "duration": 0,
+          "bytes": 0
+        }
+      ]
+    }
+  ],
+  "consoleMessages": [],
+  "errors": []
+}

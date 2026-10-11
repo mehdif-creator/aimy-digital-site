@@ -200,5 +200,21 @@ const steps = [
 </div>
 <script>
   import { initHomeExperience } from "../lib/home-experience";
-  initHomeExperience();
+  const experience = document.querySelector("[data-home-experience]");
+  if (experience) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        observer.disconnect();
+        initHomeExperience();
+      },
+      { rootMargin: "600px" },
+    );
+    observer.observe(experience);
+    document.addEventListener(
+      "astro:before-swap",
+      () => observer.disconnect(),
+      { once: true },
+    );
+  }
 </script>

@@ -15,6 +15,7 @@ for (const width of [1440, 390]) {
   const p = await c.newPage();
   p.on("pageerror", (e) => errors.push(e.message));
   await p.goto("http://127.0.0.1:4322/", { waitUntil: "networkidle" });
+  await p.locator(".home-services").scrollIntoViewIfNeeded();
   await p.waitForFunction(
     () =>
       document.querySelector("[data-home-experience]")?.dataset.motion ===

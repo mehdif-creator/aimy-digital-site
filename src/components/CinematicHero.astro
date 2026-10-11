@@ -1,9 +1,10 @@
 ---
 import "../styles/cinematic-hero.css";
-import { Image } from "astro:assets";
+import { Image, Picture } from "astro:assets";
 import sc from "../../public/images/showcase/sc-renovation.webp";
 import nutri from "../../public/images/showcase/my-nutrizen.webp";
 import games from "../../public/images/showcase/ht-crea-jeux.webp";
+import phone from "../../public/images/hero/sc-renovation-mobile.webp";
 ---
 
 <section
@@ -81,7 +82,7 @@ import games from "../../public/images/showcase/ht-crea-jeux.webp";
                 fetchpriority="low"
                 width={720}
                 widths={[360, 480, 720, 1000]}
-                sizes="(max-width: 759px) 240px, 490px"
+                sizes="(max-width: 759px) 200px, 490px"
                 format="webp"
                 quality={90}
                 alt="Capture du site My NutriZen"
@@ -100,7 +101,7 @@ import games from "../../public/images/showcase/ht-crea-jeux.webp";
                 fetchpriority="low"
                 width={720}
                 widths={[360, 480, 720, 1000]}
-                sizes="(max-width: 759px) 240px, 490px"
+                sizes="(max-width: 759px) 200px, 490px"
                 format="webp"
                 quality={90}
                 alt="Capture de la boutique HT Créa Jeux"
@@ -118,13 +119,14 @@ import games from "../../public/images/showcase/ht-crea-jeux.webp";
               <i></i>
             </div>
             <div class="shot-window">
-              <Image
+              <Picture
                 src={sc}
                 width={720}
-                widths={[360, 480, 720, 1000]}
-                sizes="(max-width: 759px) 320px, 490px"
-                format="webp"
-                quality={90}
+                widths={[360, 480, 560, 720, 1000]}
+                sizes="(max-width: 360px) 250px, (max-width: 759px) 280px, 490px"
+                formats={["avif", "webp"]}
+                fallbackFormat="webp"
+                quality={65}
                 alt="Site SC Rénovation : présentation du métier, réalisations et demande de devis"
                 loading="eager"
                 fetchpriority="high"
@@ -138,10 +140,14 @@ import games from "../../public/images/showcase/ht-crea-jeux.webp";
           </figure>
           <figure class="shot-phone">
             <div class="phone-speaker" aria-hidden="true"></div>
-            <img
-              src="/images/hero/sc-renovation-mobile.webp"
-              width="390"
-              height="844"
+            <Image
+              src={phone}
+              width={390}
+              widths={[160, 288, 390]}
+              sizes="(max-width: 759px) 80px, 144px"
+              format="webp"
+              quality={90}
+              fetchpriority="low"
               alt="Version mobile réelle de SC Rénovation avec les accès au devis et à l’appel"
               loading="eager"
               decoding="async"

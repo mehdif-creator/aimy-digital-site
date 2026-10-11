@@ -1,5 +1,15 @@
 # Progression de la refonte Aimy Digital
 
+## 11 octobre 2026 — accueil approuvé et réserves techniques traitées
+
+Le design de 11acdb9 est explicitement approuvé. Le conserver. LCP corrigé par variantes et encodage des images du hero et initialisation différée des animations des sections suivantes ; aucune refonte visuelle.
+
+Trois mesures mobiles comparables : avant 3,165 / 3,167 / 3,167 s ; après 2,470 / 2,476 / 2,504 s, médiane 2,476 s. Marge faible autour de 2,5 s, troisième run à +4 ms. Performance 97, accessibilité 100 ; audit résolution My NutriZen signalé sur la taille avant transformation, détail dans docs/qa/gate1-technical/rapport.md. Aucun autre résultat terrain inféré.
+
+Recette 320/375/390 px, console propre, axe, 32 contrôles navigateur, 9 tests, Astro check et build/audit production réussis. Aucun message console reproduit ; les messages historiques non fournis restent non attribués.
+
+La dernière instruction autorise maintenant Gate 2 : UN cas complet HT Créa Jeux. Ne pas appliquer aux trois autres projets. STOP pour approbation visuelle de HT une fois livré. Blog, migration SEO, architecture portfolio et design accueil à préserver ; aucun déploiement.
+
 ## Jalon 1 — accueil premium — 11 octobre 2026 — en attente de validation visuelle
 
 Instruction prioritaire : « Premium Visual Redesign: Homepage & Project Case Studies ». Seul le Gate 1 est réalisé. **STOP : ne pas commencer HT Créa Jeux avant approbation explicite de cet accueil ; les trois autres cas attendent ensuite la validation du cas HT.**
@@ -88,4 +98,3 @@ Conserver séparément l'inventaire SEO : une exclusion commerciale n'autorise n
 ## Blocages de publication
 
 Sauvegarde WordPress restaurable et racine documentaire non vérifiées ; SMTP/livraison et redirections Apache non testés ; mentions légales actuelles à confirmer ; fonctions des pages `/app/`, `/optimisation-webinaire/` et `/youtube-competitor-radar/` à auditer. 20 médias historiques récupérés sur 114 recensés, flux/archives/liens entrants à qualifier. Revue éditoriale, validation du design et accord explicite de production encore requis. Voir `docs/release-gates.json` : aucune validation cochée sans preuve.
-
