@@ -1,5 +1,16 @@
 # Progression de la refonte Aimy Digital
 
+## HT approuvé, préparation My NutriZen — 11 octobre 2026
+
+L’utilisateur approuve ee8b165. Ne plus refaire la page HT. Dernières retouches : nom officiel « HT Créa Jeux », fiche Multi Speedy dans le showcase et Pack Duo dans le détail identité ; Easy Peasy conservé uniquement dans l’approche. Captures publiques authentiques 2880×2200, pas de refonte.
+
+Recette HT : 5 largeurs 320/375/390/768/1440, axe et console sans erreur, images DPR2 suffisantes, 9 tests réussis, build production/audit 40 pages OK. LCP mobile 2,463 s, performance 97/accessibilité 100/bonnes pratiques 100 ; élément LCP toujours la capture d’accueil HT. Aucun déploiement.
+
+My NutriZen : autorisé comme prochain cas, avec sa propre direction. Inspection publique et contrat préparés dans docs/brand/nutrizen-case-direction.md et docs/superpowers/plans/2026-10-11-nutrizen-case.md. L’utilisateur a choisi de fournir un dossier ou un accès de démonstration, mais le chemin/URL n’est pas encore indiqué. Aucun onglet My NutriZen connecté trouvé dans le navigateur disponible. L’aperçu public 1394×1920 porte encore « Liste de courses (En Développement) » : attendre les vrais écrans avant de représenter les fonctionnalités connectées actuelles. Ne pas inventer de captures. Route My NutriZen existante conservée ; son nouveau cas n’est pas terminé.
+
+Continuer dès réception du dossier/accès, puis tests/build, performance, commit et arrêt pour approbation My NutriZen. SC Rénovation et Lambert Digital Pulse restent hors périmètre.
+
+
 ## HT Créa Jeux — raffinements ciblés, 11 octobre 2026
 
 Direction de 9a413a7 approuvée avec réserves mineures. Architecture conservée ; approche illustrée par la vraie fiche produit, identité montrée à travers la boîte et les cartes, captures planes et translations contrôlées, CTA final affiné. Composant CaseImage plafonné aux dimensions natives et contrat des futurs cas documenté. Les trois autres cas restent inchangés.

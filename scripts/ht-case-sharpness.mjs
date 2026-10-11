@@ -33,7 +33,7 @@ for (const width of [320, 375, 390, 1440]) {
   await c.close();
 }
 const sources = [];
-for (const f of ["home", "product", "mobile"]) {
+for (const f of ["home", "product", "mobile", "speedy", "duo"]) {
   const m = await sharp("public/images/cases/ht/" + f + ".webp").metadata();
   sources.push({ file: f, width: m.width, height: m.height });
 }

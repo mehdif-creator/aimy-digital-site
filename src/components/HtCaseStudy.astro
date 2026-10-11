@@ -3,6 +3,8 @@ import { Picture } from "astro:assets";
 import CaseImage from "./CaseImage.astro";
 import home from "../../public/images/cases/ht/home.webp";
 import product from "../../public/images/cases/ht/product.webp";
+import speedy from "../../public/images/cases/ht/speedy.webp";
+import duo from "../../public/images/cases/ht/duo.webp";
 import mobile from "../../public/images/cases/ht/mobile.webp";
 import "../styles/ht-case.css";
 ---
@@ -24,7 +26,7 @@ import "../styles/ht-case.css";
         </p>
       </div>
       <h1>
-        HT Créa <span>Jeux.</span>
+        HT Créa <span>Jeux</span>
       </h1>
       <div class="ht-opening">
         <p class="ht-hook">
@@ -177,7 +179,7 @@ import "../styles/ht-case.css";
             <span>01 / Comprendre</span>
             <h3>Le jeu, en détail.</h3>
             <p>
-              La fiche Easy Peasy Multi associe le visuel du produit, sa
+              La fiche Multi Speedy associe le visuel du produit, sa
               présentation et les informations pour le choisir.
             </p>
           </div>
@@ -207,17 +209,17 @@ import "../styles/ht-case.css";
           <figure class="ht-desktop">
             <div class="ht-window-label">
               <span>htcreajeux.fr</span>
-              <span>Easy Peasy Multi</span>
+              <span>Multi Speedy</span>
             </div>
             <div class="ht-desktop-window">
               <CaseImage
-                src={product}
+                src={speedy}
                 width={1440}
                 widths={[640, 960, 1440, 1920, 2400]}
                 sizes="(max-width: 759px) 90vw, (min-width: 1440px) 760px, 55vw"
                 quality={90}
                 loading="lazy"
-                alt="Fiche produit réelle Easy Peasy Multi : visuel du jeu et présentation dans la boutique."
+                alt="Fiche produit réelle Multi Speedy : visuel du jeu et présentation dans la boutique."
               />
             </div>
             <figcaption>La fiche produit sur ordinateur.</figcaption>
@@ -254,18 +256,18 @@ import "../styles/ht-case.css";
       <figure class="ht-real-detail">
         <div class="ht-detail-image">
           <CaseImage
-            src={product}
+            src={duo}
             width={1440}
             widths={[1200, 1600, 2400, 2880]}
             sizes="(max-width: 759px) 216vw, 100vw"
             quality={94}
             loading="lazy"
-            alt="Détail réel du jeu Easy Peasy Multi : sa boîte illustrée, ses cartes et leurs couleurs."
+            alt="Détail réel du Pack Duo réunissant Easy Peasy Multi et Multi Speedy."
           />
         </div>
         <figcaption>
-          La boîte et les cartes, telles qu’elles apparaissent dans la boutique.
-          L’identité prend vie dans le produit lui-même.
+          Le Pack Duo réunit les deux jeux dans la boutique. L’identité prend
+          vie dans le produit lui-même.
         </figcaption>
       </figure>
       <div class="ht-detail-copy">

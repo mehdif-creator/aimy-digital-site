@@ -14,6 +14,16 @@
       "file": "mobile",
       "width": 780,
       "height": 1688
+    },
+    {
+      "file": "speedy",
+      "width": 2880,
+      "height": 2200
+    },
+    {
+      "file": "duo",
+      "width": 2880,
+      "height": 2200
     }
   ],
   "rows": [
@@ -42,11 +52,11 @@
     {
       "viewport": 320,
       "dpr": 2,
-      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_MrKJc.webp",
+      "src": "http://127.0.0.1:4322/_astro/speedy.Cn4-rW_m_1ra31U.webp",
       "width": 278,
       "filter": "none",
       "transform": "none",
-      "alt": "Fiche produit réelle Easy Peasy Multi : visuel du jeu et présentation dans la boutique.",
+      "alt": "Fiche produit réelle Multi Speedy : visuel du jeu et présentation dans la boutique.",
       "encodedWidth": 640,
       "adequate": true
     },
@@ -64,11 +74,11 @@
     {
       "viewport": 320,
       "dpr": 2,
-      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_yVKLP.webp",
+      "src": "http://127.0.0.1:4322/_astro/duo.Dr7zMJBD_1WKk0t.webp",
       "width": 672,
       "filter": "none",
       "transform": "none",
-      "alt": "Détail réel du jeu Easy Peasy Multi : sa boîte illustrée, ses cartes et leurs couleurs.",
+      "alt": "Détail réel du Pack Duo réunissant Easy Peasy Multi et Multi Speedy.",
       "encodedWidth": 1600,
       "adequate": true
     },
@@ -97,11 +107,11 @@
     {
       "viewport": 375,
       "dpr": 2,
-      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_Z1BJwyC.webp",
+      "src": "http://127.0.0.1:4322/_astro/speedy.Cn4-rW_m_Z1TJ2Nj.webp",
       "width": 333,
       "filter": "none",
       "transform": "none",
-      "alt": "Fiche produit réelle Easy Peasy Multi : visuel du jeu et présentation dans la boutique.",
+      "alt": "Fiche produit réelle Multi Speedy : visuel du jeu et présentation dans la boutique.",
       "encodedWidth": 960,
       "adequate": true
     },
@@ -119,11 +129,11 @@
     {
       "viewport": 375,
       "dpr": 2,
-      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_2iiQuq.webp",
+      "src": "http://127.0.0.1:4322/_astro/duo.Dr7zMJBD_2m0m12.webp",
       "width": 804,
       "filter": "none",
       "transform": "none",
-      "alt": "Détail réel du jeu Easy Peasy Multi : sa boîte illustrée, ses cartes et leurs couleurs.",
+      "alt": "Détail réel du Pack Duo réunissant Easy Peasy Multi et Multi Speedy.",
       "encodedWidth": 2400,
       "adequate": true
     },
@@ -152,11 +162,11 @@
     {
       "viewport": 390,
       "dpr": 2,
-      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_Z1BJwyC.webp",
+      "src": "http://127.0.0.1:4322/_astro/speedy.Cn4-rW_m_Z1TJ2Nj.webp",
       "width": 348,
       "filter": "none",
       "transform": "none",
-      "alt": "Fiche produit réelle Easy Peasy Multi : visuel du jeu et présentation dans la boutique.",
+      "alt": "Fiche produit réelle Multi Speedy : visuel du jeu et présentation dans la boutique.",
       "encodedWidth": 960,
       "adequate": true
     },
@@ -174,11 +184,11 @@
     {
       "viewport": 390,
       "dpr": 2,
-      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_2iiQuq.webp",
+      "src": "http://127.0.0.1:4322/_astro/duo.Dr7zMJBD_2m0m12.webp",
       "width": 840,
       "filter": "none",
       "transform": "none",
-      "alt": "Détail réel du jeu Easy Peasy Multi : sa boîte illustrée, ses cartes et leurs couleurs.",
+      "alt": "Détail réel du Pack Duo réunissant Easy Peasy Multi et Multi Speedy.",
       "encodedWidth": 2400,
       "adequate": true
     },
@@ -207,11 +217,11 @@
     {
       "viewport": 1440,
       "dpr": 2,
-      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_Z1YmCwS.webp",
+      "src": "http://127.0.0.1:4322/_astro/speedy.Cn4-rW_m_1nMMrU.webp",
       "width": 741.15625,
       "filter": "none",
       "transform": "none",
-      "alt": "Fiche produit réelle Easy Peasy Multi : visuel du jeu et présentation dans la boutique.",
+      "alt": "Fiche produit réelle Multi Speedy : visuel du jeu et présentation dans la boutique.",
       "encodedWidth": 1920,
       "adequate": true
     },
@@ -229,11 +239,11 @@
     {
       "viewport": 1440,
       "dpr": 2,
-      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_Z2vdef8.webp",
+      "src": "http://127.0.0.1:4322/_astro/duo.Dr7zMJBD_Z1jIRjU.webp",
       "width": 1416,
       "filter": "none",
       "transform": "none",
-      "alt": "Détail réel du jeu Easy Peasy Multi : sa boîte illustrée, ses cartes et leurs couleurs.",
+      "alt": "Détail réel du Pack Duo réunissant Easy Peasy Multi et Multi Speedy.",
       "encodedWidth": 2880,
       "adequate": true
     }
