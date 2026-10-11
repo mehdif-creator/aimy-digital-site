@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+interface Props {
+  src: ImageMetadata;
+  width: number;
+  widths: number[];
+  sizes: string;
+  alt: string;
+  quality?: number;
+  loading?: "lazy" | "eager";
+}
+const {
+  src,
+  width,
+  widths,
+  sizes,
+  alt,
+  quality = 90,
+  loading = "lazy",
+} = Astro.props;
+// Keep source pixels as the ceiling; each composition owns its truthful sizes.
+const variants = [
+  ...new Set(widths.map((value) => Math.min(value, src.width))),
+];
+---
+
+<Image
+  src={src}
+  width={Math.min(width, src.width)}
+  widths={variants}
+  sizes={sizes}
+  alt={alt}
+  quality={quality}
+  loading={loading}
+/>

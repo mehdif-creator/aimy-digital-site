@@ -31,7 +31,7 @@ export function initHtCase() {
         if (!mobile) {
           gsap.fromTo(
             root!.querySelector(".ht-main-view"),
-            { y: 24 },
+            { y: 24, force3D: false },
             {
               y: 0,
               ease: "none",
@@ -44,6 +44,22 @@ export function initHtCase() {
             },
           );
         }
+        gsap.fromTo(
+          root!.querySelector(".ht-next > div:last-child"),
+          { y: 18 },
+          {
+            y: 0,
+            force3D: false,
+            snap: { y: 1 },
+            ease: "none",
+            scrollTrigger: {
+              trigger: root!.querySelector(".ht-next"),
+              start: "top 95%",
+              end: "top 65%",
+              scrub: 0.3,
+            },
+          },
+        );
         const stage = root!.querySelector(".ht-exhibit-stage");
         const story = gsap.timeline({
           scrollTrigger: {
@@ -56,13 +72,19 @@ export function initHtCase() {
         story
           .to(
             root!.querySelector(".ht-desktop"),
-            { rotation: 0, duration: 0.5, ease: "none" },
+            {
+              y: -12,
+              duration: 0.5,
+              ease: "none",
+              force3D: false,
+              snap: { y: 1 },
+            },
             0,
           )
           .fromTo(
             root!.querySelector(".ht-mobile"),
-            { y: mobile ? 18 : 55, rotation: 5 },
-            { y: 0, rotation: 0, duration: 1, ease: "none" },
+            { y: mobile ? 18 : 55 },
+            { y: 0, duration: 1, ease: "none", force3D: false, snap: { y: 1 } },
             0,
           )
           .to(

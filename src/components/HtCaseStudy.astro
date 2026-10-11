@@ -1,5 +1,6 @@
 ---
-import { Picture, Image } from "astro:assets";
+import { Picture } from "astro:assets";
+import CaseImage from "./CaseImage.astro";
 import home from "../../public/images/cases/ht/home.webp";
 import product from "../../public/images/cases/ht/product.webp";
 import mobile from "../../public/images/cases/ht/mobile.webp";
@@ -115,29 +116,42 @@ import "../styles/ht-case.css";
         le chemin pour choisir.
       </h2>
     </div>
+    <figure class="ht-design-proof">
+      <div class="ht-proof-image">
+        <CaseImage
+          src={product}
+          width={1440}
+          widths={[800, 1200, 1600, 2400, 2880]}
+          sizes="(max-width: 759px) 225vw, 90vw"
+          quality={94}
+          loading="lazy"
+          alt="La fiche Easy Peasy Multi place les explications au-dessus du choix de quantité et du bouton Ajouter au panier."
+        />
+      </div>
+      <figcaption>
+        <span>Une décision visible</span>Présenter le jeu, expliquer son usage,
+        puis proposer l’ajout au panier : les informations et l’action se
+        suivent dans la même colonne.
+      </figcaption>
+    </figure>
     <ol class="ht-decisions">
       <li>
         <span class="ht-step">01</span>
         <h3>Installer l’univers.</h3>
-        <p>
-          Une entrée visuelle centrée sur les jeux et le partage en famille.
-          L’orange et les illustrations donnent au site son caractère.
-        </p>
+        <p>Les jeux et le partage en famille ouvrent la découverte.</p>
       </li>
       <li>
         <span class="ht-step">02</span>
         <h3>Expliquer simplement.</h3>
         <p>
-          Les présentations distinguent les jeux et leur utilisation.
-          L’information accompagne la découverte avant l’accès aux produits.
+          La fiche associe le produit à une présentation de son utilisation.
         </p>
       </li>
       <li>
         <span class="ht-step">03</span>
         <h3>Relier à la boutique.</h3>
         <p>
-          Les liens vers les fiches produits prolongent la lecture. Le visiteur
-          peut passer de l’univers de marque au détail du jeu.
+          Le choix de quantité et l’ajout au panier prolongent cette lecture.
         </p>
       </li>
     </ol>
@@ -196,10 +210,10 @@ import "../styles/ht-case.css";
               <span>Easy Peasy Multi</span>
             </div>
             <div class="ht-desktop-window">
-              <Image
+              <CaseImage
                 src={product}
                 width={1440}
-                widths={[640, 960, 1440, 1920]}
+                widths={[640, 960, 1440, 1920, 2400]}
                 sizes="(max-width: 759px) 90vw, (min-width: 1440px) 760px, 55vw"
                 quality={90}
                 loading="lazy"
@@ -209,7 +223,7 @@ import "../styles/ht-case.css";
             <figcaption>La fiche produit sur ordinateur.</figcaption>
           </figure>
           <figure class="ht-mobile">
-            <Image
+            <CaseImage
               src={mobile}
               width={390}
               widths={[260, 390, 520, 780]}
@@ -237,16 +251,23 @@ import "../styles/ht-case.css";
       </h2>
     </div>
     <div class="ht-detail-grid">
-      <div
-        class="ht-palette"
-        aria-label="Palette inspirée des couleurs du site"
-      >
-        <span class="ht-swatch-orange">Un orange énergique.</span>
-        <span class="ht-swatch-paper">Des fonds lumineux.</span>
-        <p>
-          Une couleur de marque qui accompagne la navigation et les actions.
-        </p>
-      </div>
+      <figure class="ht-real-detail">
+        <div class="ht-detail-image">
+          <CaseImage
+            src={product}
+            width={1440}
+            widths={[1200, 1600, 2400, 2880]}
+            sizes="(max-width: 759px) 216vw, 100vw"
+            quality={94}
+            loading="lazy"
+            alt="Détail réel du jeu Easy Peasy Multi : sa boîte illustrée, ses cartes et leurs couleurs."
+          />
+        </div>
+        <figcaption>
+          La boîte et les cartes, telles qu’elles apparaissent dans la boutique.
+          L’identité prend vie dans le produit lui-même.
+        </figcaption>
+      </figure>
       <div class="ht-detail-copy">
         <h3>Voir, lire, puis choisir.</h3>
         <p>

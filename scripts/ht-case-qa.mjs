@@ -52,6 +52,21 @@ for (const width of [1440, 320, 375, 390, 768]) {
     if (width === 1440 || width === 390)
       await p.screenshot({ path: `${folder}/${s.slice(1)}-${width}.png` });
   }
+  const broken = await p
+    .locator(".ht-case img")
+    .evaluateAll((els) =>
+      els.filter((e) => !e.complete || !e.naturalWidth).map((e) => e.src),
+    );
+  if (broken.length) errors.push({ width, broken });
+  for (const href of ["/contact/", "/portfolio/"]) {
+    if (!(await p.request.get(new URL(href, p.url()).href)).ok())
+      errors.push({ width, href });
+  }
+  if (
+    (await p.locator(".ht-external").getAttribute("href")) !==
+    "https://htcreajeux.fr/"
+  )
+    errors.push({ width, external: "incorrect" });
   const a = await new AxeBuilder({ page: p }).analyze();
   if (a.violations.length)
     errors.push({
@@ -66,20 +81,18 @@ for (const width of [1440, 320, 375, 390, 768]) {
     });
   const transforms = [];
   for (const fraction of [0, 0.5, 1, 0]) {
-    await p
-      .locator(".ht-exhibit")
-      .evaluate(
-        (e, f) =>
-          scrollTo({
-            top:
-              scrollY +
-              e.getBoundingClientRect().top +
-              (e.offsetHeight - innerHeight * 0.5) * f -
-              innerHeight * 0.25,
-            behavior: "instant",
-          }),
-        fraction,
-      );
+    await p.locator(".ht-exhibit").evaluate(
+      (e, f) =>
+        scrollTo({
+          top:
+            scrollY +
+            e.getBoundingClientRect().top +
+            (e.offsetHeight - innerHeight * 0.5) * f -
+            innerHeight * 0.25,
+          behavior: "instant",
+        }),
+      fraction,
+    );
     await p.waitForTimeout(500);
     transforms.push(
       await p
@@ -108,7 +121,7 @@ const p = await b.newPage({
 await p.goto("http://127.0.0.1:4322/portfolio/ht-crea-jeux/");
 if (
   (await p.locator("h1").count()) !== 1 ||
-  (await p.locator(".ht-case img").count()) !== 3
+  (await p.locator(".ht-case img").count()) !== 5
 )
   errors.push("nojs");
 await p.locator(".ht-contact").click();

@@ -1,5 +1,16 @@
 # Progression de la refonte Aimy Digital
 
+## HT Créa Jeux — raffinements ciblés, 11 octobre 2026
+
+Direction de 9a413a7 approuvée avec réserves mineures. Architecture conservée ; approche illustrée par la vraie fiche produit, identité montrée à travers la boîte et les cartes, captures planes et translations contrôlées, CTA final affiné. Composant CaseImage plafonné aux dimensions natives et contrat des futurs cas documenté. Les trois autres cas restent inchangés.
+
+Recette 320/375/390/768/1440 px, axe/console/liens/images/scroll/mouvement réduit et sans JS ; 9 tests, Astro check et build production réussis. LCP HT mesuré 2,464 s (capture d’accueil en introduction), performance 97. Contrôle accueil 2,520 s : seuil encore fragile, ne pas présenter le problème comme définitivement résolu. Rapport et limites : docs/qa/ht-case/refinements.md.
+
+Aperçu : http://127.0.0.1:4322/portfolio/ht-crea-jeux/?cas=raffine
+
+**STOP : attendre la validation visuelle des raffinements HT avant les trois autres cas.** Aucun déploiement. Hero, accueil, portfolio, blog et infrastructure SEO préservés.
+
+
 ## Gate 2 — HT Créa Jeux — prêt pour validation visuelle, 11 octobre 2026
 
 Réserves Gate 1 traitées et enregistrées dans 21dc128, après approbation visuelle de 11acdb9. Mesures et limite autour du seuil LCP dans docs/qa/gate1-technical/rapport.md.

@@ -1,6 +1,7 @@
 import { execFileSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
-const output = ".private/lighthouse-ht-case.json";
+const label = process.env.QA_LABEL || "refined";
+const output = `.private/lighthouse-ht-${label}.json`;
 execFileSync(
   process.execPath,
   [
@@ -31,10 +32,11 @@ const report = {
   tbtMs: r.audits["total-blocking-time"].numericValue,
   bytes: r.audits["total-byte-weight"].numericValue,
   warnings: r.runWarnings,
+  lcpBreakdown: r.audits["lcp-breakdown-insight"].details,
+  settings: r.configSettings,
 };
 await writeFile(
-  "docs/qa/ht-case/lighthouse.json",
+  `docs/qa/ht-case/lighthouse-${label}.json`,
   JSON.stringify(report, null, 2),
 );
 console.log(JSON.stringify(report, null, 2));
-
