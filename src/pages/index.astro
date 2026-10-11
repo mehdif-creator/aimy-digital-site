@@ -1,10 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectPreview from "../components/ProjectPreview.astro";
-import ServiceCard from "../components/ServiceCard.astro";
-import FAQ from "../components/FAQ.astro";
-import CTA from "../components/CTA.astro";
-import { services } from "../lib/site";
+import HomeExperience from "../components/HomeExperience.astro";
+
 import CinematicHero from "../components/CinematicHero.astro";
 ---
 
@@ -14,84 +12,15 @@ import CinematicHero from "../components/CinematicHero.astro";
   cinematicHero
 >
   <CinematicHero />
-  <div class="container region-band">
-    <span>Ancrés près de chez vous.</span>
-    <span>Mauléon</span>
-    <span>Cholet</span>
-    <span>Bressuire</span>
-    <span>Les Herbiers</span>
+  <div class="home-proof">
+    <div class="container region-band">
+      <span>Ancrés près de chez vous.</span>
+      <span>Mauléon</span>
+      <span>Cholet</span>
+      <span>Bressuire</span>
+      <span>Les Herbiers</span>
+    </div>
+    <ProjectPreview />
   </div>
-  <ProjectPreview />
-  <section class="section service-section" id="apres-realisations">
-    <div class="container">
-      <div class="section-heading">
-        <h2>
-          Le bon site.
-          <br />
-          Pour les bonnes raisons.
-        </h2>
-        <p>
-          Votre site doit expliquer ce que vous faites, rassurer les visiteurs
-          et leur permettre de passer à l’étape suivante.
-        </p>
-      </div>
-      {[services[0], services[3], services[4]].map((service) => (
-        <ServiceCard service={service} />
-      ))}
-      <div class="subnav">
-        <a href="/nos-prestations/">Explorer toutes les prestations</a>
-      </div>
-    </div>
-  </section>
-  <section class="section container method-grid">
-    <div>
-      <p class="section-note">Une méthode, des décisions partagées.</p>
-      <h2>On commence par vous écouter.</h2>
-      <p class="lead">
-        Le design vient après les bonnes questions. Vous savez ce qui est prévu,
-        ce qui est en cours et ce qui reste à valider.
-      </p>
-      <a href="/a-propos/" class="text-link">
-        Découvrir l’agence
-      </a>
-    </div>
-    <ol class="steps">
-      <li>
-        <h3>Comprendre votre activité</h3>
-        <p>
-          Vos clients, vos services et les questions qui reviennent avant un
-          devis.
-        </p>
-      </li>
-      <li>
-        <h3>Donner forme au projet</h3>
-        <p>
-          Une structure, des textes et une direction visuelle que nous examinons
-          ensemble.
-        </p>
-      </li>
-      <li>
-        <h3>Construire et vérifier</h3>
-        <p>
-          Des pages testées sur mobile, des liens contrôlés et un contact
-          vérifié avant publication.
-        </p>
-      </li>
-      <li>
-        <h3>Préparer la suite</h3>
-        <p>
-          La prise en main, les mises à jour et le suivi sont cadrés selon vos
-          besoins.
-        </p>
-      </li>
-    </ol>
-  </section>
-  <section class="section container content-grid">
-    <div>
-      <h2>Avant de se lancer.</h2>
-      <p class="lead">Les questions utiles pour décider sereinement.</p>
-    </div>
-    <FAQ />
-  </section>
-  <CTA />
+  <HomeExperience />
 </BaseLayout>

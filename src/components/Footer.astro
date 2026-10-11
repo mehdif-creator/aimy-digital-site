@@ -1,9 +1,24 @@
 ---
 import { site, navigation } from "../lib/site";
 import CookieConsent from "./CookieConsent.astro";
+interface Props {
+  cinematic?: boolean;
+}
 ---
 
-<footer class="site-footer">
+<footer class:list={["site-footer", { "home-footer": Astro.props.cinematic }]}>
+  {Astro.props.cinematic && (
+    <div class="container footer-signature">
+      <a href="/" aria-label="Aimy Digital, accueil">
+        aimy digital.
+      </a>
+      <p>
+        Le sens du détail.
+        <br />
+        L’envie d’aller plus loin.
+      </p>
+    </div>
+  )}
   <div class="container footer-grid">
     <div>
       <a class="footer-name" href="/">

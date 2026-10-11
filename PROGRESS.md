@@ -1,5 +1,17 @@
 # Progression de la refonte Aimy Digital
 
+## Jalon 1 — accueil premium — 11 octobre 2026 — en attente de validation visuelle
+
+Instruction prioritaire : « Premium Visual Redesign: Homepage & Project Case Studies ». Seul le Gate 1 est réalisé. **STOP : ne pas commencer HT Créa Jeux avant approbation explicite de cet accueil ; les trois autres cas attendent ensuite la validation du cas HT.**
+
+Socle sauvegardé au commit 295ddcc. Hero, captures vérifiées et portfolio dédié préservés. Accueil : services éditoriaux interactifs, progression GSAP de quatre étapes, FAQ native revisitée, scène de contact et footer intégré. Aucun nouveau média lourd ni dépendance. Variante du footer limitée à cette page.
+
+Vérifications : 9 tests réussis, Astro check 61 fichiers sans diagnostic, build production 40 pages, audit sans erreur (121445 octets JS brut / 48357 gzip), 32 contrôles navigateur sans erreur, six largeurs 320–1440 px, clavier, modes réduits, sans JS, liens et axe. Captures et rapport : docs/qa/home-gate1/.
+
+Lighthouse mobile local : performance 93, accessibilité 100, bonnes pratiques 100 ; LCP 3,167 s, CLS 0,000331, TBT 0 ms. Le LCP dépasse 2,5 s sur ce run et concerne la capture SC du hero conservé. Ce résultat ne constitue pas une mesure terrain, ni une validation des Core Web Vitals en production.
+
+Aperçu : http://127.0.0.1:4322/?accueil=gate1#apres-realisations. Aucun déploiement ; blog, pages de projets et infrastructure SEO inchangés. Les exclusions de portfolio restent obligatoires.
+
 ## Placement et netteté — correction prioritaire du 10 octobre 2026
 
 Le parcours cinématique complet est réservé à **/portfolio/**. L’accueil présente seulement SC Rénovation et HT Créa Jeux via `ProjectPreview`, puis le CTA « Découvrir toutes nos réalisations » et le contenu commercial existant. Ne pas réintroduire les quatre chapitres sur l’accueil.
@@ -76,3 +88,4 @@ Conserver séparément l'inventaire SEO : une exclusion commerciale n'autorise n
 ## Blocages de publication
 
 Sauvegarde WordPress restaurable et racine documentaire non vérifiées ; SMTP/livraison et redirections Apache non testés ; mentions légales actuelles à confirmer ; fonctions des pages `/app/`, `/optimisation-webinaire/` et `/youtube-competitor-radar/` à auditer. 20 médias historiques récupérés sur 114 recensés, flux/archives/liens entrants à qualifier. Revue éditoriale, validation du design et accord explicite de production encore requis. Voir `docs/release-gates.json` : aucune validation cochée sans preuve.
+

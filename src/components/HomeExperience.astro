@@ -1,0 +1,204 @@
+---
+import { services } from "../lib/site";
+import FAQ from "./FAQ.astro";
+import "../styles/home-experience.css";
+const selected = [services[0], services[3], services[4]];
+const labels = ["Créer un site.", "Faire évoluer.", "Être trouvé."];
+const steps = [
+  {
+    title: "Comprendre.",
+    subtitle: "Votre activité, avant les pixels.",
+    text: "Vos clients, vos services et les questions qui reviennent avant un devis. Le design vient après les bonnes questions.",
+  },
+  {
+    title: "Dessiner.",
+    subtitle: "Donner forme à votre différence.",
+    text: "Une structure, des textes et une direction visuelle que nous examinons ensemble. Vous savez ce qui est prévu et ce qui reste à valider.",
+  },
+  {
+    title: "Construire.",
+    subtitle: "Soigner ce que l’on voit. Et le reste.",
+    text: "Des pages testées sur mobile, des liens contrôlés et un contact vérifié avant publication.",
+  },
+  {
+    title: "Accompagner.",
+    subtitle: "Préparer la vie du site.",
+    text: "La prise en main, les mises à jour et le suivi sont cadrés selon vos besoins.",
+  },
+];
+---
+
+<div class="home-experience" data-home-experience>
+  <section
+    class="home-services"
+    id="apres-realisations"
+    aria-labelledby="home-services-title"
+    data-service="0"
+  >
+    <div class="home-service-light" aria-hidden="true"></div>
+    <div class="container home-services-layout">
+      <div class="home-services-heading">
+        <p class="home-kicker">De l’intention à la présence.</p>
+        <h2 id="home-services-title">
+          Le bon site.
+          <br />
+          Pour les bonnes raisons.
+        </h2>
+        <p>
+          Expliquer votre métier. Donner confiance. Faciliter le premier
+          contact.
+        </p>
+        <div class="home-compass" aria-hidden="true">
+          <div class="home-compass-orbit">
+            <i></i>
+          </div>
+          <div class="home-compass-core">
+            <span>Concevoir</span>
+            <span>Faire évoluer</span>
+            <span>Être trouvé</span>
+          </div>
+          <span class="home-compass-caption">Votre activité au centre.</span>
+        </div>
+      </div>
+      <div class="home-service-editorial">
+        <p class="home-service-caption">
+          Trois points de départ. Un projet qui vous ressemble.
+        </p>
+        {selected.map((service, i) => (
+          <details
+            class="home-service"
+            name="home-services"
+            open={i === 0}
+            data-service-index={i}
+          >
+            <summary>
+              <span class="home-service-number">0{i + 1}</span>
+              <span>
+                {labels[i]}
+                <small>{service.title}</small>
+              </span>
+              <span class="home-service-sign" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div class="home-service-body">
+              <p>{service.intro}</p>
+              <ul>
+                {service.deliverables.slice(0, 2).map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+              <a href={`/${service.path}/`}>
+                Explorer cette prestation <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </details>
+        ))}
+        <a class="home-all-services" href="/nos-prestations/">
+          Toutes les prestations <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="home-process" aria-labelledby="home-process-title">
+    <div class="container home-process-layout">
+      <header class="home-process-heading">
+        <p class="home-kicker">Avancer ensemble.</p>
+        <h2 id="home-process-title">
+          Des étapes claires.
+          <br />
+          Des décisions partagées.
+        </h2>
+        <p>
+          Vous connaissez votre métier.
+          <br />
+          Nous construisons sa présence en ligne avec vous.
+        </p>
+        <a href="/a-propos/">
+          Découvrir l’agence <span aria-hidden="true">↗</span>
+        </a>
+        <button
+          class="home-motion-toggle"
+          type="button"
+          aria-pressed="false"
+          hidden
+        >
+          Réduire les animations de cette page
+        </button>
+      </header>
+      <div class="home-process-track">
+        <div class="home-process-rail" aria-hidden="true">
+          <i></i>
+        </div>
+        <ol>
+          {steps.map((step, i) => (
+            <li data-process-step>
+              <span class="home-step-marker" aria-hidden="true">
+                0{i + 1}
+              </span>
+              <div>
+                <h3>{step.title}</h3>
+                <p class="home-step-subtitle">{step.subtitle}</p>
+                <p>{step.text}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+  <section class="home-questions" aria-labelledby="home-questions-title">
+    <div class="container home-questions-layout">
+      <header>
+        <svg
+          class="home-question-mark"
+          viewBox="0 0 200 280"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <text x="0" y="240">
+            ?
+          </text>
+        </svg>
+        <p class="home-kicker">Avant de se lancer.</p>
+        <h2 id="home-questions-title">
+          Les bonnes questions.
+          <br />
+          Des réponses claires.
+        </h2>
+        <p>
+          Budget, délais, évolution : posons les bases avant de parler design.
+        </p>
+        <a href="/contact/">Parlons de votre situation ↗</a>
+      </header>
+      <FAQ />
+    </div>
+  </section>
+  <section class="home-closing" aria-labelledby="home-closing-title">
+    <div class="home-closing-halo" aria-hidden="true"></div>
+    <div class="container">
+      <p class="home-kicker">La suite commence par un échange.</p>
+      <h2 id="home-closing-title">
+        Et si votre site
+        <br />
+        prenait toute
+        <br />
+        <span>sa place ?</span>
+      </h2>
+      <div class="home-closing-bottom">
+        <p>
+          Votre activité, vos priorités, votre site actuel.
+          <br />
+          Posons les bonnes questions avant de dessiner les réponses.
+        </p>
+        <a class="home-contact-link" href="/contact/">
+          Discuter de mon projet <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  import { initHomeExperience } from "../lib/home-experience";
+  initHomeExperience();
+</script>
