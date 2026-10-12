@@ -1,5 +1,25 @@
 # Progression de la refonte Aimy Digital
 
+## My NutriZen — prêt pour validation visuelle, 12 octobre 2026
+
+Les quatre captures authentiques jointes sont reçues et inspectées. Elles remplacent le blocage historique ci-dessous pour le périmètre dashboard, menus et recettes desktop/mobile. Recadrages natifs sans agrandissement pour exclure le profil et le parrainage ; provenance dans docs/qa/nutrizen-case/user-assets.json. Aucun écran de préférences ou courses fabriqué.
+
+Cas distinct réalisé : ouverture menthe/pistache avec planning mobile, semaine progressive sur vert profond, recette desktop/mobile et contact. Route /portfolio/my-nutrizen/ et métadonnées préservées. HT approuvé, accueil, blog, migration SEO et autres cas inchangés.
+
+Build production et audit réussis, 9 tests, Astro check 78 fichiers sans diagnostic. QA Chrome 320/375/390/768/1440 px, images DPR2, axe, scroll aller-retour, mouvement réduit et sans JS. Lighthouse final : performance 97, accessibilité 100, bonnes pratiques 100 ; LCP 2,529 s sur la capture mobile d’introduction, TBT 0 ms, CLS 0,00124. Rapport et limites : docs/qa/nutrizen-case/rapport.md. Marge LCP faible, pas de garantie terrain.
+
+Aperçu : http://127.0.0.1:4322/portfolio/my-nutrizen/
+
+**STOP pour validation visuelle My NutriZen.** Ne pas poursuivre SC Rénovation ou Lambert Digital Pulse. Aucun déploiement.
+
+
+## My NutriZen — inventaire et attente des captures, 11 octobre 2026
+
+Dernière instruction : https://manutrizen.fr/ est l’adresse officielle fournie. Erreur DNS locale constatée, sans conclusion sur l’existence du projet. Les médias précédents viennent de https://mynutrizen.fr/ et ne prouvent pas l’état actuel de l’application. Ne pas déduire de l’ancien libellé « En Développement » que les courses sont encore inachevées.
+
+Dossier public/images/portfolio/my-nutrizen/ créé, README de captures nécessaires et inventaire docs/brand/nutrizen-assets-inventory.md rédigés. Six médias historiques identifiés ; captures actuelles dashboard/semaine, recette, préférences et mobile manquantes. Courses conditionnelles à confirmation fonctionnelle. STOP demandé avant finalisation des compositions : attendre ces captures. HT et toutes les pages approuvées inchangés.
+
+
 ## HT approuvé, préparation My NutriZen — 11 octobre 2026
 
 L’utilisateur approuve ee8b165. Ne plus refaire la page HT. Dernières retouches : nom officiel « HT Créa Jeux », fiche Multi Speedy dans le showcase et Pack Duo dans le détail identité ; Easy Peasy conservé uniquement dans l’approche. Captures publiques authentiques 2880×2200, pas de refonte.

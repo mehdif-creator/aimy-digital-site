@@ -5,7 +5,9 @@ import Button from "../../components/Button.astro";
 import CTA from "../../components/CTA.astro";
 export async function getStaticPaths() {
   return (await getCollection("cases"))
-    .filter((project) => project.data.path !== "ht-crea-jeux")
+    .filter(
+      (project) => !["ht-crea-jeux", "my-nutrizen"].includes(project.data.path),
+    )
     .map((project) => ({
       params: { slug: project.data.path },
       props: { project },

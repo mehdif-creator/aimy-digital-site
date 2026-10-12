@@ -18,12 +18,15 @@ Aucune refonte HT, accueil, blog ou migration SEO. Aucun déploiement. Pas de r�
 - LCP mesuré avec son élément, sans extrapolation terrain.
 
 ## Étapes
-- [ ] Inspecter les médias publics actuels et les éventuels écrans de démonstration fournis ; consigner provenance et fonctionnalités vérifiées.
-- [ ] HT : titre officiel sans point ajouté, showcase Multi Speedy et détail Pack Duo si les captures sont utilisables. Vérifier dans la recette existante.
-- [ ] Définir une direction My NutriZen propre : parcours préférences → semaine → courses ; palette végétale/lumineuse tirée du produit, typographie Manrope existante, composition en flux autour des vraies interfaces. Revoir après inspection des écrans.
-- [ ] Créer NutrizenCaseStudy.astro, nutrizen-case.css, nutrizen-case.ts et portfolio/my-nutrizen.astro ; exclure cette route du fallback sans changer les métadonnées.
-- [ ] Recette navigateur ciblée, 9 tests, Astro check, build/audit production, Lighthouse mobile ; corriger les anomalies puis préparer l’aperçu staging.
-- [ ] Mettre à jour PROGRESS.md et rapport, commit stable, arrêt pour validation visuelle.
+- [x] Inspecter les médias publics actuels et les éventuels écrans de démonstration fournis ; consigner provenance et fonctionnalités vérifiées.
+- [x] HT : titre officiel sans point ajouté, showcase Multi Speedy et détail Pack Duo si les captures sont utilisables. Vérifier dans la recette existante.
+- [x] Définir une direction My NutriZen propre : parcours préférences → semaine → courses ; palette végétale/lumineuse tirée du produit, typographie Manrope existante, composition en flux autour des vraies interfaces. Revoir après inspection des écrans.
+- [x] Créer NutrizenCaseStudy.astro, nutrizen-case.css, nutrizen-case.ts et portfolio/my-nutrizen.astro ; exclure cette route du fallback sans changer les métadonnées.
+- [x] Recette navigateur ciblée, 9 tests, Astro check, build/audit production, Lighthouse mobile ; corriger les anomalies puis préparer l’aperçu staging.
+- [x] Mettre à jour PROGRESS.md et rapport, commit stable, arrêt pour validation visuelle.
 
 ## Journal
 Inspection publique : fonctionnalités demandées confirmées dans le texte actuel et la fiche projet locale. Aperçu dashboard officiel de 1394×1920 disponible. Les chiffres, avis et gains commerciaux de la landing ne sont pas repris comme preuves. L’utilisateur indique vouloir fournir un dossier ou accès de démonstration ; sa localisation est attendue avant les choix d’écrans définitifs.
+
+
+Livraison 12 octobre : récit adapté aux quatre captures fournies. Préférences et courses omises faute de visuels dédiés/confirmation. Validation visuelle My NutriZen attendue.
