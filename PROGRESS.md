@@ -152,3 +152,10 @@ Conserver séparément l'inventaire SEO : une exclusion commerciale n'autorise n
 ## Blocages de publication
 
 Sauvegarde WordPress restaurable et racine documentaire non vérifiées ; SMTP/livraison et redirections Apache non testés ; mentions légales actuelles à confirmer ; fonctions des pages `/app/`, `/optimisation-webinaire/` et `/youtube-competitor-radar/` à auditer. 20 médias historiques récupérés sur 114 recensés, flux/archives/liens entrants à qualifier. Revue éditoriale, validation du design et accord explicite de production encore requis. Voir `docs/release-gates.json` : aucune validation cochée sans preuve.
+
+## 12 octobre 2026 — SC Rénovation, jalon premium
+- Nouvelle page dédiée, métadonnées conservées. Captures fraîches 2880×2000 et 780×2000, quatre contributions illustrées : grille des prestations, galerie avant/après, devis/appel, adaptation mobile.
+- Chrome 320/375/390/768/1440 à DPR2 : zéro erreur, zéro violation axe, images suffisantes, contact et mode sans JS contrôlés. Mouvement réduit dynamique vérifié.
+- Production : 40 pages ; 9 tests passants. Budget JS 124605 brut / 49999 gzip, conservé sans hausse.
+- Lighthouse mobile standard : performance 95, accessibilité 100, bonnes pratiques 100 ; LCP 2,760 s, CLS 0,00133, TBT 0. Mesure locale, pas une garantie terrain.
+- Suite autorisée : Lambert. Domaine courant limité HTTP429, ancienne URL TLS invalide ; utiliser les captures archivées vérifiées et signaler les médias manquants.
