@@ -188,3 +188,13 @@ Architecture, routes et métadonnées conservées. Nouveau module local4127octet
 Recette six largeurs320/375/390/740/768/1440, tactile/clavier, scroll réversible, axe, console, reduced-motion et sans JS. Régression initiale du masque puis cadrage initial mobile corrigés. Build40pages,9tests, Astro0erreur/0warning (1hint QA ancien). Rapport détaillé docs/qa/gate-a1/rapport.md avec essais et limites.
 Performance retenue : Lighthouse mobile97 ; LCP2,523/2,526/2,524s, CLS0,000072, accessibilité100. Cible2,5s légèrement dépassée, réserve technique explicite. CSS inline et compression85 testés puis annulés, sans gain fiable. Hero90 et détails93/95 conservés.
 STOP demandé pour jugement visuel A1 ; aucune approbation créative déduite des tests. Aucun déploiement. Attendre avant A2 ou autres pages.
+
+## 2026-10-13 — huit pages, lot 1 : acquisition et continuité
+
+Le brief 648a30ae autorise les huit pages sans gates intermédiaires. Sauvegarde locale `backup/avant-huit-pages-2026-10-13` sur `ed15fcb`. Homepage, création de sites, portfolio, cas, articles et juridique protégés.
+
+SEO : recherche illustrative, parcours au défilement et diagnostic à huit piliers. SEA : quatre étapes commandées annonce/destination/action/mesure. Maintenance : couches interactives et distinction hébergement/entretien. Nouveau contrôleur partagé uniquement sur les nouvelles pages, alternatives sans JS et reduced-motion.
+
+Build production : 40 pages, audit sans erreur. Recette finale commune : 48 configurations (8 pages × 320/375/390/768/1024/1440), zéro erreur console/pageerror, zéro débordement et zéro violation axe détectée ; panneaux activés au clavier. Les premières erreurs de contraste et une collision du sélecteur global `.hero` ont été corrigées localement.
+
+Budget JS agrégé porté explicitement de 130/52 Ko à 135/54 Ko pour les huit nouvelles pages : mesure 131 811 octets bruts / 53 190 gzip pour l’ensemble des bundles, pas par page. Aucun framework supplémentaire ni vidéo. Performance Lighthouse en cours, aucun seuil encore revendiqué.

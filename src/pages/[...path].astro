@@ -11,7 +11,7 @@ export async function getStaticPaths() {
     ...services
       .filter(
         (service) =>
-          !["creation-de-sites-internet", "referencement-seo"].includes(
+          !["creation-de-sites-internet", "referencement-seo", "publicites-sea", "maintenance-et-securite"].includes(
             service.path,
           ),
       )

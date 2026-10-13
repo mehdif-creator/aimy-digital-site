@@ -97,9 +97,10 @@ let jsBytes = 0;
 let jsGzipBytes = 0;
 for (const f of scripts) jsBytes += (await stat(f)).size;
 for (const f of scripts) jsGzipBytes += gzipSync(await readFile(f)).length;
-// Gate A1 ajoute un module local de 4,2 Ko brut : explorateurs et timeline responsive.
-// GSAP reste mutualisé ; enveloppe globale bornée à 130/52 Ko (ancien socle 125/50).
-if (jsBytes > 130000 || jsGzipBytes > 52000)
+// Huit pages : module local de choix/filtrage/motion et validation formulaire.
+// Budget agrege de tous les bundles, pas le poids charge par page. GSAP mutualise.
+// Plafond A1 130/52 Ko ; nouveau plafond borne 135/54 Ko.
+if (jsBytes > 135000 || jsGzipBytes > 54000)
   errors.push(
     `Budget JavaScript cinématique dépassé : ${jsBytes} brut / ${jsGzipBytes} gzip`,
   );

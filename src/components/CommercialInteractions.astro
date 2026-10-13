@@ -1,0 +1,148 @@
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll<HTMLElement>("[data-choice]").forEach((root) => {
+    const buttons = Array.from(
+      root.querySelectorAll<HTMLButtonElement>("[data-select]"),
+    );
+    const panels = Array.from(
+      root.querySelectorAll<HTMLElement>("[data-panel]"),
+    );
+    const activate = (index: number) => {
+      buttons.forEach((button, i) =>
+        button.setAttribute("aria-pressed", String(i === index)),
+      );
+      panels.forEach((panel, i) => {
+        panel.hidden = i !== index;
+      });
+      root.dataset.active = String(index);
+      if (
+        !matchMedia("(prefers-reduced-motion: reduce)").matches &&
+        panels[index]
+      ) {
+        gsap.fromTo(
+          panels[index],
+          { x: 12 },
+          {
+            x: 0,
+            duration: 0.35,
+            ease: "power2.out",
+            overwrite: true,
+            clearProps: "transform",
+          },
+        );
+      }
+      ScrollTrigger.refresh();
+    };
+    buttons.forEach((button, i) =>
+      button.addEventListener("click", () => activate(i)),
+    );
+    root.classList.add("is-interactive");
+    activate(0);
+  });
+  const normalize = (text: string) =>
+    text
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  document.querySelectorAll<HTMLElement>("[data-filter]").forEach((root) => {
+    const input = root.querySelector<HTMLInputElement>("input[type=search]");
+    const buttons = Array.from(
+      root.querySelectorAll<HTMLButtonElement>("[data-category]"),
+    );
+    const items = Array.from(root.querySelectorAll<HTMLElement>("[data-item]"));
+    let category = "all";
+    const update = () => {
+      let count = 0;
+      items.forEach((item) => {
+        const show =
+          (category === "all" ||
+            (item.dataset.item || "").split("|").includes(category)) &&
+          normalize(item.textContent || "").includes(
+            normalize(input?.value.trim() || ""),
+          );
+        item.hidden = !show;
+        if (show) count++;
+      });
+      const status = root.querySelector<HTMLElement>("[data-count]");
+      if (status)
+        status.textContent = count
+          ? `${count} résultat${count > 1 ? "s" : ""}`
+          : "Aucun résultat. Essayez un autre mot ou toutes les catégories.";
+      buttons.forEach((b) =>
+        b.setAttribute("aria-pressed", String(b.dataset.category === category)),
+      );
+    };
+    buttons.forEach((button) =>
+      button.addEventListener("click", () => {
+        category = button.dataset.category!;
+        update();
+      }),
+    );
+    input?.addEventListener("input", update);
+    root.addEventListener("reset-filter", () => {
+      category = "all";
+      if (input) input.value = "";
+      update();
+    });
+    root
+      .querySelectorAll<HTMLElement>("[data-filter-controls]")
+      .forEach((el) => (el.hidden = false));
+    update();
+  });
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+    const search = document.querySelector(".search-scene .searchbox");
+    if (search)
+      gsap.from(search, {
+        clipPath: "inset(0 100% 0 0)",
+        duration: 0.85,
+        ease: "power2.out",
+        clearProps: "clipPath",
+      });
+    document
+      .querySelectorAll<HTMLElement>(".journey-track li")
+      .forEach((step) => {
+        gsap.from(step.querySelector(".journey-dot"), {
+          scale: 0.7,
+          borderColor: "#547187",
+          ease: "none",
+          scrollTrigger: {
+            trigger: step,
+            start: "top 85%",
+            end: "top 50%",
+            scrub: 0.4,
+          },
+        });
+      });
+    document.querySelectorAll<HTMLElement>("[data-draw]").forEach((line) => {
+      gsap.from(line, {
+        scaleX: 0,
+        transformOrigin: "left",
+        ease: "none",
+        scrollTrigger: {
+          trigger: line.closest("section"),
+          start: "top 75%",
+          end: "bottom 65%",
+          scrub: 0.4,
+        },
+      });
+    });
+    document.querySelectorAll<HTMLElement>("[data-parallax]").forEach((el) => {
+      gsap.fromTo(
+        el,
+        { y: 24 },
+        {
+          y: -24,
+          ease: "none",
+          scrollTrigger: {
+            trigger: el.parentElement,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.5,
+          },
+        },
+      );
+    });
+  });
+</script>
