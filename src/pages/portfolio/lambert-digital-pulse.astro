@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import LambertCaseStudy from "../../components/LambertCaseStudy.astro";
+const { data } = (await getCollection("cases")).find(
+  (p) => p.data.path === "lambert-digital-pulse",
+)!;
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  image={data.image}
+>
+  <LambertCaseStudy />
+</BaseLayout>

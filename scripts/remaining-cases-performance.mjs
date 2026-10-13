@@ -39,4 +39,16 @@ await writeFile(
   `docs/qa/remaining-cases/lighthouse-${label}.json`,
   JSON.stringify(report, null, 2),
 );
-console.log(JSON.stringify({project:label,scores:report.scores,lcpMs:report.lcpMs,cls:report.cls,tbtMs:report.tbtMs},null,2));
+console.log(
+  JSON.stringify(
+    {
+      project: label,
+      scores: report.scores,
+      lcpMs: report.lcpMs,
+      cls: report.cls,
+      tbtMs: report.tbtMs,
+    },
+    null,
+    2,
+  ),
+);

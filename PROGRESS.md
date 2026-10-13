@@ -159,3 +159,9 @@ Sauvegarde WordPress restaurable et racine documentaire non vérifiées ; SMTP/l
 - Production : 40 pages ; 9 tests passants. Budget JS 124605 brut / 49999 gzip, conservé sans hausse.
 - Lighthouse mobile standard : performance 95, accessibilité 100, bonnes pratiques 100 ; LCP 2,760 s, CLS 0,00133, TBT 0. Mesure locale, pas une garantie terrain.
 - Suite autorisée : Lambert. Domaine courant limité HTTP429, ancienne URL TLS invalide ; utiliser les captures archivées vérifiées et signaler les médias manquants.
+
+## 13 octobre 2026 — Lambert Digital Pulse prêt pour validation
+- Étude de cas éditoriale jaune/noir, trois contributions démontrées et portrait issus de la capture authentique publiée. Aucun écran mobile fabriqué.
+- Chrome cinq largeurs/DPR2, axe, images, reduced-motion, sans JS et liens : contrôles passants. Domaine Lambert intermittent200/429 ; rendu public incomplet écarté, mobile manquant signalé dans le rapport.
+- Lighthouse mobile :100/100 performance, accessibilité100, bonnes pratiques100 ; LCP1,517s, CLS0,00037, TBT0.
+- Deux pages terminées dans le périmètre des médias vérifiés. Validation visuelle attendue ; nouvelle demande utilisateur autorise la mise à jour juridique SASU avant cet arrêt.

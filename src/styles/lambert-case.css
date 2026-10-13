@@ -1,0 +1,284 @@
+.lambert-case {
+  background: #f6f6f2;
+  color: #080c0b;
+}
+.lambert-case h1,
+.lambert-case h2,
+.lambert-case h3,
+.lambert-case p,
+.lambert-case figure {
+  margin: 0;
+}
+.lambert-case img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.ldp-wrap {
+  width: min(1160px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.lambert-case p {
+  line-height: 1.8;
+  max-width: 60ch;
+}
+.lambert-case .case-return {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.lambert-case a:focus-visible {
+  outline: 3px solid #bd6b00;
+  outline-offset: 6px;
+}
+.ldp-opening {
+  padding-top: 35px;
+  background: #ffe000;
+}
+.ldp-opening h1 {
+  font-size: clamp(48px, 9vw, 128px);
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+  font-weight: 800;
+  margin: 45px 0;
+}
+.ldp-opening-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  padding: 0 0 50px;
+}
+.ldp-opening-bottom > p {
+  font-size: clamp(22px, 3.2vw, 38px);
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+.ldp-opening-bottom span {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.ldp-stage {
+  padding: 60px 20px 35px;
+  background: #080c0b;
+}
+.ldp-stage figure {
+  max-width: 960px;
+  margin: auto;
+}
+.ldp-stage figcaption {
+  color: #cdd6ce;
+  text-align: right;
+  padding-top: 18px;
+  font-size: 13px;
+}
+.ldp-context {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  padding-block: 110px;
+}
+.ldp-context .ldp-thesis {
+  font-size: clamp(34px, 4.8vw, 65px);
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+}
+.lambert-case h2 {
+  font-size: clamp(30px, 4.1vw, 56px);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+}
+.ldp-context h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+.ldp-context p + p {
+  margin-top: 20px;
+}
+.ldp-designed {
+  background: #080c0b;
+  color: #f6f6f2;
+  padding-block: 95px;
+}
+.ldp-designed header {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #485047;
+}
+.ldp-designed header > p {
+  color: #d4e6bf;
+  margin-bottom: 22px;
+}
+.ldp-brand {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 75px 0;
+}
+.lambert-case h3 {
+  font-size: clamp(26px, 2.7vw, 36px);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.ldp-brand figure {
+  max-width: 530px;
+}
+.ldp-brand figure img {
+  border-bottom: 2px solid #ffe000;
+  padding-bottom: 20px;
+}
+.lambert-case figcaption {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+.ldp-evidence {
+  border-left: 2px solid #ffe000;
+  padding-left: 18px;
+  font-size: 14px;
+  margin-top: 24px !important;
+  color: #d4e0d5;
+}
+.ldp-focus {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 60px 0 30px;
+  border-top: 1px solid #485047;
+  align-items: start;
+}
+.ldp-focus > figure {
+  width: min(305px, 100%);
+  justify-self: center;
+  position: sticky;
+  top: 130px;
+  background: #000;
+  box-shadow: -24px 24px 0 #273226;
+  padding: 0;
+}
+.ldp-focus > figure figcaption {
+  padding: 16px;
+  margin: 0;
+}
+.ldp-path {
+  margin-top: 65px;
+  padding-top: 40px;
+  border-top: 1px solid #485047;
+}
+.ldp-person {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  padding-block: 105px;
+}
+.ldp-person h2 {
+  margin-bottom: 30px;
+}
+.ldp-person p + p {
+  margin-top: 22px;
+}
+.ldp-person figure {
+  width: min(285px, 100%);
+  justify-self: center;
+}
+.ldp-outcome {
+  background: #e1eccf;
+  padding: 90px 0;
+}
+.ldp-outcome h2 {
+  max-width: 25ch;
+}
+.ldp-outcome p {
+  margin-top: 30px;
+}
+.lambert-case .case-visit,
+.lambert-case .case-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 14px 25px;
+  background: #080c0b;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 28px;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.ldp-finish {
+  background: #ffe000;
+  padding: 90px 0;
+}
+.ldp-finish h2 {
+  margin: 25px 0;
+}
+.ldp-finish .case-contact {
+  margin-right: 30px;
+}
+.lambert-case a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 759px) {
+  .ldp-opening {
+    padding-top: 20px;
+  }
+  .ldp-opening h1 {
+    margin: 30px 0;
+    font-size: clamp(46px, 11.4vw, 80px);
+  }
+  .ldp-opening-bottom {
+    display: block;
+    padding-bottom: 30px;
+  }
+  .ldp-opening-bottom span {
+    display: block;
+    margin-top: 25px;
+  }
+  .ldp-stage {
+    padding: 30px 20px;
+  }
+  .ldp-context,
+  .ldp-brand,
+  .ldp-focus,
+  .ldp-person {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .ldp-context,
+  .ldp-designed,
+  .ldp-person,
+  .ldp-outcome,
+  .ldp-finish {
+    padding-block: 60px;
+  }
+  .ldp-brand {
+    padding-block: 45px;
+  }
+  .ldp-focus > figure {
+    position: static;
+    box-shadow: none;
+  }
+  .ldp-path {
+    margin-top: 35px;
+    padding-top: 30px;
+  }
+  .ldp-finish .case-contact {
+    display: flex;
+    margin-right: 0;
+  }
+  .ldp-finish .case-return {
+    margin-top: 18px;
+  }
+  .ldp-person figure {
+    justify-self: start;
+  }
+  .ldp-context .ldp-thesis {
+    font-size: 44px;
+  }
+}

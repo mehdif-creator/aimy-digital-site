@@ -6,7 +6,13 @@ import CTA from "../../components/CTA.astro";
 export async function getStaticPaths() {
   return (await getCollection("cases"))
     .filter(
-      (project) => !["ht-crea-jeux", "my-nutrizen", "sc-renovation"].includes(project.data.path),
+      (project) =>
+        ![
+          "ht-crea-jeux",
+          "my-nutrizen",
+          "sc-renovation",
+          "lambert-digital-pulse",
+        ].includes(project.data.path),
     )
     .map((project) => ({
       params: { slug: project.data.path },
@@ -57,4 +63,3 @@ const { data } = Astro.props.project;
   </div>
   <CTA />
 </BaseLayout>
-

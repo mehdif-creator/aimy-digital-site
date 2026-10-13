@@ -1,0 +1,150 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/lambert-digital-pulse.DSVvl1xc_Z1HaOIa.webp",
+          "width": 280,
+          "encodedWidth": 640
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/identity.D6yJCGPf_vBzrb.webp",
+          "width": 280,
+          "encodedWidth": 640
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/position.Cm6GwUfe_Z1b9IYF.webp",
+          "width": 280,
+          "encodedWidth": 610
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/portrait.D_ipjMWC_Z2eHc0w.webp",
+          "width": 280,
+          "encodedWidth": 570
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 375,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/lambert-digital-pulse.DSVvl1xc_mQc0w.webp",
+          "width": 335,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/identity.D6yJCGPf_Z1fHwlF.webp",
+          "width": 335,
+          "encodedWidth": 840
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/position.Cm6GwUfe_Z1b9IYF.webp",
+          "width": 305,
+          "encodedWidth": 610
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/portrait.D_ipjMWC_Z2eHc0w.webp",
+          "width": 285,
+          "encodedWidth": 570
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 390,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/lambert-digital-pulse.DSVvl1xc_mQc0w.webp",
+          "width": 350,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/identity.D6yJCGPf_Z1fHwlF.webp",
+          "width": 350,
+          "encodedWidth": 840
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/position.Cm6GwUfe_Z1b9IYF.webp",
+          "width": 305,
+          "encodedWidth": 610
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/portrait.D_ipjMWC_Z2eHc0w.webp",
+          "width": 285,
+          "encodedWidth": 570
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 768,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/lambert-digital-pulse.DSVvl1xc_iOsai.webp",
+          "width": 728,
+          "encodedWidth": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/identity.D6yJCGPf_Z2swS75.webp",
+          "width": 334,
+          "encodedWidth": 1060
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/position.Cm6GwUfe_Z1b9IYF.webp",
+          "width": 305,
+          "encodedWidth": 610
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/portrait.D_ipjMWC_Z2eHc0w.webp",
+          "width": 285,
+          "encodedWidth": 570
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 36)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    },
+    {
+      "width": 1440,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/lambert-digital-pulse.DSVvl1xc_iOsai.webp",
+          "width": 960,
+          "encodedWidth": 1920
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/identity.D6yJCGPf_Z2swS75.webp",
+          "width": 530,
+          "encodedWidth": 1060
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/position.Cm6GwUfe_Z1b9IYF.webp",
+          "width": 305,
+          "encodedWidth": 610
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/portrait.D_ipjMWC_Z2eHc0w.webp",
+          "width": 285,
+          "encodedWidth": 570
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 36)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    }
+  ],
+  "errors": []
+}

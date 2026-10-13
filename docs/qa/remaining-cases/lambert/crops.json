@@ -1,0 +1,32 @@
+[
+  {
+    "source": "public/images/showcase/lambert-digital-pulse.webp",
+    "path": "public/images/cases/lambert/identity.png",
+    "extract": {
+      "left": 420,
+      "top": 25,
+      "width": 1060,
+      "height": 230
+    }
+  },
+  {
+    "source": "public/images/showcase/lambert-digital-pulse.webp",
+    "path": "public/images/cases/lambert/position.png",
+    "extract": {
+      "left": 670,
+      "top": 260,
+      "width": 610,
+      "height": 280
+    }
+  },
+  {
+    "source": "public/images/showcase/lambert-digital-pulse.webp",
+    "path": "public/images/cases/lambert/portrait.png",
+    "extract": {
+      "left": 650,
+      "top": 570,
+      "width": 570,
+      "height": 320
+    }
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "sc-renovation",
+    "returns": 2,
+    "url": "https://sc-renovation.com/",
+    "status": 200
+  },
+  {
+    "slug": "lambert-digital-pulse",
+    "returns": 2,
+    "url": "https://lambertdigitalpulse.fr/",
+    "status": 200
+  }
+]
