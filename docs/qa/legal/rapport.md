@@ -31,3 +31,6 @@ La page officielle o2switch confirme : Chemin des Pardiaux,63000 Clermont-Ferran
 
 ## Vérification
 scripts/legal-qa.mjs : neuf configurations (320/390/1440 ×mentions/confidentialité/contact), aucune violation axe, aucun débordement, aucune erreur navigateur, aucune requête externe, refus/accord et localStorage contrôlés. Organization vérifié ; formulaire désactivé. Liens légaux et footerSASU vérifiés sur40 pages. Neuf tests de régression passants. Buildproduction40 pages, budgetJSinchangé124605/49999. Mesures Lighthouse des cas conservées ; pas de nouvel audit global inutile pour ces modifications de texte/HTML.
+
+## Confirmations du 13 octobre 2026
+Directeur de publication : Mehdi FARHANE, Président de la SASU AIMY DIGITAL. Hébergement du nouveau site : o2switch, confirmé par l’utilisateur. Les deux premiers points bloquants ci-dessus sont levés. Les tests d’hébergement/SMTP et les autres questions de traitement restent ouverts ; confirmation du prestataire ne signifie pas déploiement effectué.

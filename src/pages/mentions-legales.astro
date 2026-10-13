@@ -15,11 +15,6 @@ import "../styles/legal.css";
       <h1>Mentions légales</h1>
       <p>Mise à jour le 13 octobre 2026.</p>
     </header>
-    <aside class="legal-pending" aria-label="Informations à confirmer">
-      <strong>Version de préproduction.</strong> L’identité et la qualité du
-      directeur de la publication ainsi que l’hébergement effectif du nouveau
-      site restent à confirmer avant publication.
-    </aside>
     <nav class="legal-index" aria-label="Sommaire des mentions légales">
       <a href="#editeur">Éditeur</a>
       <a href="#publication">Publication</a>
@@ -87,22 +82,20 @@ import "../styles/legal.css";
     <section id="publication">
       <h2>Directeur de la publication</h2>
       <p>
-        <strong>À confirmer avant publication :</strong> nom complet et qualité
-        du directeur de la publication. Aucune identité n’est attribuée sans
-        confirmation.
+        {company.publicationDirector}, {company.publicationRole}.
       </p>
     </section>
     <section id="hebergement">
       <h2>Hébergement</h2>
+      <p>Le nouveau site Astro sera hébergé par o2switch.</p>
       <p>
-        Le projet prévoit un hébergement chez o2switch. L’hébergement effectif
-        de cette nouvelle version Astro n’est pas encore confirmé ; cette
-        rubrique doit être finalisée avant sa mise en ligne.
-      </p>
-      <p>
-        Les coordonnées de l’hébergeur seront renseignées après cette
-        confirmation.{" "}
-        <a href="https://www.o2switch.fr/">Consulter le site d’o2switch</a>.
+        o2switch
+        <br />
+        Chemin des Pardiaux, 63000 Clermont-Ferrand, France
+        <br />
+        <a href="tel:+33444446040">04 44 44 60 40</a>
+        <br />
+        <a href="https://www.o2switch.fr/">www.o2switch.fr</a>
       </p>
     </section>
     <section id="droits">

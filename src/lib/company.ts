@@ -1,4 +1,6 @@
 export const company = {
+  publicationDirector: "Mehdi FARHANE",
+  publicationRole: "Président de la SASU AIMY DIGITAL",
   legalName: "AIMY DIGITAL",
   form: "Société par actions simplifiée unipersonnelle (SASU)",
   capital: "1 000 €",
