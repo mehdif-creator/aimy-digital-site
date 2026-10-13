@@ -204,3 +204,19 @@ Budget JS agrégé porté explicitement de 130/52 Ko à 135/54 Ko pour les huit 
 Prestations : explorateur de six besoins, véritables changements de contenu, CTA et cas authentiques (SC Rénovation / HT Créa Jeux), sans attribuer de résultats SEO/SEA ni contrat non vérifié. Agence : manifeste éditorial, atelier en quatre étapes, interfaces réelles et identité de Mehdi Farhane confirmée. Aucun collaborateur ni historique inventé.
 
 Les deux pages sont incluses dans la recette à six largeurs sans erreur et dans les vérifications sans JavaScript / reduced-motion. Composants de cas et pages approuvées inchangés.
+
+## 2026-10-13 — huit pages, lot 3 et livraison globale
+
+Contact : choix visuel natif du projet, retours de validation, coordonnées et RGPD conservés. Le PHP/SMTP réel reste à configurer et tester : envoi désactivé, alternatives directes visibles, aucune fausse confirmation. Journal : magazine, couvertures historiques WebP optimisées sans agrandissement et filtres multi-catégories. FAQ : recherche locale accent-insensible, catégories, zéro résultat, réponses associées et compteur synchronisé.
+
+Revue indépendante : deux défauts reproduits puis corrigés (catégorie secondaire de l’article IA, question FAQ associée avec recherche active). Tests spécifiques en échec avant correction et réussis après. Aucun changement des pages protégées, des articles, du juridique, du header/footer ou des layouts.
+
+Validation finale : builds production et staging 40 pages, audits sans erreur ; Astro 0 erreur/0 warning (1 hint ancien) ; suite 9/9 ; 48 configurations navigateur sans erreur/overflow/axe, puis 12 configurations supplémentaires FAQ/journal après correction du CLS ; 16 contrôles approfondis avec tous les panneaux, images, liens et menu. Aperçus des huit routes HTTP 200 et noindex/nofollow.
+
+Lighthouse 13.5 mobile propre, séquentiel : SEO 99 / LCP 1,759 s ; SEA 98 / 1,738 s ; maintenance 99 / 1,742 s ; prestations 98 / 2,022 s ; agence 98 / 2,164 s ; FAQ 99 / médiane 1,834 s ; journal 99 / 2,121 s ; contact 100 / 1,535 s. Accessibilité et bonnes pratiques 100 partout ; TBT 0 ; CLS final 0 à 0,0611. Mesures de laboratoire locales, pas des données terrain.
+
+FAQ : CLS initial 0,248, puis 0,212 après réservation de l’interface. PerformanceObserver confirme des retours à la ligne lors du chargement des polices. Préchargement 400/600/700 uniquement sur FAQ et grille mobile stabilisée : trois audits finaux 1,849 / 1,834 / 1,837 s, CLS 0. Journal CLS réduit de 0,064 à 0,0015 en affichant ses filtres dès le HTML initial.
+
+Réserve éditoriale : onze articles actuels ne contiennent que 4–10 % du volume des archives WordPress. Aucun texte d’article modifié ; restauration éditoriale à traiter séparément avant publication. Liste exacte dans docs/qa/eight-pages/article-integrity.md. Réserves SMTP et données personnelles dans contact-readiness.md.
+
+Rapport global : docs/qa/eight-pages/rapport.md. Budget agrégé JS 131 811 / 53 190 gzip, seuil explicite 135/54 Ko. Aucun coût externe, push ou déploiement. Arrêt pour validation visuelle globale des huit pages.

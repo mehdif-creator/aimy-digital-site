@@ -1,20 +1,263 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import FAQ from "../components/FAQ.astro";
-import CTA from "../components/CTA.astro";
+import CommercialInteractions from "../components/CommercialInteractions.astro";
+import regular from "@fontsource/manrope/files/manrope-latin-400-normal.woff2?url";
+import semibold from "@fontsource/manrope/files/manrope-latin-600-normal.woff2?url";
+import bold from "@fontsource/manrope/files/manrope-latin-700-normal.woff2?url";
+import { help } from "../lib/help";
+import "../styles/commercial-premium.css";
+const categories = [...new Set(help.map((q) => q.category))];
 ---
 
 <BaseLayout
-  title="Questions fréquentes sur votre projet web"
-  description="Budget, délai, propriété, refonte, SEO et maintenance : les questions à poser avant de créer votre site internet."
+  title="FAQ : les réponses pour préparer votre projet web"
+  description="Budget, délais, domaine, propriété, SEO, publicité et maintenance : des réponses claires pour préparer votre projet avec Aimy Digital."
 >
-  <div class="container">
-    <header class="page-intro">
-      <h1>Les bonnes questions font les bons projets.</h1>
+  <Fragment slot="head">
+    {[regular, semibold, bold].map((href) => (
+      <link
+        rel="preload"
+        href={href}
+        as="font"
+        type="font/woff2"
+        crossorigin="anonymous"
+      />
+    ))}
+  </Fragment>
+  <div class="premium help-page" data-filter>
+    <header class="hero wrap">
+      <span class="eyebrow">Le centre de réponses Aimy Digital</span>
+      <h1>
+        Avant de vous lancer,
+        <br />
+        <em>voyons plus clair.</em>
+      </h1>
+      <p class="intro">
+        Les questions pratiques qui font avancer votre projet.
+      </p>
+      <div data-filter-controls>
+        <label class="searchbox" for="help-search">
+          <span aria-hidden="true">⌕</span>
+          <input
+            id="help-search"
+            type="search"
+            placeholder="Rechercher : budget, domaine, Google…"
+            aria-label="Rechercher dans les questions"
+          />
+        </label>
+      </div>
     </header>
-    <section class="section">
-      <FAQ />
+    <section class="help-layout wrap">
+      <aside>
+        <div data-filter-controls>
+          <span class="eyebrow">Votre sujet</span>
+          <div class="filters">
+            <button type="button" data-category="all">
+              Toutes les questions
+            </button>
+            {categories.map((c) => (
+              <button type="button" data-category={c}>
+                {c}
+              </button>
+            ))}
+          </div>
+          <p
+            class="filter-status"
+            data-count
+            role="status"
+            aria-live="polite"
+          ></p>
+        </div>
+        <div class="help-human">
+          <h2>Votre cas est particulier ?</h2>
+          <p>
+            Une conversation peut préciser ce qu’une réponse générale ne couvre
+            pas.
+          </p>
+          <a class="textual" href="/contact/">
+            Poser ma question ↗
+          </a>
+        </div>
+      </aside>
+      <div class="answers">
+        {help.map((q, i) => (
+          <details data-item={q.category} id={`question-${i}`}>
+            <summary>
+              <span class="caption">{q.category}</span>
+              <span>{q.question}</span>
+              <span class="help-plus" aria-hidden="true">
+                +
+              </span>
+            </summary>
+            <div class="answer-body">
+              <p>{q.answer}</p>
+              <a class="textual" href={q.href}>
+                {q.link} ↗
+              </a>
+              <p class="related">
+                À lire aussi :{" "}
+                <a
+                  href={`#question-${help.findIndex((other, j) => j !== i && other.category === q.category) >= 0 ? help.findIndex((other, j) => j !== i && other.category === q.category) : 11}`}
+                >
+                  une autre question sur {q.category.toLowerCase()}
+                </a>
+              </p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+    <section class="closing">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">La suite vous appartient</span>
+          <h2>
+            Une question en moins.
+            <br />
+            Un projet plus clair.
+          </h2>
+        </div>
+        <a class="action" href="/nos-prestations/">
+          Trouver la bonne prestation ↗
+        </a>
+      </div>
     </section>
   </div>
-  <CTA />
+  <CommercialInteractions />
+  <noscript>
+    <style>
+      .premium [data-filter-controls] {
+        display: none !important;
+      }
+    </style>
+  </noscript>
+  <script>
+    document.querySelectorAll<HTMLAnchorElement>(".related a").forEach((a) =>
+      a.addEventListener("click", () => {
+        const target = document.querySelector<HTMLDetailsElement>(a.hash);
+        if (target) {
+          target
+            .closest("[data-filter]")
+            ?.dispatchEvent(new Event("reset-filter"));
+          target.hidden = false;
+          target.open = true;
+          target.querySelector("summary")?.focus();
+        }
+      }),
+    );
+  </script>
+  <style>
+    .help-page {
+      background: #e7f0f5;
+    }
+    .help-page h1 {
+      max-width: 20ch;
+    }
+    .help-page em {
+      font-style: normal;
+      color: #006b9f;
+    }
+    .help-page .searchbox {
+      max-width: 800px;
+      margin-top: 2rem;
+      border-radius: 4px;
+    }
+    .help-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 5rem;
+      padding-bottom: 5rem;
+    }
+    .help-layout aside {
+      position: sticky;
+      top: 120px;
+      align-self: start;
+    }
+    .help-page .filters {
+      flex-direction: column;
+    }
+    .help-page .filters button {
+      text-align: left;
+      background: transparent;
+      border-width: 0 0 1px;
+      border-radius: 0;
+    }
+    .help-page .filters button[aria-pressed="true"] {
+      background: #15344b;
+    }
+    .help-human {
+      border-top: 2px solid #0075ac;
+      margin-top: 2rem;
+      padding-top: 2rem;
+    }
+    .help-human h2 {
+      font-size: 1.5rem;
+    }
+    .help-human p {
+      font-size: 0.9rem;
+    }
+    .answers details {
+      border-top: 1px solid #a5bcca;
+      background: transparent;
+    }
+    .answers summary {
+      list-style: none;
+      padding: 1.8rem 2.5rem 1.8rem 0;
+      position: relative;
+      font-size: clamp(1.1rem, 1.7vw, 1.55rem);
+      font-weight: 600;
+      letter-spacing: -0.035em;
+    }
+    .answers summary::-webkit-details-marker {
+      display: none;
+    }
+    .answers summary > .caption {
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: #426174;
+      margin-bottom: 0.6rem;
+    }
+    .help-plus {
+      position: absolute;
+      right: 0.3rem;
+      top: 2rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+    .answers details[open] .help-plus {
+      transform: rotate(45deg);
+    }
+    .answer-body {
+      padding: 0 2rem 1.5rem 0;
+    }
+    .related {
+      font-size: 0.8rem;
+      color: #375466;
+      margin-top: 1.5rem;
+    }
+    .related a {
+      text-decoration: underline;
+    }
+    @media (max-width: 850px) {
+      .help-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .help-layout aside {
+        position: static;
+      }
+      .help-page .filters {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 64px;
+      }
+      .help-page .filters button {
+        font-size: 0.8rem;
+      }
+      .help-human {
+        display: none;
+      }
+    }
+  </style>
 </BaseLayout>

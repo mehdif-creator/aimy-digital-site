@@ -49,18 +49,28 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
       maxlength="30"
     />
   </div>
-  <div class="field full">
-    <label for="need">Votre besoin *</label>
-    <select id="need" name="need" required>
-      <option value="">Choisir un sujet</option>
-      <option>Créer un site</option>
-      <option>Refondre un site</option>
-      <option>Créer une boutique</option>
-      <option>Améliorer ma visibilité</option>
-      <option>Maintenance et suivi</option>
-      <option>Autre projet</option>
-    </select>
-  </div>
+  <fieldset class="project-picker full">
+    <legend>Votre projet *</legend>
+    <div>
+      {[
+        "Créer un site",
+        "Refondre un site",
+        "Créer une boutique",
+        "Améliorer ma visibilité",
+        "Maintenance et suivi",
+        "Autre projet",
+      ].map((need, i) => (
+        <label>
+          <input type="radio" name="need" value={need} required />
+          <span>
+            <span aria-hidden="true">0{i + 1}</span>
+            {need}
+            <span aria-hidden="true">↗</span>
+          </span>
+        </label>
+      ))}
+    </div>
+  </fieldset>
   <div class="field full">
     <label for="message">Parlez-nous de votre projet *</label>
     <textarea
@@ -101,6 +111,35 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
 <script>
   import { track } from "../lib/analytics";
   const form = document.querySelector<HTMLFormElement>(".contact-form");
+  form
+    ?.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>(
+      "input:not([type=radio]), textarea",
+    )
+    .forEach((field) => {
+      if (field.name === "website") return;
+      const hint = document.createElement("span");
+      hint.className = "field-feedback";
+      hint.id = `${field.id}-feedback`;
+      hint.setAttribute("aria-live", "polite");
+      field.after(hint);
+      field.setAttribute("aria-describedby", hint.id);
+      const validate = () => {
+        field.setAttribute("aria-invalid", String(!field.validity.valid));
+        hint.textContent = field.validity.valid
+          ? ""
+          : field.validity.valueMissing
+            ? "Ce champ est nécessaire."
+            : field.validity.typeMismatch
+              ? "Indiquez une adresse e-mail valide."
+              : field.validity.tooShort
+                ? `Précisez votre réponse (${field.minLength} caractères minimum).`
+                : "Vérifiez ce champ.";
+      };
+      field.addEventListener("blur", validate);
+      field.addEventListener("input", () => {
+        if (field.getAttribute("aria-invalid") === "true") validate();
+      });
+    });
   form?.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (form.dataset.enabled !== "true" || !form.reportValidity()) return;
@@ -131,3 +170,78 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
     }
   });
 </script>
+
+<style>
+  .project-picker {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    min-width: 0;
+  }
+  .project-picker legend {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .project-picker > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+  }
+  .project-picker label {
+    position: relative;
+    cursor: pointer;
+  }
+  .project-picker input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+  .project-picker label > span {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 0.8rem;
+    min-height: 64px;
+    border: 1px solid #879fab;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    background: #fff;
+  }
+  .project-picker label > span > span:first-child {
+    font-size: 0.65rem;
+    color: #426174;
+  }
+  .project-picker input:checked + span {
+    background: #123149;
+    color: white;
+    border-color: #123149;
+  }
+  .project-picker input:checked + span > span {
+    color: white;
+  }
+  .project-picker input:focus-visible + span {
+    outline: 3px solid #0078b5;
+    outline-offset: 3px;
+  }
+  .field-feedback {
+    font-size: 0.78rem;
+    color: #9a241f;
+    min-height: 1.2em;
+  }
+  .contact-form input[aria-invalid="true"],
+  .contact-form textarea[aria-invalid="true"] {
+    border-color: #9a241f;
+  }
+  @media (max-width: 400px) {
+    .project-picker label > span {
+      font-size: 0.72rem;
+      padding: 0.75rem 0.5rem;
+      gap: 0.4rem;
+    }
+    .project-picker label > span > span:first-child {
+      display: none;
+    }
+  }
+</style>
