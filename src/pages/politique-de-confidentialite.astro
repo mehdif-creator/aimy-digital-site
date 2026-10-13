@@ -1,32 +1,188 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { company } from "../lib/company";
+import { site } from "../lib/site";
+import "../styles/legal.css";
+const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
 ---
 
 <BaseLayout
   title="Confidentialité et données personnelles"
-  description="Comment joindre Aimy Digital à propos de vos données et gérer vos préférences de confidentialité."
+  description="Responsable du traitement AIMY DIGITAL SASU, données de contact, stockage local et exercice de vos droits."
 >
-  <section class="container section prose">
-    <h1>Confidentialité</h1>
-    <h2>Vos demandes de contact</h2>
-    <p>
-      Les coordonnées et informations que vous transmettez à Aimy Digital
-      servent à comprendre votre demande et à y répondre. Évitez de communiquer
-      des données sensibles ou des mots de passe dans votre message.
-    </p>
-    <h2>Vos choix de mesure</h2>
-    <p>
-      Cette version ne charge aucun outil publicitaire ni outil tiers de mesure
-      d’audience. Le panneau de préférences, en pied de page, permet
-      d’enregistrer ou de retirer votre choix sur cet appareil. Ce choix est
-      enregistré dans le stockage local du navigateur.
-    </p>
-    <h2>Nous joindre à propos de vos données</h2>
-    <p>
-      Écrivez à{" "}
-      <a href="mailto:contact@aimy-digital.fr">contact@aimy-digital.fr</a> pour
-      demander des informations sur les données vous concernant ou exercer vos
-      droits.
-    </p>
-  </section>
+  <article class="legal-page container">
+    <header class="legal-heading">
+      <p>Vos données et vos choix</p>
+      <h1>Politique de confidentialité</h1>
+      <p>Mise à jour le 13 octobre 2026.</p>
+    </header>
+    <aside class="legal-pending" aria-label="Validation requise">
+      <strong>Version de préproduction à finaliser.</strong> Les durées de
+      conservation des messages, les prestataires de messagerie et
+      d’hébergement, les éventuels transferts de données et les bases légales
+      doivent être validés avant publication et activation du formulaire.
+    </aside>
+    <nav class="legal-index" aria-label="Sommaire de la confidentialité">
+      <a href="#responsable">Responsable</a>
+      <a href="#contact">Contact</a>
+      <a href="#destinataires">Destinataires</a>
+      <a href="#conservation">Conservation</a>
+      <a href="#cookies">Cookies</a>
+      <a href="#vos-droits">Vos droits</a>
+    </nav>
+    <section id="responsable">
+      <h2>Responsable du traitement</h2>
+      <p>
+        {company.legalName}, {company.form}, au capital de {company.capital},
+        immatriculée sous le numéro {company.siren} RCS {company.rcs}, est
+        l’éditeur du site et le responsable des traitements liés aux demandes
+        qui lui sont adressées.
+      </p>
+      <p>
+        Siège social : {company.street}, {company.postalCode} {company.city},{" "}
+        {company.country}.
+      </p>
+      <p>
+        Contact pour vos données :{" "}
+        <a href={`mailto:${site.email}`}>{site.email}</a> ou par courrier au
+        siège social. Téléphone : <a href={`tel:${site.tel}`}>{site.phone}</a>.
+      </p>
+    </section>
+    <section id="contact">
+      <h2>Demandes de contact et de devis</h2>
+      <p>
+        Les informations que vous adressez à AIMY DIGITAL servent à comprendre
+        votre demande, échanger avec vous et, le cas échéant, préparer une
+        proposition. N’envoyez pas de mots de passe ni de données sensibles dans
+        votre message.
+      </p>
+      <p>
+        {enabled
+          ? "Le formulaire de contact est activé dans cette version."
+          : "Le formulaire de contact est désactivé dans cette version de préproduction. Vous pouvez nous joindre directement par e-mail ou téléphone."}
+      </p>
+      <p>
+        Le formulaire prévoit les champs obligatoires nom, e-mail, sujet de la
+        demande et message. L’entreprise et le téléphone sont facultatifs. Les
+        champs obligatoires permettent de traiter votre demande et de vous
+        répondre ; sans eux, le formulaire ne peut pas être envoyé.
+      </p>
+      <p>
+        Un e-mail direct contient les informations que vous choisissez de
+        communiquer et les données techniques associées à sa transmission. Le
+        site ne comporte pas de formulaire d’inscription à une newsletter.
+      </p>
+      <h3>Fondement du traitement — à valider</h3>
+      <p>
+        Pour une demande de devis ou de prestation, le fondement envisagé est
+        l’exécution de mesures précontractuelles prises à votre demande. Pour
+        les autres échanges, l’intérêt légitime à répondre aux sollicitations
+        est à évaluer selon leur objet. Ces qualifications doivent être
+        confirmées par AIMY DIGITAL avant la mise en production.
+      </p>
+    </section>
+    <section id="destinataires">
+      <h2>Destinataires et prestataires</h2>
+      <p>
+        Les demandes sont destinées à AIMY DIGITAL. Le dispositif de contact
+        prévu transmet les messages par e-mail via un serveur de messagerie ; il
+        ne crée pas de base de contacts dans le site statique.
+      </p>
+      <p>
+        <strong>À confirmer :</strong> l’identité du prestataire de messagerie,
+        l’hébergeur effectif, les personnes habilitées à accéder aux messages,
+        les lieux de traitement, les éventuels transferts hors de l’Espace
+        économique européen et, s’il y a lieu, les garanties applicables. Aucune
+        absence de transfert n’est présumée.
+      </p>
+    </section>
+    <section id="conservation">
+      <h2>Conservation et sécurité technique</h2>
+      <p>
+        <strong>Messages et pièces jointes :</strong> les durées ou critères de
+        conservation dans les boîtes e-mail et les sauvegardes restent à définir
+        et à valider. Aucune durée chiffrée n’est annoncée sans politique
+        effectivement appliquée.
+      </p>
+      <p>
+        <strong>Protection du formulaire prévu :</strong> le code serveur
+        utilise un identifiant dérivé de l’adresse IP par hachage avec clé et
+        des horodatages pour limiter les tentatives d’envoi sur une fenêtre
+        d’une heure. Cette fenêtre de calcul ne garantit pas la suppression des
+        fichiers : la purge effective et sa durée restent à configurer et
+        vérifier avant activation. Le gestionnaire n’écrit pas le contenu des
+        messages dans ces fichiers.
+      </p>
+      <p>
+        <strong>Journaux d’hébergement et de messagerie :</strong> leurs
+        contenus, accès et durées de conservation doivent être confirmés auprès
+        des prestataires retenus. Le fonctionnement du serveur de contact et la
+        réception des e-mails ne sont pas encore validés en production.
+      </p>
+    </section>
+    <section id="cookies">
+      <h2>Cookies, statistiques et stockage local</h2>
+      <p>
+        Cette version ne charge aucun outil tiers de mesure d’audience ni
+        traceur publicitaire. Aucun envoi d’événement vers un prestataire
+        d’analyse n’est configuré. Les polices et les images du site sont
+        servies localement.
+      </p>
+      <p>
+        Le panneau « Préférences de confidentialité », accessible en pied de
+        page, enregistre uniquement votre choix sur cet appareil sous la clé{" "}
+        <code>aimy-consent</code> dans le stockage local du navigateur. Cette
+        valeur n’a pas d’expiration automatique dans le code actuel : elle reste
+        jusqu’à son remplacement ou à la suppression des données du site dans
+        votre navigateur.
+      </p>
+      <p>
+        Vous pouvez modifier ce choix à tout moment dans le panneau, ou
+        supprimer les données du site depuis votre navigateur. Aucun outil de
+        mesure n’est activé par ce choix aujourd’hui. Il ne constitue pas une
+        autorisation anticipée pour un futur prestataire ou une nouvelle
+        finalité.
+      </p>
+      <p>
+        Avant tout ajout de traceur, cette information devra être actualisée et
+        un consentement adapté devra être recueilli lorsque celui-ci est requis.
+      </p>
+    </section>
+    <section id="vos-droits">
+      <h2>Exercer vos droits</h2>
+      <p>
+        Selon le traitement et les conditions prévues par la réglementation,
+        vous pouvez demander l’accès à vos données, leur rectification, leur
+        effacement, la limitation du traitement, vous y opposer ou demander leur
+        portabilité. Lorsqu’un traitement repose sur votre consentement, vous
+        pouvez le retirer sans remettre en cause la licéité du traitement
+        effectué auparavant.
+      </p>
+      <p>
+        Adressez votre demande à{" "}
+        <a href={`mailto:${site.email}`}>{site.email}</a> ou au siège social en
+        précisant les éléments permettant d’identifier votre demande. Un
+        justificatif d’identité ne doit être demandé qu’en cas de doute
+        raisonnable sur votre identité.
+      </p>
+      <p>
+        Vous pouvez également{" "}
+        <a href="https://www.cnil.fr/fr/plaintes">
+          adresser une réclamation à la CNIL
+        </a>
+        . Pour comprendre les conditions d’exercice de vos droits, consultez{" "}
+        <a href="https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles">
+          les informations de la CNIL
+        </a>
+        .
+      </p>
+    </section>
+    <section>
+      <h2>Informations sur l’éditeur</h2>
+      <p>
+        Retrouvez les informations d’immatriculation et les coordonnées d’AIMY
+        DIGITAL dans les <a href="/mentions-legales/">mentions légales</a>.
+      </p>
+    </section>
+  </article>
 </BaseLayout>

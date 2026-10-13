@@ -1,0 +1,60 @@
+{
+  "results": [
+    {
+      "route": "mentions-legales",
+      "width": 320,
+      "axe": 0,
+      "externalRequests": 0
+    },
+    {
+      "route": "mentions-legales",
+      "width": 390,
+      "axe": 0,
+      "externalRequests": 0
+    },
+    {
+      "route": "mentions-legales",
+      "width": 1440,
+      "axe": 0,
+      "externalRequests": 0
+    },
+    {
+      "route": "politique-de-confidentialite",
+      "width": 320,
+      "axe": 0,
+      "externalRequests": 0
+    },
+    {
+      "route": "politique-de-confidentialite",
+      "width": 390,
+      "axe": 0,
+      "externalRequests": 0
+    },
+    {
+      "route": "politique-de-confidentialite",
+      "width": 1440,
+      "axe": 0,
+      "externalRequests": 0
+    },
+    {
+      "route": "contact",
+      "width": 320,
+      "axe": 0,
+      "externalRequests": 0
+    },
+    {
+      "route": "contact",
+      "width": 390,
+      "axe": 0,
+      "externalRequests": 0
+    },
+    {
+      "route": "contact",
+      "width": 1440,
+      "axe": 0,
+      "externalRequests": 0
+    }
+  ],
+  "pages": 40,
+  "errors": []
+}

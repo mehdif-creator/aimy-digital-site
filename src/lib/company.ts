@@ -1,0 +1,15 @@
+export const company = {
+  legalName: "AIMY DIGITAL",
+  form: "Société par actions simplifiée unipersonnelle (SASU)",
+  capital: "1 000 €",
+  siren: "131 260 390",
+  siret: "131 260 390 00011",
+  rcs: "Niort",
+  vat: "FR79131260390",
+  ape: "7022Z — Conseil pour les affaires et autres conseils de gestion",
+  started: "07/10/2026",
+  street: "23 rue Pierre Jeissou",
+  postalCode: "79700",
+  city: "Saint-Amand-sur-Sèvre",
+  country: "France",
+};

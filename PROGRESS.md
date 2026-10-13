@@ -165,3 +165,9 @@ Sauvegarde WordPress restaurable et racine documentaire non vérifiées ; SMTP/l
 - Chrome cinq largeurs/DPR2, axe, images, reduced-motion, sans JS et liens : contrôles passants. Domaine Lambert intermittent200/429 ; rendu public incomplet écarté, mobile manquant signalé dans le rapport.
 - Lighthouse mobile :100/100 performance, accessibilité100, bonnes pratiques100 ; LCP1,517s, CLS0,00037, TBT0.
 - Deux pages terminées dans le périmètre des médias vérifiés. Validation visuelle attendue ; nouvelle demande utilisateur autorise la mise à jour juridique SASU avant cet arrêt.
+
+## 13 octobre 2026 — correction juridique SASU obligatoire
+Identité utilisateur intégrée et centralisée : mentions légales, confidentialité, footer, contact, information du formulaire, Organization et publisher. URL conservées, archives et blog inchangés. Aucun ancien SIRET/statut d’éditeur dans les sources publiables ou40pages.
+Audit réel : formulaire désactivé, SMTP/hébergement non vérifiés, aucun traceur tiers, localStorage aimy-consent sans expiration. Texte fondé sur ce constat ; aucune durée ou conformité inventée.
+À confirmer avant publication : directeur de publication (nom/qualité), hébergement effectif o2switch, messagerie/sous-traitants/transferts, conservation/purge et bases légales. Questions envoyées, réserves visibles dans les pages locales. Coordonnées o2switch vérifiées à part ; ne prouvent pas un hébergement effectif.
+QA : neuf configurations320/390/1440 sur3pages, axe/réseau/préférences/schema sans erreur ; liens légaux/footer sur40pages ;9tests réussis ;buildproduction valide. Rapport docs/qa/legal/rapport.md. Pas de déploiement. Finalisation juridique conditionnée aux réponses, validation visuelle des deux cas toujours attendue.

@@ -1,37 +1,148 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { company } from "../lib/company";
+import { site } from "../lib/site";
+import "../styles/legal.css";
 ---
 
 <BaseLayout
   title="Mentions légales"
-  description="Informations sur l’éditeur et l’hébergement du site Aimy Digital."
+  description="Identification d’AIMY DIGITAL, SASU immatriculée au RCS de Niort, et informations légales du site."
 >
-  <section class="container section prose">
-    <h1>Mentions légales</h1>
-    <h2>Contacter l’éditeur</h2>
-    <p>
-      Aimy Digital
-      <br />
-      <a href="mailto:contact@aimy-digital.fr">contact@aimy-digital.fr</a>
-      <br />
-      <a href="tel:+33652597780">06 52 59 77 80</a>
-    </p>
-    <h2>Hébergement prévu</h2>
-    <p>
-      o2switch. Le présent site présente l’activité et les prestations d’Aimy
-      Digital.
-    </p>
-    <h2>Contenus et réalisations</h2>
-    <p>
-      Les textes, visuels et captures présentés ne peuvent être réutilisés sans
-      l’autorisation de leurs titulaires respectifs. Les marques citées
-      appartiennent à leurs propriétaires.
-    </p>
-    <h2>Données personnelles</h2>
-    <p>
-      Consultez la{" "}
-      <a href="/politique-de-confidentialite/">politique de confidentialité</a>{" "}
-      pour les informations relatives aux demandes de contact.
-    </p>
-  </section>
+  <article class="legal-page container">
+    <header class="legal-heading">
+      <p>Informations sur le site</p>
+      <h1>Mentions légales</h1>
+      <p>Mise à jour le 13 octobre 2026.</p>
+    </header>
+    <aside class="legal-pending" aria-label="Informations à confirmer">
+      <strong>Version de préproduction.</strong> L’identité et la qualité du
+      directeur de la publication ainsi que l’hébergement effectif du nouveau
+      site restent à confirmer avant publication.
+    </aside>
+    <nav class="legal-index" aria-label="Sommaire des mentions légales">
+      <a href="#editeur">Éditeur</a>
+      <a href="#publication">Publication</a>
+      <a href="#hebergement">Hébergement</a>
+      <a href="#droits">Contenus et droits</a>
+      <a href="#donnees">Données personnelles</a>
+    </nav>
+    <section id="editeur">
+      <h2>Éditeur du site</h2>
+      <dl class="legal-facts">
+        <div>
+          <dt>Dénomination sociale</dt>
+          <dd>{company.legalName}</dd>
+        </div>
+        <div>
+          <dt>Forme juridique</dt>
+          <dd>{company.form}</dd>
+        </div>
+        <div>
+          <dt>Capital social</dt>
+          <dd>{company.capital}</dd>
+        </div>
+        <div>
+          <dt>Siège social</dt>
+          <dd>
+            {company.street}, {company.postalCode} {company.city},{" "}
+            {company.country}
+          </dd>
+        </div>
+        <div>
+          <dt>SIREN</dt>
+          <dd>{company.siren}</dd>
+        </div>
+        <div>
+          <dt>SIRET</dt>
+          <dd>{company.siret}</dd>
+        </div>
+        <div>
+          <dt>Immatriculation</dt>
+          <dd>
+            {company.siren} RCS {company.rcs}
+          </dd>
+        </div>
+        <div>
+          <dt>TVA intracommunautaire</dt>
+          <dd>{company.vat}</dd>
+        </div>
+        <div>
+          <dt>Code APE</dt>
+          <dd>{company.ape}</dd>
+        </div>
+        <div>
+          <dt>Début d’activité</dt>
+          <dd>{company.started}</dd>
+        </div>
+      </dl>
+      <p>
+        Contact : <a href={`mailto:${site.email}`}>{site.email}</a> ·{" "}
+        <a href={`tel:${site.tel}`}>{site.phone}</a>.
+      </p>
+      <p>
+        Site : <a href={site.url}>aimy-digital.fr</a>.
+      </p>
+    </section>
+    <section id="publication">
+      <h2>Directeur de la publication</h2>
+      <p>
+        <strong>À confirmer avant publication :</strong> nom complet et qualité
+        du directeur de la publication. Aucune identité n’est attribuée sans
+        confirmation.
+      </p>
+    </section>
+    <section id="hebergement">
+      <h2>Hébergement</h2>
+      <p>
+        Le projet prévoit un hébergement chez o2switch. L’hébergement effectif
+        de cette nouvelle version Astro n’est pas encore confirmé ; cette
+        rubrique doit être finalisée avant sa mise en ligne.
+      </p>
+      <p>
+        Les coordonnées de l’hébergeur seront renseignées après cette
+        confirmation.{" "}
+        <a href="https://www.o2switch.fr/">Consulter le site d’o2switch</a>.
+      </p>
+    </section>
+    <section id="droits">
+      <h2>Contenus et propriété intellectuelle</h2>
+      <p>
+        Les textes, photographies, illustrations, marques, captures de sites et
+        éléments logiciels présentés peuvent relever de droits détenus par AIMY
+        DIGITAL, ses clients ou des tiers. Leur présence sur ce site n’emporte
+        aucune cession de droits au visiteur.
+      </p>
+      <p>
+        Toute réutilisation doit respecter les autorisations des titulaires
+        concernés, les licences applicables et les exceptions prévues par la
+        loi. Les marques et réalisations citées restent rattachées à leurs
+        titulaires respectifs ; AIMY DIGITAL ne revendique pas la propriété
+        exclusive de l’ensemble de ces éléments.
+      </p>
+      <p>
+        Pour une demande relative à un contenu ou à sa réutilisation, écrivez à{" "}
+        <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+    </section>
+    <section id="donnees">
+      <h2>Données personnelles et cookies</h2>
+      <p>
+        Consultez la{" "}
+        <a href="/politique-de-confidentialite/">
+          politique de confidentialité
+        </a>{" "}
+        pour les traitements liés au contact, vos droits et les points restant à
+        valider.
+      </p>
+      <p>
+        Les informations sur les{" "}
+        <a href="/politique-de-confidentialite/#cookies">
+          cookies et le stockage local
+        </a>{" "}
+        sont regroupées dans cette politique. Les préférences sont accessibles
+        en pied de page.
+      </p>
+    </section>
+  </article>
 </BaseLayout>

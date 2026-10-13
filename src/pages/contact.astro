@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
+import { company } from "../lib/company";
 import { site } from "../lib/site";
 ---
 
@@ -29,7 +30,9 @@ import { site } from "../lib/site";
           <a href={`tel:${site.tel}`}>{site.phone}</a>
         </div>
         <p>
-          Mauléon et le Bocage.
+          {company.legalName} · SASU
+          <br />
+          Siège social : {company.street}, {company.postalCode} {company.city}.
           <br />
           Deux-Sèvres, Maine-et-Loire, Vendée.
         </p>

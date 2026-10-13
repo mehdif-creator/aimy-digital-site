@@ -1,5 +1,6 @@
 ---
 import { site, navigation } from "../lib/site";
+import { company } from "../lib/company";
 import CookieConsent from "./CookieConsent.astro";
 interface Props {
   cinematic?: boolean;
@@ -47,7 +48,9 @@ interface Props {
     </nav>
   </div>
   <div class="container footer-bottom">
-    <span>© {new Date().getFullYear()} Aimy Digital</span>
+    <span>
+      © {new Date().getFullYear()} {company.legalName} · SASU
+    </span>
     <a href="/mentions-legales/">Mentions légales</a>
     <a href="/politique-de-confidentialite/">Confidentialité</a>
     <CookieConsent />
