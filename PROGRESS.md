@@ -198,3 +198,9 @@ SEO : recherche illustrative, parcours au défilement et diagnostic à huit pili
 Build production : 40 pages, audit sans erreur. Recette finale commune : 48 configurations (8 pages × 320/375/390/768/1024/1440), zéro erreur console/pageerror, zéro débordement et zéro violation axe détectée ; panneaux activés au clavier. Les premières erreurs de contraste et une collision du sélecteur global `.hero` ont été corrigées localement.
 
 Budget JS agrégé porté explicitement de 130/52 Ko à 135/54 Ko pour les huit nouvelles pages : mesure 131 811 octets bruts / 53 190 gzip pour l’ensemble des bundles, pas par page. Aucun framework supplémentaire ni vidéo. Performance Lighthouse en cours, aucun seuil encore revendiqué.
+
+## 2026-10-13 — huit pages, lot 2 : orientation et agence
+
+Prestations : explorateur de six besoins, véritables changements de contenu, CTA et cas authentiques (SC Rénovation / HT Créa Jeux), sans attribuer de résultats SEO/SEA ni contrat non vérifié. Agence : manifeste éditorial, atelier en quatre étapes, interfaces réelles et identité de Mehdi Farhane confirmée. Aucun collaborateur ni historique inventé.
+
+Les deux pages sont incluses dans la recette à six largeurs sans erreur et dans les vérifications sans JavaScript / reduced-motion. Composants de cas et pages approuvées inchangés.

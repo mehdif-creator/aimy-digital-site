@@ -1,46 +1,248 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CTA from "../components/CTA.astro";
+import CaseImage from "../components/CaseImage.astro";
+import CommercialInteractions from "../components/CommercialInteractions.astro";
+import sc from "../../public/images/cases/sc/services.webp";
+import ht from "../../public/images/cases/ht/product.webp";
+import "../styles/commercial-premium.css";
+const steps = [
+  [
+    "Comprendre",
+    "Avant les pixels, votre métier.",
+    "Vos clients, vos prestations, vos contraintes. Le projet commence par ces éléments : ils donnent une direction au contenu et au parcours.",
+    "SC Rénovation · une offre de travaux organisée par services",
+    sc,
+    "/portfolio/sc-renovation/",
+  ],
+  [
+    "Concevoir",
+    "Donner une place à chaque information.",
+    "Organiser la hiérarchie, les textes et les repères visuels pour aider le visiteur à choisir. Le design doit montrer autant qu’il doit expliquer.",
+    "HT Créa Jeux · présentation d’un produit e-commerce",
+    ht,
+    "/portfolio/ht-crea-jeux/",
+  ],
+  [
+    "Développer",
+    "Faire fonctionner l’intention.",
+    "Assembler une expérience lisible, responsive et accessible. Vérifier les liens, les formulaires et le chargement fait partie du travail.",
+    "SC Rénovation · interface authentique du projet",
+    sc,
+    "/portfolio/sc-renovation/",
+  ],
+  [
+    "Faire évoluer",
+    "Préparer ce qui vient après.",
+    "Préciser la gestion du contenu, les besoins de suivi et les prochaines améliorations. Le périmètre d’accompagnement est défini avec vous.",
+    "HT Créa Jeux · une boutique à faire vivre",
+    ht,
+    "/portfolio/ht-crea-jeux/",
+  ],
+] as const;
 ---
 
 <BaseLayout
-  title="L’agence web Aimy Digital"
-  description="Aimy Digital accompagne les artisans, entreprises de services et PME du Bocage dans leurs projets de site web et de visibilité locale."
+  title="Aimy Digital, agence web de proximité à Mauléon"
+  description="Une agence web dirigée par Mehdi Farhane à Saint-Amand-sur-Sèvre. Design, développement et visibilité pour les entreprises du Bocage, autour de Mauléon et Cholet."
 >
-  <div class="container">
-    <header class="page-intro">
-      <h1>Le web, à l’échelle de votre entreprise.</h1>
-      <p class="lead">
-        Aimy Digital accompagne les activités locales dans la création de sites
-        et le développement de leur présence en ligne.
-      </p>
-    </header>
-    <section class="content-grid section">
-      <div>
-        <h2>Votre métier d’abord.</h2>
-        <p>
-          Un site utile commence par comprendre ce que vous vendez, à qui vous
-          vous adressez et comment vos clients prennent leur décision. Ces
-          éléments guident les textes, les pages et les choix visuels.
-        </p>
-        <p>
-          Création de sites, refonte, e-commerce, SEO et suivi technique : le
-          périmètre est défini selon votre projet. Les outils sont choisis pour
-          les besoins réels du site et sa gestion au quotidien.
-        </p>
+  <div class="premium agency-page">
+    <header class="hero wrap">
+      <span class="eyebrow">Aimy Digital · le métier avant l’outil</span>
+      <h1>
+        Comprendre votre métier.
+        <br />
+        <em>Lui donner de l’allure.</em>
+      </h1>
+      <div class="agency-intro">
+        <span class="agency-signature" aria-hidden="true">
+          AIMY
+          <br />
+          DIGITAL ↗
+        </span>
+        <div>
+          <p class="intro">
+            Derrière chaque bon site, il y a une vraie compréhension de
+            l’entreprise qu’il représente.
+          </p>
+          <p>
+            Nous associons design, développement et visibilité pour construire
+            une présence qui vous ressemble et facilite la prise de contact.
+          </p>
+        </div>
       </div>
-      <aside class="content-panel">
-        <h2>Un ancrage local.</h2>
+    </header>
+    <section class="agency-workshop band" data-choice>
+      <div class="wrap">
+        <span class="eyebrow">L’atelier · du besoin à l’usage</span>
+        <div class="choices">
+          {steps.map(([label], i) => (
+            <button type="button" data-select aria-controls={`atelier-${i}`}>
+              0{i + 1} · {label}
+            </button>
+          ))}
+        </div>
+        {steps.map(([, title, text, caption, img, url], i) => (
+          <article data-panel id={`atelier-${i}`} class="workshop-panel">
+            <figure>
+              <div class="screen">
+                <CaseImage
+                  src={img}
+                  alt={caption}
+                  width={1100}
+                  widths={[480, 768, 1100, 1600]}
+                  sizes="(max-width: 800px) 90vw, 55vw"
+                />
+              </div>
+              <figcaption class="caption">{caption}</figcaption>
+            </figure>
+            <div>
+              <span class="workshop-number" aria-hidden="true">
+                0{i + 1}
+              </span>
+              <h2>{title}</h2>
+              <p>{text}</p>
+              <a class="textual" href={url}>
+                Voir le projet présenté ↗
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+    <section class="band wrap agency-person">
+      <div>
+        <span class="eyebrow">Une agence. Un interlocuteur identifié.</span>
+        <h2>Mehdi Farhane</h2>
+        <p class="intro">Président de la SASU AIMY DIGITAL.</p>
         <p>
-          Mauléon, Cholet, Bressuire, Les Herbiers : Aimy Digital travaille avec
-          les entreprises des Deux-Sèvres, du Maine-et-Loire et de Vendée.
+          La relation commence par un échange sur votre activité. Des étapes
+          identifiées, des choix expliqués et un périmètre clair permettent de
+          construire votre projet ensemble.
+        </p>
+        <a class="action" href="/contact/">
+          Faisons connaissance ↗
+        </a>
+      </div>
+      <aside class="local-note">
+        <span class="eyebrow">Le Bocage comme point d’ancrage</span>
+        <p class="local-large">
+          Proche de vous.
+          <br />
+          Attentif à votre terrain.
         </p>
         <p>
-          Des échanges compréhensibles, des étapes identifiées et des
-          validations partagées pour savoir où en est votre projet.
+          Le siège est à Saint-Amand-sur-Sèvre, dans les Deux-Sèvres. Mauléon
+          est notre ancrage commercial local ; Cholet, Bressuire et Les Herbiers
+          font partie des bassins que nous accompagnons.
+        </p>
+        <p>
+          Artisans, commerçants, indépendants et PME : votre offre et vos
+          clients restent le point de départ.
         </p>
       </aside>
     </section>
+    <section class="closing">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">Parlons concret</span>
+          <h2>Qu’aimeriez-vous faire évoluer ?</h2>
+        </div>
+        <a class="action" href="/nos-prestations/">
+          Explorer les solutions ↗
+        </a>
+      </div>
+    </section>
   </div>
-  <CTA />
+  <CommercialInteractions />
 </BaseLayout>
+<style>
+  .agency-page {
+    background: #f0efeb;
+  }
+  .agency-page h1 {
+    max-width: 20ch;
+  }
+  .agency-page em {
+    font-style: normal;
+    color: #426a83;
+  }
+  .agency-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 3rem;
+    align-items: center;
+  }
+  .agency-signature {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.07em;
+  }
+  .agency-workshop {
+    background: #dce8ed;
+  }
+  .workshop-panel {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .workshop-panel .screen {
+    aspect-ratio: 1.4;
+  }
+  .workshop-panel h2 {
+    font-size: clamp(2rem, 3.5vw, 3.3rem);
+  }
+  .workshop-panel figcaption {
+    margin-top: 1rem;
+  }
+  .workshop-number {
+    font-size: 5rem;
+    color: #67879a;
+    line-height: 1;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .agency-person {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem;
+  }
+  .agency-person h2 {
+    font-size: clamp(2rem, 4vw, 4rem);
+  }
+  .local-note {
+    border-left: 1px solid #9aadb7;
+    padding-left: 3rem;
+  }
+  .local-large {
+    font-size: 2.2rem;
+    letter-spacing: -0.05em;
+    line-height: 1.15;
+  }
+  .agency-page .closing {
+    background: #152a3b;
+    color: white;
+  }
+  @media (max-width: 800px) {
+    .agency-intro,
+    .workshop-panel,
+    .agency-person {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .agency-signature {
+      font-size: 2rem;
+    }
+    .local-note {
+      padding-left: 1.5rem;
+    }
+    .workshop-number {
+      font-size: 3rem;
+    }
+    .agency-page .choices button {
+      flex: 1 1 40%;
+    }
+  }
+</style>
