@@ -1,0 +1,179 @@
+{
+  "results": [
+    {
+      "width": 375,
+      "initial": "matrix(1, 0, 0, 1, -200, 0)",
+      "clicked": "matrix(1, 0, 0, 1, -200, 0)",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_wxsU4.webp",
+          "width": 333,
+          "height": 231.09375,
+          "fit": "fill",
+          "encodedWidth": 768,
+          "neededDPR2": 666
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_Z7hYv1.webp",
+          "width": 335,
+          "height": 342,
+          "fit": "cover",
+          "encodedWidth": 1040,
+          "neededDPR2": 985.2631578947369
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_Z5ensz.webp",
+          "width": 272,
+          "height": 697.21875,
+          "fit": "fill",
+          "encodedWidth": 600,
+          "neededDPR2": 544
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_1WazgS.webp",
+          "width": 720,
+          "height": 500.0625,
+          "fit": "fill",
+          "encodedWidth": 2200,
+          "neededDPR2": 1440
+        }
+      ],
+      "seo": {
+        "title": "Création de sites internet à Mauléon et Cholet | Aimy Digital",
+        "description": "Aimy Digital conçoit votre site vitrine, boutique ou refonte autour de votre métier. Projets réels, parcours mobile et accompagnement dans le Bocage.",
+        "canonical": "https://aimy-digital.fr/creation-de-sites-internet/",
+        "h1": 1,
+        "links": [
+          "/",
+          "/creation-de-sites-internet/",
+          "/referencement-seo/",
+          "/portfolio/",
+          "/a-propos/",
+          "/blog/",
+          "/contact/",
+          "/creation-de-sites-internet/",
+          "/referencement-seo/",
+          "/portfolio/",
+          "/a-propos/",
+          "/blog/",
+          "/contact/",
+          "/",
+          "/nos-prestations/",
+          "/contact/",
+          "/creation-de-sites-internet/creation-de-sites-vitrines/",
+          "/portfolio/sc-renovation/",
+          "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+          "/portfolio/ht-crea-jeux/",
+          "/creation-de-sites-internet/refonte-de-sites-internet/",
+          "/portfolio/sc-renovation/",
+          "/referencement-seo/",
+          "/maintenance-et-securite/",
+          "/contact/",
+          "/portfolio/",
+          "/",
+          "/creation-de-sites-internet/",
+          "/referencement-seo/",
+          "/portfolio/",
+          "/a-propos/",
+          "/blog/",
+          "/contact/",
+          "/nos-prestations/",
+          "/publicites-sea/",
+          "/maintenance-et-securite/",
+          "/faq/",
+          "/mentions-legales/",
+          "/politique-de-confidentialite/",
+          "/politique-de-confidentialite/#cookies"
+        ]
+      }
+    },
+    {
+      "width": 1440,
+      "initial": "matrix(1, 0, 0, 1, 0, 0)",
+      "clicked": "matrix(1, 0, 0, 1, 0, 0)",
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_24XV4o.webp",
+          "width": 1078,
+          "height": 748.609375,
+          "fit": "fill",
+          "encodedWidth": 2160,
+          "neededDPR2": 2156
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_Z8w7wK.webp",
+          "width": 1040,
+          "height": 414,
+          "fit": "cover",
+          "encodedWidth": 2080,
+          "neededDPR2": 2080
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_Z5ensz.webp",
+          "width": 272,
+          "height": 697.21875,
+          "fit": "fill",
+          "encodedWidth": 600,
+          "neededDPR2": 544
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_1WazgS.webp",
+          "width": 1100,
+          "height": 764,
+          "fit": "fill",
+          "encodedWidth": 2200,
+          "neededDPR2": 2200
+        }
+      ],
+      "seo": {
+        "title": "Création de sites internet à Mauléon et Cholet | Aimy Digital",
+        "description": "Aimy Digital conçoit votre site vitrine, boutique ou refonte autour de votre métier. Projets réels, parcours mobile et accompagnement dans le Bocage.",
+        "canonical": "https://aimy-digital.fr/creation-de-sites-internet/",
+        "h1": 1,
+        "links": [
+          "/",
+          "/creation-de-sites-internet/",
+          "/referencement-seo/",
+          "/portfolio/",
+          "/a-propos/",
+          "/blog/",
+          "/contact/",
+          "/creation-de-sites-internet/",
+          "/referencement-seo/",
+          "/portfolio/",
+          "/a-propos/",
+          "/blog/",
+          "/contact/",
+          "/",
+          "/nos-prestations/",
+          "/contact/",
+          "/creation-de-sites-internet/creation-de-sites-vitrines/",
+          "/portfolio/sc-renovation/",
+          "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+          "/portfolio/ht-crea-jeux/",
+          "/creation-de-sites-internet/refonte-de-sites-internet/",
+          "/portfolio/sc-renovation/",
+          "/referencement-seo/",
+          "/maintenance-et-securite/",
+          "/contact/",
+          "/portfolio/",
+          "/",
+          "/creation-de-sites-internet/",
+          "/referencement-seo/",
+          "/portfolio/",
+          "/a-propos/",
+          "/blog/",
+          "/contact/",
+          "/nos-prestations/",
+          "/publicites-sea/",
+          "/maintenance-et-securite/",
+          "/faq/",
+          "/mentions-legales/",
+          "/politique-de-confidentialite/",
+          "/politique-de-confidentialite/#cookies"
+        ]
+      }
+    }
+  ],
+  "errors": []
+}

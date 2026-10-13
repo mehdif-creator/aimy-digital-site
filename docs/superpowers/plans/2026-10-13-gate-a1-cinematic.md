@@ -1,0 +1,10 @@
+# Gate A1 — plan et direction cinématique
+Objectif : refondre uniquement la création. Référence de récupération ec377bf. Brief utilisateur 5f3c4707-a55d-4ae2-b587-fef1ee5bd71f, priorité sur les pipelines génération/déploiement de 10k-websites. Exécution inline writing-plans/executing-plans ; pas de génération, dépense ou déploiement.
+Direction : atelier de mise en scène, fond navy continu, rails de composition bleus, grand mot typographique traversé par une vraie interface. Une ouverture claire limitée à l’explorateur, pas de bandes alternées répétitives. Manrope existante. L’interface reste le sujet.
+- [x] CreationService.astro : cinq scènes, données commerciales/FAQ conservées. Hero typographique et interface perspective. Scène responsive avec ouverture qui se resserre et révèle verticalement une vraie capture mobile, pas un crossfade. Trois projets/types accessibles avec boutons et panneaux. Détails de navigation/offre/contact sélectionnables sur une capture SC native. Conclusion ligne de conception vers demande de projet.
+- [x] CreationExperience.ts : timeline d’entrée, scrub transformant masque et cadre, explorateur avec vrai état ARIA/clavier/flèches/Home/End et clic/touch ; détails avec focus visuel animé. CSS sticky courte (une hauteur d’écran de progression), aucune capture agrandie au-delà du natif. Fallback HTML complet et reduced-motion sans séquence longue.
+- [x] Tests navigateur : transitions et réversibilité mesurées ; sélection des trois modes et détails ; clavier/touch, sans JS, 320/375/390/740/768/1440, axe, netteté, console. SEO inchangé. Build/test/check, trois Lighthouse mobiles standard.
+- [x] Rapport, PROGRESS, commit, STOP visuel A1. Aucun changement SEO/GateB.
+Règle : la refonte dans l’explorateur illustre les points à examiner avec SC, sans prétendre montrer un avant/après d’une refonte cliente. Aucun bénéfice commercial chiffré. L’approbation créative reste celle de l’utilisateur.
+
+Réserve finale : LCP médian2,524s, cible2,5s légèrement dépassée. Essais et mesures conservés dans le rapport ; état livré pour jugement visuel, sans déclaration de succès créatif.

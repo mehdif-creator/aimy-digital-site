@@ -1,13 +1,15 @@
 ---
 import { Image } from "astro:assets";
 import CaseImage from "./CaseImage.astro";
-import EvidenceMotion from "./EvidenceMotion.astro";
+
 import FAQ from "./FAQ.astro";
 import sc from "../../public/images/cases/sc/home.webp";
 import phone from "../../public/images/cases/sc/mobile.webp";
 import ht from "../../public/images/cases/ht/product.webp";
-import "../styles/commercial.css";
-import "../styles/creation-service.css";
+
+import "../styles/creation-cinema.css";
+import services from "../../public/images/cases/sc/services.webp";
+import gallery from "../../public/images/cases/sc/gallery.webp";
 const questions = [
   {
     question: "Quel budget prévoir pour un site professionnel ?",
@@ -42,282 +44,376 @@ const questions = [
 ];
 ---
 
-<article class="commercial creation-service">
-  <header class="creation-hero">
-    <div class="commercial-wrap">
-      <nav class="commercial-breadcrumb" aria-label="Fil d’Ariane">
+<noscript>
+  <style is:inline>
+    .creation-cinema .cc-project-panel {
+      display: grid !important;
+    }
+  </style>
+</noscript>
+<article class="creation-cinema" id="creation-cinema">
+  <header class="cc-opening">
+    <div class="cc-wrap">
+      <nav class="cc-breadcrumb" aria-label="Fil d’Ariane">
         <a href="/">Accueil</a>
         <span>/</span>
         <a href="/nos-prestations/">Prestations</a>
         <span>/</span>
         <span>Création de sites</span>
       </nav>
-      <div class="creation-hero-grid">
-        <div>
-          <p class="commercial-kicker">
-            Création de sites internet à Mauléon et dans le Bocage
+      <div class="cc-opening-copy">
+        <p class="cc-eyebrow">Aimy Digital · Création de sites à Mauléon</p>
+        <h1>
+          Votre prochain site
+          <br />
+          <span class="cc-kinetic">prend vie.</span>
+        </h1>
+        <div class="cc-opening-aside">
+          <p>
+            Votre savoir-faire mérite plus qu’un simple site web. Nous concevons
+            des sites professionnels pour les artisans, commerçants et
+            entreprises du Bocage.
           </p>
-          <h1>
-            Votre savoir-faire
-            <br />
-            mérite plus qu’un
-            <br />
-            simple site web.
-          </h1>
-          <p class="commercial-lead">
-            Un site qui montre votre travail, explique votre offre et donne
-            envie de vous contacter. Pour les artisans, commerçants et
-            entreprises qui veulent être compris dès la première visite.
-          </p>
-          <a class="commercial-cta" href="/contact/">
-            Parlons de votre futur site
-          </a>
-          <a class="commercial-text-link" href="#realisations">
-            Voir le travail en images
+          <a class="cc-link cc-primary" href="/contact/">
+            Parlons de votre futur site <span aria-hidden="true">↗</span>
           </a>
         </div>
-        <figure class="creation-hero-work">
-          <div class="creation-browserline">
-            <span>SC Rénovation</span>
-            <span>Une réalisation Aimy Digital</span>
+      </div>
+      <div class="cc-opening-stage">
+        <div class="cc-coordinates" aria-hidden="true">
+          <span>DESIGN / DÉVELOPPEMENT</span>
+          <span>01 — L’INTENTION</span>
+        </div>
+        <span class="cc-outline" aria-hidden="true">
+          VIVANT
+        </span>
+        <figure class="cc-hero-screen">
+          <div class="cc-browser">
+            <i aria-hidden="true"></i>
+            <span>SC Rénovation · Une réalisation Aimy Digital</span>
+            <span aria-hidden="true">↗</span>
           </div>
           <Image
             src={sc}
-            width={560}
-            widths={[640, 840, 1120, 1440]}
-            sizes="(max-width: 759px) calc(100vw - 40px), (max-width: 1240px) 44vw, 560px"
-            quality={88}
+            width={1080}
+            widths={[480, 640, 768, 960, 1280, 1600, 2160]}
+            sizes="(max-width: 759px) calc(100vw - 40px), (max-width: 1240px) 86vw, 1080px"
+            quality={90}
             format="webp"
             loading="eager"
             fetchpriority="high"
-            alt="Site SC Rénovation conçu par Aimy Digital : présentation du métier, avant/après et accès au devis"
+            alt="Interface réelle SC Rénovation : métier, chantiers et demande de devis"
           />
-          <figcaption>
-            Le métier au premier plan. Le contact, à portée de clic.
-          </figcaption>
         </figure>
+        <a class="cc-scroll" href="#responsive">
+          Faites défiler. Le site change de format.{" "}
+          <span aria-hidden="true">↓</span>
+        </a>
       </div>
     </div>
   </header>
-  <section class="creation-purpose commercial-wrap">
-    <h2>
-      Votre site n’est pas
-      <br />
-      une carte de visite.
-      <br />
-      C’est une rencontre.
-    </h2>
-    <div>
-      <p>
-        Avant de vous appeler, un futur client cherche à comprendre ce que vous
-        faites, pour qui et avec quel niveau d’exigence. Une suite de slogans ne
-        répond pas à ces questions.
-      </p>
-      <p>
-        Nous construisons un parcours qui les traite dans le bon ordre : une
-        offre lisible, des exemples réels, les informations utiles et une
-        prochaine étape évidente. Le design sert cette décision.
-      </p>
-      <p>
-        Établie à Saint-Amand-sur-Sèvre, près de Mauléon, AIMY DIGITAL
-        accompagne les projets web du secteur de Cholet, Bressuire et des
-        Herbiers. Votre zone de clientèle guide le contenu du site.
+  <section
+    class="cc-responsive"
+    id="responsive"
+    aria-labelledby="responsive-title"
+  >
+    <div class="cc-responsive-stage cc-wrap">
+      <div class="cc-stage-heading">
+        <p class="cc-eyebrow">02 / Un même métier. Chaque écran.</p>
+        <h2 id="responsive-title">
+          Le cadre change.
+          <br />
+          <span>L’essentiel reste.</span>
+        </h2>
+        <p>
+          Sur ordinateur, le métier et les chantiers. Sur téléphone, les mêmes
+          repères et les actions d’appel et de devis à portée de main.
+        </p>
+      </div>
+      <div class="cc-transform-area">
+        <div class="cc-ruler" aria-hidden="true">
+          <span>ORDINATEUR</span>
+          <span>MOBILE</span>
+        </div>
+        <div class="cc-aperture">
+          <div class="cc-desktop-shot">
+            <CaseImage
+              src={sc}
+              width={1040}
+              widths={[640, 1040, 1600, 2080]}
+              sizes="(max-width:759px) calc(100vw - 40px), (max-width:1240px) 90vw,1040px"
+              quality={93}
+              alt="SC Rénovation sur ordinateur : offre et navigation horizontale"
+            />
+          </div>
+          <div class="cc-mobile-shot">
+            <CaseImage
+              src={phone}
+              width={272}
+              widths={[390, 600, 780]}
+              sizes="272px"
+              quality={93}
+              alt="La véritable interface mobile SC Rénovation, avec navigation adaptée et boutons appel et devis"
+            />
+          </div>
+        </div>
+        <div class="cc-frame" aria-hidden="true"></div>
+        <div class="cc-progress-track" aria-hidden="true">
+          <span></span>
+        </div>
+      </div>
+      <p class="cc-scene-note">
+        Deux captures authentiques. Une adaptation de l’interface, pas une
+        réduction du site.
       </p>
     </div>
   </section>
-  <section class="creation-choices">
-    <div class="commercial-wrap">
-      <div class="commercial-section-heading">
-        <p>Choisir selon votre besoin</p>
+  <section class="cc-explorer" id="explorer">
+    <div class="cc-wrap">
+      <div class="cc-explorer-heading">
+        <p class="cc-eyebrow">03 / À vous de choisir</p>
         <h2>
-          Le bon site commence
+          Quel site
           <br />
-          par la bonne question.
+          <span>pour votre ambition ?</span>
         </h2>
+        <p>Sélectionnez un projet. Regardez ce qui change.</p>
       </div>
-      <div class="creation-choice-list">
-        <details open>
-          <summary>
-            <span>Présenter mon activité</span>
-            <strong>Le site vitrine</strong>
-            <span aria-hidden="true">+</span>
-          </summary>
-          <div>
+      <div class="cc-tabs" data-tabs aria-label="Type de projet">
+        <button type="button" data-tab="vitrine">
+          01 <span>Site vitrine</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+        <button type="button" data-tab="commerce">
+          02 <span>E-commerce</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+        <button type="button" data-tab="refonte">
+          03 <span>Refonte</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+      <div class="cc-project-panels">
+        <section class="cc-project-panel" id="cc-vitrine" data-panel="vitrine">
+          <div class="cc-project-visual">
+            <CaseImage
+              src={services}
+              width={900}
+              widths={[640, 960, 1440, 1800]}
+              sizes="(max-width:759px) calc(100vw - 40px),70vw"
+              quality={93}
+              alt="Les prestations réelles de SC Rénovation organisées par métier"
+            />
+            <span class="cc-project-credit">SC Rénovation / Site vitrine</span>
+          </div>
+          <div class="cc-project-copy">
+            <p class="cc-eyebrow">Présenter mon activité</p>
+            <h3>
+              Le bon service.
+              <br />
+              Au premier regard.
+            </h3>
             <p>
-              Vous voulez expliquer vos prestations, montrer vos réalisations et
-              recevoir des demandes. Nous organisons les pages autour de votre
-              métier et des questions de vos clients, avec des accès clairs à la
-              prise de contact.
+              Expliquer vos prestations, montrer vos réalisations et recevoir
+              des demandes. Ici, SC Rénovation organise son offre par métier
+              pour orienter la lecture.
             </p>
-            <a href="/creation-de-sites-internet/creation-de-sites-vitrines/">
-              Comprendre le projet de site vitrine
+            <dl>
+              <dt>Le bénéfice recherché</dt>
+              <dd>
+                Permettre au visiteur de reconnaître le service dont il a
+                besoin.
+              </dd>
+              <dt>À prévoir dans le projet</dt>
+              <dd>
+                Arborescence, pages de prestations, réalisations et parcours de
+                contact.
+              </dd>
+            </dl>
+            <a
+              class="cc-link"
+              href="/creation-de-sites-internet/creation-de-sites-vitrines/"
+            >
+              Préparer mon site vitrine <span aria-hidden="true">↗</span>
+            </a>
+            <a class="cc-small-link" href="/portfolio/sc-renovation/">
+              Explorer le projet SC Rénovation
             </a>
           </div>
-        </details>
-        <details>
-          <summary>
-            <span>Vendre mes produits</span>
-            <strong>La boutique en ligne</strong>
-            <span aria-hidden="true">+</span>
-          </summary>
-          <div>
+        </section>
+        <section
+          class="cc-project-panel"
+          id="cc-commerce"
+          data-panel="commerce"
+        >
+          <div class="cc-project-visual">
+            <CaseImage
+              src={ht}
+              width={900}
+              widths={[640, 960, 1440, 1800]}
+              sizes="(max-width:759px) calc(100vw - 40px),70vw"
+              quality={93}
+              alt="Fiche produit authentique HT Créa Jeux : jeu, caractéristiques et achat"
+            />
+            <span class="cc-project-credit">HT Créa Jeux / E-commerce</span>
+          </div>
+          <div class="cc-project-copy">
+            <p class="cc-eyebrow">Vendre mes produits</p>
+            <h3>
+              Comprendre le jeu.
+              <br />
+              Puis passer à l’achat.
+            </h3>
             <p>
-              Vos visiteurs doivent trouver un produit, comprendre ses
-              caractéristiques et avancer dans leur commande. Le catalogue, les
-              variantes, les moyens de paiement et la livraison se cadrent
-              ensemble, avant le choix de la plateforme.
+              La fiche produit HT Créa Jeux met le jeu en situation et rassemble
+              les informations utiles à l’achat. Une boutique ne se résume pas à
+              ajouter un panier.
             </p>
-            <a href="/creation-de-sites-internet/creation-de-sites-e-commerce/">
-              Préparer votre projet e-commerce
+            <dl>
+              <dt>Le bénéfice recherché</dt>
+              <dd>
+                Aider à choisir grâce à une présentation lisible du produit.
+              </dd>
+              <dt>À prévoir dans le projet</dt>
+              <dd>
+                Catalogue, variantes, paiement et livraison à cadrer avant le
+                choix de la plateforme.
+              </dd>
+            </dl>
+            <a
+              class="cc-link"
+              href="/creation-de-sites-internet/creation-de-sites-e-commerce/"
+            >
+              Préparer ma boutique <span aria-hidden="true">↗</span>
+            </a>
+            <a class="cc-small-link" href="/portfolio/ht-crea-jeux/">
+              Explorer le projet HT Créa Jeux
             </a>
           </div>
-        </details>
-        <details>
-          <summary>
-            <span>Faire évoluer l’existant</span>
-            <strong>La refonte</strong>
-            <span aria-hidden="true">+</span>
-          </summary>
-          <div>
+        </section>
+        <section class="cc-project-panel" id="cc-refonte" data-panel="refonte">
+          <div class="cc-project-visual">
+            <CaseImage
+              src={gallery}
+              width={900}
+              widths={[640, 960, 1440, 1800]}
+              sizes="(max-width:759px) calc(100vw - 40px),70vw"
+              quality={93}
+              alt="Galerie réelle de chantiers SC Rénovation, exemple de contenu à valoriser"
+            />
+            <span class="cc-project-credit">
+              SC Rénovation / Exemple de contenu à valoriser
+            </span>
+          </div>
+          <div class="cc-project-copy">
+            <p class="cc-eyebrow">Faire évoluer l’existant</p>
+            <h3>
+              Révéler ce qui
+              <br />a déjà de la valeur.
+            </h3>
             <p>
               Votre activité a changé ou votre site freine vos visiteurs. Nous
               commençons par inventorier les contenus, les accès et les URL
-              utiles. La nouvelle expérience se construit en préservant ce qui a
-              de la valeur.
+              utiles.
             </p>
-            <a href="/creation-de-sites-internet/refonte-de-sites-internet/">
-              Découvrir notre approche de la refonte
+            <p class="cc-qualification">
+              Cette galerie illustre la place des réalisations dans un parcours.
+              Ce n’est pas l’avant/après d’une refonte cliente.
+            </p>
+            <dl>
+              <dt>Le bénéfice recherché</dt>
+              <dd>
+                Clarifier le parcours en conservant les contenus et les URL qui
+                ont de la valeur.
+              </dd>
+              <dt>À prévoir dans le projet</dt>
+              <dd>
+                Inventaire, nouvelle hiérarchie, reprise des contenus et
+                vérifications de migration.
+              </dd>
+            </dl>
+            <a
+              class="cc-link"
+              href="/creation-de-sites-internet/refonte-de-sites-internet/"
+            >
+              Étudier ma refonte <span aria-hidden="true">↗</span>
             </a>
           </div>
-        </details>
+        </section>
       </div>
     </div>
   </section>
-  <section class="creation-work commercial-wrap" id="realisations">
-    <div class="commercial-section-heading">
-      <p>Du travail réel, des choix visibles</p>
-      <h2>
-        Ce que nous concevons
-        <br />
-        se voit dans les détails.
-      </h2>
+  <section class="cc-decisions cc-wrap" id="decisions">
+    <p class="cc-eyebrow">04 / La précision fait la différence</p>
+    <h2>
+      Rien n’est placé
+      <br />
+      <span>au hasard.</span>
+    </h2>
+    <div class="cc-detail-controls" aria-label="Décision de design à examiner">
+      <button type="button" data-detail="0" aria-pressed="true">
+        01 / Se repérer
+      </button>
+      <button type="button" data-detail="1" aria-pressed="false">
+        02 / Comprendre
+      </button>
+      <button type="button" data-detail="2" aria-pressed="false">
+        03 / Agir
+      </button>
     </div>
-    <div class="creation-device-story">
-      <div class="creation-device-copy">
-        <h3>
-          Le même objectif.
-          <br />
-          Deux façons de consulter.
-        </h3>
-        <p>
-          Sur SC Rénovation, le métier et les chantiers sont présentés dès
-          l’accueil. Sur téléphone, une barre rassemble l’appel et le devis : le
-          visiteur retrouve les actions essentielles dans un format adapté à sa
-          consultation.
-        </p>
-        <ul>
-          <li>Une hiérarchie qui fait ressortir l’offre.</li>
-          <li>Des preuves visuelles liées au métier.</li>
-          <li>Des actions identifiables sur petit écran.</li>
-        </ul>
-        <a class="commercial-text-link" href="/portfolio/sc-renovation/">
-          Explorer le projet SC Rénovation
-        </a>
-      </div>
-      <figure class="creation-phone" data-evidence-motion>
+    <div class="cc-detail-view">
+      <div class="cc-detail-image">
         <CaseImage
-          src={phone}
-          width={300}
-          widths={[390, 600, 780]}
-          sizes="(max-width: 360px) calc(100vw - 60px), 300px"
-          quality={93}
-          alt="Véritable version mobile SC Rénovation : navigation repliée et barre d’appel et de devis"
+          src={sc}
+          width={1100}
+          widths={[800, 1400, 2200, 2880]}
+          sizes="(max-width:759px) 720px,1100px"
+          quality={95}
+          alt="Détail de la page SC Rénovation : navigation, hiérarchie de l’offre et boutons de contact"
         />
-      </figure>
-    </div>
-    <div class="creation-shop">
-      <figure>
-        <CaseImage
-          src={ht}
-          width={660}
-          widths={[640, 960, 1320, 1440]}
-          sizes="(max-width: 759px) calc(100vw - 40px), (max-width: 1240px) 55vw, 660px"
-          quality={93}
-          alt="Fiche produit réelle HT Créa Jeux : présentation du jeu, informations produit et commande"
-        />
-      </figure>
-      <div>
-        <h3>
-          Pour vendre,
-          <br />
-          il faut d’abord expliquer.
-        </h3>
-        <p>
-          La fiche produit HT Créa Jeux met le jeu en situation et rassemble les
-          informations utiles à l’achat. Une boutique ne se résume pas à ajouter
-          un panier : chaque page doit aider à comprendre le produit.
-        </p>
-        <a class="commercial-text-link" href="/portfolio/ht-crea-jeux/">
-          Voir l’étude de cas HT Créa Jeux
-        </a>
+        <div class="cc-focus-box" aria-hidden="true"></div>
       </div>
-    </div>
-  </section>
-  <section class="creation-delivery">
-    <div class="commercial-wrap">
-      <div>
-        <p>Un périmètre clair</p>
-        <h2>
-          Ce que votre projet
-          <br />
-          doit prévoir.
-        </h2>
+      <div class="cc-detail-label" aria-live="polite">
+        <span>01 / Navigation</span>
         <p>
-          Le devis précise les livrables retenus. Cette base de travail permet
-          de discuter du projet autrement qu’en nombre de pages.
+          Services, réalisations, contact : les entrées de navigation nomment ce
+          que le visiteur vient chercher.
         </p>
       </div>
-      <dl>
-        <div>
-          <dt>Le parcours</dt>
-          <dd>
-            Arborescence, priorités de lecture et liens entre services, preuves
-            et contact.
-          </dd>
-        </div>
-        <div>
-          <dt>L’interface</dt>
-          <dd>
-            Direction visuelle, compositions ordinateur/mobile et comportements
-            des éléments interactifs.
-          </dd>
-        </div>
-        <div>
-          <dt>Les fondations</dt>
-          <dd>
-            Titres et métadonnées, structure des contenus, images adaptées et
-            vérification des liens.
-          </dd>
-        </div>
-        <div>
-          <dt>La livraison</dt>
-          <dd>
-            Recette des pages, contrôle des fonctions prévues, accès et
-            modalités de prise en main définis ensemble.
-          </dd>
-        </div>
-      </dl>
     </div>
+    <div class="cc-decision-notes">
+      <p>
+        <strong>Se repérer.</strong> Services, réalisations et contact
+        structurent la navigation.
+      </p>
+      <p>
+        <strong>Comprendre.</strong> Le titre place le métier au premier plan,
+        avant les informations complémentaires.
+      </p>
+      <p>
+        <strong>Agir.</strong> Devis et appel proposent deux façons
+        identifiables de prendre contact.
+      </p>
+    </div>
+    <a class="cc-small-link" href="/portfolio/sc-renovation/">
+      Voir l’étude de cas complète et sa version mobile
+    </a>
   </section>
-  <section class="creation-process commercial-wrap">
-    <div class="commercial-section-heading">
-      <p>Une progression partagée</p>
-      <h2>
-        Du premier échange
-        <br />
-        au site prêt à être utilisé.
-      </h2>
-    </div>
+  <section class="cc-method cc-wrap">
+    <p class="cc-eyebrow">De l’intention à la livraison</p>
+    <h2>
+      Un projet qui se construit.
+      <br />
+      <span>Avec vous.</span>
+    </h2>
+    <svg
+      class="cc-method-line"
+      viewBox="0 0 1000 50"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <path d="M0 25 H1000" pathLength="1" />
+    </svg>
     <ol>
       <li>
         <h3>Cadrer</h3>
@@ -348,42 +444,59 @@ const questions = [
         </p>
       </li>
     </ol>
-    <p class="commercial-related">
-      Et pour être trouvé ?{" "}
-      <a href="/referencement-seo/">
-        Découvrez le travail de référencement local
+    <div class="cc-context">
+      <p>
+        Avant de vous appeler, un futur client cherche à comprendre ce que vous
+        faites, pour qui et avec quel niveau d’exigence. Nous construisons un
+        parcours qui traite ces questions dans le bon ordre : une offre lisible,
+        des exemples réels et une prochaine étape évidente.
+      </p>
+      <p>
+        Établie à Saint-Amand-sur-Sèvre, près de Mauléon, AIMY DIGITAL
+        accompagne les projets du Bocage, de Cholet, de Bressuire et des
+        Herbiers. Le devis précise les livrables, les accès, la prise en main et
+        les modalités de suivi.
+      </p>
+    </div>
+    <p>
+      <a href="/referencement-seo/">Travailler votre référencement local</a> ·{" "}
+      <a href="/maintenance-et-securite/">
+        Prévoir la maintenance de votre site
       </a>
-      . Pour la suite,{" "}
-      <a href="/maintenance-et-securite/">cadrez le suivi de votre site</a>.
     </p>
   </section>
-  <section class="commercial-faq commercial-wrap">
+  <section class="cc-faq cc-wrap">
     <h2>
-      Avant de lancer
+      Les questions
       <br />
-      votre projet.
+      avant le premier pas.
     </h2>
     <FAQ items={questions} />
   </section>
-  <footer class="commercial-finish">
-    <div class="commercial-wrap">
-      <p>Votre métier mérite d’être compris.</p>
+  <footer class="cc-finale">
+    <div class="cc-wrap">
+      <p class="cc-eyebrow">05 / La prochaine réalisation</p>
       <h2>
-        Partons de ce que
+        Et si c’était
         <br />
-        vous voulez accomplir.
+        <span>la vôtre ?</span>
       </h2>
+      <a class="cc-link cc-primary" href="/contact/">
+        Donnons vie à votre site <span aria-hidden="true">↗</span>
+      </a>
       <p>
         Votre activité, votre site actuel et vos priorités suffisent pour
         commencer la discussion.
       </p>
-      <a class="commercial-cta" href="/contact/">
-        Parlons de votre futur site
+      <a class="cc-small-link" href="/portfolio/">
+        Découvrir toutes nos réalisations
       </a>
-      <a class="commercial-text-link" href="/portfolio/">
-        Découvrir toutes les réalisations
-      </a>
+      <span class="cc-signature" aria-hidden="true">
+        AIMY<span>↗</span>
+      </span>
     </div>
   </footer>
 </article>
-<EvidenceMotion />
+<script>
+  import "./CreationExperience";
+</script>

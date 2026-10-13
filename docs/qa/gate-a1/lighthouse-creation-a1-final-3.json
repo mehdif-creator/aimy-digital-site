@@ -1,0 +1,130 @@
+{
+  "version": "13.5.0",
+  "date": "2026-10-13T05:47:36.043Z",
+  "mode": "mobile simulé, Chrome headless, build de production local",
+  "scores": {
+    "performance": 96,
+    "accessibility": 100,
+    "best-practices": 100
+  },
+  "lcpMs": 2631.8116499999996,
+  "cls": 0.003610170328234029,
+  "tbtMs": 0,
+  "bytes": 478851,
+  "warnings": [],
+  "lcpBreakdown": {
+    "type": "list",
+    "items": [
+      {
+        "type": "table",
+        "headings": [
+          {
+            "key": "label",
+            "valueType": "text",
+            "label": "Subpart"
+          },
+          {
+            "key": "duration",
+            "valueType": "ms",
+            "label": "Duration"
+          }
+        ],
+        "items": [
+          {
+            "subpart": "timeToFirstByte",
+            "label": "Time to first byte",
+            "duration": 7.7379999923706055
+          },
+          {
+            "subpart": "resourceLoadDelay",
+            "label": "Resource load delay",
+            "duration": 14.377000007629395
+          },
+          {
+            "subpart": "resourceLoadDuration",
+            "label": "Resource load duration",
+            "duration": 19.696
+          },
+          {
+            "subpart": "elementRenderDelay",
+            "label": "Element render delay",
+            "duration": 115.888
+          }
+        ]
+      },
+      {
+        "type": "node",
+        "lhId": "page-0-IMG",
+        "path": "1,HTML,1,BODY,2,MAIN,0,ARTICLE,0,HEADER,0,DIV,2,DIV,2,FIGURE,1,IMG",
+        "selector": "div.cc-wrap > div.cc-opening-stage > figure.cc-hero-screen > img",
+        "boundingRect": {
+          "top": 595,
+          "bottom": 852,
+          "left": 21,
+          "right": 391,
+          "width": 370,
+          "height": 257
+        },
+        "snippet": "<img src=\"http://127.0.0.1:4322/_astro/home.CRwd45qZ_ZDF1CE.webp\" srcset=\"/_astro/home.CRwd45qZ_WnY60.webp 640w, /_astro/home.CRwd45qZ_ZDF1CE.webp 8…\" sizes=\"(max-width: 759px) calc(100vw - 40px), (max-width: 1240px) 86vw, 1080px\" loading=\"eager\" fetchpriority=\"high\" alt=\"Interface réelle SC Rénovation : métier, chantiers et demande de devis\" decoding=\"async\" width=\"1080\" height=\"750\">",
+        "nodeLabel": "Interface réelle SC Rénovation : métier, chantiers et demande de devis"
+      }
+    ]
+  },
+  "settings": {
+    "output": [
+      "json"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 1000,
+    "pauseAfterLoadMs": 1000,
+    "networkQuietThresholdMs": 1000,
+    "cpuQuietThresholdMs": 1000,
+    "formFactor": "mobile",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "simulate",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": false
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": false,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "cli",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "accessibility",
+      "best-practices"
+    ],
+    "skipAudits": null
+  }
+}

@@ -22,6 +22,7 @@ interface Props {
 <html lang="fr">
   <head>
     <SEOHead {...Astro.props} />
+    <slot name="head" />
   </head>
   <body class:list={{ "cinematic-home": Astro.props.cinematicHero }}>
     <Header cinematic={Astro.props.cinematicHero} />
