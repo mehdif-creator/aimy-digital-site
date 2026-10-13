@@ -1,0 +1,214 @@
+.seo-service {
+  background: #f0f6f9;
+}
+.seo-intro {
+  padding-bottom: 80px;
+}
+.seo-intro > .commercial-kicker {
+  margin-top: 50px;
+}
+.seo-intro h1 {
+  font-size: clamp(42px, 6.4vw, 86px);
+  line-height: 1.08;
+  letter-spacing: -0.065em;
+  max-width: 1050px;
+  margin-bottom: 40px;
+}
+.seo-intro h1 em {
+  font-style: normal;
+  color: #17669b;
+}
+.seo-intro-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+.seo-intro-bottom .commercial-cta {
+  background: #102d46;
+  color: white;
+  flex-shrink: 0;
+}
+.seo-journey {
+  background: #092237;
+  color: #f0f6f9;
+  padding: 90px 0;
+}
+.seo-journey > .commercial-wrap {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+}
+.seo-journey-heading > p {
+  max-width: 40ch;
+}
+.seo-stages details {
+  border-top: 1px solid #4f6d81;
+  padding: 22px 0;
+}
+.seo-stages summary {
+  display: grid;
+  grid-template-columns: 35px 1fr 20px;
+  gap: 14px;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  min-height: 44px;
+}
+.seo-stages summary::-webkit-details-marker {
+  display: none;
+}
+.seo-stages summary > span:first-child {
+  color: #9bd5fb;
+  font-size: 14px;
+}
+.seo-stages strong {
+  font-size: clamp(20px, 2vw, 27px);
+  letter-spacing: -0.03em;
+}
+.seo-stages details > div {
+  padding: 24px 0 0 49px;
+  color: #d5e4ed;
+}
+.seo-stages details[open] summary > span:last-child {
+  transform: rotate(45deg);
+}
+.seo-priorities {
+  padding-block: 100px;
+}
+.seo-priorities ol {
+  list-style: none;
+  padding: 0;
+  margin: 55px 0 0;
+  counter-reset: priority;
+}
+.seo-priorities li {
+  display: grid;
+  grid-template-columns: 60px 1fr 1.15fr;
+  gap: 30px;
+  border-top: 1px solid #aabfce;
+  padding: 35px 0;
+  counter-increment: priority;
+}
+.seo-priorities li:before {
+  content: counter(priority, decimal-leading-zero);
+  font-size: 18px;
+  color: #17669b;
+}
+.seo-priorities h3 {
+  font-size: 28px;
+}
+.seo-evidence {
+  background: #d9eaf3;
+  padding: 100px 0;
+}
+.seo-evidence > .commercial-wrap {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  align-items: center;
+  gap: 65px;
+}
+.seo-evidence figure {
+  margin: 0;
+  min-width: 0;
+}
+.seo-evidence img {
+  display: block;
+  box-shadow: 0 28px 50px #09223720;
+}
+.seo-evidence figcaption {
+  font-size: 13px;
+  padding-top: 20px;
+  line-height: 1.6;
+}
+.seo-local {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding-block: 100px;
+}
+.seo-local h3 {
+  margin-top: 40px;
+}
+.seo-measure {
+  padding: 85px 0;
+  background: #102d46;
+  color: white;
+}
+.seo-measure dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 45px;
+  margin: 50px 0;
+}
+.seo-measure dl > div {
+  border-top: 1px solid #7590a2;
+  padding-top: 25px;
+}
+.seo-measure dt {
+  font-size: 25px;
+  font-weight: 700;
+  color: #bce4ff;
+}
+.seo-measure dd {
+  margin: 18px 0 0;
+  line-height: 1.8;
+}
+@media (max-width: 900px) {
+  .seo-evidence > .commercial-wrap {
+    grid-template-columns: 1fr;
+  }
+  .seo-evidence-copy {
+    max-width: 650px;
+  }
+  .seo-intro-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .seo-journey > .commercial-wrap {
+    gap: 35px;
+  }
+  .seo-priorities li {
+    grid-template-columns: 35px 1fr;
+    gap: 20px;
+  }
+  .seo-priorities li p {
+    grid-column: 2;
+  }
+}
+@media (max-width: 759px) {
+  .seo-intro {
+    padding-bottom: 50px;
+  }
+  .seo-intro > .commercial-kicker {
+    margin-top: 30px;
+  }
+  .seo-intro h1 {
+    font-size: clamp(40px, 9vw, 64px);
+  }
+  .seo-journey,
+  .seo-evidence,
+  .seo-measure {
+    padding-block: 60px;
+  }
+  .seo-journey > .commercial-wrap,
+  .seo-local {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .seo-local,
+  .seo-priorities {
+    padding-block: 60px;
+  }
+  .seo-measure dl {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .seo-stages details > div {
+    padding-left: 0;
+  }
+  .seo-priorities h3 {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,389 @@
+---
+import { Image } from "astro:assets";
+import CaseImage from "./CaseImage.astro";
+import EvidenceMotion from "./EvidenceMotion.astro";
+import FAQ from "./FAQ.astro";
+import sc from "../../public/images/cases/sc/home.webp";
+import phone from "../../public/images/cases/sc/mobile.webp";
+import ht from "../../public/images/cases/ht/product.webp";
+import "../styles/commercial.css";
+import "../styles/creation-service.css";
+const questions = [
+  {
+    question: "Quel budget prévoir pour un site professionnel ?",
+    answer:
+      "Le prix dépend des pages, des contenus disponibles, des fonctions et du niveau d’accompagnement. Un site vitrine et une boutique avec catalogue n’ont pas le même périmètre. Les livrables et les coûts récurrents sont précisés dans une proposition avant tout engagement.",
+  },
+  {
+    question: "Combien de temps faut-il pour créer mon site ?",
+    answer:
+      "Le calendrier se construit après le cadrage. La préparation des textes et des images, la validation des maquettes et les intégrations influencent le délai. Nous identifions les étapes et les éléments attendus de chacun, sans annoncer une durée identique pour tous les projets.",
+  },
+  {
+    question: "Faut-il déjà avoir les textes et les photos ?",
+    answer:
+      "Apportez ce que vous avez : présentation de votre activité, services, réalisations, logo et photos dont vous détenez les droits. Nous repérons les éléments manquants. La rédaction, les prises de vue ou la recherche de médias sont précisées dans le devis si elles font partie du projet.",
+  },
+  {
+    question: "WordPress, Shopify ou développement sur mesure ?",
+    answer:
+      "Le choix vient après les usages. Qui mettra les contenus à jour ? Faut-il gérer un catalogue ou une réservation ? Quelles intégrations existent déjà ? Nous comparons les contraintes de gestion, de coût et d’évolution avant de retenir une solution.",
+  },
+  {
+    question: "Mon site sera-t-il visible sur Google ?",
+    answer:
+      "Une structure claire, des titres pertinents, des pages accessibles et un chargement soigné créent les bases techniques. Cela ne garantit pas une position dans Google. Le contenu, la concurrence et le suivi relèvent d’une démarche SEO à cadrer selon vos objectifs.",
+  },
+  {
+    question: "Que se passe-t-il après la mise en ligne ?",
+    answer:
+      "Les accès, la prise en main, l’hébergement et les conditions de maintenance sont précisés dans la proposition. Nous distinguons la livraison du site de son suivi régulier pour que vous sachiez ce qui est inclus et ce qui nécessite un accompagnement complémentaire.",
+  },
+];
+---
+
+<article class="commercial creation-service">
+  <header class="creation-hero">
+    <div class="commercial-wrap">
+      <nav class="commercial-breadcrumb" aria-label="Fil d’Ariane">
+        <a href="/">Accueil</a>
+        <span>/</span>
+        <a href="/nos-prestations/">Prestations</a>
+        <span>/</span>
+        <span>Création de sites</span>
+      </nav>
+      <div class="creation-hero-grid">
+        <div>
+          <p class="commercial-kicker">
+            Création de sites internet à Mauléon et dans le Bocage
+          </p>
+          <h1>
+            Votre savoir-faire
+            <br />
+            mérite plus qu’un
+            <br />
+            simple site web.
+          </h1>
+          <p class="commercial-lead">
+            Un site qui montre votre travail, explique votre offre et donne
+            envie de vous contacter. Pour les artisans, commerçants et
+            entreprises qui veulent être compris dès la première visite.
+          </p>
+          <a class="commercial-cta" href="/contact/">
+            Parlons de votre futur site
+          </a>
+          <a class="commercial-text-link" href="#realisations">
+            Voir le travail en images
+          </a>
+        </div>
+        <figure class="creation-hero-work">
+          <div class="creation-browserline">
+            <span>SC Rénovation</span>
+            <span>Une réalisation Aimy Digital</span>
+          </div>
+          <Image
+            src={sc}
+            width={560}
+            widths={[640, 840, 1120, 1440]}
+            sizes="(max-width: 759px) calc(100vw - 40px), (max-width: 1240px) 44vw, 560px"
+            quality={88}
+            format="webp"
+            loading="eager"
+            fetchpriority="high"
+            alt="Site SC Rénovation conçu par Aimy Digital : présentation du métier, avant/après et accès au devis"
+          />
+          <figcaption>
+            Le métier au premier plan. Le contact, à portée de clic.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </header>
+  <section class="creation-purpose commercial-wrap">
+    <h2>
+      Votre site n’est pas
+      <br />
+      une carte de visite.
+      <br />
+      C’est une rencontre.
+    </h2>
+    <div>
+      <p>
+        Avant de vous appeler, un futur client cherche à comprendre ce que vous
+        faites, pour qui et avec quel niveau d’exigence. Une suite de slogans ne
+        répond pas à ces questions.
+      </p>
+      <p>
+        Nous construisons un parcours qui les traite dans le bon ordre : une
+        offre lisible, des exemples réels, les informations utiles et une
+        prochaine étape évidente. Le design sert cette décision.
+      </p>
+      <p>
+        Établie à Saint-Amand-sur-Sèvre, près de Mauléon, AIMY DIGITAL
+        accompagne les projets web du secteur de Cholet, Bressuire et des
+        Herbiers. Votre zone de clientèle guide le contenu du site.
+      </p>
+    </div>
+  </section>
+  <section class="creation-choices">
+    <div class="commercial-wrap">
+      <div class="commercial-section-heading">
+        <p>Choisir selon votre besoin</p>
+        <h2>
+          Le bon site commence
+          <br />
+          par la bonne question.
+        </h2>
+      </div>
+      <div class="creation-choice-list">
+        <details open>
+          <summary>
+            <span>Présenter mon activité</span>
+            <strong>Le site vitrine</strong>
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            <p>
+              Vous voulez expliquer vos prestations, montrer vos réalisations et
+              recevoir des demandes. Nous organisons les pages autour de votre
+              métier et des questions de vos clients, avec des accès clairs à la
+              prise de contact.
+            </p>
+            <a href="/creation-de-sites-internet/creation-de-sites-vitrines/">
+              Comprendre le projet de site vitrine
+            </a>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span>Vendre mes produits</span>
+            <strong>La boutique en ligne</strong>
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            <p>
+              Vos visiteurs doivent trouver un produit, comprendre ses
+              caractéristiques et avancer dans leur commande. Le catalogue, les
+              variantes, les moyens de paiement et la livraison se cadrent
+              ensemble, avant le choix de la plateforme.
+            </p>
+            <a href="/creation-de-sites-internet/creation-de-sites-e-commerce/">
+              Préparer votre projet e-commerce
+            </a>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span>Faire évoluer l’existant</span>
+            <strong>La refonte</strong>
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            <p>
+              Votre activité a changé ou votre site freine vos visiteurs. Nous
+              commençons par inventorier les contenus, les accès et les URL
+              utiles. La nouvelle expérience se construit en préservant ce qui a
+              de la valeur.
+            </p>
+            <a href="/creation-de-sites-internet/refonte-de-sites-internet/">
+              Découvrir notre approche de la refonte
+            </a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="creation-work commercial-wrap" id="realisations">
+    <div class="commercial-section-heading">
+      <p>Du travail réel, des choix visibles</p>
+      <h2>
+        Ce que nous concevons
+        <br />
+        se voit dans les détails.
+      </h2>
+    </div>
+    <div class="creation-device-story">
+      <div class="creation-device-copy">
+        <h3>
+          Le même objectif.
+          <br />
+          Deux façons de consulter.
+        </h3>
+        <p>
+          Sur SC Rénovation, le métier et les chantiers sont présentés dès
+          l’accueil. Sur téléphone, une barre rassemble l’appel et le devis : le
+          visiteur retrouve les actions essentielles dans un format adapté à sa
+          consultation.
+        </p>
+        <ul>
+          <li>Une hiérarchie qui fait ressortir l’offre.</li>
+          <li>Des preuves visuelles liées au métier.</li>
+          <li>Des actions identifiables sur petit écran.</li>
+        </ul>
+        <a class="commercial-text-link" href="/portfolio/sc-renovation/">
+          Explorer le projet SC Rénovation
+        </a>
+      </div>
+      <figure class="creation-phone" data-evidence-motion>
+        <CaseImage
+          src={phone}
+          width={300}
+          widths={[390, 600, 780]}
+          sizes="(max-width: 360px) calc(100vw - 60px), 300px"
+          quality={93}
+          alt="Véritable version mobile SC Rénovation : navigation repliée et barre d’appel et de devis"
+        />
+      </figure>
+    </div>
+    <div class="creation-shop">
+      <figure>
+        <CaseImage
+          src={ht}
+          width={660}
+          widths={[640, 960, 1320, 1440]}
+          sizes="(max-width: 759px) calc(100vw - 40px), (max-width: 1240px) 55vw, 660px"
+          quality={93}
+          alt="Fiche produit réelle HT Créa Jeux : présentation du jeu, informations produit et commande"
+        />
+      </figure>
+      <div>
+        <h3>
+          Pour vendre,
+          <br />
+          il faut d’abord expliquer.
+        </h3>
+        <p>
+          La fiche produit HT Créa Jeux met le jeu en situation et rassemble les
+          informations utiles à l’achat. Une boutique ne se résume pas à ajouter
+          un panier : chaque page doit aider à comprendre le produit.
+        </p>
+        <a class="commercial-text-link" href="/portfolio/ht-crea-jeux/">
+          Voir l’étude de cas HT Créa Jeux
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="creation-delivery">
+    <div class="commercial-wrap">
+      <div>
+        <p>Un périmètre clair</p>
+        <h2>
+          Ce que votre projet
+          <br />
+          doit prévoir.
+        </h2>
+        <p>
+          Le devis précise les livrables retenus. Cette base de travail permet
+          de discuter du projet autrement qu’en nombre de pages.
+        </p>
+      </div>
+      <dl>
+        <div>
+          <dt>Le parcours</dt>
+          <dd>
+            Arborescence, priorités de lecture et liens entre services, preuves
+            et contact.
+          </dd>
+        </div>
+        <div>
+          <dt>L’interface</dt>
+          <dd>
+            Direction visuelle, compositions ordinateur/mobile et comportements
+            des éléments interactifs.
+          </dd>
+        </div>
+        <div>
+          <dt>Les fondations</dt>
+          <dd>
+            Titres et métadonnées, structure des contenus, images adaptées et
+            vérification des liens.
+          </dd>
+        </div>
+        <div>
+          <dt>La livraison</dt>
+          <dd>
+            Recette des pages, contrôle des fonctions prévues, accès et
+            modalités de prise en main définis ensemble.
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+  <section class="creation-process commercial-wrap">
+    <div class="commercial-section-heading">
+      <p>Une progression partagée</p>
+      <h2>
+        Du premier échange
+        <br />
+        au site prêt à être utilisé.
+      </h2>
+    </div>
+    <ol>
+      <li>
+        <h3>Cadrer</h3>
+        <p>
+          Votre activité, vos clients, les contenus disponibles et les actions
+          attendues. Le périmètre se définit avant la maquette.
+        </p>
+      </li>
+      <li>
+        <h3>Concevoir</h3>
+        <p>
+          Le parcours et la direction visuelle prennent forme. Vous validez les
+          choix structurants sur des écrans concrets.
+        </p>
+      </li>
+      <li>
+        <h3>Construire</h3>
+        <p>
+          Les pages deviennent un site responsive. Les contenus et fonctions
+          sont intégrés selon le périmètre convenu.
+        </p>
+      </li>
+      <li>
+        <h3>Vérifier</h3>
+        <p>
+          Navigation, mobile, formulaires, images et liens sont contrôlés avant
+          la mise en ligne autorisée.
+        </p>
+      </li>
+    </ol>
+    <p class="commercial-related">
+      Et pour être trouvé ?{" "}
+      <a href="/referencement-seo/">
+        Découvrez le travail de référencement local
+      </a>
+      . Pour la suite,{" "}
+      <a href="/maintenance-et-securite/">cadrez le suivi de votre site</a>.
+    </p>
+  </section>
+  <section class="commercial-faq commercial-wrap">
+    <h2>
+      Avant de lancer
+      <br />
+      votre projet.
+    </h2>
+    <FAQ items={questions} />
+  </section>
+  <footer class="commercial-finish">
+    <div class="commercial-wrap">
+      <p>Votre métier mérite d’être compris.</p>
+      <h2>
+        Partons de ce que
+        <br />
+        vous voulez accomplir.
+      </h2>
+      <p>
+        Votre activité, votre site actuel et vos priorités suffisent pour
+        commencer la discussion.
+      </p>
+      <a class="commercial-cta" href="/contact/">
+        Parlons de votre futur site
+      </a>
+      <a class="commercial-text-link" href="/portfolio/">
+        Découvrir toutes les réalisations
+      </a>
+    </div>
+  </footer>
+</article>
+<EvidenceMotion />

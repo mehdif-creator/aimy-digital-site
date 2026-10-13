@@ -1,0 +1,329 @@
+---
+import CaseImage from "./CaseImage.astro";
+import FAQ from "./FAQ.astro";
+import EvidenceMotion from "./EvidenceMotion.astro";
+import sc from "../../public/images/cases/sc/home.webp";
+import "../styles/commercial.css";
+import "../styles/seo-service.css";
+const questions = [
+  {
+    question: "Le référencement local est-il utile à mon activité ?",
+    answer:
+      "Il est pertinent si vos clients recherchent un prestataire dans votre zone d’intervention. Nous partons de vos services et des demandes que vous souhaitez recevoir, puis examinons les recherches et les pages existantes. Le volume de visites seul ne suffit pas à définir une priorité.",
+  },
+  {
+    question: "Pouvez-vous garantir la première place sur Google ?",
+    answer:
+      "Non. Le classement dépend notamment de la concurrence, de la pertinence des pages et, pour les résultats locaux, de la distance et de la notoriété. Nous pouvons définir un travail, des livrables et un suivi, pas garantir une position.",
+  },
+  {
+    question: "Combien de temps faut-il pour voir une évolution ?",
+    answer:
+      "Le délai varie selon l’état du site, la concurrence et la prise en compte des modifications par les moteurs. Le point de départ est documenté et les observations sont comparées dans le temps. Une hausse immédiate ou un délai universel ne peuvent pas être promis.",
+  },
+  {
+    question: "Faut-il créer une page pour chaque ville ?",
+    answer:
+      "Pas automatiquement. Une page locale doit apporter des informations utiles et spécifiques à la zone concernée. Répéter le même texte en changeant seulement le nom d’une ville n’aide pas un visiteur à choisir. Nous privilégions les services, les réalisations et une zone d’intervention décrite honnêtement.",
+  },
+  {
+    question: "Ma fiche Google Business Profile suffit-elle ?",
+    answer:
+      "La fiche et le site répondent à des usages complémentaires. La fiche présente votre établissement dans les services Google ; le site permet de détailler l’offre et de montrer votre travail. Les accès, l’éligibilité et les actions éventuelles sur la fiche sont vérifiés au cadrage.",
+  },
+  {
+    question: "Quelle différence entre SEO et publicité Google ?",
+    answer:
+      "Le SEO travaille la visibilité dans les résultats naturels. Le SEA repose sur des annonces et un budget publicitaire. Les deux démarches ont leurs contraintes et peuvent se compléter. Leur pertinence dépend de votre marché, de vos objectifs et des moyens disponibles.",
+  },
+];
+---
+
+<article class="commercial seo-service">
+  <header class="seo-intro commercial-wrap">
+    <nav class="commercial-breadcrumb" aria-label="Fil d’Ariane">
+      <a href="/">Accueil</a>
+      <span>/</span>
+      <a href="/nos-prestations/">Prestations</a>
+      <span>/</span>
+      <span>Référencement SEO</span>
+    </nav>
+    <p class="commercial-kicker">Référencement local · Mauléon & Deux-Sèvres</p>
+    <h1>
+      Être trouvé.
+      <br />
+      <em>Pour les bonnes raisons.</em>
+    </h1>
+    <div class="seo-intro-bottom">
+      <p class="commercial-lead">
+        Vos futurs clients cherchent un métier, une solution, un professionnel
+        près de chez eux. Rendons votre offre visible et vos pages utiles au
+        moment où ils en ont besoin.
+      </p>
+      <a class="commercial-cta" href="/contact/">
+        Parlons de votre visibilité
+      </a>
+    </div>
+  </header>
+  <section class="seo-journey">
+    <div class="commercial-wrap">
+      <div class="seo-journey-heading">
+        <p>Du besoin à la prise de contact</p>
+        <h2>
+          Une recherche.
+          <br />
+          Un parcours à construire.
+        </h2>
+        <p>
+          Ce schéma explique la démarche. Il ne représente ni un classement
+          obtenu ni une promesse de résultat.
+        </p>
+      </div>
+      <div class="seo-stages">
+        <details open>
+          <summary>
+            <span>01</span>
+            <strong>La demande existe</strong>
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            <p>
+              « Un artisan pour rénover ma maison près de Mauléon. » Derrière
+              les mots tapés, il y a un besoin précis, un territoire et des
+              questions.
+            </p>
+            <p>
+              Le travail commence par comprendre ce que vos clients cherchent
+              réellement.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span>02</span>
+            <strong>Une page répond</strong>
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            <p>
+              Le titre annonce le service. Le contenu explique les prestations,
+              les conditions et la zone d’intervention réelle. Les moteurs
+              doivent pouvoir accéder à cette page et la comprendre.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span>03</span>
+            <strong>La confiance se construit</strong>
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            <p>
+              Des réalisations authentiques, des explications concrètes et une
+              identité claire donnent des éléments pour choisir. Le visiteur
+              retrouve une réponse à sa recherche, sur ordinateur comme sur
+              téléphone.
+            </p>
+          </div>
+        </details>
+        <details>
+          <summary>
+            <span>04</span>
+            <strong>Le contact devient évident</strong>
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            <p>
+              Un appel, un message ou une demande de devis : l’action proposée
+              doit correspondre au service. La visibilité est utile lorsqu’elle
+              conduit vers un parcours compréhensible.
+            </p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="seo-priorities commercial-wrap">
+    <div>
+      <p>Commencer au bon endroit</p>
+      <h2>
+        Avant d’ajouter des mots,
+        <br />
+        lever les obstacles.
+      </h2>
+    </div>
+    <ol>
+      <li>
+        <h3>Rendre les pages accessibles</h3>
+        <p>
+          Explorer les URL, vérifier l’indexabilité, les liens, les redirections
+          et les pages canoniques. Une page importante ne doit pas être bloquée
+          ou isolée par erreur.
+        </p>
+      </li>
+      <li>
+        <h3>Faire correspondre offre et recherche</h3>
+        <p>
+          Clarifier les services, organiser les titres et relier les contenus
+          complémentaires. Chaque page porte une intention identifiable, sans
+          accumulation artificielle de mots-clés.
+        </p>
+      </li>
+      <li>
+        <h3>Choisir les prochaines actions</h3>
+        <p>
+          Distinguer les corrections prioritaires des développements de contenu.
+          Le périmètre de l’accompagnement, les accès nécessaires et les
+          livrables sont définis dans la proposition.
+        </p>
+      </li>
+    </ol>
+  </section>
+  <section class="seo-evidence">
+    <div class="commercial-wrap">
+      <div class="seo-evidence-copy">
+        <p>La clarté se voit</p>
+        <h2>
+          Un métier.
+          <br />
+          Des preuves.
+          <br />
+          Un prochain pas.
+        </h2>
+        <p>
+          Le site SC Rénovation présente l’activité, montre le travail et rend
+          la demande de devis identifiable. Cet exemple illustre une page qui
+          explique son offre ; il ne constitue pas une mesure de performance
+          SEO.
+        </p>
+        <a class="commercial-text-link" href="/portfolio/sc-renovation/">
+          Voir les choix du projet
+        </a>
+      </div>
+      <figure data-evidence-motion>
+        <CaseImage
+          src={sc}
+          width={690}
+          widths={[640, 960, 1380, 1600]}
+          sizes="(max-width: 900px) calc(100vw - 40px), (max-width: 1240px) 60vw, 720px"
+          quality={93}
+          alt="Page réelle SC Rénovation : présentation de l’activité, réalisations et accès au devis"
+        />
+        <figcaption>
+          Capture authentique d’une réalisation Aimy Digital.
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="seo-local commercial-wrap">
+    <div>
+      <p>Un territoire réel</p>
+      <h2>
+        Proche de vos clients.
+        <br />
+        Précis sur votre activité.
+      </h2>
+    </div>
+    <div>
+      <p>
+        AIMY DIGITAL est établie à Saint-Amand-sur-Sèvre, près de Mauléon. Nous
+        échangeons avec les entreprises du Bocage, de Cholet, de Bressuire et
+        des Herbiers sur leurs besoins de visibilité.
+      </p>
+      <p>
+        Votre zone d’intervention doit être décrite avec la même précision. Le
+        travail local relie les services aux lieux réellement desservis, sans
+        inventer d’établissement ou multiplier des pages interchangeables.
+      </p>
+      <h3>Et votre fiche Google ?</h3>
+      <p>
+        La cohérence des informations de votre entreprise mérite aussi d’être
+        examinée. Toute intervention sur Google Business Profile se cadre selon
+        votre situation, votre éligibilité et les accès disponibles.
+      </p>
+      <a
+        class="commercial-text-link"
+        href="https://support.google.com/business/answer/7091?hl=fr"
+      >
+        Comprendre les critères locaux expliqués par Google
+      </a>
+    </div>
+  </section>
+  <section class="seo-measure">
+    <div class="commercial-wrap">
+      <p>Observer avant de conclure</p>
+      <h2>
+        Mesurer ce qui change.
+        <br />
+        Comprendre ce que cela signifie.
+      </h2>
+      <p class="commercial-lead">
+        Avec les accès disponibles, Search Console permet de suivre les
+        recherches et les pages qui apparaissent dans Google. Les observations
+        se lisent avec leur période et leur contexte.
+      </p>
+      <dl>
+        <div>
+          <dt>Impressions</dt>
+          <dd>
+            Les apparitions dans les résultats : un signal de visibilité, pas un
+            nombre de visiteurs.
+          </dd>
+        </div>
+        <div>
+          <dt>Clics & requêtes</dt>
+          <dd>
+            Les recherches qui amènent au site et leur adéquation avec vos
+            services.
+          </dd>
+        </div>
+        <div>
+          <dt>Pages & contacts</dt>
+          <dd>
+            Les contenus consultés et, si un suivi adapté est défini, les prises
+            de contact. Les clics seuls ne prouvent pas un résultat commercial.
+          </dd>
+        </div>
+      </dl>
+      <p>
+        Les outils de mesure et leur configuration respectueuse des données sont
+        précisés avant leur activation.
+      </p>
+    </div>
+  </section>
+  <section class="commercial-faq commercial-wrap">
+    <h2>
+      Le SEO,
+      <br />
+      sans raccourcis.
+    </h2>
+    <FAQ items={questions} />
+  </section>
+  <footer class="commercial-finish">
+    <div class="commercial-wrap">
+      <p>Votre activité, votre territoire, vos priorités.</p>
+      <h2>
+        Commençons par
+        <br />
+        ce que vos clients cherchent.
+      </h2>
+      <p>
+        Partagez votre site et les services que vous souhaitez développer. Nous
+        pourrons cadrer les points à examiner.
+      </p>
+      <a class="commercial-cta" href="/contact/">
+        Parlons de votre visibilité
+      </a>
+      <p class="commercial-related">
+        Le site doit aussi évoluer ?{" "}
+        <a href="/creation-de-sites-internet/">
+          Découvrez notre approche de la création et de la refonte
+        </a>
+        . Besoin d’explorer les annonces ?{" "}
+        <a href="/publicites-sea/">Consultez la prestation SEA</a>.
+      </p>
+    </div>
+  </footer>
+</article>
+<EvidenceMotion />

@@ -1,0 +1,149 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_1I4MJ9.webp",
+          "width": 280,
+          "encodedWidth": 640
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_Z5ensz.webp",
+          "width": 246,
+          "encodedWidth": 600
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_ZeSFTx.webp",
+          "width": 280,
+          "encodedWidth": 640
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 375,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_70M0u.webp",
+          "width": 335,
+          "encodedWidth": 840
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_Z5ensz.webp",
+          "width": 286,
+          "encodedWidth": 600
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_2q69Az.webp",
+          "width": 335,
+          "encodedWidth": 960
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 390,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_70M0u.webp",
+          "width": 350,
+          "encodedWidth": 840
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_Z5ensz.webp",
+          "width": 286,
+          "encodedWidth": 600
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_2q69Az.webp",
+          "width": 350,
+          "encodedWidth": 960
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 740,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_Z1VDqLw.webp",
+          "width": 700,
+          "encodedWidth": 1440
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_Z5ensz.webp",
+          "width": 286,
+          "encodedWidth": 600
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_Z2bB6K9.webp",
+          "width": 700,
+          "encodedWidth": 1440
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 768,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_70M0u.webp",
+          "width": 327.453125,
+          "encodedWidth": 840
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_Z5ensz.webp",
+          "width": 246,
+          "encodedWidth": 600
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_2q69Az.webp",
+          "width": 380.859375,
+          "encodedWidth": 960
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 36)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    },
+    {
+      "width": 1440,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_23psJP.webp",
+          "width": 558.828125,
+          "encodedWidth": 1120
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_Z5ensz.webp",
+          "width": 286,
+          "encodedWidth": 600
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_ZeFV98.webp",
+          "width": 652.015625,
+          "encodedWidth": 1320
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 36)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    }
+  ],
+  "errors": []
+}

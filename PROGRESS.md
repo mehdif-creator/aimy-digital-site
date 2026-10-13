@@ -174,3 +174,9 @@ QA : neuf configurations320/390/1440 sur3pages, axe/réseau/préférences/schema
 
 ## 13 octobre 2026 — confirmations juridiques reçues
 L’utilisateur confirme Mehdi FARHANE, Président de la SASU AIMY DIGITAL, directeur de la publication ; nouveau site Astro hébergé chez o2switch. Mentions mises à jour avec adresse et téléphone officiels de l’hébergeur. Confidentialité cohérente ; seules restent ouvertes la messagerie, les durées/purges, lieux/transferts et validation des bases légales. Pas de déploiement ; footer/Schema.org gardent l’identité SASU correcte.
+
+## 13 octobre 2026 — Gate A commercial prêt pour validation
+Deux pages dédiées : création de sites internet et référencement SEO. Compositions distinctes, captures réelles SC/HT, accordéons natifs, FAQ ciblées, liens et contenu local factuel. Aucun changement aux autres pages ni au blog. Méthode et audit des dix routes dans docs/superpowers/plans/2026-10-13-commercial-gate-a.md.
+QA Chrome320/375/390/740/768/1440 DPR2 : sans débordement, erreur console ni violation axe ; clavier, CTA, reduced-motion et sans JS vérifiés. Correction sizes SEO sous-estimé, images désormais suffisantes à DPR2. Build40pages,9tests réussis, Astro0erreur/0warning (1hint de script QA préexistant). Budget JS inchangé124605/49999gzip.
+Trois Lighthouse mobiles comparables par page : Création LCP2,255/2,317/2,045s (image hero) ; SEO1,897/1,443/1,432s (texte introductif). CLS0,00196/0,00310 ; accessibilité100, bonnes pratiques100, TBT0. Mesures locales, pas CWV terrain. Rapport docs/qa/gate-a/rapport.md.
+STOP Gate A : validation visuelle demandée avant les huit autres pages. Pas de déploiement. Les articles raccourcis restent à réconcilier avec leurs sources historiques avant publication ; ce chantier n’est pas clos par ces pages commerciales.

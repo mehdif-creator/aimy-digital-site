@@ -1,0 +1,130 @@
+import { chromium } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
+import sharp from "sharp";
+import { writeFile, mkdir } from "node:fs/promises";
+const slug = process.env.QA_PROJECT || "creation-de-sites-internet",
+  id = slug;
+const root = ".commercial";
+const b = await chromium.launch({ channel: "chrome", headless: true });
+const errors = [],
+  results = [];
+await mkdir(`docs/qa/gate-a/${id}`, { recursive: true });
+for (const width of [320, 375, 390, 740, 768, 1440]) {
+  const c = await b.newContext({
+    viewport: { width, height: 900 },
+    deviceScaleFactor: 2,
+  });
+  const p = await c.newPage();
+  p.on("pageerror", (e) => errors.push(e.message));
+  p.on("console", (m) => {
+    if (m.type() === "error") errors.push(m.text());
+  });
+  await p.goto(`http://127.0.0.1:4322/${slug}/`, {
+    waitUntil: "networkidle",
+  });
+  await p.screenshot({
+    path: `docs/qa/gate-a/${id}/intro-${width}.png`,
+  });
+  for (const section of await p.locator(`${root} section`).all()) {
+    await section.scrollIntoViewIfNeeded();
+    await p.waitForTimeout(150);
+    if (
+      await p.evaluate(() => document.documentElement.scrollWidth > innerWidth)
+    )
+      errors.push({ width, overflow: true });
+  }
+  for (const detail of await p.locator(`${root} details`).all()) {
+    const before = await detail.evaluate((e) => e.open);
+    await detail.locator("summary").focus();
+    await p.keyboard.press("Enter");
+    if ((await detail.evaluate((e) => e.open)) === before)
+      errors.push({ width, details: false });
+    await p.keyboard.press("Enter");
+  }
+  const images = [];
+  for (const img of await p.locator(`${root} img`).all()) {
+    await img.scrollIntoViewIfNeeded();
+    await img.evaluate((e) => e.decode());
+    const data = await img.evaluate((e) => ({
+      src: e.currentSrc,
+      width: e.getBoundingClientRect().width,
+    }));
+    const meta = await sharp("dist/" + new URL(data.src).pathname).metadata();
+    images.push({ ...data, encodedWidth: meta.width });
+    if (meta.width < data.width * 2 - 2)
+      errors.push({ width, undersized: data });
+  }
+  const axe = await new AxeBuilder({ page: p }).analyze();
+  if (axe.violations.length)
+    errors.push({
+      width,
+      axe: axe.violations.map((x) => ({
+        id: x.id,
+        nodes: x.nodes.map((n) => n.target),
+      })),
+    });
+  const transforms = [];
+  await p.evaluate(() => scrollTo({ top: 0, behavior: "instant" }));
+  await p.waitForTimeout(200);
+  const origin = await p
+    .locator("[data-evidence-motion]")
+    .first()
+    .evaluate((e) => scrollY + e.getBoundingClientRect().top);
+  for (const pos of ["top bottom", "top top"]) {
+    await p.evaluate(
+      ({ origin, pos }) =>
+        scrollTo({
+          top: origin - (pos === "top bottom" ? innerHeight : 0),
+          behavior: "instant",
+        }),
+      { origin, pos },
+    );
+    await p.waitForTimeout(500);
+    transforms.push(
+      await p
+        .locator("[data-evidence-motion]")
+        .first()
+        .evaluate((e) => getComputedStyle(e).transform),
+    );
+  }
+  if (width >= 760 && new Set(transforms).size < 2)
+    errors.push({ width, motion: false });
+  await p.emulateMedia({ reducedMotion: "reduce" });
+  await p.waitForTimeout(250);
+  if (
+    await p
+      .locator("[data-evidence-motion]")
+      .first()
+      .evaluate((e) => getComputedStyle(e).transform !== "none")
+  )
+    errors.push({ width, reduced: false });
+  if ([390, 1440].includes(width)) {
+    await p.locator(".commercial-faq").scrollIntoViewIfNeeded();
+    await p.screenshot({
+      path: `docs/qa/gate-a/${id}/conception-${width}.png`,
+    });
+    await p.screenshot({
+      path: `docs/qa/gate-a/${id}/full-${width}.png`,
+      fullPage: true,
+    });
+  }
+  await p.locator(`${root} .commercial-cta`).first().click();
+  await p.waitForURL("**/contact/");
+  results.push({ width, images, transforms });
+  await c.close();
+}
+const c = await b.newContext({
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 844 },
+  }),
+  p = await c.newPage();
+await p.goto(`http://127.0.0.1:4322/${slug}/`);
+await p.locator(`${root} .commercial-cta`).first().click();
+await p.waitForURL("**/contact/");
+await b.close();
+await writeFile(
+  `docs/qa/gate-a/${id}/browser.json`,
+  JSON.stringify({ results, errors }, null, 2),
+);
+console.log(JSON.stringify({ id, viewports: results.length, errors }, null, 2));
+if (errors.length) process.exitCode = 1;

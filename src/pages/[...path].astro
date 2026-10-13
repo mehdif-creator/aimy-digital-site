@@ -8,10 +8,17 @@ import { services, type Service } from "../lib/site";
 import type { CollectionEntry } from "astro:content";
 export async function getStaticPaths() {
   return [
-    ...services.map((service) => ({
-      params: { path: service.path },
-      props: { service, post: undefined },
-    })),
+    ...services
+      .filter(
+        (service) =>
+          !["creation-de-sites-internet", "referencement-seo"].includes(
+            service.path,
+          ),
+      )
+      .map((service) => ({
+        params: { path: service.path },
+        props: { service, post: undefined },
+      })),
     ...(await getCollection("posts")).map((post) => ({
       params: { path: post.data.path },
       props: { post, service: undefined },

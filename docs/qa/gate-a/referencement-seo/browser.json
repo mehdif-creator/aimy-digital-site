@@ -1,0 +1,89 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_2eVw5A.webp",
+          "width": 280,
+          "encodedWidth": 640
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 375,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_Z2eFnrk.webp",
+          "width": 335,
+          "encodedWidth": 960
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 390,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_Z2eFnrk.webp",
+          "width": 350,
+          "encodedWidth": 960
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 740,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_160T1U.webp",
+          "width": 700,
+          "encodedWidth": 1600
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 768,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_160T1U.webp",
+          "width": 728,
+          "encodedWidth": 1600
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 36)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    },
+    {
+      "width": 1440,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_160T1U.webp",
+          "width": 709.375,
+          "encodedWidth": 1600
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 36)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    }
+  ],
+  "errors": []
+}
