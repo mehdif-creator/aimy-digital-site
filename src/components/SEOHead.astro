@@ -43,6 +43,7 @@ const schema = article
       "@context": "https://schema.org",
       "@type": "Article",
       headline: title,
+      image: new URL(image, site.url).href,
       datePublished: article.date,
       dateModified: article.modified,
       mainEntityOfPage: canonical,

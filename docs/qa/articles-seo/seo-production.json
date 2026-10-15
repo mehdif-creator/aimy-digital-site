@@ -1,0 +1,493 @@
+{
+  "at": "2026-10-15T14:52:23.636Z",
+  "pages": 40,
+  "redirects": 15,
+  "errors": [],
+  "warnings": [
+    {
+      "route": "/10-erreurs-creation-site-internet-2025/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/blog/",
+      "type": "title-long",
+      "length": 71
+    },
+    {
+      "route": "/combien-coute-site-vitrine-2025/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/creer-site-web-professionnel-guide-2025/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/ia-et-marketing-digital-le-guide-ultime-pour-les-tpe-en-2025/",
+      "type": "description-long",
+      "length": 176
+    },
+    {
+      "route": "/ia-et-marketing-digital-le-guide-ultime-pour-les-tpe-en-2025/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/maintenance-site-web-essentielle-2025/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "type": "title-long",
+      "length": 72
+    },
+    {
+      "route": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/seo-local-optimiser-site-clients-locaux/",
+      "type": "title-long",
+      "length": 76
+    },
+    {
+      "route": "/seo-local-optimiser-site-clients-locaux/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/site-web-professionnel-2025/",
+      "type": "title-long",
+      "length": 79
+    },
+    {
+      "route": "/site-web-professionnel-2025/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/woocommerce-ou-shopify-que-choisir-2025/",
+      "type": "description-long",
+      "length": 206
+    },
+    {
+      "route": "/woocommerce-ou-shopify-que-choisir-2025/",
+      "type": "author-unconfirmed"
+    },
+    {
+      "route": "/wordpress-cms-2025/",
+      "type": "author-unconfirmed"
+    }
+  ],
+  "externalLinks": [
+    "https://www.o2switch.fr/",
+    "https://www.cnil.fr/fr/plaintes",
+    "https://www.cnil.fr/fr/les-droits-pour-maitriser-vos-donnees-personnelles",
+    "https://htcreajeux.fr/",
+    "https://mynutrizen.fr/",
+    "https://sc-renovation.com/",
+    "https://lambertdigitalpulse.fr/"
+  ],
+  "rows": [
+    {
+      "route": "/10-erreurs-creation-site-internet-2025/",
+      "title": "Dix erreurs à éviter lors de la création de votre site | Aimy Digital",
+      "description": "Les 10 erreurs fatales en création de site internet à éviter en 2025 : budget, SEO, UX, performance et sécurité. Check-list et bonnes pratiques.",
+      "canonical": "https://aimy-digital.fr/10-erreurs-creation-site-internet-2025/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/404.html",
+      "title": "Page introuvable | Aimy Digital",
+      "description": "Cette adresse ne correspond pas à une page disponible. Retrouvez les prestations ou contactez Aimy Digital.",
+      "canonical": "https://aimy-digital.fr/404/",
+      "robots": "noindex, nofollow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/a-propos/",
+      "title": "Aimy Digital, agence web de proximité à Mauléon | Aimy Digital",
+      "description": "Une agence web dirigée par Mehdi Farhane à Saint-Amand-sur-Sèvre. Design, développement et visibilité pour les entreprises du Bocage, autour de Mauléon et Cholet.",
+      "canonical": "https://aimy-digital.fr/a-propos/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/blog/",
+      "title": "Le journal Aimy Digital : web, SEO et stratégie digitale | Aimy Digital",
+      "description": "Des lectures pour éclairer vos choix : création de sites internet, référencement local, publicité, maintenance et outils numériques pour votre entreprise.",
+      "canonical": "https://aimy-digital.fr/blog/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/category/automatisation-outils-no-code/",
+      "title": "Automatisation & Outils no-code | Aimy Digital",
+      "description": "Les articles Aimy Digital de la rubrique Automatisation & Outils no-code.",
+      "canonical": "https://aimy-digital.fr/category/automatisation-outils-no-code/",
+      "robots": "noindex, nofollow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/category/conseils-business-roi/",
+      "title": "Conseils business & ROI | Aimy Digital",
+      "description": "Les articles Aimy Digital de la rubrique Conseils business & ROI.",
+      "canonical": "https://aimy-digital.fr/category/conseils-business-roi/",
+      "robots": "noindex, nofollow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/category/creation-de-sites-web/",
+      "title": "Création de sites web | Aimy Digital",
+      "description": "Les articles Aimy Digital de la rubrique Création de sites web.",
+      "canonical": "https://aimy-digital.fr/category/creation-de-sites-web/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/category/maintenance-securite/",
+      "title": "Maintenance & Sécurité | Aimy Digital",
+      "description": "Les articles Aimy Digital de la rubrique Maintenance & Sécurité.",
+      "canonical": "https://aimy-digital.fr/category/maintenance-securite/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/category/publicite-acquisition-client/",
+      "title": "Publicité & Acquisition client | Aimy Digital",
+      "description": "Les articles Aimy Digital de la rubrique Publicité & Acquisition client.",
+      "canonical": "https://aimy-digital.fr/category/publicite-acquisition-client/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/category/referencement-seo/",
+      "title": "Référencement & SEO | Aimy Digital",
+      "description": "Les articles Aimy Digital de la rubrique Référencement & SEO.",
+      "canonical": "https://aimy-digital.fr/category/referencement-seo/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/category/strategie-digitale-pour-tpe-pme/",
+      "title": "Stratégie digitale pour TPE/PME | Aimy Digital",
+      "description": "Les articles Aimy Digital de la rubrique Stratégie digitale pour TPE/PME.",
+      "canonical": "https://aimy-digital.fr/category/strategie-digitale-pour-tpe-pme/",
+      "robots": "noindex, nofollow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/category/tendances-innovations-web/",
+      "title": "Tendances & innovations web | Aimy Digital",
+      "description": "Les articles Aimy Digital de la rubrique Tendances & innovations web.",
+      "canonical": "https://aimy-digital.fr/category/tendances-innovations-web/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/combien-coute-site-vitrine-2025/",
+      "title": "Combien coûte un site vitrine professionnel ? | Aimy Digital",
+      "description": "Baromètre 2025 : combien coûte un site vitrine professionnel ? Prix, postes de coût, délais et exemples concrets pour TPE/PME locales. Devis gratuit.",
+      "canonical": "https://aimy-digital.fr/combien-coute-site-vitrine-2025/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/contact/",
+      "title": "Contact Aimy Digital : parlons de votre projet web | Aimy Digital",
+      "description": "Présentez votre projet de site, référencement ou publicité à Aimy Digital. Contact direct : 06 52 59 77 80, contact@aimy-digital.fr. Agence à Saint-Amand-sur-Sèvre.",
+      "canonical": "https://aimy-digital.fr/contact/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+      "title": "Création de sites e-commerce | Aimy Digital",
+      "description": "Conception de boutiques e-commerce WordPress/WooCommerce ou Shopify : catalogue, fiches produits et parcours de commande.",
+      "canonical": "https://aimy-digital.fr/creation-de-sites-internet/creation-de-sites-e-commerce/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/creation-de-sites-internet/creation-de-sites-vitrines/",
+      "title": "Création de sites vitrines | Aimy Digital",
+      "description": "Un site vitrine clair pour présenter vos prestations, vos réalisations et faciliter les demandes de contact dans le Bocage.",
+      "canonical": "https://aimy-digital.fr/creation-de-sites-internet/creation-de-sites-vitrines/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/creation-de-sites-internet/",
+      "title": "Création de sites internet à Mauléon et Cholet | Aimy Digital",
+      "description": "Aimy Digital conçoit votre site vitrine, boutique ou refonte autour de votre métier. Projets réels, parcours mobile et accompagnement dans le Bocage.",
+      "canonical": "https://aimy-digital.fr/creation-de-sites-internet/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/creation-de-sites-internet/refonte-de-sites-internet/",
+      "title": "Refonte de sites internet | Aimy Digital",
+      "description": "Refonte de site autour de Mauléon et Cholet : contenu, design, mobile et migration des URL existantes.",
+      "canonical": "https://aimy-digital.fr/creation-de-sites-internet/refonte-de-sites-internet/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/creer-site-web-professionnel-guide-2025/",
+      "title": "Créer un site web professionnel : les étapes du projet | Aimy Digital",
+      "description": "Guide 2025 pour créer un site web professionnel : étapes clés, coûts réels, choix WordPress/Shopify, SEO & performance. Conseils pratiques pour TPE/PME locales.",
+      "canonical": "https://aimy-digital.fr/creer-site-web-professionnel-guide-2025/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/faq/",
+      "title": "FAQ : les réponses pour préparer votre projet web | Aimy Digital",
+      "description": "Budget, délais, domaine, propriété, SEO, publicité et maintenance : des réponses claires pour préparer votre projet avec Aimy Digital.",
+      "canonical": "https://aimy-digital.fr/faq/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/ia-et-marketing-digital-le-guide-ultime-pour-les-tpe-en-2025/",
+      "title": "IA et marketing digital : des usages à encadrer en TPE | Aimy Digital",
+      "description": "Découvrez comment les TPE peuvent tirer parti de l’IA dans leur stratégie digitale en 2025 : outils, cas pratiques, pièges à éviter et actions à mettre en place dès maintenant.",
+      "canonical": "https://aimy-digital.fr/ia-et-marketing-digital-le-guide-ultime-pour-les-tpe-en-2025/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/",
+      "title": "Création de sites web et SEO local à Mauléon | Aimy Digital",
+      "description": "Aimy Digital conçoit des sites internet pour artisans et PME à Mauléon, Cholet, Bressuire et Les Herbiers. Design, clarté et visibilité locale.",
+      "canonical": "https://aimy-digital.fr/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/maintenance-et-securite/",
+      "title": "Maintenance et sécurité de votre site internet | Aimy Digital",
+      "description": "Sauvegardes, mises à jour, sécurité et vérifications : Aimy Digital définit un suivi adapté à votre site, à sa technologie et à vos besoins.",
+      "canonical": "https://aimy-digital.fr/maintenance-et-securite/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/maintenance-site-web-essentielle-2025/",
+      "title": "Maintenance de site web : ce qu’il faut prévoir | Aimy Digital",
+      "description": "Maintenance de site web (WordPress) : mises à jour, sauvegardes, sécurité et optimisation des performances. Indispensable en 2025 pour protéger trafic et ROI.",
+      "canonical": "https://aimy-digital.fr/maintenance-site-web-essentielle-2025/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/mentions-legales/",
+      "title": "Mentions légales | Aimy Digital",
+      "description": "Identification d’AIMY DIGITAL, SASU immatriculée au RCS de Niort, et informations légales du site.",
+      "canonical": "https://aimy-digital.fr/mentions-legales/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/nos-prestations/",
+      "title": "Nos prestations web : trouvez la solution adaptée | Aimy Digital",
+      "description": "Explorez les solutions Aimy Digital selon votre besoin : site vitrine, refonte, e-commerce, SEO, publicité ou maintenance à Mauléon et dans le Bocage.",
+      "canonical": "https://aimy-digital.fr/nos-prestations/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/",
+      "title": "SEO WordPress : organiser les vérifications utiles | Aimy Digital",
+      "description": "Guide historique 2025 : fondations techniques, contenu, performance et suivi du référencement WordPress. Édition restaurée, conseils à contextualiser.",
+      "canonical": "https://aimy-digital.fr/optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/politique-de-confidentialite/",
+      "title": "Confidentialité et données personnelles | Aimy Digital",
+      "description": "Responsable du traitement AIMY DIGITAL SASU, données de contact, stockage local et exercice de vos droits.",
+      "canonical": "https://aimy-digital.fr/politique-de-confidentialite/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/portfolio/ht-crea-jeux/",
+      "title": "HT Créa Jeux | Aimy Digital",
+      "description": "Une boutique de jeux pour apprendre les tables de multiplication.",
+      "canonical": "https://aimy-digital.fr/portfolio/ht-crea-jeux/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/portfolio/",
+      "title": "Réalisations web | Aimy Digital",
+      "description": "Découvrez HT Créa Jeux, My NutriZen, SC Rénovation et Lambert Digital Pulse, quatre projets présentés par Aimy Digital.",
+      "canonical": "https://aimy-digital.fr/portfolio/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/portfolio/lambert-digital-pulse/",
+      "title": "Lambert Digital Pulse | Aimy Digital",
+      "description": "Une vitrine professionnelle pour une activité de community management.",
+      "canonical": "https://aimy-digital.fr/portfolio/lambert-digital-pulse/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/portfolio/my-nutrizen/",
+      "title": "My NutriZen | Aimy Digital",
+      "description": "Une application pour organiser les repas et les courses.",
+      "canonical": "https://aimy-digital.fr/portfolio/my-nutrizen/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/portfolio/sc-renovation/",
+      "title": "SC Rénovation | Aimy Digital",
+      "description": "La rénovation extérieure présentée à travers les prestations et les chantiers.",
+      "canonical": "https://aimy-digital.fr/portfolio/sc-renovation/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "title": "Publicité digitale : relier le budget aux demandes utiles | Aimy Digital",
+      "description": "Publicité digitale 2025 : Google Ads & Facebook Ads. Ciblage, budgets, formats et KPI pour maximiser votre ROI. Guide TPE/PME avec exemples et check-lists.",
+      "canonical": "https://aimy-digital.fr/publicite-digitale-roi-google-ads-facebook-ads/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/publicites-sea/",
+      "title": "Publicité digitale et Google Ads pour votre entreprise | Aimy Digital",
+      "description": "Aimy Digital construit votre parcours d’acquisition : ciblage Google Ads, annonces, pages de destination et mesure des demandes autour de Mauléon et Cholet.",
+      "canonical": "https://aimy-digital.fr/publicites-sea/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/referencement-seo/",
+      "title": "Référencement SEO local à Mauléon et en Deux-Sèvres | Aimy Digital",
+      "description": "Rendez votre activité plus facile à trouver et à comprendre. Aimy Digital accompagne votre référencement local : technique, contenus et suivi des recherches utiles.",
+      "canonical": "https://aimy-digital.fr/referencement-seo/",
+      "robots": "index, follow",
+      "schemas": [
+        "Organization"
+      ]
+    },
+    {
+      "route": "/seo-local-optimiser-site-clients-locaux/",
+      "title": "SEO local : rendre votre activité compréhensible et trouvable | Aimy Digital",
+      "description": "SEO local 2025 : apparaissez dans le Pack Local. Optimisez Google Business Profile, NAP, pages locales, avis et données structurées pour attirer des clients proches.",
+      "canonical": "https://aimy-digital.fr/seo-local-optimiser-site-clients-locaux/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/site-web-professionnel-2025/",
+      "title": "Pourquoi créer un site web professionnel pour votre entreprise ? | Aimy Digital",
+      "description": "2025 : pourquoi un site web professionnel est indispensable. Visibilité, SEO local, conversions et ROI. Coûts, exemples et check-list pour TPE/PME.",
+      "canonical": "https://aimy-digital.fr/site-web-professionnel-2025/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/woocommerce-ou-shopify-que-choisir-2025/",
+      "title": "WooCommerce ou Shopify : comment cadrer le choix ? | Aimy Digital",
+      "description": "Comparatif 2025 WooCommerce ou Shopify : coûts, SEO, paiements, logistique et performances. Guide TPE/PME pour choisir la bonne plateforme et réussir votre e-commerce. WooCommerce ou Shopify : que choisir ?",
+      "canonical": "https://aimy-digital.fr/woocommerce-ou-shopify-que-choisir-2025/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    },
+    {
+      "route": "/wordpress-cms-2025/",
+      "title": "WordPress : quels critères pour votre projet web ? | Aimy Digital",
+      "description": "Découvrez pourquoi WordPress reste en 2025 le CMS incontournable pour sites vitrines et e-commerce. Performance, SEO et flexibilité au rendez-vous.",
+      "canonical": "https://aimy-digital.fr/wordpress-cms-2025/",
+      "robots": "index, follow",
+      "schemas": [
+        "Article"
+      ]
+    }
+  ]
+}

@@ -11,9 +11,12 @@ export async function getStaticPaths() {
     ...services
       .filter(
         (service) =>
-          !["creation-de-sites-internet", "referencement-seo", "publicites-sea", "maintenance-et-securite"].includes(
-            service.path,
-          ),
+          ![
+            "creation-de-sites-internet",
+            "referencement-seo",
+            "publicites-sea",
+            "maintenance-et-securite",
+          ].includes(service.path),
       )
       .map((service) => ({
         params: { path: service.path },
@@ -34,8 +37,9 @@ const description = service?.description || post!.data.description;
 ---
 
 <BaseLayout
-  title={title}
+  title={post?.data.seoTitle || title}
   description={description}
+  image={post?.data.image}
   article={
     post ? { date: post.data.date, modified: post.data.modified } : undefined
   }
@@ -100,6 +104,31 @@ const description = service?.description || post!.data.description;
               {new Date(post.data.date).toLocaleDateString("fr-FR")}
             </time>
           </p>
+          {post.data.historicalReview && (
+            <aside
+              class="article-history"
+              aria-label="Contexte de cette archive"
+            >
+              <p>
+                <strong>
+                  Édition historique de 2025 — texte restauré, validation
+                  éditoriale en cours.
+                </strong>
+              </p>
+              <p>
+                Les tarifs, statistiques, exemples de résultats et promesses de
+                cette archive ne sont pas vérifiés. Ils ne constituent ni des
+                preuves clients, ni les offres ou engagements actuels d’Aimy
+                Digital. Les outils et conseils techniques ou juridiques cités
+                peuvent avoir évolué.
+              </p>
+              <p>
+                Pour le périmètre actuel :{" "}
+                <a href="/nos-prestations/">consultez nos prestations</a> ou{" "}
+                <a href="/contact/">contactez-nous</a>.
+              </p>
+            </aside>
+          )}
           <div set:html={post.data.html} />
           <p>
             <a href="/blog/">Tous les articles</a>
@@ -110,3 +139,22 @@ const description = service?.description || post!.data.description;
   </div>
   <CTA />
 </BaseLayout>
+
+<style>
+  .article-history {
+    border-left: 3px solid var(--blue, #1765ed);
+    padding: 1rem 1.25rem;
+    margin-bottom: 2.5rem;
+    background: #edf4fa;
+    color: #142638;
+  }
+  .article-history p {
+    margin: 0 0 0.75rem;
+  }
+  .article-history p:last-child {
+    margin-bottom: 0;
+  }
+  .prose {
+    overflow-wrap: anywhere;
+  }
+</style>

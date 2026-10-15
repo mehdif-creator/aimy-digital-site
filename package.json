@@ -11,7 +11,7 @@
     "check": "astro check",
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1",
-    "test": "node --test tests/content.test.mjs tests/portfolio.test.mjs tests/regressions.test.mjs",
+    "test": "node --test tests/content.test.mjs tests/portfolio.test.mjs tests/regressions.test.mjs tests/restoration.test.mjs",
     "audit": "node scripts/check-build.mjs",
     "format": "prettier --write src scripts tests astro.config.mjs",
     "format:check": "prettier --check src scripts tests astro.config.mjs"

@@ -2,11 +2,11 @@
 
 Inventaire public du 10 octobre 2026 : 89 URL observées (variantes incluses). {"301":18,"KEEP":39,"404/410":8,"REVIEW":24}. Le champ status est le statut FINAL après suivi des redirections, pas le code du premier saut. Les codes exacts des sauts et leur exécution Apache restent à vérifier.
 
-Les 11 articles sont conservés aux chemins REST actuels, avec leur date de publication. Les anciens slugs redirigés sont proposés en 301 vers les destinations observées. Les contenus non sourcés ont été révisés ; voir docs/content/copy-review.md. Cette réduction nécessite une revue sémantique avant publication.
+Les 11 articles sont conservés aux chemins REST actuels, avec leur date de publication. Les anciens slugs redirigés sont proposés en 301 vers les destinations observées. Les onze corps historiques ont été restaurés le 15 octobre 2026 avec une mention de validation éditoriale en cours. Voir docs/qa/articles-seo/rapport.md et reserves-editoriales.md : les affirmations historiques ne sont pas validées.
 
 40 pages compilées, dont 8 catégories et 4 dossiers de réalisations. Les catégories vides sont noindex et exclues du sitemap production. Le staging est intégralement noindex et ne produit pas de sitemap.
 
-20 médias d’articles récupérés à leur chemin historique ; l’inventaire REST en compte 114. La couverture des médias, liens entrants, flux, archives et pages privées n’est pas complète. L’inventaire public ne remplace pas l’export WordPress, les logs et la sauvegarde serveur.
+21 médias récupérés à leur chemin historique, plus quatre illustrations extraites sans altération des données base64 ; l’inventaire REST en compte 114. La couverture des médias, liens entrants, flux, archives et pages privées n’est pas complète. L’inventaire public ne remplace pas l’export WordPress, les logs et la sauvegarde serveur.
 
 ## URL nécessitant encore une décision
 

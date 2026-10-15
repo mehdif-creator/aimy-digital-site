@@ -12,3 +12,8 @@ Les fichiers `src/content/posts/*.json` n’ont pas été modifiés. Le manifest
 Associer chaque slug à l’archive et conserver titre, date, liens utiles et images authentiques. Récupérer auprès du propriétaire un export WordPress WXR ou une sauvegarde de référence si l’archive HTML manque de blocs, de légendes ou de métadonnées SEO. Comparer les métadonnées avec l’inventaire de migration. Relire les prix, outils, références à 2025 et promesses historiques ; documenter les mises à jour factuelles sans inventer de date de publication. Ne pas restaurer d’anciens clients exclus comme références commerciales actuelles.
 
 Aucun article réécrit, raccourci ou restauré ici. La restauration complète des onze articles reste obligatoire avant publication, suivie de l’audit SEO final.
+
+
+## Actualisation du 15 octobre 2026
+
+La restauration des onze corps est désormais réalisée. Ce document décrit l’état antérieur ; le rapport de référence est [articles-seo/rapport.md](../articles-seo/rapport.md). Validation factuelle et préparation serveur toujours réservées.

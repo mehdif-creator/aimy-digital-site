@@ -25,6 +25,9 @@ export function cleanContent(html) {
       "br",
     ],
     allowedAttributes: {
+      h2: ["id"],
+      h3: ["id"],
+      h4: ["id"],
       a: ["href", "title"],
       img: ["src", "alt", "width", "height", "loading"],
       th: ["scope"],
@@ -54,7 +57,15 @@ export function cleanContent(html) {
       }),
       img: (tagName, attribs) => ({
         tagName,
-        attribs: { ...attribs, loading: "lazy", alt: attribs.alt || "" },
+        attribs: {
+          ...attribs,
+          src: (attribs.src || "").replace(
+            /^https:\/\/aimy-digital\.fr(?=\/)/,
+            "",
+          ),
+          loading: "lazy",
+          alt: attribs.alt || "",
+        },
       }),
     },
   });
