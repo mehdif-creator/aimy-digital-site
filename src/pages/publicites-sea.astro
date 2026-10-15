@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import CommercialJourney from "../components/CommercialJourney.astro";
 import CommercialInteractions from "../components/CommercialInteractions.astro";
 import "../styles/commercial-premium.css";
 const stages = [
@@ -73,7 +74,7 @@ const stages = [
         ATTENTION <span>↗</span> INTENTION <span>↗</span> ACTION
       </div>
     </header>
-    <section class="campaign wrap" data-choice>
+    <section class="campaign wrap" data-choice data-motion="campaign">
       <div class="campaign-top">
         <span class="eyebrow">Dans les coulisses d’une campagne</span>
         <p class="caption">
@@ -87,28 +88,12 @@ const stages = [
           </button>
         ))}
       </div>
+      <CommercialJourney mode="ads" />
       {stages.map((s, i) => (
         <div class="campaign-panel" data-panel id={`campaign-${i}`}>
-          <div class={`ad-stage ad-stage-${i}`}>
-            <span class="caption">{s.eyebrow}</span>
-            <span class="ad-index" aria-hidden="true">
-              0{i + 1}
-            </span>
-            <h2>{s.heading}</h2>
-            <p>{s.body}</p>
-            <div class="ad-route" aria-hidden="true">
-              {i === 0
-                ? "Une recherche → votre offre"
-                : i === 1
-                  ? "Une promesse → une réponse"
-                  : i === 2
-                    ? "Un besoin → un échange"
-                    : "Observer → ajuster"}
-            </div>
-          </div>
           <div class="campaign-copy">
             <span class="eyebrow">{s.label}</span>
-            <h3>{s.title}</h3>
+            <h2>{s.title}</h2>
             <p>{s.text}</p>
             <p class="caption">{s.detail}</p>
           </div>
@@ -201,8 +186,8 @@ const stages = [
   }
   .campaign-panel {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    min-height: 430px;
+    grid-template-columns: 1fr;
+    min-height: 230px;
     border: 1px solid #aebfcb;
   }
   .ad-stage {
@@ -244,8 +229,9 @@ const stages = [
   .campaign-copy {
     padding: clamp(2rem, 4vw, 4rem);
     align-self: center;
+    max-width: 1000px;
   }
-  .campaign-copy h3 {
+  .campaign-copy h2 {
     font-size: 2rem;
   }
   .ad-stage-1 {

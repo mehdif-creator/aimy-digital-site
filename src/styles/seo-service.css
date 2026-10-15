@@ -135,3 +135,15 @@
     display: none;
   }
 }
+
+.seo-premium .journey-dot {
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  background: transparent;
+}
+.seo-premium .journey-dot[aria-pressed="true"] {
+  background: #e5f1f7;
+  color: #10283e;
+  border-color: #e5f1f7;
+}

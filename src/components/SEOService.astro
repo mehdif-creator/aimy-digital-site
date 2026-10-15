@@ -1,4 +1,5 @@
 ---
+import CommercialJourney from "./CommercialJourney.astro";
 import CommercialInteractions from "./CommercialInteractions.astro";
 import "../styles/commercial-premium.css";
 import "../styles/seo-service.css";
@@ -103,11 +104,11 @@ const pillars = [
       </div>
     </div>
   </header>
-  <section class="search-journey band night">
+  <section class="search-journey band night" data-journey-scroll>
     <div class="wrap">
       <span class="eyebrow">Le parcours d’une demande</span>
       <h2>La visibilité n’est que le début.</h2>
-      <div class="rule" data-draw></div>
+      <CommercialJourney mode="seo" />
       <ol class="journey-track">
         {[
           [
@@ -136,7 +137,7 @@ const pillars = [
       </ol>
     </div>
   </section>
-  <section class="band wrap diagnostic" data-choice>
+  <section class="band wrap diagnostic" data-choice data-motion="diagnostic">
     <span class="eyebrow">Le diagnostic · huit angles de lecture</span>
     <h2>Où se situe le frein ?</h2>
     <p class="intro">
@@ -162,7 +163,14 @@ const pillars = [
             <p class="eyebrow">{label}</p>
             <h3>{title}</h3>
             <p>{copy}</p>
-            <div class="diagnostic-chain">{chain}</div>
+            <div class="diagnostic-chain">
+              {chain.split(" → ").map((part, index) => (
+                <span data-chain-step>
+                  {index > 0 && <b aria-hidden="true"> → </b>}
+                  {part}
+                </span>
+              ))}
+            </div>
           </article>
         ))}
       </div>

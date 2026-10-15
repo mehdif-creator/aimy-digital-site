@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CaseImage from "../components/CaseImage.astro";
 import CommercialInteractions from "../components/CommercialInteractions.astro";
 import sc from "../../public/images/cases/sc/services.webp";
+import mobile from "../../public/images/cases/sc/mobile.webp";
 import ht from "../../public/images/cases/ht/product.webp";
 import "../styles/commercial-premium.css";
 const needs = [
@@ -22,9 +23,9 @@ const needs = [
     "Repartir de vos contenus utiles, clarifier l’offre et améliorer l’expérience mobile. Les adresses existantes et la migration font partie du cadrage.",
     "Refonte de sites internet",
     "/creation-de-sites-internet/refonte-de-sites-internet/",
-    "SC Rénovation · exemple de présentation de services",
+    "SC Rénovation · exemple mobile réalisé, sans comparaison avant/après",
     "/portfolio/sc-renovation/",
-    sc,
+    mobile,
   ],
   [
     "Être trouvé sur Google",
@@ -89,6 +90,7 @@ const needs = [
     <section
       class="solutions wrap"
       data-choice
+      data-motion="solutions"
       aria-label="Trouver une prestation"
     >
       <div class="choices needs-nav">
@@ -110,21 +112,58 @@ const needs = [
               <a class="action" href={url}>
                 Explorer : {service} ↗
               </a>
-              <figure class="solution-image">
-                <div class="screen">
-                  <CaseImage
-                    src={img}
-                    alt={`Capture authentique : ${project}`}
-                    width={1100}
-                    widths={[480, 768, 1100, 1600]}
-                    sizes="(max-width: 800px) 90vw, 58vw"
-                  />
+              {[0, 1, 4].includes(i) ? (
+                <figure class="solution-image">
+                  <div class:list={["screen", { "mobile-proof": i === 1 }]}>
+                    <CaseImage
+                      src={img}
+                      alt={`Capture authentique : ${project}`}
+                      width={1100}
+                      widths={[480, 768, 1100, 1600]}
+                      sizes="(max-width: 800px) 90vw, 58vw"
+                    />
+                  </div>
+                  <figcaption>
+                    <span>{project}</span>
+                    <a href={caseUrl}>Voir le projet ↗</a>
+                  </figcaption>
+                </figure>
+              ) : (
+                <div class:list={["service-map", `service-map-${i}`]}>
+                  <span class="caption">
+                    Schéma de méthode · aucune mission client attribuée
+                  </span>
+                  <div class="service-map-route">
+                    {(i === 2
+                      ? [
+                          "Une recherche locale",
+                          "Une page métier",
+                          "Une prise de contact",
+                        ]
+                      : i === 3
+                        ? [
+                            "Une annonce ciblée",
+                            "Une destination cohérente",
+                            "Une demande à qualifier",
+                          ]
+                        : [
+                            "L’état du site",
+                            "Les priorités",
+                            "Les vérifications",
+                          ]
+                    ).map((text, n) => (
+                      <div data-chain-step>
+                        <span aria-hidden="true">0{n + 1}</span>
+                        <strong>{text}</strong>
+                        {n < 2 && <b aria-hidden="true">↓</b>}
+                      </div>
+                    ))}
+                  </div>
+                  <a class="textual" href={url}>
+                    Comprendre la démarche ↗
+                  </a>
                 </div>
-                <figcaption>
-                  <span>{project}</span>
-                  <a href={caseUrl}>Voir le projet ↗</a>
-                </figcaption>
-              </figure>
+              )}
             </article>
           ),
         )}
@@ -213,6 +252,53 @@ const needs = [
   .solution-image a {
     white-space: nowrap;
     text-decoration: underline;
+  }
+  .solution-image .mobile-proof {
+    max-width: 300px;
+    aspect-ratio: 0.48;
+    margin: auto;
+  }
+  .service-map-3 .service-map-route > div:nth-child(2) {
+    margin-left: 10%;
+  }
+  .service-map-3 .service-map-route > div:nth-child(3) {
+    margin-left: 20%;
+  }
+  .service-map-5 .service-map-route > div {
+    border: 1px solid #7894a8;
+    padding: 1rem;
+  }
+  .service-map {
+    background: #10283e;
+    color: #edf7ff;
+    padding: clamp(1.2rem, 3vw, 2.5rem);
+    margin-top: 2.5rem;
+  }
+  .service-map-3 {
+    background: #e0eaf1;
+    color: #10283e;
+  }
+  .service-map-5 {
+    background: #10292f;
+  }
+  .service-map-route {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .service-map-route > div {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.4rem 1rem;
+    border-top: 1px solid #7894a8;
+    padding-top: 1rem;
+  }
+  .service-map-route b {
+    grid-column: 2;
+    color: inherit;
+  }
+  .service-map-route span {
+    font-size: 0.75rem;
   }
   .services-page .closing {
     background: #f6f8f9;

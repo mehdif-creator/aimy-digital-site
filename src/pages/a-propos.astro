@@ -3,6 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CaseImage from "../components/CaseImage.astro";
 import CommercialInteractions from "../components/CommercialInteractions.astro";
 import sc from "../../public/images/cases/sc/services.webp";
+import duo from "../../public/images/cases/ht/duo.webp";
+import scMobile from "../../public/images/cases/sc/mobile.webp";
 import ht from "../../public/images/cases/ht/product.webp";
 import "../styles/commercial-premium.css";
 const steps = [
@@ -26,16 +28,16 @@ const steps = [
     "Développer",
     "Faire fonctionner l’intention.",
     "Assembler une expérience lisible, responsive et accessible. Vérifier les liens, les formulaires et le chargement fait partie du travail.",
-    "SC Rénovation · interface authentique du projet",
-    sc,
+    "SC Rénovation · interface mobile authentique",
+    scMobile,
     "/portfolio/sc-renovation/",
   ],
   [
     "Faire évoluer",
     "Préparer ce qui vient après.",
     "Préciser la gestion du contenu, les besoins de suivi et les prochaines améliorations. Le périmètre d’accompagnement est défini avec vous.",
-    "HT Créa Jeux · une boutique à faire vivre",
-    ht,
+    "HT Créa Jeux · le Pack Duo dans le catalogue",
+    duo,
     "/portfolio/ht-crea-jeux/",
   ],
 ] as const;
@@ -71,7 +73,7 @@ const steps = [
         </div>
       </div>
     </header>
-    <section class="agency-workshop band" data-choice>
+    <section class="agency-workshop band" data-choice data-motion="workshop">
       <div class="wrap">
         <span class="eyebrow">L’atelier · du besoin à l’usage</span>
         <div class="choices">
@@ -84,7 +86,7 @@ const steps = [
         {steps.map(([, title, text, caption, img, url], i) => (
           <article data-panel id={`atelier-${i}`} class="workshop-panel">
             <figure>
-              <div class="screen">
+              <div class:list={["screen", { "mobile-proof": i === 2 }]}>
                 <CaseImage
                   src={img}
                   alt={caption}
@@ -101,6 +103,19 @@ const steps = [
               </span>
               <h2>{title}</h2>
               <p>{text}</p>
+              <div class="design-decision" data-chain-step>
+                <span class="eyebrow">Un choix visible dans le projet</span>
+                <p>
+                  {
+                    [
+                      "SC Rénovation : regrouper les prestations pour permettre de reconnaître les travaux recherchés avant de prendre contact.",
+                      "HT Créa Jeux : rapprocher la présentation du jeu et les informations produit pour accompagner le choix d’achat.",
+                      "SC Rénovation : placer les accès au devis et au téléphone dans la navigation mobile, puis les rappeler près de la présentation du métier.",
+                      "HT Créa Jeux : donner une place aux différents jeux du catalogue plutôt que résumer toute la boutique à un seul produit.",
+                    ][i]
+                  }
+                </p>
+              </div>
               <a class="textual" href={url}>
                 Voir le projet présenté ↗
               </a>
@@ -114,6 +129,13 @@ const steps = [
         <span class="eyebrow">Une agence. Un interlocuteur identifié.</span>
         <h2>Mehdi Farhane</h2>
         <p class="intro">Président de la SASU AIMY DIGITAL.</p>
+        <p>
+          Votre activité, vos contraintes, vos questions : échangeons
+          directement, avant de choisir les outils.
+        </p>
+        <a class="textual" href="mailto:contact@aimy-digital.fr">
+          Écrire à Mehdi
+        </a>
         <p>
           La relation commence par un échange sur votre activité. Des étapes
           identifiées, des choix expliqués et un périmètre clair permettent de
@@ -156,6 +178,25 @@ const steps = [
   <CommercialInteractions />
 </BaseLayout>
 <style>
+  .workshop-panel .mobile-proof {
+    max-width: 300px;
+    margin: auto;
+    aspect-ratio: 0.48;
+  }
+  .design-decision {
+    border-left: 3px solid #0570b0;
+    padding: 1.2rem;
+    background: #f3f8fb;
+    margin: 1.5rem 0;
+  }
+  .design-decision .eyebrow {
+    font-size: 0.65rem;
+    margin-bottom: 0.7rem;
+  }
+  .design-decision p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
   .agency-page {
     background: #f0efeb;
   }

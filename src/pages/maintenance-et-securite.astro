@@ -70,7 +70,7 @@ const layers = [
         </div>
       </div>
     </header>
-    <section class="system-lab band night" data-choice>
+    <section class="system-lab band night" data-choice data-motion="layers">
       <div class="wrap">
         <div class="split">
           <div>
@@ -97,22 +97,37 @@ const layers = [
             ))}
           </div>
           <div class="system-readout">
+            <div class="layer-model" aria-hidden="true">
+              <svg viewBox="0 0 420 230" fill="none">
+                {layers.map(([label], i) => (
+                  <g data-layer-plane>
+                    <path
+                      d={`M40 ${20 + i * 27} L270 ${20 + i * 27} L375 ${48 + i * 27} L145 ${48 + i * 27} Z`}
+                      fill="#1c4750"
+                      stroke="#91cbd0"
+                    />
+                    <text x="158" y={40 + i * 27} fill="#e4f8fa" font-size="12">
+                      {label}
+                    </text>
+                  </g>
+                ))}
+              </svg>
+              <span class="caption">
+                Architecture de responsabilités · schéma explicatif
+              </span>
+            </div>
             {layers.map(([label, title, copy, chain], i) => (
               <article data-panel id={`layer-${i}`}>
                 <span class="eyebrow">
                   Couche 0{i + 1} · {label}
                 </span>
-                <div class="signal" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
                 <h3>{title}</h3>
                 <p>{copy}</p>
-                <p class="system-chain">{chain}</p>
+                <ol class="system-chain">
+                  {chain.split(" · ").map((t) => (
+                    <li data-chain-step>{t}</li>
+                  ))}
+                </ol>
               </article>
             ))}
           </div>
@@ -253,6 +268,24 @@ const layers = [
     align-self: center;
     border-left: 1px solid #557980;
     padding: 1rem 0 1rem 3rem;
+  }
+  .layer-model {
+    max-width: 420px;
+    margin-bottom: 1.5rem;
+  }
+  .layer-model svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .system-chain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-left: 1.2rem;
+  }
+  .system-chain li {
+    padding-left: 0.2rem;
   }
   .system-readout h3 {
     font-size: 2.5rem;
