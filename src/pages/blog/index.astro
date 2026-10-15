@@ -125,6 +125,12 @@ const service = (id: number) =>
                     year: "numeric",
                   })}
                 </time>
+                {(data.path.includes("2025") ||
+                  data.title.includes("2025")) && (
+                  <p class="archive-note">
+                    Repères de 2025 · à lire dans leur contexte de publication.
+                  </p>
+                )}
                 <div class="article-bottom">
                   <a href={`/${data.path}/`}>Lire l’article ↗</a>
                   <a href={service(data.categories[0])}>
@@ -228,11 +234,14 @@ const service = (id: number) =>
   .article-cover img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding-bottom: 2.6rem;
     transition: transform 0.45s;
   }
-  .article-cover:hover img {
-    transform: scale(1.025);
+  .archive-note {
+    font-size: 0.78rem;
+    color: #405a6a;
+    margin-top: 0.7rem;
   }
   .cover-type {
     font-size: 3rem;

@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "Double clic : reveal termine sans figer la capture",
+    "Clics rapides : dernier panneau seul visible",
+    "Changement reduced-motion annule reveal en cours",
+    "Repère persistant : étape finale et redimensionnement mobile",
+    "Retour arrière publicitaire",
+    "SEO mobile : étape commandée et repère visibles ensemble"
+  ]
+}

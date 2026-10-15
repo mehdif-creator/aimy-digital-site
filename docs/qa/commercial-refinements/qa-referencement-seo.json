@@ -1,0 +1,197 @@
+{
+  "results": [
+    {
+      "route": "referencement-seo",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "referencement-seo",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "referencement-seo",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "referencement-seo",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "publicites-sea",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "publicites-sea",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "publicites-sea",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "publicites-sea",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "maintenance-et-securite",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "maintenance-et-securite",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "maintenance-et-securite",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "maintenance-et-securite",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "nos-prestations",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "nos-prestations",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "nos-prestations",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "nos-prestations",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "a-propos",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "a-propos",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "a-propos",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "a-propos",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "contact",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "contact",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "contact",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "contact",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "faq",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "faq",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "faq",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "faq",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    }
+  ],
+  "errors": []
+}

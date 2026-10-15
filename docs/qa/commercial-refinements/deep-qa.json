@@ -1,0 +1,69 @@
+{
+  "results": [
+    {
+      "route": "referencement-seo",
+      "width": 390
+    },
+    {
+      "route": "publicites-sea",
+      "width": 390
+    },
+    {
+      "route": "maintenance-et-securite",
+      "width": 390
+    },
+    {
+      "route": "nos-prestations",
+      "width": 390
+    },
+    {
+      "route": "a-propos",
+      "width": 390
+    },
+    {
+      "route": "blog",
+      "width": 390
+    },
+    {
+      "route": "contact",
+      "width": 390
+    },
+    {
+      "route": "faq",
+      "width": 390
+    },
+    {
+      "route": "referencement-seo",
+      "width": 1440
+    },
+    {
+      "route": "publicites-sea",
+      "width": 1440
+    },
+    {
+      "route": "maintenance-et-securite",
+      "width": 1440
+    },
+    {
+      "route": "nos-prestations",
+      "width": 1440
+    },
+    {
+      "route": "a-propos",
+      "width": 1440
+    },
+    {
+      "route": "blog",
+      "width": 1440
+    },
+    {
+      "route": "contact",
+      "width": 1440
+    },
+    {
+      "route": "faq",
+      "width": 1440
+    }
+  ],
+  "errors": []
+}

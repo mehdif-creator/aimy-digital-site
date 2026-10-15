@@ -1,0 +1,83 @@
+{
+  "archive": ".private\\wordpress\\posts.json",
+  "archiveSHA256": "7694be13a5435de3c553e7e84437a9b9e7dea9ece412fc6b3a30e9f1f2766cea",
+  "articles": [
+    {
+      "file": "src\\content\\posts\\10-erreurs-creation-site-internet-2025.json",
+      "sha256": "37bdd2d958016b3c597e6c5c2f3d1ceac054e9015639e2e7c38c1bbe14b2ee3c",
+      "path": "10-erreurs-creation-site-internet-2025",
+      "title": "Dix erreurs à éviter lors de la création de votre site",
+      "references2025": 5
+    },
+    {
+      "file": "src\\content\\posts\\combien-coute-site-vitrine-2025.json",
+      "sha256": "8f2b15a2f154eba47670821b4228b06024860716ec5f4bc49b608ef266e2a2e5",
+      "path": "combien-coute-site-vitrine-2025",
+      "title": "Combien coûte un site vitrine professionnel ?",
+      "references2025": 4
+    },
+    {
+      "file": "src\\content\\posts\\creer-site-web-professionnel-guide-2025.json",
+      "sha256": "3e1e36dd64b8e4a6aa27b485506a9ffcb6974658ffed1258d05dbad48ab6eea8",
+      "path": "creer-site-web-professionnel-guide-2025",
+      "title": "Créer un site web professionnel : les étapes du projet",
+      "references2025": 4
+    },
+    {
+      "file": "src\\content\\posts\\ia-et-marketing-digital-le-guide-ultime-pour-les-tpe-en-2025.json",
+      "sha256": "2de1e41a3906b22adb79880de14c180762903dc95000534fd40a61a0b52a6b38",
+      "path": "ia-et-marketing-digital-le-guide-ultime-pour-les-tpe-en-2025",
+      "title": "IA et marketing digital : des usages à encadrer en TPE",
+      "references2025": 5
+    },
+    {
+      "file": "src\\content\\posts\\maintenance-site-web-essentielle-2025.json",
+      "sha256": "98af98e55db45fcdbf7ba38512eb183c8754198800616f4befce1221d12d4236",
+      "path": "maintenance-site-web-essentielle-2025",
+      "title": "Maintenance de site web : ce qu’il faut prévoir",
+      "references2025": 5
+    },
+    {
+      "file": "src\\content\\posts\\optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia.json",
+      "sha256": "2a75777aca249aef8a3f19c0c7b10a04ae2dc65643d2af93ad7694da4573ab95",
+      "path": "optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia",
+      "title": "SEO WordPress : organiser les vérifications utiles",
+      "references2025": 3
+    },
+    {
+      "file": "src\\content\\posts\\publicite-digitale-roi-google-ads-facebook-ads.json",
+      "sha256": "2b6d0509784c0a11a00729e530b914797b4e9d5796daebd3887319744ce5564f",
+      "path": "publicite-digitale-roi-google-ads-facebook-ads",
+      "title": "Publicité digitale : relier le budget aux demandes utiles",
+      "references2025": 2
+    },
+    {
+      "file": "src\\content\\posts\\seo-local-optimiser-site-clients-locaux.json",
+      "sha256": "482540e6cef6468f7deae8ad843a72e3c87e350820f0832790c9fea24b35ed4b",
+      "path": "seo-local-optimiser-site-clients-locaux",
+      "title": "SEO local : rendre votre activité compréhensible et trouvable",
+      "references2025": 2
+    },
+    {
+      "file": "src\\content\\posts\\site-web-professionnel-2025.json",
+      "sha256": "0eae071786dc1d5c46a6e0c6ad3868cef9e134e4f685b90c6eba021c6599265d",
+      "path": "site-web-professionnel-2025",
+      "title": "Pourquoi créer un site web professionnel pour votre entreprise ?",
+      "references2025": 5
+    },
+    {
+      "file": "src\\content\\posts\\woocommerce-ou-shopify-que-choisir-2025.json",
+      "sha256": "a373c3977fdb995083efd737048a82e6355ec8af8b316051cafde182564299e8",
+      "path": "woocommerce-ou-shopify-que-choisir-2025",
+      "title": "WooCommerce ou Shopify : comment cadrer le choix ?",
+      "references2025": 4
+    },
+    {
+      "file": "src\\content\\posts\\wordpress-cms-2025.json",
+      "sha256": "a285e50d8d8bfedb7f18d5993af6b1c359a8a60d948b2d5ce5125ce4189a5bb6",
+      "path": "wordpress-cms-2025",
+      "title": "WordPress : quels critères pour votre projet web ?",
+      "references2025": 4
+    }
+  ]
+}

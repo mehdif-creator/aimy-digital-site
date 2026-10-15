@@ -23,6 +23,9 @@ import "../styles/commercial-premium.css";
           Une idée précise ou un besoin à clarifier : quelques lignes suffisent
           pour ouvrir la discussion.
         </p>
+        <a class="action form-shortcut" href="#presenter-projet">
+          Accéder au formulaire ↓
+        </a>
         <div class="direct-contact">
           <span class="eyebrow">Vous préférez un échange direct ?</span>
           <a href={`tel:${site.tel}`}>
@@ -49,7 +52,12 @@ import "../styles/commercial-premium.css";
         </address>
         <p class="caption">Deux-Sèvres · Vendée · Maine-et-Loire</p>
       </header>
-      <section class="contact-sheet" aria-label="Présenter votre projet">
+      <section
+        id="presenter-projet"
+        tabindex="-1"
+        class="contact-sheet"
+        aria-label="Présenter votre projet"
+      >
         <div class="sheet-heading">
           <span class="eyebrow">Votre point de départ</span>
           <span aria-hidden="true">↗</span>
@@ -60,6 +68,12 @@ import "../styles/commercial-premium.css";
   </div>
 </BaseLayout>
 <style>
+  .form-shortcut {
+    display: none !important;
+  }
+  .contact-sheet {
+    scroll-margin-top: 110px;
+  }
   .contact-page {
     background: #dcebf3;
   }
@@ -147,6 +161,9 @@ import "../styles/commercial-premium.css";
     }
   }
   @media (max-width: 800px) {
+    .form-shortcut {
+      display: inline-flex !important;
+    }
     .contact-stage {
       grid-template-columns: 1fr;
       padding-block: 3rem;

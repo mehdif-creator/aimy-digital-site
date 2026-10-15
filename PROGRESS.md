@@ -220,3 +220,14 @@ FAQ : CLS initial 0,248, puis 0,212 après réservation de l’interface. Perfor
 Réserve éditoriale : onze articles actuels ne contiennent que 4–10 % du volume des archives WordPress. Aucun texte d’article modifié ; restauration éditoriale à traiter séparément avant publication. Liste exacte dans docs/qa/eight-pages/article-integrity.md. Réserves SMTP et données personnelles dans contact-readiness.md.
 
 Rapport global : docs/qa/eight-pages/rapport.md. Budget agrégé JS 131 811 / 53 190 gzip, seuil explicite 135/54 Ko. Aucun coût externe, push ou déploiement. Arrêt pour validation visuelle globale des huit pages.
+
+
+## 15 octobre 2026 — corrections ciblées après audit visuel global
+
+Le commit 975adf4 reste la base technique/éditoriale, pas une validation artistique globale. SEO/SEA : scène persistante, même besoin traversant les étapes, commandes à proximité immédiate et progression SEO desktop sans pin. Maintenance : éclaté de six responsabilités, sans monitoring simulé. Prestations : preuves SC/HT limitées aux interfaces réellement réalisées, schémas sans client pour SEO/SEA/maintenance. Agence : décisions de conception, vrais médias mobile SC et Pack Duo, interlocuteur Mehdi identifié. Contact : accès au formulaire plus tôt sur mobile, envoi toujours désactivé. Journal : couvertures non recadrées, contexte historique 2025 explicite. FAQ conservée après tests.
+
+Revue et régressions : double-clic figeant un masque, commande SEO mobile hors scène et préférence reduced-motion changée en cours reproduits puis corrigés. 32 configurations à 320/375/390/1440 sans erreur console/overflow/Axe ; 16 contrôles approfondis panneaux, images, liens/menu sans erreur ; six régressions de mouvement et huit contrôles fonctionnels passent. Suite9/9, Astro0erreur/0warning (1hint ancien), builds production/staging40pages et audits sans erreur. Budget JS inchangé135000/54000, résultat134114/53971.
+
+Lighthouse13.5 mobile séquentiel, une mesure par page : SEO99/LCP1,751s ; SEA99/1,756s ; maintenance99/1,771s ; prestations98/2,015s ; agence98/2,231s ; FAQ99/1,840s ; journal98/2,272s ; contact100/1,433s. Accessibilité/bonnes pratiques100, CLS0–0,0432, TBT0 saufSEO5ms. Mesures laboratoire, pas terrain. Aucun changement des pages protégées, articles, métadonnées ou migration.
+
+Rapport unique : docs/qa/commercial-refinements/rapport.md. Quatre vidéos natives desktop/mobile SEO/SEA dans le dossier voisin Validation-commerciale-Aimy-Digital-2026-10-15. Réserves obligatoires : configuration et réception SMTP réelles (pas de PHP local), restauration des onze articles historiques, audit SEO final, validation artistique globale. Pas de push, déploiement, service payant ni envoi externe. STOP pour validation visuelle après livraison.
