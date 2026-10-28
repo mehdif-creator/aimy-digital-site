@@ -12,6 +12,7 @@ const paths = new Set(
   files.map((f) => "/" + f.slice(5).replace(/index\.html$/, "")),
 );
 const redirects = JSON.parse(await readFile("src/data/redirects.json", "utf8"));
+const gone = JSON.parse(await readFile("src/data/gone.json", "utf8"));
 const crawl = JSON.parse(
   await readFile(".private/wordpress/crawl.json", "utf8"),
 );
@@ -30,6 +31,10 @@ const rows = crawl.rows.map((r) => {
       r.final_url !== r.old_url
         ? "Destination actuelle observée"
         : "Équivalent éditorial proposé après inspection";
+  } else if (gone.includes(normalized)) {
+    action = "404/410";
+    reason =
+      "Retrait validé par le propriétaire le 28/10/2026 (410), voir url-decisions.md";
   } else if (r.status === 404) {
     action = "404/410";
     reason =

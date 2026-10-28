@@ -13,5 +13,22 @@
   "/blog/category/conseils-business-roi/": "/category/conseils-business-roi/",
   "/blog/category/referencement-seo/": "/category/referencement-seo/",
   "/blog/category/strategie-digitale-tpe-pme/": "/category/strategie-digitale-pour-tpe-pme/",
-  "/blog/category/creation-sites-web/": "/category/creation-de-sites-web/"
+  "/blog/category/creation-sites-web/": "/category/creation-de-sites-web/",
+  "/page/2/": "/",
+  "/page/3/": "/",
+  "/page/4/": "/",
+  "/page/5/": "/",
+  "/blog/page/2/": "/blog/",
+  "/author/aimydigital/": "/blog/",
+  "/author/aimydigital/page/2/": "/blog/",
+  "/feed/": "/feed.xml",
+  "/author/aimydigital/feed/": "/feed.xml",
+  "/category/automatisation-outils-no-code/feed/": "/feed.xml",
+  "/category/conseils-business-roi/feed/": "/feed.xml",
+  "/category/creation-de-sites-web/feed/": "/feed.xml",
+  "/category/maintenance-securite/feed/": "/feed.xml",
+  "/category/publicite-acquisition-client/feed/": "/feed.xml",
+  "/category/referencement-seo/feed/": "/feed.xml",
+  "/category/strategie-digitale-pour-tpe-pme/feed/": "/feed.xml",
+  "/category/tendances-innovations-web/feed/": "/feed.xml"
 }

@@ -70,6 +70,12 @@ const schema = article
 <meta property="og:image" content={new URL(image, site.url).href} />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="/images/logo-source.png" type="image/png" />
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="Le journal Aimy Digital"
+  href="/feed.xml"
+/>
 <script
   type="application/ld+json"
   set:html={JSON.stringify(schema).replaceAll("<", "\u003c")}

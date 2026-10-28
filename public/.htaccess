@@ -23,4 +23,14 @@ RewriteRule ^blog/category/conseils-business-roi/?$ /category/conseils-business-
 RewriteRule ^blog/category/referencement-seo/?$ /category/referencement-seo/ [R=301,L]
 RewriteRule ^blog/category/strategie-digitale-tpe-pme/?$ /category/strategie-digitale-pour-tpe-pme/ [R=301,L]
 RewriteRule ^blog/category/creation-sites-web/?$ /category/creation-de-sites-web/ [R=301,L]
+# Décisions du 28 octobre 2026 (docs/migrations/url-decisions.md)
+RewriteRule ^page/[0-9]+/?$ / [R=301,L]
+RewriteRule ^blog/page/[0-9]+/?$ /blog/ [R=301,L]
+RewriteRule ^author/aimydigital(/page/[0-9]+)?/?$ /blog/ [R=301,L]
+RewriteRule ^feed/?$ /feed.xml [R=301,L]
+RewriteRule ^author/aimydigital/feed/?$ /feed.xml [R=301,L]
+RewriteRule ^category/[a-z0-9-]+/feed/?$ /feed.xml [R=301,L]
+RewriteRule ^(app|youtube-competitor-radar|optimisation-webinaire|404-2|4)/?$ - [G,L]
+RewriteRule ^comments/feed/?$ - [G,L]
+RewriteRule ^[a-z0-9-]+/feed/?$ - [G,L]
 </IfModule>
