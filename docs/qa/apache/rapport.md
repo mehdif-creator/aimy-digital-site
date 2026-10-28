@@ -15,6 +15,14 @@ Commande : `node scripts/check-redirects-http.mjs http://127.0.0.1:8099 docs/qa/
 
 ## Limites
 
-- **o2switch sert le site via LiteSpeed** (en-têtes `Server: o2switch-PowerBoost-v3`, `x-litespeed-cache`), compatible `.htaccess` mais pas identique à Apache. Relancer le script sur la préproduction o2switch (protégée par authentification) avant la bascule.
+- **o2switch sert le site via LiteSpeed** (en-têtes `Server: o2switch-PowerBoost-v3`, `x-litespeed-cache`), compatible `.htaccess` mais pas identique à Apache : voir la recette préproduction ci-dessous.
 - `/feed.xml` est servi en `application/xml` (type MIME par défaut de l'extension), accepté par les lecteurs RSS.
 - Le `.htaccess` doit encore être fusionné avec la configuration existante du serveur.
+
+# Recette préproduction o2switch (LiteSpeed) — 28 octobre 2026
+
+- Sous-domaine `preprod.aimy-digital.fr` créé dans cPanel, racine `/home/venu0261/preprod.aimy-digital.fr`, **hors de `public_html`** (WordPress en ligne non touché). Build staging déposé (sans `api/contact.php`), zip supprimé après extraction.
+- Accès restreint par IP en tête du `.htaccess` de la préprod (`Require ip` : IPv4 et préfixe IPv6 du propriétaire). Vérifié depuis une IP extérieure : **403**. Ce bloc n'existe que sur le serveur, pas dans `public/.htaccess`.
+- `node scripts/check-redirects-http.mjs http://preprod.aimy-digital.fr docs/qa/apache/preprod-litespeed-http.json` : **139/139 contrôles réussis** sur LiteSpeed.
+- Contrôles complémentaires : en-têtes de sécurité présents, page 404 du site servie par `ErrorDocument`, `/feed.xml` en 200, `robots.txt` bloquant, `noindex` sur les pages.
+- Limites : recette faite en HTTP, le certificat AutoSSL du sous-domaine n'était pas encore émis (certificat provisoire non approuvé). Relancer en `https://` une fois AutoSSL passé. Le `.htaccess` de production devra toujours être fusionné avec celui du WordPress actuel lors de la bascule. Supprimer le sous-domaine après la recette s'il ne sert plus.

@@ -1,0 +1,982 @@
+{
+  "base": "http://preprod.aimy-digital.fr",
+  "date": "2026-10-28T13:57:38.319Z",
+  "results": [
+    {
+      "path": "/maintenance-de-site-web-pourquoi-cest-essentiel-pour-votre-activite/",
+      "status": 301,
+      "location": "/maintenance-site-web-essentielle-2025/",
+      "got": 301,
+      "gotLocation": "/maintenance-site-web-essentielle-2025/",
+      "ok": true
+    },
+    {
+      "path": "/maintenance-de-site-web-pourquoi-cest-essentiel-pour-votre-activite",
+      "status": 301,
+      "location": "/maintenance-site-web-essentielle-2025/",
+      "got": 301,
+      "gotLocation": "/maintenance-site-web-essentielle-2025/",
+      "ok": true
+    },
+    {
+      "path": "/pourquoi-votre-entreprise-a-besoin-dun-site-web-professionnel-en-2025/",
+      "status": 301,
+      "location": "/site-web-professionnel-2025/",
+      "got": 301,
+      "gotLocation": "/site-web-professionnel-2025/",
+      "ok": true
+    },
+    {
+      "path": "/pourquoi-votre-entreprise-a-besoin-dun-site-web-professionnel-en-2025",
+      "status": 301,
+      "location": "/site-web-professionnel-2025/",
+      "got": 301,
+      "gotLocation": "/site-web-professionnel-2025/",
+      "ok": true
+    },
+    {
+      "path": "/publicite-digitale-comment-maximiser-votre-roi-avec-google-ads-et-facebook-ads/",
+      "status": 301,
+      "location": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "got": 301,
+      "gotLocation": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "ok": true
+    },
+    {
+      "path": "/publicite-digitale-comment-maximiser-votre-roi-avec-google-ads-et-facebook-ads",
+      "status": 301,
+      "location": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "got": 301,
+      "gotLocation": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-e-commerce/",
+      "status": 301,
+      "location": "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+      "got": 301,
+      "gotLocation": "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-e-commerce",
+      "status": 301,
+      "location": "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+      "got": 301,
+      "gotLocation": "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+      "ok": true
+    },
+    {
+      "path": "/refonte-de-sites-internet/",
+      "status": 301,
+      "location": "/creation-de-sites-internet/refonte-de-sites-internet/",
+      "got": 301,
+      "gotLocation": "/creation-de-sites-internet/refonte-de-sites-internet/",
+      "ok": true
+    },
+    {
+      "path": "/refonte-de-sites-internet",
+      "status": 301,
+      "location": "/creation-de-sites-internet/refonte-de-sites-internet/",
+      "got": 301,
+      "gotLocation": "/creation-de-sites-internet/refonte-de-sites-internet/",
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-vitrines/",
+      "status": 301,
+      "location": "/creation-de-sites-internet/creation-de-sites-vitrines/",
+      "got": 301,
+      "gotLocation": "/creation-de-sites-internet/creation-de-sites-vitrines/",
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-vitrines",
+      "status": 301,
+      "location": "/creation-de-sites-internet/creation-de-sites-vitrines/",
+      "got": 301,
+      "gotLocation": "/creation-de-sites-internet/creation-de-sites-vitrines/",
+      "ok": true
+    },
+    {
+      "path": "/blog/seo-local-optimiser-site-clients-locaux/",
+      "status": 301,
+      "location": "/seo-local-optimiser-site-clients-locaux/",
+      "got": 301,
+      "gotLocation": "/seo-local-optimiser-site-clients-locaux/",
+      "ok": true
+    },
+    {
+      "path": "/blog/seo-local-optimiser-site-clients-locaux",
+      "status": 301,
+      "location": "/seo-local-optimiser-site-clients-locaux/",
+      "got": 301,
+      "gotLocation": "/seo-local-optimiser-site-clients-locaux/",
+      "ok": true
+    },
+    {
+      "path": "/seo-local-comment-optimiser-votre-site-pour-attirer-des-clients-locaux/",
+      "status": 301,
+      "location": "/seo-local-optimiser-site-clients-locaux/",
+      "got": 301,
+      "gotLocation": "/seo-local-optimiser-site-clients-locaux/",
+      "ok": true
+    },
+    {
+      "path": "/seo-local-comment-optimiser-votre-site-pour-attirer-des-clients-locaux",
+      "status": 301,
+      "location": "/seo-local-optimiser-site-clients-locaux/",
+      "got": 301,
+      "gotLocation": "/seo-local-optimiser-site-clients-locaux/",
+      "ok": true
+    },
+    {
+      "path": "/blog/pourquoi-entreprise-besoin-site-web-professionnel-2025/",
+      "status": 301,
+      "location": "/site-web-professionnel-2025/",
+      "got": 301,
+      "gotLocation": "/site-web-professionnel-2025/",
+      "ok": true
+    },
+    {
+      "path": "/blog/pourquoi-entreprise-besoin-site-web-professionnel-2025",
+      "status": 301,
+      "location": "/site-web-professionnel-2025/",
+      "got": 301,
+      "gotLocation": "/site-web-professionnel-2025/",
+      "ok": true
+    },
+    {
+      "path": "/blog/publicite-digitale-maximiser-roi-google-ads-facebook-ads/",
+      "status": 301,
+      "location": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "got": 301,
+      "gotLocation": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "ok": true
+    },
+    {
+      "path": "/blog/publicite-digitale-maximiser-roi-google-ads-facebook-ads",
+      "status": 301,
+      "location": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "got": 301,
+      "gotLocation": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "ok": true
+    },
+    {
+      "path": "/blog/optimiser-site-wordpress-seo-2025-ia/",
+      "status": 301,
+      "location": "/optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/",
+      "got": 301,
+      "gotLocation": "/optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/",
+      "ok": true
+    },
+    {
+      "path": "/blog/optimiser-site-wordpress-seo-2025-ia",
+      "status": 301,
+      "location": "/optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/",
+      "got": 301,
+      "gotLocation": "/optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/",
+      "ok": true
+    },
+    {
+      "path": "/blog/category/conseils-business-roi/",
+      "status": 301,
+      "location": "/category/conseils-business-roi/",
+      "got": 301,
+      "gotLocation": "/category/conseils-business-roi/",
+      "ok": true
+    },
+    {
+      "path": "/blog/category/conseils-business-roi",
+      "status": 301,
+      "location": "/category/conseils-business-roi/",
+      "got": 301,
+      "gotLocation": "/category/conseils-business-roi/",
+      "ok": true
+    },
+    {
+      "path": "/blog/category/referencement-seo/",
+      "status": 301,
+      "location": "/category/referencement-seo/",
+      "got": 301,
+      "gotLocation": "/category/referencement-seo/",
+      "ok": true
+    },
+    {
+      "path": "/blog/category/referencement-seo",
+      "status": 301,
+      "location": "/category/referencement-seo/",
+      "got": 301,
+      "gotLocation": "/category/referencement-seo/",
+      "ok": true
+    },
+    {
+      "path": "/blog/category/strategie-digitale-tpe-pme/",
+      "status": 301,
+      "location": "/category/strategie-digitale-pour-tpe-pme/",
+      "got": 301,
+      "gotLocation": "/category/strategie-digitale-pour-tpe-pme/",
+      "ok": true
+    },
+    {
+      "path": "/blog/category/strategie-digitale-tpe-pme",
+      "status": 301,
+      "location": "/category/strategie-digitale-pour-tpe-pme/",
+      "got": 301,
+      "gotLocation": "/category/strategie-digitale-pour-tpe-pme/",
+      "ok": true
+    },
+    {
+      "path": "/blog/category/creation-sites-web/",
+      "status": 301,
+      "location": "/category/creation-de-sites-web/",
+      "got": 301,
+      "gotLocation": "/category/creation-de-sites-web/",
+      "ok": true
+    },
+    {
+      "path": "/blog/category/creation-sites-web",
+      "status": 301,
+      "location": "/category/creation-de-sites-web/",
+      "got": 301,
+      "gotLocation": "/category/creation-de-sites-web/",
+      "ok": true
+    },
+    {
+      "path": "/page/2/",
+      "status": 301,
+      "location": "/",
+      "got": 301,
+      "gotLocation": "/",
+      "ok": true
+    },
+    {
+      "path": "/page/2",
+      "status": 301,
+      "location": "/",
+      "got": 301,
+      "gotLocation": "/",
+      "ok": true
+    },
+    {
+      "path": "/page/3/",
+      "status": 301,
+      "location": "/",
+      "got": 301,
+      "gotLocation": "/",
+      "ok": true
+    },
+    {
+      "path": "/page/3",
+      "status": 301,
+      "location": "/",
+      "got": 301,
+      "gotLocation": "/",
+      "ok": true
+    },
+    {
+      "path": "/page/4/",
+      "status": 301,
+      "location": "/",
+      "got": 301,
+      "gotLocation": "/",
+      "ok": true
+    },
+    {
+      "path": "/page/4",
+      "status": 301,
+      "location": "/",
+      "got": 301,
+      "gotLocation": "/",
+      "ok": true
+    },
+    {
+      "path": "/page/5/",
+      "status": 301,
+      "location": "/",
+      "got": 301,
+      "gotLocation": "/",
+      "ok": true
+    },
+    {
+      "path": "/page/5",
+      "status": 301,
+      "location": "/",
+      "got": 301,
+      "gotLocation": "/",
+      "ok": true
+    },
+    {
+      "path": "/blog/page/2/",
+      "status": 301,
+      "location": "/blog/",
+      "got": 301,
+      "gotLocation": "/blog/",
+      "ok": true
+    },
+    {
+      "path": "/blog/page/2",
+      "status": 301,
+      "location": "/blog/",
+      "got": 301,
+      "gotLocation": "/blog/",
+      "ok": true
+    },
+    {
+      "path": "/author/aimydigital/",
+      "status": 301,
+      "location": "/blog/",
+      "got": 301,
+      "gotLocation": "/blog/",
+      "ok": true
+    },
+    {
+      "path": "/author/aimydigital",
+      "status": 301,
+      "location": "/blog/",
+      "got": 301,
+      "gotLocation": "/blog/",
+      "ok": true
+    },
+    {
+      "path": "/author/aimydigital/page/2/",
+      "status": 301,
+      "location": "/blog/",
+      "got": 301,
+      "gotLocation": "/blog/",
+      "ok": true
+    },
+    {
+      "path": "/author/aimydigital/page/2",
+      "status": 301,
+      "location": "/blog/",
+      "got": 301,
+      "gotLocation": "/blog/",
+      "ok": true
+    },
+    {
+      "path": "/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/author/aimydigital/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/author/aimydigital/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/automatisation-outils-no-code/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/automatisation-outils-no-code/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/conseils-business-roi/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/conseils-business-roi/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/creation-de-sites-web/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/creation-de-sites-web/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/maintenance-securite/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/maintenance-securite/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/publicite-acquisition-client/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/publicite-acquisition-client/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/referencement-seo/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/referencement-seo/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/strategie-digitale-pour-tpe-pme/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/strategie-digitale-pour-tpe-pme/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/tendances-innovations-web/feed/",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/category/tendances-innovations-web/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/app/",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/app",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/youtube-competitor-radar/",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/youtube-competitor-radar",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/optimisation-webinaire/",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/optimisation-webinaire",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/404-2/",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/404-2",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/4/",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/4",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/comments/feed/",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/comments/feed",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/wordpress-cms-2025/feed/",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/wordpress-cms-2025/feed",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/ia-et-marketing-digital-le-guide-ultime-pour-les-tpe-en-2025/feed/",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/ia-et-marketing-digital-le-guide-ultime-pour-les-tpe-en-2025/feed",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/portfolio/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-internet/creation-de-sites-vitrines/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-internet/refonte-de-sites-internet/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/a-propos/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/contact/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/faq/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/mentions-legales/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/nos-prestations/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/maintenance-et-securite/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/publicites-sea/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/referencement-seo/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-internet/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/politique-de-confidentialite/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/wordpress-cms-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/ia-et-marketing-digital-le-guide-ultime-pour-les-tpe-en-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/combien-coute-site-vitrine-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/woocommerce-ou-shopify-que-choisir-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/creer-site-web-professionnel-guide-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/10-erreurs-creation-site-internet-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/seo-local-optimiser-site-clients-locaux/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/maintenance-site-web-essentielle-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/site-web-professionnel-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/automatisation-outils-no-code/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/conseils-business-roi/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/creation-de-sites-web/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/maintenance-securite/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/publicite-acquisition-client/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/referencement-seo/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/strategie-digitale-pour-tpe-pme/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/tendances-innovations-web/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/woocommerce-ou-shopify-que-choisir-2025",
+      "status": 301,
+      "location": "/woocommerce-ou-shopify-que-choisir-2025/",
+      "got": 301,
+      "gotLocation": "/woocommerce-ou-shopify-que-choisir-2025/",
+      "ok": true
+    },
+    {
+      "path": "/combien-coute-site-vitrine-2025",
+      "status": 301,
+      "location": "/combien-coute-site-vitrine-2025/",
+      "got": 301,
+      "gotLocation": "/combien-coute-site-vitrine-2025/",
+      "ok": true
+    },
+    {
+      "path": "/creer-site-web-professionnel-guide-2025",
+      "status": 301,
+      "location": "/creer-site-web-professionnel-guide-2025/",
+      "got": 301,
+      "gotLocation": "/creer-site-web-professionnel-guide-2025/",
+      "ok": true
+    },
+    {
+      "path": "/10-erreurs-creation-site-internet-2025",
+      "status": 301,
+      "location": "/10-erreurs-creation-site-internet-2025/",
+      "got": 301,
+      "gotLocation": "/10-erreurs-creation-site-internet-2025/",
+      "ok": true
+    },
+    {
+      "path": "/maintenance-site-web-essentielle-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/site-web-professionnel-2025/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/publicite-digitale-roi-google-ads-facebook-ads/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-internet/refonte-de-sites-internet/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/creation-de-sites-internet/creation-de-sites-vitrines/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/seo-local-optimiser-site-clients-locaux/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/optimiser-son-site-wordpress-pour-le-seo-en-2025-maitrisez-les-algorithmes-et-lia/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/conseils-business-roi/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/referencement-seo/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/strategie-digitale-pour-tpe-pme/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/category/creation-de-sites-web/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/blog/",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/feed.xml",
+      "status": 200,
+      "got": 200,
+      "ok": true
+    },
+    {
+      "path": "/page/9/",
+      "status": 301,
+      "location": "/",
+      "got": 301,
+      "gotLocation": "/",
+      "ok": true
+    },
+    {
+      "path": "/blog/page/3/",
+      "status": 301,
+      "location": "/blog/",
+      "got": 301,
+      "gotLocation": "/blog/",
+      "ok": true
+    },
+    {
+      "path": "/category/referencement-seo/feed",
+      "status": 301,
+      "location": "/feed.xml",
+      "got": 301,
+      "gotLocation": "/feed.xml",
+      "ok": true
+    },
+    {
+      "path": "/combien-coute-site-vitrine-2025/feed/",
+      "status": 410,
+      "got": 410,
+      "ok": true
+    },
+    {
+      "path": "/page-inexistante-test/",
+      "status": 404,
+      "got": 404,
+      "ok": true
+    }
+  ]
+}

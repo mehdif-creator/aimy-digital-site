@@ -1,9 +1,16 @@
 // Contrôle HTTP réel des redirections et retraits : node scripts/check-redirects-http.mjs [base] [rapport.json]
 // Requêtes sans suivi de redirection ; à lancer sur un Apache local ou une préproduction.
+// Préproduction protégée : définir QA_AUTH="utilisateur:motdepasse" (authentification HTTP Basic).
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 const base = (process.argv[2] || "http://127.0.0.1:8099").replace(/\/$/, "");
 const output = process.argv[3];
+const headers = process.env.QA_AUTH
+  ? {
+      Authorization:
+        "Basic " + Buffer.from(process.env.QA_AUTH).toString("base64"),
+    }
+  : {};
 const redirects = JSON.parse(readFileSync("src/data/redirects.json", "utf8"));
 const gone = JSON.parse(readFileSync("src/data/gone.json", "utf8"));
 const kept = readFileSync("docs/migrations/url-map.csv", "utf8")
@@ -45,7 +52,12 @@ const cases = [
 ];
 const results = [];
 for (const c of cases) {
-  const res = await fetch(base + encodeURI(c.path), { redirect: "manual" });
+  const res = await fetch(base + encodeURI(c.path), {
+    redirect: "manual",
+    headers,
+  });
+  if (res.status === 401)
+    throw new Error("401 : authentification refusée, vérifier QA_AUTH");
   const raw = res.headers.get("location");
   const location = raw ? new URL(raw, base).pathname : undefined;
   const ok =

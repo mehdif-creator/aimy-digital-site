@@ -1,6 +1,6 @@
 # Livraison o2switch
 
-**État : aucune publication. Aucun accès d'hébergement utilisé.** Racine documentaire inconnue, SMTP non testé, sauvegarde non obtenue. Ne pas supposer `public_html/`.
+**État : aucune publication en production.** Préproduction `preprod.aimy-digital.fr` créée le 28/10/2026 (racine `/home/venu0261/preprod.aimy-digital.fr`, accès restreint par IP, voir docs/qa/apache/rapport.md). Le site en ligne est servi depuis `/home/venu0261/public_html` (vérifié dans cPanel). SMTP non testé, sauvegarde non obtenue.
 
 ## Options
 
