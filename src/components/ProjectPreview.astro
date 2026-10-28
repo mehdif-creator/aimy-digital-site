@@ -102,6 +102,31 @@ const selected = [
     display: block;
     width: 100%;
     height: auto;
+    transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .preview-image {
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0 #07172600;
+    transition:
+      box-shadow 0.5s,
+      transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  article:hover .preview-image {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -24px #07172655;
+  }
+  article:hover .preview-image img {
+    transform: scale(1.035);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .preview-image,
+    .preview-image img {
+      transition: none;
+    }
+    article:hover .preview-image,
+    article:hover .preview-image img {
+      transform: none;
+    }
   }
   .preview-caption h3 {
     font-size: 1.4rem;

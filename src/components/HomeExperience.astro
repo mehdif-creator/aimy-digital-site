@@ -1,5 +1,5 @@
 ---
-import { services } from "../lib/site";
+import { services, site } from "../lib/site";
 import FAQ from "./FAQ.astro";
 import "../styles/home-experience.css";
 const selected = [services[0], services[3], services[4]];
@@ -191,9 +191,15 @@ const steps = [
           <br />
           Posons les bonnes questions avant de dessiner les réponses.
         </p>
-        <a class="home-contact-link" href="/contact/">
-          Discuter de mon projet <span aria-hidden="true">↗</span>
-        </a>
+        <div class="home-closing-actions">
+          <a class="home-contact-link" href="/contact/">
+            Discuter de mon projet <span aria-hidden="true">↗</span>
+          </a>
+          <p class="home-closing-reassure">
+            Devis gratuit sous 24 h · ou appelez Mehdi au{" "}
+            <a href={`tel:${site.tel}`}>{site.phone}</a>
+          </p>
+        </div>
       </div>
     </div>
   </section>

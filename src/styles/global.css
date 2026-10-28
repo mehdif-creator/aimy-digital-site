@@ -28,6 +28,18 @@ body {
 html {
   scroll-behavior: smooth;
 }
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.28s;
+}
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
 img {
   display: block;
   max-width: 100%;
@@ -145,15 +157,30 @@ h3 {
   gap: 1.5rem;
   min-height: 112px;
 }
-.brand img {
-  width: 88px;
-  height: 88px;
-  object-fit: contain;
-  mix-blend-mode: multiply;
+.brand {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+.header-phone {
+  display: inline-flex;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.header-phone:hover {
+  color: var(--blue-dark);
 }
 .desktop-nav {
   display: flex;
   gap: 1.7rem;
+  white-space: nowrap;
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -690,14 +717,24 @@ h3 {
   .desktop-nav {
     gap: 1rem;
   }
-  .header-cta {
+  .header-phone {
     display: none;
+  }
+  .header-cta .button {
+    gap: 0.8rem;
+    min-height: 44px;
+    padding: 0.7rem 1rem;
   }
   .hero {
     gap: 2rem;
   }
   .method-grid {
     gap: 3rem;
+  }
+}
+@media (max-width: 1000px) {
+  .header-cta {
+    display: none;
   }
 }
 @media (max-width: 760px) {
@@ -707,9 +744,8 @@ h3 {
   .site-header {
     min-height: 92px;
   }
-  .brand img {
-    width: 74px;
-    height: 74px;
+  .header-cta {
+    display: none;
   }
   .desktop-nav {
     display: none;

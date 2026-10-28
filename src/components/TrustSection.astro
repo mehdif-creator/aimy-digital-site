@@ -1,0 +1,278 @@
+---
+import { getCollection } from "astro:content";
+import { site } from "../lib/site";
+const cases = (await getCollection("cases")).map((c) => c.data);
+const promises = [
+  {
+    title: "Devis gratuit sous 24 h",
+    text: "Décrivez votre projet en quelques lignes : vous recevez une première réponse et un devis gratuit sous 24 h.",
+  },
+  {
+    title: "Un seul interlocuteur",
+    text: "Mehdi Farhane vous accompagne du premier échange à la mise en ligne, puis pour les évolutions de votre site.",
+  },
+  {
+    title: "Ici, dans le Bocage",
+    text: "L’agence est installée à Saint-Amand-sur-Sèvre. Mauléon, Cholet, Bressuire, Les Herbiers : vos clients sont aussi nos voisins.",
+  },
+  {
+    title: "Un suivi après le lancement",
+    text: "Maintenance, sécurité et visibilité locale : votre site continue d’évoluer avec votre activité.",
+  },
+];
+---
+
+<section class="trust container" aria-labelledby="trust-title">
+  <div class="trust-founder">
+    <div class="trust-monogram" aria-hidden="true">
+      <span>MF</span>
+    </div>
+    <p class="trust-kicker">Votre interlocuteur</p>
+    <h2 id="trust-title">
+      Une agence à taille humaine.
+      <span>Un projet suivi de près.</span>
+    </h2>
+    <p class="trust-signature">
+      <strong>Mehdi Farhane</strong>
+      Fondateur d’Aimy Digital
+    </p>
+    <div class="trust-direct">
+      <a class="trust-call" href={`tel:${site.tel}`}>
+        <span aria-hidden="true">✆</span>
+        {site.phone}
+      </a>
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+    </div>
+  </div>
+  <div class="trust-body">
+    <ol class="trust-promises">
+      {promises.map((p, i) => (
+        <li>
+          <span class="trust-index" aria-hidden="true">
+            0{i + 1}
+          </span>
+          <h3>{p.title}</h3>
+          <p>{p.text}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="trust-live">
+      <p>
+        <span class="trust-pulse" aria-hidden="true"></span>
+        En ligne aujourd’hui, conçus par Aimy Digital
+      </p>
+      <ul>
+        {cases.map((c) => (
+          <li>
+            <a href={c.website} rel="noopener" target="_blank">
+              <span>{c.title}</span>
+              <span class="trust-domain">
+                {new URL(c.website).hostname.replace(/^www\./, "")} ↗
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .trust {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: clamp(2.5rem, 6vw, 6rem);
+    padding-block: clamp(4.5rem, 9vw, 8rem);
+    border-top: 1px solid #c3d4df;
+  }
+  .trust-founder {
+    position: relative;
+  }
+  .trust-monogram {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 112px;
+    aspect-ratio: 1;
+    margin-bottom: 2.2rem;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, #1b4a6d, #071726 70%);
+    color: #edf6ff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    box-shadow: 0 24px 50px #07172633;
+  }
+  .trust-monogram:before {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border-radius: 50%;
+    border: 3px solid #0686ce;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    transform: rotate(-20deg);
+  }
+  .trust-kicker {
+    font-size: 0.85rem;
+    margin: 0 0 1rem;
+    color: #476173;
+  }
+  .trust h2 {
+    margin: 0;
+    font-size: clamp(2.1rem, 4.2vw, 3.6rem);
+    line-height: 1.02;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+  }
+  .trust h2 span {
+    display: block;
+    color: #0670ad;
+  }
+  .trust-signature {
+    display: grid;
+    gap: 0.2rem;
+    margin: 2rem 0 1.6rem;
+    font-size: 0.85rem;
+    color: #476173;
+  }
+  .trust-signature strong {
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+  .trust-direct {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.4rem;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .trust-direct a:hover {
+    color: var(--blue-dark);
+  }
+  .trust-call {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 1.3rem;
+    border-radius: 100px;
+    background: var(--ink);
+    color: #fff;
+  }
+  .trust-direct a.trust-call:hover {
+    color: #fff;
+    background: #0670ad;
+  }
+  .trust-promises {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem 2.2rem;
+  }
+  .trust-promises li {
+    padding-top: 1.2rem;
+    border-top: 1px solid #9fb9cb;
+  }
+  .trust-index {
+    font:
+      0.65rem ui-monospace,
+      monospace;
+    color: #0670ad;
+    letter-spacing: 0.1em;
+  }
+  .trust-promises h3 {
+    margin: 0.7rem 0 0.6rem;
+    font-size: 1.2rem;
+    letter-spacing: -0.03em;
+  }
+  .trust-promises p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #476173;
+  }
+  .trust-live {
+    margin-top: 3.2rem;
+    padding: 1.6rem;
+    border-radius: 1.2rem;
+    background: #071726;
+    color: #edf6ff;
+  }
+  .trust-live > p {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 0 0 1rem;
+    font-size: 0.8rem;
+    color: #9bb5ce;
+  }
+  .trust-pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3ddc97;
+    box-shadow: 0 0 0 0 #3ddc9788;
+    animation: trust-pulse 2.4s infinite;
+  }
+  @keyframes trust-pulse {
+    70% {
+      box-shadow: 0 0 0 10px #3ddc9700;
+    }
+    100% {
+      box-shadow: 0 0 0 0 #3ddc9700;
+    }
+  }
+  .trust-live ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .trust-live a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid #2b425a;
+    border-radius: 0.8rem;
+    font-weight: 700;
+    transition:
+      border-color 0.2s,
+      background 0.2s;
+  }
+  .trust-live a:hover {
+    border-color: #69caff;
+    background: #0d2236;
+  }
+  .trust-domain {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #69caff;
+  }
+  @media (max-width: 900px) {
+    .trust {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 560px) {
+    .trust-promises,
+    .trust-live ul {
+      grid-template-columns: 1fr;
+    }
+    .trust-monogram {
+      width: 88px;
+      font-size: 1.3rem;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .trust-pulse {
+      animation: none;
+    }
+  }
+</style>

@@ -1,5 +1,22 @@
 # Progression de la refonte Aimy Digital
 
+## Conversion et finitions — 28 octobre 2026
+
+Demande du propriétaire : rendre le site exceptionnel et donner envie de prendre contact. Réalisé en autonomie :
+
+- Logo vectoriel (`Logo.astro`, orbite issue du logo historique + mot-symbole du pied de page) dans l’en-tête ; favicon SVG.
+- En-tête : téléphone cliquable et bouton « Parlons de votre projet » (≥ 1001 px). Barre de contact fixe « Appeler / Parler de mon projet » ≤ 1000 px, apparition au défilement en CSS pur (absente de /contact/).
+- Formulaire : utilisable sans backend. Tant que `PUBLIC_CONTACT_ENABLED` n’est pas activé, l’envoi ouvre un e-mail pré-rédigé vers contact@aimy-digital.fr (aucune donnée transmise au site) ; politique de confidentialité mise à jour.
+- Section confiance (`TrustSection.astro`) après les réalisations : fondateur, « Devis gratuit sous 24 h » (promesse déjà publiée sur le site WordPress), interlocuteur unique, ancrage local, suivi, et les quatre sites clients en ligne. **Aucun témoignage ni chiffre inventé ; monogramme « MF » en attendant une vraie photo.**
+- Réassurance « Devis gratuit sous 24 h » sous le CTA du hero et dans l’appel final (avec le téléphone).
+- Hero : défilement de la séquence raccourci (220 → 165 svh, mobile 195 → 150), filigrane AIMY en contour. CSS intégré aux pages (plus de feuilles bloquantes).
+- Finitions : transitions natives entre pages (`@view-transition`), survol des aperçus de projets, image de partage 1200×630 (`scripts/og-image.mjs`).
+- Lien Lambert Digital Pulse corrigé : l’adresse temporaire universe.wf ne répondait plus, remplacée par https://lambertdigitalpulse.fr/ (en ligne, crédite Aimy Digital).
+
+Vérifications : astro check 0 erreur, 17 tests, build et audit (budget JS respecté : 53 998 o gzip), recette navigateur 11/11 (aucun débordement 320–1440 px, 0 violation axe), contrôle visuel 1440/800/375 px.
+
+À fournir par le propriétaire : une photo portrait, des témoignages clients réels avec accord, la configuration SMTP pour activer l’envoi serveur.
+
 ## My NutriZen — prêt pour validation visuelle, 12 octobre 2026
 
 Les quatre captures authentiques jointes sont reçues et inspectées. Elles remplacent le blocage historique ci-dessous pour le périmètre dashboard, menus et recettes desktop/mobile. Recadrages natifs sans agrandissement pour exclure le profil et le parrainage ; provenance dans docs/qa/nutrizen-case/user-assets.json. Aucun écran de préférences ou courses fabriqué.

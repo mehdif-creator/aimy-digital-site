@@ -471,6 +471,16 @@
   font-size: clamp(1.1rem, 1.9vw, 1.8rem);
   white-space: nowrap;
 }
+.home-closing-reassure {
+  margin: 18px 0 0;
+  font-size: 0.85rem;
+  color: #9bb5ce;
+}
+.home-closing-reassure a {
+  color: #edf6ff;
+  font-weight: 700;
+  border-bottom: 1px solid #69caff;
+}
 .home-contact-link span {
   font-size: 2rem;
   transition: transform 0.3s;

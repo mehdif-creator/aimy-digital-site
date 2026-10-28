@@ -2,6 +2,7 @@
 import SEOHead from "../components/SEOHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import MobileContactBar from "../components/MobileContactBar.astro";
 import "../styles/global.css";
 import "@fontsource/manrope/latin-400.css";
 import "@fontsource/manrope/latin-500.css";
@@ -30,6 +31,7 @@ interface Props {
       <slot />
     </main>
     <Footer cinematic={Astro.props.cinematicHero} />
+    {!Astro.url.pathname.startsWith("/contact/") && <MobileContactBar />}
   </body>
 </html>
 <script>

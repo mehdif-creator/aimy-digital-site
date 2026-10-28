@@ -13,6 +13,7 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
     <input
       id="name"
       name="name"
+      data-label="Nom"
       autocomplete="name"
       required
       minlength="2"
@@ -24,6 +25,7 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
     <input
       id="company"
       name="company"
+      data-label="Entreprise"
       autocomplete="organization"
       maxlength="150"
     />
@@ -33,6 +35,7 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
     <input
       id="email"
       name="email"
+      data-label="E-mail"
       type="email"
       autocomplete="email"
       required
@@ -44,6 +47,7 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
     <input
       id="phone"
       name="phone"
+      data-label="Téléphone"
       type="tel"
       autocomplete="tel"
       maxlength="30"
@@ -61,7 +65,13 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
         "Autre projet",
       ].map((need, i) => (
         <label>
-          <input type="radio" name="need" value={need} required />
+          <input
+            type="radio"
+            name="need"
+            value={need}
+            data-label="Projet"
+            required
+          />
           <span>
             <span aria-hidden="true">0{i + 1}</span>
             {need}
@@ -95,14 +105,24 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
     </p>
     {!enabled && (
       <p class="notice">
-        Le formulaire est en cours de préparation. Pour nous joindre, utilisez
-        l’e-mail ou le téléphone indiqués sur cette page.
+        À l’envoi, votre messagerie s’ouvre avec la demande déjà rédigée : il ne
+        reste qu’à l’envoyer. Réponse et devis gratuit sous 24 h.
       </p>
     )}
-    <button class="button" type="submit" disabled={!enabled}>
+    <button class="button" type="submit">
       Envoyer ma demande <span aria-hidden="true">↗</span>
     </button>
-    <p class="form-status" role="status" hidden></p>
+    <p
+      class="form-status"
+      role="status"
+      hidden
+      data-ok="Votre demande a été acceptée par le serveur de messagerie. Merci pour votre message."
+      data-error="L’envoi n’a pas pu être confirmé. Vos informations restent dans le formulaire. Vous pouvez nous écrire à contact@aimy-digital.fr ou nous appeler."
+    ></p>
+    <p class="form-status form-mailto" role="status" hidden>
+      Votre messagerie s’ouvre avec votre demande. Si rien ne s’affiche, écrivez
+      à contact@aimy-digital.fr ou appelez le 06 52 59 77 80.
+    </p>
     <noscript>
       <p>Vous pouvez nous écrire directement à contact@aimy-digital.fr.</p>
     </noscript>
@@ -142,11 +162,25 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
     });
   form?.addEventListener("submit", async (event) => {
     event.preventDefault();
-    if (form.dataset.enabled !== "true" || !form.reportValidity()) return;
+    if (!form.reportValidity()) return;
+    const status = form.querySelector<HTMLParagraphElement>('[role="status"]')!;
+    if (form.dataset.enabled !== "true") {
+      // Sans envoi serveur configuré : la demande s'ouvre, rédigée, dans la messagerie.
+      const body = [...new FormData(form)]
+        .filter(([key, v]) => key !== "website" && v)
+        .map(([key, v]) => {
+          const label = form.querySelector<HTMLElement>(`[name=${key}]`)!
+            .dataset.label;
+          return label ? `${label} : ${v}` : `\n${v}`;
+        })
+        .join("\n");
+      form.querySelector<HTMLElement>(".form-mailto")!.hidden = false;
+      location.href = `mailto:contact@aimy-digital.fr?subject=Projet%20web&body=${encodeURIComponent(body)}`;
+      return;
+    }
     const button = form.querySelector<HTMLButtonElement>(
       'button[type="submit"]',
     )!;
-    const status = form.querySelector<HTMLParagraphElement>('[role="status"]')!;
     button.disabled = true;
     status.hidden = false;
     status.textContent = "Envoi en cours…";
@@ -158,13 +192,11 @@ const enabled = import.meta.env.PUBLIC_CONTACT_ENABLED === "true";
       });
       const result = await response.json();
       if (!response.ok || result.ok !== true) throw new Error();
-      status.textContent =
-        "Votre demande a été acceptée par le serveur de messagerie. Merci pour votre message.";
+      status.textContent = status.dataset.ok!;
       track("form_submit_success");
       form.reset();
     } catch {
-      status.textContent =
-        "L’envoi n’a pas pu être confirmé. Vos informations restent dans le formulaire. Vous pouvez nous écrire à contact@aimy-digital.fr ou nous appeler.";
+      status.textContent = status.dataset.error!;
     } finally {
       button.disabled = false;
     }

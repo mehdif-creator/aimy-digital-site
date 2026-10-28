@@ -5,14 +5,8 @@
   color: #edf6ff;
   background: #050d1a;
 }
-.cinematic-header .brand img {
-  width: 104px;
-  height: 104px;
-  padding: 0;
-  border-radius: 0;
-  background: transparent;
-  filter: invert(1) hue-rotate(180deg);
-  mix-blend-mode: screen;
+.cinematic-header .header-phone:hover {
+  color: #6fcfff;
 }
 .cinematic-header .desktop-nav a:hover {
   color: #6fcfff;
@@ -34,7 +28,7 @@
   color: #edf6ff;
 }
 .cinema[data-motion="full"] {
-  height: 220svh;
+  height: 165svh;
 }
 .cinema-stage {
   position: relative;
@@ -77,8 +71,9 @@
   line-height: 1;
   font-weight: 800;
   letter-spacing: -0.075em;
-  color: #173550;
-  opacity: 0.25;
+  color: transparent;
+  -webkit-text-stroke: 1px #2a5679;
+  opacity: 0.55;
   pointer-events: none;
 }
 .cinema-topline {
@@ -172,6 +167,23 @@
   gap: 24px;
   position: relative;
   z-index: 6;
+}
+.cinema-reassure {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 22px 0 0;
+  font-size: 0.78rem;
+  color: #9bb5ce;
+}
+.cinema-reassure span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3ddc97;
+  box-shadow: 0 0 12px #3ddc97;
 }
 .cinema-cta {
   display: inline-flex;
@@ -509,12 +521,8 @@
   .cinematic-header {
     min-height: 82px;
   }
-  .cinematic-header .brand img {
-    width: 82px;
-    height: 82px;
-  }
   .cinema[data-motion="full"] {
-    height: 195svh;
+    height: 150svh;
   }
   .cinema-stage {
     min-height: 820px;

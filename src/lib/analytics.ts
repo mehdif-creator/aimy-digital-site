@@ -11,7 +11,11 @@ export function setConsent(choice: Choice) {
 }
 export function track(
   name:
-    "form_submit_success" | "phone_click" | "email_click" | "appointment_click",
+    | "form_submit_success"
+    | "form_mailto_open"
+    | "phone_click"
+    | "email_click"
+    | "appointment_click",
 ) {
   let choice = memoryChoice;
   try {

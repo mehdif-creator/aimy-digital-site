@@ -70,10 +70,13 @@ for (const route of [
   if (violations.length) errors.push(`Accessibilité ${route}`);
 }
 await page.goto(base + "/contact/");
+// Sans configuration serveur, le formulaire prépare un e-mail (mailto) et ne poste rien.
 if (
-  !(await page.getByRole("button", { name: "Envoyer ma demande" }).isDisabled())
+  (await page.locator(".contact-form").getAttribute("data-enabled")) !==
+    "false" ||
+  !(await page.locator(".form-mailto").count())
 )
-  errors.push("Formulaire actif sans configuration");
+  errors.push("Formulaire relié au serveur sans configuration");
 const missing = await page.goto(base + "/page-absente-qa/");
 if (missing.status() !== 404) errors.push("Statut 404 incorrect");
 await browser.close();

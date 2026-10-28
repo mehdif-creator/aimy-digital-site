@@ -15,7 +15,7 @@ export default defineConfig({
   site: "https://aimy-digital.fr",
   output: "static",
   trailingSlash: "always",
-  build: { format: "directory" },
+  build: { format: "directory", inlineStylesheets: "always" },
   integrations:
     env.PUBLIC_SITE_ENV === "production"
       ? [
