@@ -44,7 +44,11 @@ Principes : 301 seulement vers un équivalent réel ; 410 pour ce qui n'a ni con
 
 **Retenu : retrait (410).** Outils non repris dans la refonte. Contenu privé non consulté ; l'exporter depuis WordPress avant la bascule si nécessaire.
 
-## Remarques annexes
+## Vérifications du 28 octobre 2026
 
-- Aucune donnée Search Console ni de liens entrants n'a été consultée pour ces URL : vérifier avant bascule qu'aucune ne reçoit de clics ou de backlinks.
-- Reste à faire : tester chaque règle par requête HTTP sur Apache (codes 301/410 et destinations). Les règles génériques `page/N`, `blog/page/N` et `<article>/feed/` couvrent aussi des variantes non crawlées.
+- **Logique des règles** : `tests/htaccess.test.mjs` (dans `npm test`) émule mod_rewrite sur `public/.htaccess`. Chaque entrée de `redirects.json` répond 301 vers sa cible (avec et sans slash final), chaque entrée de `gone.json` répond 410, aucune des 39 URL conservées n'est touchée, aucune cible n'est elle-même redirigée. Émulation seulement : aucun Apache disponible localement, aucun test sur o2switch.
+- **Indexation publique** (requête `site:aimy-digital.fr` via moteur de recherche) : 14 pages remontées, toutes conservées dans la refonte ; aucune des 24 URL tranchées n'apparaît. Échantillon d'un moteur tiers, pas l'index Google complet.
+- **Mentions externes** trouvées (LinkedIn, Threads, CB Insights, mentions légales de Djez Garden et Lambert Digital Pulse, My NutriZen) : toutes pointent vers la racine ou l'e-mail, aucune vers une URL retirée.
+- **Search Console, performances sur 16 mois** (propriété `https://aimy-digital.fr/`, 37 clics, 6 760 impressions au total) : **aucune des 24 URL n'a reçu de clic**. Seule `/app/` apparaît, avec 0 clic et 6 impressions. Les URL qui reçoivent des clics (accueil 28, `/site-web-professionnel-2025/` 3, contact 2, prestations 2, FAQ, `/10-erreurs-…`, SEA) sont toutes conservées. `/template/` (63 impressions) répond déjà 404 en ligne : pas d'action.
+- **Search Console, liens** : 100 liens externes, **tous vers l'accueil** (mynutrizen.fr 56, lambertdigitalpulse.fr 19, htcreajeux.fr 11, djezgarden.fr 5, sc-renovation.com 5).
+- **Non fait** : sauvegarde du contenu de `/app/` et `/youtube-competitor-radar/` (pas de session WordPress ouverte dans le navigateur) ; test réel sur Apache.
