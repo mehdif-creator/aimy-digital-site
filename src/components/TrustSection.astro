@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import { site } from "../lib/site";
+import portrait from "../../public/images/team/mehdi-farhane.webp";
 const cases = (await getCollection("cases")).map((c) => c.data);
 const promises = [
   {
@@ -24,9 +26,16 @@ const promises = [
 
 <section class="trust container" aria-labelledby="trust-title">
   <div class="trust-founder">
-    <div class="trust-monogram" aria-hidden="true">
-      <span>MF</span>
-    </div>
+    <figure class="trust-portrait">
+      <Image
+        src={portrait}
+        widths={[240, 480]}
+        sizes="240px"
+        quality={85}
+        loading="lazy"
+        alt="Mehdi Farhane, fondateur d’Aimy Digital, à son bureau"
+      />
+    </figure>
     <p class="trust-kicker">Votre interlocuteur</p>
     <h2 id="trust-title">
       Une agence à taille humaine.
@@ -88,30 +97,32 @@ const promises = [
   .trust-founder {
     position: relative;
   }
-  .trust-monogram {
+  .trust-portrait {
     position: relative;
-    display: grid;
-    place-items: center;
-    width: 112px;
-    aspect-ratio: 1;
-    margin-bottom: 2.2rem;
-    border-radius: 50%;
-    background: radial-gradient(circle at 30% 25%, #1b4a6d, #071726 70%);
-    color: #edf6ff;
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    box-shadow: 0 24px 50px #07172633;
+    width: min(240px, 70%);
+    aspect-ratio: 4 / 5;
+    margin: 0 0 2.4rem;
   }
-  .trust-monogram:before {
+  .trust-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 72% 22%;
+    border-radius: 1.2rem;
+    box-shadow: 0 30px 60px -20px #07172666;
+  }
+  .trust-portrait:before {
     content: "";
     position: absolute;
-    inset: -10px;
+    inset: -14px -14px auto auto;
+    width: 64%;
+    aspect-ratio: 1;
     border-radius: 50%;
     border: 3px solid #0686ce;
     border-left-color: transparent;
     border-bottom-color: transparent;
-    transform: rotate(-20deg);
+    transform: rotate(-10deg);
+    z-index: -1;
   }
   .trust-kicker {
     font-size: 0.85rem;
@@ -264,10 +275,6 @@ const promises = [
     .trust-promises,
     .trust-live ul {
       grid-template-columns: 1fr;
-    }
-    .trust-monogram {
-      width: 88px;
-      font-size: 1.3rem;
     }
   }
   @media (prefers-reduced-motion: reduce) {

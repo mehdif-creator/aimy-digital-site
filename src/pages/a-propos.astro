@@ -6,6 +6,8 @@ import sc from "../../public/images/cases/sc/services.webp";
 import duo from "../../public/images/cases/ht/duo.webp";
 import scMobile from "../../public/images/cases/sc/mobile.webp";
 import ht from "../../public/images/cases/ht/product.webp";
+import { Image } from "astro:assets";
+import portrait from "../../public/images/team/mehdi-farhane.webp";
 import "../styles/commercial-premium.css";
 const steps = [
   [
@@ -126,6 +128,15 @@ const steps = [
     </section>
     <section class="band wrap agency-person">
       <div>
+        <Image
+          class="agency-portrait"
+          src={portrait}
+          widths={[360, 720]}
+          sizes="(max-width: 800px) 70vw, 360px"
+          quality={85}
+          loading="lazy"
+          alt="Mehdi Farhane, fondateur d’Aimy Digital, à son bureau"
+        />
         <span class="eyebrow">Une agence. Un interlocuteur identifié.</span>
         <h2>Mehdi Farhane</h2>
         <p class="intro">Président de la SASU AIMY DIGITAL.</p>
@@ -249,6 +260,15 @@ const steps = [
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 7rem;
+  }
+  .agency-portrait {
+    width: min(360px, 100%);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: 72% 22%;
+    border-radius: 1.4rem;
+    margin-bottom: 2.4rem;
+    box-shadow: 0 30px 60px -24px #15293b66;
   }
   .agency-person h2 {
     font-size: clamp(2rem, 4vw, 4rem);
