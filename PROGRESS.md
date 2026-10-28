@@ -15,6 +15,8 @@ Demande du propriétaire : rendre le site exceptionnel et donner envie de prendr
 
 Vérifications : astro check 0 erreur, 17 tests, build et audit (budget JS respecté : 53 998 o gzip), recette navigateur 11/11 (aucun débordement 320–1440 px, 0 violation axe), contrôle visuel 1440/800/375 px.
 
+Déployé sur la préprod o2switch (LiteSpeed, compression Brotli), accès toujours restreint par IP (403 vérifié depuis l’extérieur), redirections 139/139. Lighthouse mobile sur l’accueil, préprod en HTTP : avant 83–86, LCP 3,54–3,64 s (3 mesures) ; après 81–95, LCP 2,66–4,07 s, médiane 3,39 s (6 mesures, résultats bimodaux). Gain léger et instable : la cible 2,5 s n’est pas atteinte. Le score « bonnes pratiques » de 74 vient de l’absence de HTTPS sur la préprod et de l’alerte de résolution d’images déjà connue.
+
 À fournir par le propriétaire : une photo portrait, des témoignages clients réels avec accord, la configuration SMTP pour activer l’envoi serveur.
 
 ## My NutriZen — prêt pour validation visuelle, 12 octobre 2026
