@@ -33,6 +33,19 @@ const { service, post } = Astro.props as {
   post?: CollectionEntry<"posts">;
 };
 const title = service?.title || post!.data.title;
+// Prestation liée à l'article, d'après sa catégorie principale.
+const related = post
+  ? post.data.categories.includes(4)
+    ? { href: "/referencement-seo/", label: "le référencement SEO local" }
+    : post.data.categories.includes(30)
+      ? { href: "/maintenance-et-securite/", label: "la maintenance de site" }
+      : post.data.categories.includes(1)
+        ? { href: "/publicites-sea/", label: "la publicité Google et Meta" }
+        : {
+            href: "/creation-de-sites-internet/",
+            label: "la création de sites internet",
+          }
+  : undefined;
 const description = service?.description || post!.data.description;
 ---
 
@@ -125,6 +138,19 @@ const description = service?.description || post!.data.description;
             </aside>
           )}
           <div set:html={post.data.html} />
+          <aside class="article-next" aria-label="Passer à l’action">
+            <p class="article-next-kicker">Et pour votre entreprise ?</p>
+            <p class="article-next-title">
+              Aimy Digital vous accompagne sur {related!.label}, à Mauléon,
+              Cholet, Bressuire et Les Herbiers.
+            </p>
+            <div>
+              <a class="article-next-cta" href="/contact/">
+                Devis gratuit sous 24 h ↗
+              </a>
+              <a href={related!.href}>Découvrir la prestation</a>
+            </div>
+          </aside>
           <p>
             <a href="/blog/">Tous les articles</a>
           </p>
@@ -151,5 +177,46 @@ const description = service?.description || post!.data.description;
   }
   .prose {
     overflow-wrap: anywhere;
+  }
+  .article-next {
+    margin: 3.5rem 0 2rem;
+    padding: clamp(1.6rem, 4vw, 2.4rem);
+    border-radius: 1.4rem;
+    background: #071726;
+    color: #edf6ff;
+  }
+  .article-next p {
+    margin: 0;
+  }
+  .article-next-kicker {
+    font-size: 0.8rem;
+    color: #9bb5ce;
+  }
+  .article-next-title {
+    margin: 0.6rem 0 1.6rem !important;
+    font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+  .article-next div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.6rem;
+    align-items: center;
+  }
+  .article-next a {
+    color: #edf6ff;
+    font-weight: 700;
+  }
+  .article-next-cta {
+    display: inline-flex;
+    min-height: 50px;
+    align-items: center;
+    padding: 0 1.4rem;
+    border-radius: 100px;
+    background: #0670ad;
+    color: #fff !important;
+    text-decoration: none;
   }
 </style>

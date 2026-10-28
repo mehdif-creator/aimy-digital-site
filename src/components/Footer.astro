@@ -2,6 +2,7 @@
 import { site, navigation } from "../lib/site";
 import { company } from "../lib/company";
 import CookieConsent from "./CookieConsent.astro";
+import { cities } from "../data/cities";
 interface Props {
   cinematic?: boolean;
 }
@@ -45,6 +46,13 @@ interface Props {
       <a href="/publicites-sea/">Publicité digitale</a>
       <a href="/maintenance-et-securite/">Maintenance</a>
       <a href="/faq/">Questions fréquentes</a>
+    </nav>
+    <nav aria-label="Zones d’intervention">
+      {cities.map((c) => (
+        <a href={`/creation-site-internet-${c.slug}/`}>
+          Site internet {c.name}
+        </a>
+      ))}
     </nav>
   </div>
   <div class="container footer-bottom">

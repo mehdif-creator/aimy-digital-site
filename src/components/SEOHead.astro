@@ -7,6 +7,7 @@ interface Props {
   noindex?: boolean;
   image?: string;
   article?: { date: string; modified: string };
+  faq?: readonly { question: string; answer: string }[];
 }
 const {
   title,
@@ -14,15 +15,26 @@ const {
   noindex = false,
   image = "/images/og-default.jpg",
   article,
+  faq,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const hidden = noindex || import.meta.env.PUBLIC_SITE_ENV !== "production";
+const orgId = `${site.url}/#organisation`;
+const city = (name: string, region: string) => ({
+  "@type": "City",
+  name,
+  containedInPlace: { "@type": "AdministrativeArea", name: region },
+});
 const organization = {
-  "@type": "Organization",
+  "@type": "ProfessionalService",
+  "@id": orgId,
   name: site.name,
   legalName: company.legalName,
+  description:
+    "Agence web à Saint-Amand-sur-Sèvre : création de sites internet, référencement SEO local et publicité pour les entreprises du Bocage.",
   url: site.url,
-  logo: new URL("/images/logo-source.png", site.url).href,
+  logo: new URL("/favicon.svg", site.url).href,
+  image: new URL("/images/og-default.jpg", site.url).href,
   email: site.email,
   telephone: site.tel,
   vatID: company.vat,
@@ -35,24 +47,100 @@ const organization = {
     streetAddress: company.street,
     postalCode: company.postalCode,
     addressLocality: company.city,
+    addressRegion: "Deux-Sèvres",
     addressCountry: "FR",
   },
+  areaServed: [
+    city("Mauléon", "Deux-Sèvres"),
+    city("Bressuire", "Deux-Sèvres"),
+    city("Cholet", "Maine-et-Loire"),
+    city("Les Herbiers", "Vendée"),
+  ],
+  founder: {
+    "@type": "Person",
+    name: "Mehdi Farhane",
+    jobTitle: "Fondateur",
+    image: new URL("/images/team/mehdi-farhane.webp", site.url).href,
+    sameAs: ["https://fr.linkedin.com/in/mehdi-farhane"],
+  },
+  sameAs: ["https://www.threads.com/@aimy_digital"],
+  knowsAbout: [
+    "Création de sites internet",
+    "Référencement local",
+    "Google Ads",
+    "Maintenance WordPress",
+  ],
 };
-const schema = article
+// Fil d'Ariane déduit du chemin ; le dernier élément reprend le titre de la page.
+const labels: Record<string, string> = {
+  portfolio: "Réalisations",
+  "creation-de-sites-internet": "Création de sites internet",
+  category: "Journal",
+  blog: "Journal",
+};
+const segments = Astro.url.pathname.split("/").filter(Boolean);
+const breadcrumb =
+  segments.length > 0
+    ? {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { name: "Accueil", path: "/" },
+          ...segments.map((seg, i) => ({
+            name:
+              i === segments.length - 1
+                ? title
+                : (labels[seg] ?? seg.replace(/-/g, " ")),
+            path: "/" + segments.slice(0, i + 1).join("/") + "/",
+          })),
+        ]
+          .filter((item) => item.path !== "/category/")
+          .map((item, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: item.name,
+            item: new URL(item.path, site.url).href,
+          })),
+      }
+    : null;
+const page = article
   ? {
-      "@context": "https://schema.org",
       "@type": "Article",
       headline: title,
       image: new URL(image, site.url).href,
       datePublished: article.date,
       dateModified: article.modified,
       mainEntityOfPage: canonical,
-      publisher: organization,
+      author: { "@id": orgId },
+      publisher: { "@id": orgId },
     }
   : {
-      "@context": "https://schema.org",
-      ...organization,
+      "@type": "WebPage",
+      "@id": canonical,
+      name: title,
+      description,
+      isPartOf: { "@type": "WebSite", name: site.name, url: site.url },
+      about: { "@id": orgId },
     };
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    organization,
+    page,
+    ...(breadcrumb ? [breadcrumb] : []),
+    ...(faq?.length
+      ? [
+          {
+            "@type": "FAQPage",
+            mainEntity: faq.map((q) => ({
+              "@type": "Question",
+              name: q.question,
+              acceptedAnswer: { "@type": "Answer", text: q.answer },
+            })),
+          },
+        ]
+      : []),
+  ],
+};
 ---
 
 <meta charset="UTF-8" />

@@ -188,6 +188,17 @@ h3 {
 .desktop-nav a[aria-current] {
   color: var(--blue-dark);
 }
+/* Mot-clé de la page, porté par le H1 sans changer la composition. */
+.h1-kicker {
+  display: block;
+  margin-bottom: 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
 .skip-link {
   position: absolute;
   left: 1rem;
@@ -275,6 +286,9 @@ h3 {
   z-index: 2;
   bottom: 12%;
   right: 0;
+}
+.region-band a:hover {
+  color: var(--blue-dark);
 }
 .region-band {
   display: flex;
@@ -469,7 +483,7 @@ h3 {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
 }
 .footer-name {

@@ -1,0 +1,311 @@
+---
+import { cities } from "../data/cities";
+interface Props {
+  current?: string;
+  heading?: string;
+}
+const { current, heading = "Une agence au cœur du Bocage." } = Astro.props;
+// Projection simplifiée (longitude/latitude réelles) vers un plan 600 × 430.
+const project = (lat: number, lon: number) => ({
+  x: Math.round(((lon + 1.1) / 0.7) * 600),
+  y: Math.round(((47.12 - lat) / 0.34) * 430),
+});
+const coords: Record<string, [number, number]> = {
+  cholet: [47.06, -0.879],
+  mauleon: [46.923, -0.75],
+  bressuire: [46.841, -0.489],
+  "les-herbiers": [46.871, -1.014],
+};
+// Position des noms : x, y relatifs au point, ancrage du texte.
+const labels: Record<string, [number, number, string]> = {
+  cholet: [0, -24, "middle"],
+  mauleon: [0, -24, "middle"],
+  bressuire: [10, 34, "end"],
+  "les-herbiers": [-10, 34, "start"],
+};
+const agency = project(46.869, -0.796);
+const points = cities.map((c) => ({ ...c, ...project(...coords[c.slug]) }));
+const arc = (p: { x: number; y: number }) => {
+  const mx = (agency.x + p.x) / 2;
+  const my = (agency.y + p.y) / 2 - Math.abs(p.x - agency.x) * 0.22 - 18;
+  return `M${agency.x} ${agency.y} Q${mx} ${my} ${p.x} ${p.y}`;
+};
+---
+
+<section class="bocage" aria-labelledby="bocage-title">
+  <div class="container bocage-layout">
+    <div class="bocage-copy">
+      <p class="bocage-kicker">Zones d’intervention</p>
+      <h2 id="bocage-title">{heading}</h2>
+      <p>
+        Installée à Saint-Amand-sur-Sèvre, Aimy Digital accompagne les
+        entreprises de trois départements, dans un même bassin de vie.
+      </p>
+      <ul class="bocage-list">
+        {points.map((c) => (
+          <li>
+            <a
+              href={`/creation-site-internet-${c.slug}/`}
+              aria-current={c.slug === current ? "page" : undefined}
+            >
+              <span>Création de site internet {c.at}</span>
+              <span class="bocage-dep">
+                {c.department} ({c.short}) ↗
+              </span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <figure class="bocage-map" aria-hidden="true">
+      <svg viewBox="0 0 600 430" role="presentation">
+        <defs>
+          <radialGradient id="bocage-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#0686ce" stop-opacity=".35"></stop>
+            <stop offset="1" stop-color="#0686ce" stop-opacity="0"></stop>
+          </radialGradient>
+        </defs>
+        <g class="bocage-hedges">
+          <path d="M-10 120 C80 100 140 150 230 120 S380 80 470 130 610 110"></path>
+          <path d="M-10 200 C70 220 160 180 250 210 S420 240 520 200 610 220"></path>
+          <path d="M-10 300 C90 280 150 330 260 300 S400 270 500 320 610 290"></path>
+          <path d="M-10 390 C120 370 200 410 300 380 S470 360 610 400"></path>
+          <path d="M110 -10 C130 90 90 170 130 260 S110 380 140 440"></path>
+          <path d="M360 -10 C340 80 390 160 360 250 S390 360 370 440"></path>
+          <path d="M480 -10 C500 100 460 200 500 300 S480 400 510 440"></path>
+        </g>
+        <path
+          class="bocage-river"
+          d="M20 430 C90 380 150 360 210 330 S250 260 300 230 360 160 420 120 520 40 600 20"
+        ></path>
+        <text class="bocage-region" x="150" y="40">
+          MAINE-ET-LOIRE
+        </text>
+        <text class="bocage-region" x="20" y="405">
+          VENDÉE
+        </text>
+        <text class="bocage-region" x="440" y="410">
+          DEUX-SÈVRES
+        </text>
+        <circle
+          cx={agency.x}
+          cy={agency.y}
+          r="70"
+          fill="url(#bocage-glow)"
+          class="bocage-halo"
+        ></circle>
+        {points.map((c, i) => (
+          <path
+            class:list={["bocage-arc", { "is-current": c.slug === current }]}
+            d={arc(c)}
+            style={`--i:${i}`}
+          />
+        ))}
+        {points.map((c) => (
+          <g
+            class:list={["bocage-city", { "is-current": c.slug === current }]}
+            transform={`translate(${c.x} ${c.y})`}
+          >
+            <circle r="15" class="bocage-ring" />
+            <circle r="6" />
+            <text
+              x={labels[c.slug][0]}
+              y={labels[c.slug][1]}
+              text-anchor={labels[c.slug][2]}
+            >
+              {c.name}
+            </text>
+          </g>
+        ))}
+        <g
+          class="bocage-agency"
+          transform={`translate(${agency.x} ${agency.y})`}
+        >
+          <circle r="22" class="bocage-pulse"></circle>
+          <circle r="9"></circle>
+          <text y="40" text-anchor="middle">
+            Aimy Digital
+          </text>
+        </g>
+      </svg>
+      <figcaption>Saint-Amand-sur-Sèvre, au centre du bassin.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<style>
+  .bocage {
+    padding-block: clamp(4.5rem, 9vw, 8rem);
+    background: linear-gradient(160deg, #eef5f9, #dfeaf2);
+    color: var(--ink);
+    overflow: hidden;
+  }
+  .bocage-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+  }
+  .bocage-kicker {
+    margin: 0 0 1rem;
+    font-size: 0.85rem;
+    color: #476173;
+  }
+  .bocage h2 {
+    margin: 0 0 1.4rem;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.03;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+  }
+  .bocage-copy > p:not(.bocage-kicker) {
+    max-width: 38ch;
+    color: #476173;
+    line-height: 1.6;
+  }
+  .bocage-list {
+    list-style: none;
+    margin: 2rem 0 0;
+    padding: 0;
+    border-top: 1px solid #a9c0cf;
+  }
+  .bocage-list a {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0.2rem;
+    border-bottom: 1px solid #a9c0cf;
+    font-weight: 600;
+    transition:
+      padding 0.3s,
+      color 0.3s;
+  }
+  .bocage-list a:hover,
+  .bocage-list a[aria-current] {
+    padding-left: 0.8rem;
+    color: #0670ad;
+  }
+  .bocage-dep {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #476173;
+    white-space: nowrap;
+  }
+  .bocage-map {
+    margin: 0;
+    position: relative;
+    border-radius: 1.6rem;
+    background: #071726;
+    box-shadow: 0 40px 80px -40px #07172688;
+    padding: clamp(0.8rem, 2vw, 1.4rem);
+  }
+  .bocage-map svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .bocage-map figcaption {
+    padding: 0.4rem 0.4rem 0.2rem;
+    font-size: 0.72rem;
+    color: #9bb5ce;
+  }
+  .bocage-hedges path {
+    fill: none;
+    stroke: #16324a;
+    stroke-width: 1;
+  }
+  .bocage-river {
+    fill: none;
+    stroke: #1d5a86;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    opacity: 0.7;
+  }
+  .bocage-region {
+    font:
+      600 11px ui-monospace,
+      monospace;
+    letter-spacing: 0.18em;
+    fill: #5b7f9c;
+  }
+  .bocage-arc {
+    fill: none;
+    stroke: #69caff;
+    stroke-width: 1.6;
+    stroke-dasharray: 5 7;
+    opacity: 0.55;
+    animation: bocage-flow 2.4s linear infinite;
+    animation-delay: calc(var(--i) * -0.6s);
+  }
+  .bocage-arc.is-current {
+    stroke: #fff;
+    stroke-width: 2.4;
+    opacity: 1;
+  }
+  @keyframes bocage-flow {
+    to {
+      stroke-dashoffset: -24;
+    }
+  }
+  .bocage-city circle {
+    fill: #69caff;
+  }
+  .bocage-city .bocage-ring {
+    fill: none;
+    stroke: #69caff;
+    stroke-opacity: 0.4;
+  }
+  .bocage-city.is-current circle {
+    fill: #fff;
+  }
+  .bocage-city.is-current .bocage-ring {
+    stroke: #fff;
+    stroke-opacity: 0.7;
+  }
+  .bocage-city text,
+  .bocage-agency text {
+    font:
+      700 15px Manrope,
+      sans-serif;
+    fill: #edf6ff;
+  }
+  .bocage-agency circle {
+    fill: #0686ce;
+  }
+  .bocage-agency text {
+    fill: #69caff;
+    font-size: 13px;
+  }
+  .bocage-pulse {
+    fill: none !important;
+    stroke: #0686ce;
+    stroke-width: 2;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: bocage-pulse 2.6s ease-out infinite;
+  }
+  @keyframes bocage-pulse {
+    from {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    to {
+      transform: scale(2.2);
+      opacity: 0;
+    }
+  }
+  @media (max-width: 900px) {
+    .bocage-layout {
+      grid-template-columns: 1fr;
+    }
+    .bocage-map {
+      order: -1;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bocage-arc,
+    .bocage-pulse {
+      animation: none;
+    }
+  }
+</style>

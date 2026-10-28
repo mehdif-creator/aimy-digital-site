@@ -56,6 +56,8 @@ for (const route of [
   "/portfolio/",
   "/contact/",
   "/maintenance-site-web-essentielle-2025/",
+  "/creation-site-internet-cholet/",
+  "/faq/",
 ]) {
   const response = await page.goto(base + route, { waitUntil: "networkidle" });
   const axe = await new AxeBuilder({ page })

@@ -8,8 +8,8 @@ const { data } = (await getCollection("cases")).find(
 ---
 
 <BaseLayout
-  title={data.title}
-  description={data.description}
+  title={`${data.title} : ${data.category.toLowerCase()}, réalisation web`}
+  description={`${data.description} Une réalisation Aimy Digital, agence web près de Mauléon.`}
   image={data.image}
 >
   <HtCaseStudy />

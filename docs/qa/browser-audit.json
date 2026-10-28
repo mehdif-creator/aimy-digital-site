@@ -48,6 +48,16 @@
       "route": "/maintenance-site-web-essentielle-2025/",
       "status": 200,
       "violations": []
+    },
+    {
+      "route": "/creation-site-internet-cholet/",
+      "status": 200,
+      "violations": []
+    },
+    {
+      "route": "/faq/",
+      "status": 200,
+      "violations": []
     }
   ],
   "errors": []

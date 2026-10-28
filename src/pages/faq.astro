@@ -12,6 +12,7 @@ const categories = [...new Set(help.map((q) => q.category))];
 <BaseLayout
   title="FAQ : les réponses pour préparer votre projet web"
   description="Budget, délais, domaine, propriété, SEO, publicité et maintenance : des réponses claires pour préparer votre projet avec Aimy Digital."
+  faq={help}
 >
   <Fragment slot="head">
     {[regular, semibold, bold].map((href) => (
@@ -28,6 +29,7 @@ const categories = [...new Set(help.map((q) => q.category))];
     <header class="hero wrap">
       <span class="eyebrow">Le centre de réponses Aimy Digital</span>
       <h1>
+        <span class="h1-kicker">FAQ création de site internet</span>
         Avant de vous lancer,
         <br />
         <em>voyons plus clair.</em>

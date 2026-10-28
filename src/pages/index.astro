@@ -5,24 +5,28 @@ import HomeExperience from "../components/HomeExperience.astro";
 
 import CinematicHero from "../components/CinematicHero.astro";
 import TrustSection from "../components/TrustSection.astro";
+import BocageMap from "../components/BocageMap.astro";
+import { questions } from "../lib/site";
 ---
 
 <BaseLayout
   title="Création de sites web et SEO local à Mauléon"
   description="Aimy Digital conçoit des sites internet pour artisans et PME à Mauléon, Cholet, Bressuire et Les Herbiers. Design, clarté et visibilité locale."
   cinematicHero
+  faq={questions}
 >
   <CinematicHero />
   <div class="home-proof">
     <div class="container region-band">
       <span>Ancrés près de chez vous.</span>
-      <span>Mauléon</span>
-      <span>Cholet</span>
-      <span>Bressuire</span>
-      <span>Les Herbiers</span>
+      <a href="/creation-site-internet-mauleon/">Mauléon</a>
+      <a href="/creation-site-internet-cholet/">Cholet</a>
+      <a href="/creation-site-internet-bressuire/">Bressuire</a>
+      <a href="/creation-site-internet-les-herbiers/">Les Herbiers</a>
     </div>
     <ProjectPreview />
     <TrustSection />
   </div>
+  <BocageMap />
   <HomeExperience />
 </BaseLayout>
