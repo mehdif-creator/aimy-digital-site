@@ -3,15 +3,25 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 // Émulation simplifiée de mod_rewrite (contexte .htaccess : chemin sans « / » initial,
 // première règle [L] correspondante appliquée). Ne remplace pas un test sur Apache.
-const rules = readFileSync("public/.htaccess", "utf8")
-  .split(/\r?\n/)
-  .filter((line) => line.startsWith("RewriteRule "))
-  .map((line) => {
+// Seules les conditions sur HTTP_HOST sont évaluées, pour l'hôte canonique.
+const host = "aimy-digital.fr";
+const rules = [];
+let conds = [];
+for (const line of readFileSync("public/.htaccess", "utf8").split(/\r?\n/)) {
+  if (line.startsWith("RewriteCond %{HTTP_HOST} ")) {
+    conds.push(new RegExp(line.split(/\s+/)[2], "i"));
+  } else if (line.startsWith("RewriteRule ")) {
     const [, pattern, target, flags] = line.split(/\s+/);
-    return { pattern: new RegExp(pattern), target, flags };
-  });
+    rules.push({ pattern: new RegExp(pattern), target, flags, conds });
+    conds = [];
+  }
+}
 const resolve = (path) => {
-  const rule = rules.find((r) => r.pattern.test(path.replace(/^\//, "")));
+  const rule = rules.find(
+    (r) =>
+      r.conds.every((c) => c.test(host)) &&
+      r.pattern.test(path.replace(/^\//, "")),
+  );
   if (!rule) return { status: 200 };
   if (rule.flags.includes("G")) return { status: 410 };
   return { status: 301, location: rule.target };
@@ -22,9 +32,7 @@ const rows = readFileSync("docs/migrations/url-map.csv", "utf8")
   .filter(Boolean)
   .map((line) => line.slice(1, -1).split('";"'));
 test("chaque redirection de redirects.json aboutit en 301 à sa cible", () => {
-  const redirects = JSON.parse(
-    readFileSync("src/data/redirects.json", "utf8"),
-  );
+  const redirects = JSON.parse(readFileSync("src/data/redirects.json", "utf8"));
   for (const [from, to] of Object.entries(redirects)) {
     assert.deepEqual(resolve(from), { status: 301, location: to }, from);
     assert.deepEqual(

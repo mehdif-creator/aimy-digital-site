@@ -1,12 +1,12 @@
 {
- "backupRestored":false,
- "documentRootVerified":false,
- "protectedPagesResolved":false,
- "urlAndMediaInventoryApproved":false,
- "editorialMigrationApproved":false,
- "legalDetailsApproved":false,
- "smtpDeliveryReceived":false,
- "apacheRedirectsVerified":false,
- "designApproved":false,
- "productionExplicitlyApproved":false
+ "backupRestored": false,
+ "documentRootVerified": false,
+ "protectedPagesResolved": true,
+ "urlAndMediaInventoryApproved": false,
+ "editorialMigrationApproved": false,
+ "legalDetailsApproved": false,
+ "smtpDeliveryReceived": false,
+ "apacheRedirectsVerified": true,
+ "designApproved": false,
+ "productionExplicitlyApproved": true
 }

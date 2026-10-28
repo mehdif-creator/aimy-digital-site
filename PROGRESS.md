@@ -1,5 +1,9 @@
 # Progression de la refonte Aimy Digital
 
+## EN PRODUCTION — 28 octobre 2026
+
+Le nouveau site est en ligne sur https://aimy-digital.fr à la demande explicite du propriétaire. WordPress archivé (non supprimé) dans `/home/venu0261/wordpress-archive-20261028/`. Détails, vérifications (139/139, Lighthouse 95–98) et procédure de retour arrière : `docs/deployment/production-2026-10-28.md`. Photo du fondateur intégrée ; témoignages génériques refusés (faux avis interdits), en attente d’avis réels.
+
 ## Conversion et finitions — 28 octobre 2026
 
 Demande du propriétaire : rendre le site exceptionnel et donner envie de prendre contact. Réalisé en autonomie :

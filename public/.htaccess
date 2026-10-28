@@ -8,6 +8,9 @@ Header always set X-Frame-Options "SAMEORIGIN"
 </IfModule>
 <IfModule mod_rewrite.c>
 RewriteEngine On
+# Adresse canonique sans www
+RewriteCond %{HTTP_HOST} ^www\.aimy-digital\.fr$ [NC]
+RewriteRule ^(.*)$ https://aimy-digital.fr/$1 [R=301,L]
 RewriteRule ^maintenance-de-site-web-pourquoi-cest-essentiel-pour-votre-activite/?$ /maintenance-site-web-essentielle-2025/ [R=301,L]
 RewriteRule ^pourquoi-votre-entreprise-a-besoin-dun-site-web-professionnel-en-2025/?$ /site-web-professionnel-2025/ [R=301,L]
 RewriteRule ^publicite-digitale-comment-maximiser-votre-roi-avec-google-ads-et-facebook-ads/?$ /publicite-digitale-roi-google-ads-facebook-ads/ [R=301,L]
