@@ -41,7 +41,7 @@ Les captures source restent dans `.private/`, ignoré par Git. Ce dossier n'est 
 
 ## Vérifier
 
-`npm run format:check`, `npm run check`, `npm test`, `npm run build`, `npm run audit`. `node scripts/browser-qa.mjs` utilise Chrome local et `http://127.0.0.1:4322` ; modifier `QA_BASE` ou `QA_BROWSER` si nécessaire. Les rapports sont dans `docs/qa/`.
+`npm run format:check`, `npm run check`, `npm test`, `npm run build`, `npm run audit`. `node scripts/browser-qa.mjs` utilise Chrome local et `http://127.0.0.1:4322` ; modifier `QA_BASE` ou `QA_BROWSER` si nécessaire. Les rapports sont dans `docs/qa/`. `node scripts/check-redirects-http.mjs <base>` contrôle par HTTP réel les 301/410 de `.htaccess` (Apache local ou préproduction o2switch) ; voir `docs/qa/apache/rapport.md`.
 
 `node scripts/release-check.mjs` doit actuellement échouer : il rappelle les validations manquantes. Ne pas cocher les validations sans preuve et accord. La CI vérifie et archive le build staging, sans connexion à o2switch.
 
