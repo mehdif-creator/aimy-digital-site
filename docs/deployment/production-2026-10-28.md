@@ -35,3 +35,12 @@ Demande explicite du propriétaire : mettre le nouveau site en ligne sur aimy-di
 - Relecture par le propriétaire des textes juridiques finalisés (confidentialité : bases légales, durées).
 - Supprimer l'archive WordPress et la préprod quand le nouveau site est validé dans la durée ; exporter la base WordPress avant si besoin.
 - Remplacer les médias historiques encore manquants (21 récupérés sur 114 recensés).
+
+## Deuxième mise en production — 28 octobre 2026 (soir)
+
+Commit 7a1be11 : pages villes, carte du Bocage, SEO local, maillage (voir `docs/strategie-reference-regionale.md`).
+
+- Archive déposée dans `/home/venu0261/aimy-release-v2/`, extraite, droits corrigés **avant** la bascule (402 fichiers en `0644`) : aucune interruption.
+- Version précédente mise de côté dans `/home/venu0261/aimy-release-previous/` (retour arrière : inverser les déplacements entre ce dossier et `public_html`, en conservant `.well-known`, `cgi-bin`, `o2-qc-*.php`, `f61ab…txt`).
+- Vérifié : 139/139 redirections, 4 pages villes en 200, `llms.txt`, sitemap, www et HTTP redirigés. Lighthouse mobile : accueil 99/100/92/100 (LCP 1,5 s), Cholet 100/100/96/100 (LCP 1,3 s).
+- Search Console : indexation demandée pour Cholet et Bressuire ; Mauléon refusé (« Un problème est survenu », probablement quota), Les Herbiers non tenté. Les deux sont dans le sitemap.
