@@ -1,0 +1,175 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_WnY60.webp",
+          "width": 270,
+          "encodedWidth": 640
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/services.pb19SEZD_RDVd6.webp",
+          "width": 280,
+          "encodedWidth": 640
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/gallery.B_MQCDXI_Z1b97jT.webp",
+          "width": 280,
+          "encodedWidth": 640
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/contact._Z2xJu1b_Z1WzGtQ.webp",
+          "width": 280,
+          "encodedWidth": 640
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_zolQ.webp",
+          "width": 240,
+          "encodedWidth": 680
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 375,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_1xXdn1.webp",
+          "width": 325,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/services.pb19SEZD_Z2corII.webp",
+          "width": 335,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/gallery.B_MQCDXI_1aQ6rh.webp",
+          "width": 335,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/contact._Z2xJu1b_opwhk.webp",
+          "width": 335,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_zolQ.webp",
+          "width": 295,
+          "encodedWidth": 680
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 390,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_1xXdn1.webp",
+          "width": 340,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/services.pb19SEZD_Z2corII.webp",
+          "width": 350,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/gallery.B_MQCDXI_1aQ6rh.webp",
+          "width": 350,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/contact._Z2xJu1b_opwhk.webp",
+          "width": 350,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_zolQ.webp",
+          "width": 310,
+          "encodedWidth": 680
+        }
+      ],
+      "transforms": [
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 768,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_ZoCxiX.webp",
+          "width": 708,
+          "encodedWidth": 2400
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/services.pb19SEZD_Z2corII.webp",
+          "width": 426.890625,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/gallery.B_MQCDXI_2hr08V.webp",
+          "width": 728,
+          "encodedWidth": 2400
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/contact._Z2xJu1b_opwhk.webp",
+          "width": 426.875,
+          "encodedWidth": 960
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_zolQ.webp",
+          "width": 324,
+          "encodedWidth": 680
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 36)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    },
+    {
+      "width": 1440,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/home.CRwd45qZ_ZoCxiX.webp",
+          "width": 1180,
+          "encodedWidth": 2400
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/services.pb19SEZD_Z2rdggl.webp",
+          "width": 724.0625,
+          "encodedWidth": 1520
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/gallery.B_MQCDXI_2hr08V.webp",
+          "width": 1200,
+          "encodedWidth": 2400
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/contact._Z2xJu1b_SAYcy.webp",
+          "width": 724.0625,
+          "encodedWidth": 1520
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/mobile.BiwJv3R1_zolQ.webp",
+          "width": 324,
+          "encodedWidth": 680
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 36)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    }
+  ],
+  "errors": []
+}

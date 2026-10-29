@@ -1,0 +1,251 @@
+{
+  "sources": [
+    {
+      "file": "home",
+      "width": 2880,
+      "height": 1800
+    },
+    {
+      "file": "product",
+      "width": 2880,
+      "height": 2200
+    },
+    {
+      "file": "mobile",
+      "width": 780,
+      "height": 1688
+    },
+    {
+      "file": "speedy",
+      "width": 2880,
+      "height": 2200
+    },
+    {
+      "file": "duo",
+      "width": 2880,
+      "height": 2200
+    }
+  ],
+  "rows": [
+    {
+      "viewport": 320,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/home.BDv1IAfT_ZD4B3V.avif",
+      "width": 278,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Accueil réel HT Créa Jeux, avec son univers orange et une famille autour des jeux.",
+      "encodedWidth": 800,
+      "adequate": true
+    },
+    {
+      "viewport": 320,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_yVKLP.webp",
+      "width": 695,
+      "filter": "none",
+      "transform": "none",
+      "alt": "La fiche Easy Peasy Multi place les explications au-dessus du choix de quantité et du bouton Ajouter au panier.",
+      "encodedWidth": 1600,
+      "adequate": true
+    },
+    {
+      "viewport": 320,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/speedy.Cn4-rW_m_1ra31U.webp",
+      "width": 278,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Fiche produit réelle Multi Speedy : visuel du jeu et présentation dans la boutique.",
+      "encodedWidth": 640,
+      "adequate": true
+    },
+    {
+      "viewport": 320,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/mobile.ONApCqf8_v03Vf.webp",
+      "width": 132,
+      "filter": "none",
+      "transform": "matrix(1, 0, 0, 1, 0, 10)",
+      "alt": "Accueil réel HT Créa Jeux sur téléphone, avec sa navigation et son introduction adaptées.",
+      "encodedWidth": 390,
+      "adequate": true
+    },
+    {
+      "viewport": 320,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/duo.Dr7zMJBD_1WKk0t.webp",
+      "width": 672,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Détail réel du Pack Duo réunissant Easy Peasy Multi et Multi Speedy.",
+      "encodedWidth": 1600,
+      "adequate": true
+    },
+    {
+      "viewport": 375,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/home.BDv1IAfT_ZD4B3V.avif",
+      "width": 333,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Accueil réel HT Créa Jeux, avec son univers orange et une famille autour des jeux.",
+      "encodedWidth": 800,
+      "adequate": true
+    },
+    {
+      "viewport": 375,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_2iiQuq.webp",
+      "width": 832.5,
+      "filter": "none",
+      "transform": "none",
+      "alt": "La fiche Easy Peasy Multi place les explications au-dessus du choix de quantité et du bouton Ajouter au panier.",
+      "encodedWidth": 2400,
+      "adequate": true
+    },
+    {
+      "viewport": 375,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/speedy.Cn4-rW_m_Z1TJ2Nj.webp",
+      "width": 333,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Fiche produit réelle Multi Speedy : visuel du jeu et présentation dans la boutique.",
+      "encodedWidth": 960,
+      "adequate": true
+    },
+    {
+      "viewport": 375,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/mobile.ONApCqf8_v03Vf.webp",
+      "width": 132,
+      "filter": "none",
+      "transform": "matrix(1, 0, 0, 1, 0, 10)",
+      "alt": "Accueil réel HT Créa Jeux sur téléphone, avec sa navigation et son introduction adaptées.",
+      "encodedWidth": 390,
+      "adequate": true
+    },
+    {
+      "viewport": 375,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/duo.Dr7zMJBD_2m0m12.webp",
+      "width": 804,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Détail réel du Pack Duo réunissant Easy Peasy Multi et Multi Speedy.",
+      "encodedWidth": 2400,
+      "adequate": true
+    },
+    {
+      "viewport": 390,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/home.BDv1IAfT_ZD4B3V.avif",
+      "width": 348,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Accueil réel HT Créa Jeux, avec son univers orange et une famille autour des jeux.",
+      "encodedWidth": 800,
+      "adequate": true
+    },
+    {
+      "viewport": 390,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_2iiQuq.webp",
+      "width": 870,
+      "filter": "none",
+      "transform": "none",
+      "alt": "La fiche Easy Peasy Multi place les explications au-dessus du choix de quantité et du bouton Ajouter au panier.",
+      "encodedWidth": 2400,
+      "adequate": true
+    },
+    {
+      "viewport": 390,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/speedy.Cn4-rW_m_Z1TJ2Nj.webp",
+      "width": 348,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Fiche produit réelle Multi Speedy : visuel du jeu et présentation dans la boutique.",
+      "encodedWidth": 960,
+      "adequate": true
+    },
+    {
+      "viewport": 390,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/mobile.ONApCqf8_v03Vf.webp",
+      "width": 132,
+      "filter": "none",
+      "transform": "matrix(1, 0, 0, 1, 0, 10)",
+      "alt": "Accueil réel HT Créa Jeux sur téléphone, avec sa navigation et son introduction adaptées.",
+      "encodedWidth": 390,
+      "adequate": true
+    },
+    {
+      "viewport": 390,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/duo.Dr7zMJBD_2m0m12.webp",
+      "width": 840,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Détail réel du Pack Duo réunissant Easy Peasy Multi et Multi Speedy.",
+      "encodedWidth": 2400,
+      "adequate": true
+    },
+    {
+      "viewport": 1440,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/home.BDv1IAfT_uxj4N.avif",
+      "width": 1124.390625,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Accueil réel HT Créa Jeux, avec son univers orange et une famille autour des jeux.",
+      "encodedWidth": 2400,
+      "adequate": true
+    },
+    {
+      "viewport": 1440,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/product.DCXSy1aU_Z2vdef8.webp",
+      "width": 1278,
+      "filter": "none",
+      "transform": "none",
+      "alt": "La fiche Easy Peasy Multi place les explications au-dessus du choix de quantité et du bouton Ajouter au panier.",
+      "encodedWidth": 2880,
+      "adequate": true
+    },
+    {
+      "viewport": 1440,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/speedy.Cn4-rW_m_1nMMrU.webp",
+      "width": 741.15625,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Fiche produit réelle Multi Speedy : visuel du jeu et présentation dans la boutique.",
+      "encodedWidth": 1920,
+      "adequate": true
+    },
+    {
+      "viewport": 1440,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/mobile.ONApCqf8_Z2p3XQ5.webp",
+      "width": 198,
+      "filter": "none",
+      "transform": "matrix(1, 0, 0, 1, 0, 28)",
+      "alt": "Accueil réel HT Créa Jeux sur téléphone, avec sa navigation et son introduction adaptées.",
+      "encodedWidth": 520,
+      "adequate": true
+    },
+    {
+      "viewport": 1440,
+      "dpr": 2,
+      "src": "http://127.0.0.1:4322/_astro/duo.Dr7zMJBD_Z1jIRjU.webp",
+      "width": 1416,
+      "filter": "none",
+      "transform": "none",
+      "alt": "Détail réel du Pack Duo réunissant Easy Peasy Multi et Multi Speedy.",
+      "encodedWidth": 2880,
+      "adequate": true
+    }
+  ]
+}

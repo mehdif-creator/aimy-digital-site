@@ -1,0 +1,149 @@
+.seo-premium em {
+  color: #00689e;
+  font-style: normal;
+}
+.seo-premium .search-scene {
+  padding: 2rem;
+  background: #deedf5;
+  border-radius: 50% 50% 4px 4px / 12% 12% 4px 4px;
+  position: relative;
+}
+.seo-premium .searchbox {
+  margin: 2rem -1rem 1.5rem;
+  box-shadow: 0 14px 40px #11335212;
+}
+.seo-premium .search-result {
+  background: white;
+  border-left: 3px solid #0782bd;
+  padding: 2rem;
+}
+.seo-premium .search-result h2 {
+  font-size: 1.65rem;
+  margin: 1rem 0;
+  color: #00649b;
+}
+.seo-premium .result-tags {
+  font-size: 0.8rem;
+  color: #416176;
+}
+.seo-premium .search-intent {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+  margin: 2rem 0 0;
+  padding-left: 2rem;
+}
+.seo-premium .search-intent > span {
+  font-size: 3rem;
+  float: left;
+  margin-right: 1rem;
+}
+.seo-premium .journey-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0;
+  list-style: none;
+}
+.seo-premium .journey-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #72b7de;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+  color: #7ac8f5;
+}
+.seo-premium .diagnostic-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+}
+.seo-premium .diagnostic .choices {
+  display: grid;
+  align-content: start;
+}
+.seo-premium .diagnostic button {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  gap: 1rem;
+}
+.seo-premium .diagnostic button span:first-child {
+  font-size: 0.7rem;
+  padding-top: 0.2rem;
+}
+.seo-premium .diagnostic [data-panel] {
+  padding: 3rem 0;
+  position: relative;
+}
+.seo-premium .diagnostic-index {
+  font-size: 7rem;
+  line-height: 1;
+  color: #517589;
+  display: block;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.seo-premium .diagnostic h3 {
+  font-size: 2.5rem;
+  max-width: 18ch;
+}
+.seo-premium .diagnostic-chain {
+  border-top: 1px solid #a8bdcb;
+  padding-top: 1.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.seo-premium .seo-method {
+  background: #e1ecf2;
+}
+@media (max-width: 800px) {
+  .seo-premium .journey-track {
+    grid-template-columns: 1fr 1fr;
+  }
+  .seo-premium .diagnostic-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .seo-premium .diagnostic .choices {
+    grid-template-columns: 1fr 1fr;
+  }
+  .seo-premium .diagnostic-index {
+    font-size: 4rem;
+  }
+  .seo-premium .diagnostic [data-panel] {
+    padding: 1rem 0;
+  }
+  .seo-premium .search-scene {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 400px) {
+  .seo-premium .journey-track {
+    grid-template-columns: 1fr;
+  }
+  .seo-premium .search-result {
+    padding: 1.2rem;
+  }
+  .seo-premium .diagnostic button {
+    font-size: 0.75rem;
+  }
+  .seo-premium .diagnostic button span:first-child {
+    display: none;
+  }
+}
+
+.seo-premium .journey-dot {
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  background: transparent;
+}
+.seo-premium .journey-dot[aria-pressed="true"] {
+  background: #e5f1f7;
+  color: #10283e;
+  border-color: #e5f1f7;
+}

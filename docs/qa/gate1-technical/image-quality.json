@@ -1,0 +1,58 @@
+[
+  {
+    "viewport": 1440,
+    "url": "http://127.0.0.1:4322/_astro/my-nutrizen.CxzqP2vT_1ip3H0.webp",
+    "box": 231.791748046875,
+    "sourceWidth": 1000,
+    "sourceHeight": 1250
+  },
+  {
+    "viewport": 1440,
+    "url": "http://127.0.0.1:4322/_astro/ht-crea-jeux.CQc0tJ3__ZyFaRQ.webp",
+    "box": 211.8096923828125,
+    "sourceWidth": 1000,
+    "sourceHeight": 1250
+  },
+  {
+    "viewport": 1440,
+    "url": "http://127.0.0.1:4322/_astro/sc-renovation.BwcJQh6y_1cAlNn.avif",
+    "box": 304.560791015625,
+    "sourceWidth": 1000,
+    "sourceHeight": 1250
+  },
+  {
+    "viewport": 1440,
+    "url": "http://127.0.0.1:4322/_astro/sc-renovation-mobile.0ckK77WP_Z2uK7za.webp",
+    "box": 136,
+    "sourceWidth": 288,
+    "sourceHeight": 623
+  },
+  {
+    "viewport": 390,
+    "url": "http://127.0.0.1:4322/_astro/my-nutrizen.CxzqP2vT_Z1WPB9b.webp",
+    "box": 111.19387817382812,
+    "sourceWidth": 480,
+    "sourceHeight": 600
+  },
+  {
+    "viewport": 390,
+    "url": "http://127.0.0.1:4322/_astro/ht-crea-jeux.CQc0tJ3__Z1H4LLJ.webp",
+    "box": 101.60818481445312,
+    "sourceWidth": 480,
+    "sourceHeight": 600
+  },
+  {
+    "viewport": 390,
+    "url": "http://127.0.0.1:4322/_astro/sc-renovation.BwcJQh6y_23eYrT.avif",
+    "box": 146.142333984375,
+    "sourceWidth": 560,
+    "sourceHeight": 700
+  },
+  {
+    "viewport": 390,
+    "url": "http://127.0.0.1:4322/_astro/sc-renovation-mobile.0ckK77WP_Z1w9HFx.webp",
+    "box": 65.27999877929688,
+    "sourceWidth": 160,
+    "sourceHeight": 346
+  }
+]

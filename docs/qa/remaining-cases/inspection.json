@@ -1,0 +1,41 @@
+[
+  {
+    "id": "lambert",
+    "url": "https://lambertdigitalpulse.fr/",
+    "status": 429,
+    "text": " HTTP 429\nRalentissez\n\nCette requête a été bloquée par une sécurité activée sur l'hébergement, suite à de trop nombreuses tentatives d'accès détecté (Rate-limit).\nSi vous êtes le webmaster de ce site, vous pouvez désactiver cette sécurité depuis votre compte cPanel.\n\n Comment gérer cette sécurité avec TigerProtect dans cPanel ?\n\n\n\nsupport@o2switch.fr - Tiger Protect\nRequest ID : 3b111c1c3ee7795fe6da502a65487452\n",
+    "links": [
+      {
+        "text": "\n                Comment gérer cette sécurité avec TigerProtect dans cPanel ?\n              ",
+        "href": "https://faq.o2switch.fr/hebergement-mutualise/tutoriels-cpanel/tiger-protect"
+      },
+      {
+        "text": "support@o2switch.fr",
+        "href": "https://www.o2switch.fr/"
+      },
+      {
+        "text": "Tiger Protect",
+        "href": "https://faq.o2switch.fr/hebergement-mutualise/tutoriels-cpanel/tiger-protect"
+      }
+    ],
+    "dimensions": {
+      "format": "png",
+      "mediaType": "image/png",
+      "width": 2880,
+      "height": 2000,
+      "space": "srgb",
+      "channels": 3,
+      "depth": "uchar",
+      "density": 72,
+      "isProgressive": false,
+      "isPalette": false,
+      "bitsPerSample": 8,
+      "hasProfile": false,
+      "hasAlpha": false,
+      "autoOrient": {
+        "width": 2880,
+        "height": 2000
+      }
+    }
+  }
+]

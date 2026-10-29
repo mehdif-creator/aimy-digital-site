@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NutrizenCaseStudy from "../../components/NutrizenCaseStudy.astro";
+const { data } = (await getCollection("cases")).find(
+  (project) => project.data.path === "my-nutrizen",
+)!;
+---
+
+<BaseLayout
+  title={`${data.title} : ${data.category.toLowerCase()}, réalisation web`}
+  description={`${data.description} Une réalisation Aimy Digital, agence web près de Mauléon.`}
+  image={data.image}
+>
+  <NutrizenCaseStudy />
+</BaseLayout>

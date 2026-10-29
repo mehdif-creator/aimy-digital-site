@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Recherche accent-insensible",
+    "Zéro résultat explicite",
+    "Catégorie FAQ et réponse associée",
+    "Question associée : filtres réinitialisés",
+    "Chaque catégorie journal filtre réellement les onze articles",
+    "Formulaire désactivé par défaut et erreur de saisie explicite",
+    "Erreur serveur simulée : aucune fausse réussite, données conservées",
+    "Contrat UI de réussite testé avec réponse interceptée, aucun mail envoyé",
+    "Axe après interactions formulaire"
+  ],
+  "limitations": "Réponses HTTP interceptées pour le contrat UI uniquement. PHP/SMTP réel non exécuté."
+}

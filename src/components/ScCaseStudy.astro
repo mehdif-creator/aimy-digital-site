@@ -1,0 +1,207 @@
+---
+import { Image } from "astro:assets";
+import EvidenceMotion from "./EvidenceMotion.astro";
+import CaseImage from "./CaseImage.astro";
+import home from "../../public/images/cases/sc/home.webp";
+import services from "../../public/images/cases/sc/services.webp";
+import gallery from "../../public/images/cases/sc/gallery.webp";
+import contact from "../../public/images/cases/sc/contact.webp";
+import mobile from "../../public/images/cases/sc/mobile.webp";
+import "../styles/sc-case.css";
+---
+
+<article class="sc-case evidence-case">
+  <header class="sc-opening">
+    <div class="sc-wrap">
+      <a class="case-return" href="/portfolio/">
+        Toutes les réalisations
+      </a>
+      <div class="sc-title">
+        <h1>SC Rénovation</h1>
+        <p>
+          Donner une structure
+          <br />
+          au savoir-faire.
+        </p>
+      </div>
+      <div class="sc-intro-copy">
+        <span>Site vitrine · Rénovation extérieure</span>
+        <p>
+          Des prestations identifiables, des chantiers à regarder et un chemin
+          direct vers le devis. Le métier de l’artisan devient le fil conducteur
+          du site.
+        </p>
+      </div>
+      <figure class="sc-elevation">
+        <Image
+          src={home}
+          width={1200}
+          widths={[640, 960, 1440, 2400]}
+          sizes="(max-width: 1240px) calc(100vw - 40px), 1200px"
+          format="webp"
+          quality={90}
+          loading="eager"
+          fetchpriority="high"
+          alt="Accueil réel SC Rénovation : prestations, zone d’intervention, devis et comparaison avant/après"
+        />
+        <figcaption>
+          Une entrée qui réunit le métier, le territoire et la prise de contact.
+        </figcaption>
+      </figure>
+    </div>
+  </header>
+  <section class="sc-context sc-wrap">
+    <h2>
+      Du chantier
+      <br />à l’écran.
+    </h2>
+    <div>
+      <p>
+        SC Rénovation présente des interventions sur les façades, les toitures
+        et les extérieurs, en Vendée, Maine-et-Loire et Deux-Sèvres.
+      </p>
+      <p>
+        Notre travail de mise en page organise cette offre autour de trois
+        questions : quelle prestation, quel rendu visible et comment prendre
+        contact ?
+      </p>
+    </div>
+  </section>
+  <section class="sc-designed" id="conception">
+    <div class="sc-wrap">
+      <header class="sc-section-title">
+        <p>Les choix d’interface</p>
+        <h2>
+          Ce que nous avons conçu
+          <br />
+          pour SC Rénovation
+        </h2>
+      </header>
+      <div class="sc-specimen">
+        <div class="sc-note">
+          <h3>Une offre découpée par intervention.</h3>
+          <p>
+            Nous avons regroupé les prestations dans une grille de six entrées.
+            Chaque intitulé nomme un besoin précis pour aider le visiteur à
+            repérer l’intervention qui le concerne.
+          </p>
+          <p class="sc-proof">
+            À l’écran : nettoyage de façade, démoussage, hydrofuge, dallage,
+            ravalement et peinture, chacun accompagné d’un accès « En savoir
+            plus ».
+          </p>
+        </div>
+        <figure>
+          <CaseImage
+            src={services}
+            width={760}
+            widths={[640, 960, 1520]}
+            sizes="(max-width: 759px) calc(100vw - 40px), (max-width: 1240px) 60vw, 760px"
+            quality={93}
+            alt="Grille réelle des six prestations de SC Rénovation"
+          />
+        </figure>
+      </div>
+      <div class="sc-gallery">
+        <div class="sc-gallery-copy">
+          <h3>Le chantier devient une preuve visuelle.</h3>
+          <p>
+            Le comparateur juxtapose les états d’une même intervention. Les
+            repères « Avant » et « Après » donnent un rôle précis au geste de
+            comparaison : observer la transformation présentée par l’artisan.
+          </p>
+          <p class="sc-proof">
+            À l’écran : une galerie de façades, toiture et terrasse, avec
+            curseurs de comparaison et navigation entre les réalisations.
+          </p>
+        </div>
+        <figure>
+          <CaseImage
+            src={gallery}
+            width={1200}
+            widths={[640, 960, 1440, 2400]}
+            sizes="(max-width: 1240px) calc(100vw - 40px), 1200px"
+            quality={93}
+            alt="Galerie réelle de chantiers avec repères avant/après et curseurs de comparaison"
+          />
+        </figure>
+      </div>
+      <div class="sc-specimen sc-contact-detail">
+        <figure>
+          <CaseImage
+            src={contact}
+            width={760}
+            widths={[640, 960, 1520]}
+            sizes="(max-width: 759px) calc(100vw - 40px), (max-width: 1240px) 60vw, 760px"
+            quality={93}
+            alt="Accès au devis et au téléphone dans la conclusion du site SC Rénovation"
+          />
+        </figure>
+        <div class="sc-note">
+          <h3>Deux façons de commencer l’échange.</h3>
+          <p>
+            Nous avons placé la demande de devis et l’appel côte à côte, dans
+            l’en-tête et en conclusion. Le visiteur peut choisir entre écrire
+            son besoin et contacter directement l’artisan.
+          </p>
+          <p class="sc-proof">
+            À l’écran : « Obtenir mon devis » et le numéro de téléphone restent
+            distincts, avec des traitements visuels qui permettent de les
+            reconnaître.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sc-responsive sc-wrap">
+    <div>
+      <p>Le même parcours, à portée de main</p>
+      <h2>
+        Sur mobile,
+        <br />
+        le contact reste
+        <br />
+        dans le cadre.
+      </h2>
+      <p>
+        La navigation se replie dans un menu. Le devis garde sa place dans
+        l’en-tête et une barre en bas d’écran rassemble l’appel et la demande de
+        devis.
+      </p>
+      <p>
+        Cette adaptation conserve les deux actions essentielles pendant la
+        consultation des prestations.
+      </p>
+      <a class="case-visit" href="https://sc-renovation.com/">
+        Visiter SC Rénovation
+      </a>
+    </div>
+    <figure class="sc-phone" data-evidence-motion>
+      <CaseImage
+        src={mobile}
+        width={340}
+        widths={[390, 680, 780]}
+        sizes="(max-width: 400px) calc(100vw - 64px), 340px"
+        quality={93}
+        alt="Véritable accueil mobile SC Rénovation avec menu, devis dans l’en-tête et barre de contact fixe"
+      />
+    </figure>
+  </section>
+  <section class="sc-finish">
+    <div class="sc-wrap">
+      <p>Une vitrine structurée autour du métier</p>
+      <h2>
+        Votre savoir-faire.
+        <br />
+        Un parcours pour le découvrir.
+      </h2>
+      <a class="case-contact" href="/contact/">
+        Parlons de votre site
+      </a>
+      <a class="case-return" href="/portfolio/">
+        Revenir aux réalisations
+      </a>
+    </div>
+  </section>
+</article>
+<EvidenceMotion />

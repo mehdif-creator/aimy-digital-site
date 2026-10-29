@@ -1,0 +1,21 @@
+---
+import type { Service } from "../lib/site";
+interface Props {
+  service: Service;
+}
+const { service } = Astro.props;
+---
+
+<article class="service-row">
+  <h3>
+    <a href={`/${service.path}/`}>{service.title}</a>
+  </h3>
+  <p>{service.intro}</p>
+  <a
+    class="round-link"
+    href={`/${service.path}/`}
+    aria-label={`Découvrir : ${service.title}`}
+  >
+    ↗
+  </a>
+</article>

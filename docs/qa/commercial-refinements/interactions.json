@@ -1,0 +1,13 @@
+{
+  "checks": [
+    "Recherche accent-insensible",
+    "Zéro résultat explicite",
+    "Catégorie FAQ et réponse associée",
+    "Question associée : filtres réinitialisés",
+    "Chaque catégorie journal filtre réellement les onze articles",
+    "Formulaire désactivé par défaut et erreur de saisie explicite",
+    "Accès mobile au formulaire, aucun envoi ni interception de réussite",
+    "Axe après interactions formulaire"
+  ],
+  "limitations": "Aucune requête SMTP, aucun envoi simulé. PHP/SMTP réel non exécuté."
+}

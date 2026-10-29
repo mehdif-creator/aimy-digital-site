@@ -1,0 +1,249 @@
+---
+import CommercialJourney from "./CommercialJourney.astro";
+import CommercialInteractions from "./CommercialInteractions.astro";
+import "../styles/commercial-premium.css";
+import "../styles/seo-service.css";
+const pillars = [
+  [
+    "01",
+    "Être accessible",
+    "Avant d’être trouvé, être lisible.",
+    "Vérifier les pages accessibles aux moteurs, les directives d’indexation et les erreurs d’exploration. Une page bloquée ne devient pas visible grâce à davantage de mots-clés.",
+    "Exploration → indexation",
+  ],
+  [
+    "02",
+    "Soigner la technique",
+    "Retirer les obstacles à la visite.",
+    "Chargement, affichage mobile, liens cassés et structure des pages : traiter les problèmes qui gênent les visiteurs et la compréhension du site.",
+    "Vitesse → expérience",
+  ],
+  [
+    "03",
+    "Répondre à la recherche",
+    "La bonne réponse à la bonne question.",
+    "Comprendre l’intention de recherche pour rédiger un contenu précis, utile et propre à votre activité. La qualité compte davantage que la répétition d’une expression.",
+    "Intention → réponse",
+  ],
+  [
+    "04",
+    "Présenter les services",
+    "Une page, un besoin clairement expliqué.",
+    "Décrire vos prestations, leurs destinataires et les prochaines étapes. Organiser les services aide le visiteur à trouver la réponse qui le concerne.",
+    "Service → décision",
+  ],
+  [
+    "05",
+    "Ancrer le territoire",
+    "Votre zone réelle, sans détour.",
+    "Présenter vos lieux d’intervention et vos coordonnées de manière cohérente. Aucun faux bureau ni série de pages identiques par ville.",
+    "Proximité → pertinence",
+  ],
+  [
+    "06",
+    "Fiche d’établissement",
+    "Relier le site à votre présence locale.",
+    "Vérifier les informations, catégories et liens de votre fiche Google Business Profile, selon l’éligibilité de votre activité. Les avis restent ceux de vos véritables clients.",
+    "Établissement → confiance",
+  ],
+  [
+    "07",
+    "Relier les contenus",
+    "Créer des chemins utiles.",
+    "Faire circuler le visiteur entre conseils, services et réalisations. Chaque lien doit avoir un intérêt pour la personne qui poursuit sa lecture.",
+    "Conseil → prestation",
+  ],
+  [
+    "08",
+    "Mesurer et améliorer",
+    "Observer avant de conclure.",
+    "Distinguer impressions, clics et demandes. Les données disponibles dans Search Console aident à prioriser les améliorations, sans promettre une position ou un volume de contacts.",
+    "Observation → ajustement",
+  ],
+];
+---
+
+<div class="premium seo-premium">
+  <header class="hero wrap">
+    <span class="eyebrow">Référencement naturel · Deux-Sèvres</span>
+    <div class="split">
+      <div>
+        <h1>
+          <span class="h1-kicker">
+            Référencement SEO local · Deux-Sèvres, Vendée, Maine-et-Loire
+          </span>
+          De la recherche au <em>premier contact.</em>
+        </h1>
+        <p class="intro">
+          Votre prochain client cherche déjà une solution. Aidons-le à
+          comprendre pourquoi votre entreprise peut être la bonne.
+        </p>
+        <a class="action" href="/contact/">
+          Parlons de votre visibilité <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <div class="search-scene">
+        <span class="caption">
+          Démonstration illustrative · aucun classement réel
+        </span>
+        <div class="searchbox">
+          <span aria-hidden="true">⌕</span>
+          <span>Entreprise de rénovation Cholet</span>
+        </div>
+        <div class="search-result">
+          <span class="caption">Une entreprise locale · exemple fictif</span>
+          <h2>Un projet de rénovation ?</h2>
+          <p>
+            Les prestations, la zone d’intervention et les réalisations
+            permettent de vérifier si l’entreprise répond à la recherche.
+          </p>
+          <span class="result-tags">Prestations · Réalisations · Contact</span>
+        </div>
+        <div class="search-intent">
+          <span aria-hidden="true">↳</span> Une recherche précise.
+          <br />
+          Une réponse qui l’est aussi.
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="search-journey band night" data-journey-scroll>
+    <div class="wrap">
+      <span class="eyebrow">Le parcours d’une demande</span>
+      <h2>La visibilité n’est que le début.</h2>
+      <CommercialJourney mode="seo" />
+      <ol class="journey-track">
+        {[
+          [
+            "Rechercher",
+            "Une personne exprime un besoin, un service et parfois un lieu.",
+          ],
+          [
+            "Reconnaître",
+            "Le titre et le contenu de la page répondent à cette intention.",
+          ],
+          [
+            "Comprendre",
+            "Le site explique l’offre, montre le travail et lève les doutes.",
+          ],
+          [
+            "Contacter",
+            "Un accès clair au téléphone ou au formulaire permet d’agir.",
+          ],
+        ].map(([title, copy], i) => (
+          <li>
+            <span class="journey-dot">0{i + 1}</span>
+            <h3>{title}</h3>
+            <p>{copy}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+  <section class="band wrap diagnostic" data-choice data-motion="diagnostic">
+    <span class="eyebrow">Le diagnostic · huit angles de lecture</span>
+    <h2>Où se situe le frein ?</h2>
+    <p class="intro">
+      Explorez les points à examiner. Ce module explique notre démarche ; il
+      n’analyse pas automatiquement votre site.
+    </p>
+    <div class="diagnostic-layout">
+      <div class="choices">
+        {pillars.map(([n, label], i) => (
+          <button type="button" data-select aria-controls={`pillar-${i}`}>
+            <span>{n}</span>
+            {label}
+            <span aria-hidden="true">↗</span>
+          </button>
+        ))}
+      </div>
+      <div>
+        {pillars.map(([n, label, title, copy, chain], i) => (
+          <article data-panel id={`pillar-${i}`}>
+            <span class="diagnostic-index" aria-hidden="true">
+              {n}
+            </span>
+            <p class="eyebrow">{label}</p>
+            <h3>{title}</h3>
+            <p>{copy}</p>
+            <div class="diagnostic-chain">
+              {chain.split(" → ").map((part, index) => (
+                <span data-chain-step>
+                  {index > 0 && <b aria-hidden="true"> → </b>}
+                  {part}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="seo-method band">
+    <div class="wrap split">
+      <div>
+        <span class="eyebrow">La méthode Aimy Digital</span>
+        <h2>
+          Des priorités.
+          <br />
+          Puis des progrès.
+        </h2>
+        <p>
+          Le référencement local à Mauléon, Cholet et dans le Bocage commence
+          par une connaissance de votre activité et de votre territoire réel.
+        </p>
+        <p>
+          Depuis Saint-Amand-sur-Sèvre, nous accompagnons les artisans et PME
+          des Deux-Sèvres, de Vendée et du Maine-et-Loire.
+        </p>
+      </div>
+      <div>
+        {[
+          [
+            "Observer",
+            "Audit du site, des recherches utiles et des obstacles existants.",
+          ],
+          [
+            "Prioriser",
+            "Identifier les intentions et choisir les corrections techniques et éditoriales utiles.",
+          ],
+          [
+            "Améliorer",
+            "Travailler les pages de services, les contenus, les liens et la cohérence locale.",
+          ],
+          [
+            "Suivre",
+            "Lire les indicateurs disponibles et ajuster progressivement les actions.",
+          ],
+        ].map(([title, text], i) => (
+          <div class="step-row">
+            <span class="number">0{i + 1}</span>
+            <div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="closing">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Votre visibilité mérite un état des lieux</span>
+        <h2>Partons de ce que vos clients cherchent.</h2>
+        <p>
+          Aucune première place garantie. Un travail construit autour de vos
+          services et de vos objectifs.
+        </p>
+        <a class="textual" href="/publicites-sea/">
+          Besoin d’un levier publicitaire complémentaire ?
+        </a>
+      </div>
+      <a class="action" href="/contact/">
+        Discuter de mon référencement ↗
+      </a>
+    </div>
+  </section>
+</div>
+<CommercialInteractions />

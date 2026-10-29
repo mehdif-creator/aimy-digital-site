@@ -1,0 +1,14 @@
+{
+  "title": "HT Créa Jeux",
+  "path": "ht-crea-jeux",
+  "category": "E-commerce",
+  "website": "https://htcreajeux.fr/",
+  "description": "Une boutique de jeux pour apprendre les tables de multiplication.",
+  "mission": "Présenter un catalogue pédagogique et faciliter le parcours d’achat.",
+  "details": [
+    "Une présentation des jeux et de leur usage.",
+    "Un catalogue accessible sur ordinateur et mobile.",
+    "Un parcours de découverte orienté vers les produits."
+  ],
+  "image": "/images/projects/ht-crea-jeux.webp"
+}

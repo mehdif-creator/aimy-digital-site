@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-11T05:10:51.102Z",
+  "results": [
+    {
+      "width": 1440,
+      "service": 0
+    },
+    {
+      "width": 1440,
+      "service": 1
+    },
+    {
+      "width": 1440,
+      "service": 2
+    },
+    {
+      "width": 1440,
+      "step": 0
+    },
+    {
+      "width": 1440,
+      "step": 1
+    },
+    {
+      "width": 1440,
+      "step": 2
+    },
+    {
+      "width": 1440,
+      "step": 3
+    },
+    {
+      "width": 1440,
+      "step": 0
+    },
+    {
+      "width": 1440,
+      "faq": 0
+    },
+    {
+      "width": 1440,
+      "faq": 1
+    },
+    {
+      "width": 1440,
+      "faq": 2
+    },
+    {
+      "width": 1440,
+      "faq": 3
+    },
+    {
+      "width": 1440,
+      "faq": 4
+    },
+    {
+      "width": 390,
+      "service": 0
+    },
+    {
+      "width": 390,
+      "service": 1
+    },
+    {
+      "width": 390,
+      "service": 2
+    },
+    {
+      "width": 390,
+      "step": 0
+    },
+    {
+      "width": 390,
+      "step": 1
+    },
+    {
+      "width": 390,
+      "step": 2
+    },
+    {
+      "width": 390,
+      "step": 3
+    },
+    {
+      "width": 390,
+      "step": 0
+    },
+    {
+      "width": 390,
+      "faq": 0
+    },
+    {
+      "width": 390,
+      "faq": 1
+    },
+    {
+      "width": 390,
+      "faq": 2
+    },
+    {
+      "width": 390,
+      "faq": 3
+    },
+    {
+      "width": 390,
+      "faq": 4
+    },
+    {
+      "responsive": 320
+    },
+    {
+      "responsive": 375
+    },
+    {
+      "responsive": 390
+    },
+    {
+      "responsive": 768
+    },
+    {
+      "responsive": 1024
+    },
+    {
+      "responsive": 1440
+    }
+  ],
+  "errors": []
+}

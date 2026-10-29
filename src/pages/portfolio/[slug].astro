@@ -1,0 +1,65 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
+import CTA from "../../components/CTA.astro";
+export async function getStaticPaths() {
+  return (await getCollection("cases"))
+    .filter(
+      (project) =>
+        ![
+          "ht-crea-jeux",
+          "my-nutrizen",
+          "sc-renovation",
+          "lambert-digital-pulse",
+        ].includes(project.data.path),
+    )
+    .map((project) => ({
+      params: { slug: project.data.path },
+      props: { project },
+    }));
+}
+const { data } = Astro.props.project;
+---
+
+<BaseLayout
+  title={`${data.title} : ${data.category.toLowerCase()}, réalisation web`}
+  description={`${data.description} Une réalisation Aimy Digital, agence web près de Mauléon.`}
+  image={data.image}
+>
+  <div class="container">
+    <header class="page-intro">
+      <p class="breadcrumb">
+        <a href="/">Accueil</a> / <a href="/portfolio/">Réalisations</a> /{" "}
+        {data.title}
+      </p>
+      <p class="section-note">{data.category}</p>
+      <h1>{data.title}</h1>
+      <p class="lead">{data.description}</p>
+    </header>
+    <section class="content-grid section">
+      <div>
+        <h2>Le projet</h2>
+        <p class="lead">{data.mission}</p>
+        <ul class="checklist">
+          {data.details.map((detail) => (
+            <li>{detail}</li>
+          ))}
+        </ul>
+        <Button href={data.website}>Visiter le site</Button>
+      </div>
+      <figure class="case-image">
+        <img
+          src={data.image}
+          alt={`Capture du site ${data.title}`}
+          width="779"
+          height="2560"
+        />
+        <figcaption>
+          Capture présentée dans le portfolio Aimy Digital.
+        </figcaption>
+      </figure>
+    </section>
+  </div>
+  <CTA />
+</BaseLayout>

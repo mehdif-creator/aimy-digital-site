@@ -1,0 +1,204 @@
+---
+import { Picture } from "astro:assets";
+import CaseImage from "./CaseImage.astro";
+import dashboard from "../../public/images/portfolio/my-nutrizen/dashboard.png";
+import recipe from "../../public/images/portfolio/my-nutrizen/recipe.png";
+import weekMobile from "../../public/images/portfolio/my-nutrizen/week-mobile.png";
+import recipeMobile from "../../public/images/portfolio/my-nutrizen/recipe-mobile.png";
+import "../styles/nutrizen-case.css";
+---
+
+<article class="nz-case" data-nutrizen>
+  <header class="nz-intro">
+    <div class="container">
+      <a class="nz-back" href="/portfolio/">
+        Toutes les réalisations
+      </a>
+      <div class="nz-opening">
+        <div class="nz-opening-copy">
+          <p class="nz-label">Une application pour organiser ses repas</p>
+          <h1>My NutriZen</h1>
+          <p class="nz-statement">
+            La semaine
+            <br />
+            prend forme.
+          </p>
+          <p class="nz-lead">
+            Des menus à parcourir, un repas à choisir, une recette à retrouver.
+            Une expérience qui relie la vue d’ensemble aux gestes du quotidien.
+          </p>
+          <a class="nz-link" href="#nutrizen-semaine">
+            Explorer l’expérience <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <figure class="nz-intro-phone">
+          <div class="nz-phone-label">La semaine, à portée de main</div>
+          <Picture
+            src={weekMobile}
+            width={531}
+            widths={[320, 420, 531]}
+            sizes="(max-width: 759px) 240px, 260px"
+            formats={["webp"]}
+            fallbackFormat="webp"
+            quality={85}
+            loading="eager"
+            fetchpriority="high"
+            alt="Interface mobile réelle My NutriZen : choix du jour, déjeuner et dîner, accès aux recettes."
+          />
+          <figcaption>Le planning dans l’application mobile.</figcaption>
+        </figure>
+      </div>
+      <div class="nz-route" aria-label="Parcours présenté">
+        <span>La semaine</span>
+        <i aria-hidden="true"></i>
+        <span>Le repas</span>
+        <i aria-hidden="true"></i>
+        <span>La recette</span>
+      </div>
+    </div>
+  </header>
+  <section
+    class="nz-week"
+    id="nutrizen-semaine"
+    aria-labelledby="nz-week-title"
+  >
+    <div class="container">
+      <div class="nz-section-head">
+        <p>Organiser sans perdre le fil</p>
+        <h2 id="nz-week-title">
+          Voir les jours.
+          <br />
+          Retrouver ses repas.
+        </h2>
+      </div>
+      <div class="nz-week-story">
+        <figure class="nz-week-screen">
+          <div class="nz-screen-label">
+            My NutriZen <span>Tableau de bord · vue ordinateur</span>
+          </div>
+          <div
+            class="nz-week-window"
+            tabindex="0"
+            role="region"
+            aria-label="Menus de la semaine, capture défilable"
+          >
+            <CaseImage
+              src={dashboard}
+              width={615}
+              widths={[615, 920, 1230]}
+              sizes="(max-width: 759px) calc(100vw - 40px), (max-width: 1100px) 52vw, 600px"
+              quality={94}
+              alt="Extrait du tableau de bord fourni : sept jours de menus avec déjeuner et dîner, boutons Valider, Swap et Voir la recette."
+            />
+          </div>
+          <figcaption>
+            Un extrait authentique du tableau de bord, centré sur les menus.
+          </figcaption>
+        </figure>
+        <div class="nz-week-notes">
+          <div>
+            <span class="nz-step">01 / Parcourir</span>
+            <h3>Une semaine, d’un seul regard.</h3>
+            <p>
+              Les repas sont regroupés par jour. Les photos donnent un premier
+              repère ; les intitulés et les temps affichés permettent de lire le
+              menu plus précisément.
+            </p>
+          </div>
+          <div>
+            <span class="nz-step">02 / Choisir</span>
+            <h3>Du menu au repas.</h3>
+            <p>
+              Chaque proposition garde ses actions à proximité : valider,
+              changer de repas ou ouvrir la recette. La navigation suit ce que
+              l’on souhaite faire.
+            </p>
+          </div>
+          <div>
+            <span class="nz-step">03 / Retrouver</span>
+            <h3>Un jour à la fois, sur mobile.</h3>
+            <p>
+              Sur téléphone, les jours deviennent une navigation compacte.
+              Déjeuner et dîner se lisent l’un après l’autre, dans une colonne
+              adaptée à l’écran.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="nz-recipe" aria-labelledby="nz-recipe-title">
+    <div class="container">
+      <div class="nz-recipe-heading">
+        <p>Passer à la préparation</p>
+        <h2 id="nz-recipe-title">
+          L’envie en image.
+          <br />
+          La recette en détail.
+        </h2>
+        <p>
+          Photo du plat, ingrédients, quantités et instructions : la fiche
+          rassemble les éléments utiles à la préparation. Sur mobile, la même
+          lecture se poursuit verticalement.
+        </p>
+      </div>
+      <div class="nz-recipe-composition">
+        <figure class="nz-recipe-desktop">
+          <CaseImage
+            src={recipe}
+            width={515}
+            widths={[515, 780, 1030]}
+            sizes="(max-width: 759px) calc(100vw - 40px), 515px"
+            quality={94}
+            alt="Fiche recette réelle sur ordinateur : poêlée marocaine de poulet, photo, temps, ingrédients et instructions."
+          />
+          <figcaption>La fiche complète sur ordinateur.</figcaption>
+        </figure>
+        <figure class="nz-recipe-phone">
+          <CaseImage
+            src={recipeMobile}
+            width={265}
+            widths={[320, 420, 531]}
+            sizes="(max-width: 759px) 240px, 265px"
+            quality={94}
+            alt="La même recette sur mobile, avec les ingrédients puis les étapes de préparation."
+          />
+          <figcaption>La même recette sur téléphone.</figcaption>
+        </figure>
+      </div>
+      <p class="nz-proof-note">
+        Captures de l’application fournies pour ce projet. Les cadrages
+        privilégient les interfaces et excluent les informations de compte.
+      </p>
+    </div>
+  </section>
+  <section class="nz-finish">
+    <div class="container">
+      <p>Un parcours pensé autour de l’usage</p>
+      <h2>
+        Une idée utile.
+        <br />
+        Une expérience à vivre.
+      </h2>
+      <div class="nz-finish-bottom">
+        <p>
+          My NutriZen relie l’organisation des repas à leur préparation. Vous
+          avez, vous aussi, une application à rendre claire et agréable à
+          utiliser ?
+        </p>
+        <div>
+          <a class="nz-contact" href="/contact/">
+            Parlons de votre projet <span aria-hidden="true">↗</span>
+          </a>
+          <a class="nz-back" href="/portfolio/">
+            Retour aux réalisations
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+<script>
+  import { initNutrizenCase } from "../lib/nutrizen-case";
+  initNutrizenCase();
+</script>

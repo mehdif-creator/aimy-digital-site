@@ -1,0 +1,218 @@
+---
+import { Image } from "astro:assets";
+import EvidenceMotion from "./EvidenceMotion.astro";
+import CaseImage from "./CaseImage.astro";
+import home from "../../public/images/showcase/lambert-digital-pulse.webp";
+import identity from "../../public/images/cases/lambert/identity.png";
+import position from "../../public/images/cases/lambert/position.png";
+import portrait from "../../public/images/cases/lambert/portrait.png";
+import "../styles/lambert-case.css";
+---
+
+<article class="lambert-case evidence-case">
+  <header class="ldp-opening">
+    <div class="ldp-wrap">
+      <a class="case-return" href="/portfolio/">
+        Toutes les réalisations
+      </a>
+      <h1>
+        Lambert
+        <br />
+        Digital Pulse
+      </h1>
+      <div class="ldp-opening-bottom">
+        <p>
+          Donner une voix
+          <br />à une présence digitale.
+        </p>
+        <span>
+          Site vitrine
+          <br />
+          Community management
+        </span>
+      </div>
+    </div>
+    <div class="ldp-stage">
+      <figure>
+        <Image
+          src={home}
+          width={960}
+          widths={[640, 960, 1440, 1920]}
+          sizes="(max-width: 1000px) calc(100vw - 40px), 960px"
+          format="webp"
+          quality={94}
+          loading="eager"
+          fetchpriority="high"
+          alt="Capture publiée du site Lambert Digital Pulse : identité LDP, métier, localité et accès aux services"
+        />
+        <figcaption>Le site du projet · Vue ordinateur archivée</figcaption>
+      </figure>
+    </div>
+  </header>
+  <section class="ldp-context ldp-wrap">
+    <p class="ldp-thesis">
+      Une personne.
+      <br />
+      Un métier.
+      <br />
+      Un point de contact.
+    </p>
+    <div>
+      <h2>Faire comprendre l’offre dès l’accueil.</h2>
+      <p>
+        Lambert Digital Pulse présente une activité de community management à
+        Bellevigne-en-Layon. Le site associe cette spécialité à un visage et à
+        des accès explicites vers les services et la prise de rendez-vous.
+      </p>
+      <p>
+        Notre contribution se lit dans cette organisation de l’interface :
+        rendre le positionnement identifiable, installer l’univers de marque et
+        proposer une prochaine étape.
+      </p>
+    </div>
+  </section>
+  <section class="ldp-designed" id="conception">
+    <div class="ldp-wrap">
+      <header>
+        <p>De la marque au parcours</p>
+        <h2>
+          Ce que nous avons conçu
+          <br />
+          pour Lambert Digital Pulse
+        </h2>
+      </header>
+      <div class="ldp-brand">
+        <div class="ldp-editorial">
+          <h3>Une identité qui habite la navigation.</h3>
+          <p>
+            Nous avons intégré l’emblème LDP et son univers graphique dans
+            l’en-tête. Le décor numérique donne une continuité entre la marque
+            et le menu, sans séparer l’identité des accès utiles.
+          </p>
+          <p class="ldp-evidence">
+            Le détail réel montre le logo, les rubriques, la demande de devis et
+            les liens sociaux réunis dans un même bandeau.
+          </p>
+        </div>
+        <figure>
+          <CaseImage
+            src={identity}
+            width={530}
+            widths={[640, 840, 1060]}
+            sizes="(max-width: 570px) calc(100vw - 40px), 530px"
+            quality={95}
+            alt="Détail authentique de l’en-tête LDP : emblème, navigation, devis et réseaux sociaux"
+          />
+          <figcaption>
+            Identité et navigation, dans le même champ visuel.
+          </figcaption>
+        </figure>
+      </div>
+      <div class="ldp-focus">
+        <figure data-evidence-motion>
+          <CaseImage
+            src={position}
+            width={305}
+            widths={[420, 610]}
+            sizes="(max-width: 345px) calc(100vw - 40px), 305px"
+            quality={95}
+            alt="Détail réel du titre Community Manager à Bellevigne-en-Layon et des boutons rendez-vous et services"
+          />
+          <figcaption>
+            Le premier écran, cadré sur le message et les actions.
+          </figcaption>
+        </figure>
+        <div class="ldp-focus-copy">
+          <h3>Le métier avant le discours.</h3>
+          <p>
+            Le titre place « Community Manager » et « Bellevigne-en-Layon »
+            avant le nom de marque. Cette hiérarchie permet d’identifier
+            l’activité et son ancrage local dès le début de la lecture.
+          </p>
+          <p class="ldp-evidence">
+            Dans l’interface, trois niveaux se succèdent : le métier et la
+            ville, le nom Lambert Digital Pulse, puis une phrase qui précise
+            l’offre de communication.
+          </p>
+          <div class="ldp-path">
+            <h3>Explorer ou prendre rendez-vous.</h3>
+            <p>
+              Deux boutons accompagnent ce message : « Découvrir mes services »
+              pour poursuivre la lecture, « Prendre rendez-vous » pour engager
+              un échange. Nous avons donné une place explicite à ces deux
+              intentions, dès l’accueil.
+            </p>
+            <p class="ldp-evidence">
+              Le cadrage présente les libellés réellement intégrés au site. Les
+              prestations de community management restent celles du client.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ldp-person ldp-wrap">
+    <div>
+      <h2>
+        Une présence
+        <br />
+        qui se présente.
+      </h2>
+      <p>
+        La rubrique « Qui suis-je ? » prolonge l’accueil avec un portrait
+        illustré et une présentation personnelle. Le visiteur retrouve le même
+        univers graphique tout en découvrant la personne derrière l’activité.
+      </p>
+      <p>
+        Le portrait et la présentation partagent un même espace : l’identité
+        visuelle accompagne ainsi la découverte de l’interlocuteur.
+      </p>
+    </div>
+    <figure>
+      <CaseImage
+        src={portrait}
+        width={285}
+        widths={[420, 570]}
+        sizes="(max-width: 325px) calc(100vw - 40px), 285px"
+        quality={95}
+        alt="Rubrique Qui suis-je du site Lambert Digital Pulse, avec portrait illustré et présentation"
+      />
+      <figcaption>Détail de la capture publiée du projet.</figcaption>
+    </figure>
+  </section>
+  <section class="ldp-outcome">
+    <div class="ldp-wrap">
+      <h2>
+        Un positionnement lisible.
+        <br />
+        Une identité présente.
+        <br />
+        Un échange accessible.
+      </h2>
+      <p>
+        L’accueil réunit une présentation du métier, un univers de marque, une
+        introduction personnelle et deux chemins pour poursuivre : découvrir les
+        services ou entrer en contact.
+      </p>
+      <a class="case-visit" href="https://lambertdigitalpulse.fr/">
+        Visiter Lambert Digital Pulse
+      </a>
+    </div>
+  </section>
+  <section class="ldp-finish">
+    <div class="ldp-wrap">
+      <p>À votre tour de prendre la parole.</p>
+      <h2>
+        Donnons une forme
+        <br />à votre projet.
+      </h2>
+      <a class="case-contact" href="/contact/">
+        Parlons de votre site
+      </a>
+      <a class="case-return" href="/portfolio/">
+        Revenir aux réalisations
+      </a>
+    </div>
+  </section>
+</article>
+<EvidenceMotion />

@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  project: CollectionEntry<"cases">;
+  heading?: "h2" | "h3";
+  priority?: boolean;
+}
+const { data } = Astro.props.project;
+const { heading: Heading = "h3", priority = false } = Astro.props;
+---
+
+<article class="project">
+  <a
+    class={`project-visual project-${data.path}`}
+    href={`/portfolio/${data.path}/`}
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <img
+      src={data.image}
+      width="779"
+      height="2560"
+      loading={priority ? "eager" : "lazy"}
+      fetchpriority={priority ? "high" : "auto"}
+      alt=""
+    />
+  </a>
+  <div class="project-caption">
+    <div>
+      <Heading>
+        <a href={`/portfolio/${data.path}/`}>{data.title}</a>
+      </Heading>
+      <p>{data.description}</p>
+    </div>
+    <span>{data.category}</span>
+  </div>
+</article>

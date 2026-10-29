@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { company } from "../lib/company";
+import { site } from "../lib/site";
+import "../styles/legal.css";
+---
+
+<BaseLayout
+  title="Mentions légales"
+  description="Identification d’AIMY DIGITAL, SASU immatriculée au RCS de Niort, et informations légales du site."
+>
+  <article class="legal-page container">
+    <header class="legal-heading">
+      <p>Informations sur le site</p>
+      <h1>Mentions légales</h1>
+      <p>Mise à jour le 13 octobre 2026.</p>
+    </header>
+    <nav class="legal-index" aria-label="Sommaire des mentions légales">
+      <a href="#editeur">Éditeur</a>
+      <a href="#publication">Publication</a>
+      <a href="#hebergement">Hébergement</a>
+      <a href="#droits">Contenus et droits</a>
+      <a href="#donnees">Données personnelles</a>
+    </nav>
+    <section id="editeur">
+      <h2>Éditeur du site</h2>
+      <dl class="legal-facts">
+        <div>
+          <dt>Dénomination sociale</dt>
+          <dd>{company.legalName}</dd>
+        </div>
+        <div>
+          <dt>Forme juridique</dt>
+          <dd>{company.form}</dd>
+        </div>
+        <div>
+          <dt>Capital social</dt>
+          <dd>{company.capital}</dd>
+        </div>
+        <div>
+          <dt>Siège social</dt>
+          <dd>
+            {company.street}, {company.postalCode} {company.city},{" "}
+            {company.country}
+          </dd>
+        </div>
+        <div>
+          <dt>SIREN</dt>
+          <dd>{company.siren}</dd>
+        </div>
+        <div>
+          <dt>SIRET</dt>
+          <dd>{company.siret}</dd>
+        </div>
+        <div>
+          <dt>Immatriculation</dt>
+          <dd>
+            {company.siren} RCS {company.rcs}
+          </dd>
+        </div>
+        <div>
+          <dt>TVA intracommunautaire</dt>
+          <dd>{company.vat}</dd>
+        </div>
+        <div>
+          <dt>Code APE</dt>
+          <dd>{company.ape}</dd>
+        </div>
+        <div>
+          <dt>Début d’activité</dt>
+          <dd>{company.started}</dd>
+        </div>
+      </dl>
+      <p>
+        Contact : <a href={`mailto:${site.email}`}>{site.email}</a> ·{" "}
+        <a href={`tel:${site.tel}`}>{site.phone}</a>.
+      </p>
+      <p>
+        Site : <a href={site.url}>aimy-digital.fr</a>.
+      </p>
+    </section>
+    <section id="publication">
+      <h2>Directeur de la publication</h2>
+      <p>
+        {company.publicationDirector}, {company.publicationRole}.
+      </p>
+    </section>
+    <section id="hebergement">
+      <h2>Hébergement</h2>
+      <p>Le nouveau site Astro sera hébergé par o2switch.</p>
+      <p>
+        o2switch
+        <br />
+        Chemin des Pardiaux, 63000 Clermont-Ferrand, France
+        <br />
+        <a href="tel:+33444446040">04 44 44 60 40</a>
+        <br />
+        <a href="https://www.o2switch.fr/">www.o2switch.fr</a>
+      </p>
+    </section>
+    <section id="droits">
+      <h2>Contenus et propriété intellectuelle</h2>
+      <p>
+        Les textes, photographies, illustrations, marques, captures de sites et
+        éléments logiciels présentés peuvent relever de droits détenus par AIMY
+        DIGITAL, ses clients ou des tiers. Leur présence sur ce site n’emporte
+        aucune cession de droits au visiteur.
+      </p>
+      <p>
+        Toute réutilisation doit respecter les autorisations des titulaires
+        concernés, les licences applicables et les exceptions prévues par la
+        loi. Les marques et réalisations citées restent rattachées à leurs
+        titulaires respectifs ; AIMY DIGITAL ne revendique pas la propriété
+        exclusive de l’ensemble de ces éléments.
+      </p>
+      <p>
+        Pour une demande relative à un contenu ou à sa réutilisation, écrivez à{" "}
+        <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+    </section>
+    <section id="donnees">
+      <h2>Données personnelles et cookies</h2>
+      <p>
+        Consultez la{" "}
+        <a href="/politique-de-confidentialite/">
+          politique de confidentialité
+        </a>{" "}
+        pour les traitements liés au contact et l’exercice de vos droits.
+      </p>
+      <p>
+        Les informations sur les{" "}
+        <a href="/politique-de-confidentialite/#cookies">
+          cookies et le stockage local
+        </a>{" "}
+        sont regroupées dans cette politique. Les préférences sont accessibles
+        en pied de page.
+      </p>
+    </section>
+  </article>
+</BaseLayout>

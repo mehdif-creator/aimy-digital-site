@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CreationService from "../components/CreationService.astro";
+import regular from "@fontsource/manrope/files/manrope-latin-400-normal.woff2?url";
+import semibold from "@fontsource/manrope/files/manrope-latin-600-normal.woff2?url";
+import bold from "@fontsource/manrope/files/manrope-latin-700-normal.woff2?url";
+---
+
+<BaseLayout
+  title="Création de sites internet à Mauléon et Cholet"
+  description="Aimy Digital conçoit votre site vitrine, boutique ou refonte autour de votre métier. Projets réels, parcours mobile et accompagnement dans le Bocage."
+>
+  <Fragment slot="head">
+    {[regular, semibold, bold].map((href) => (
+      <link
+        rel="preload"
+        href={href}
+        as="font"
+        type="font/woff2"
+        crossorigin="anonymous"
+      />
+    ))}
+  </Fragment>
+  <CreationService />
+</BaseLayout>

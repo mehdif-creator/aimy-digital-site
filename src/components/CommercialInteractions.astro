@@ -1,0 +1,264 @@
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+  document.querySelectorAll<HTMLElement>("[data-choice]").forEach((root) => {
+    const buttons = Array.from(
+      root.querySelectorAll<HTMLButtonElement>("[data-select]"),
+    );
+    const panels = Array.from(
+      root.querySelectorAll<HTMLElement>("[data-panel]"),
+    );
+    let previous = -1;
+    const activate = (index: number) => {
+      if (index === previous) return;
+      previous = index;
+      buttons.forEach((button, i) =>
+        button.setAttribute("aria-pressed", String(i === index)),
+      );
+      panels.forEach((panel, i) => {
+        panel.hidden = i !== index;
+      });
+      root.dataset.active = String(index);
+      const panel = panels[index];
+      if (panel) {
+        gsap.killTweensOf([
+          panel,
+          ...panel.querySelectorAll("[data-chain-step], figure, .service-map"),
+        ]);
+        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          const parts = panel.querySelectorAll("[data-chain-step]");
+          const visual = panel.querySelector("figure, .service-map");
+          if (visual)
+            gsap.fromTo(
+              visual,
+              {
+                clipPath:
+                  root.dataset.motion === "workshop"
+                    ? "inset(0 0 100% 0)"
+                    : "inset(0 100% 0 0)",
+              },
+              {
+                clipPath: "inset(0 0 0 0)",
+                duration: 0.65,
+                ease: "power3.inOut",
+                clearProps: "clipPath",
+                overwrite: true,
+              },
+            );
+          if (parts.length)
+            gsap.fromTo(
+              parts,
+              { y: 16, opacity: 0.5 },
+              {
+                y: 0,
+                opacity: 1,
+                stagger: 0.09,
+                duration: 0.45,
+                clearProps: "transform,opacity",
+                overwrite: true,
+              },
+            );
+        }
+      }
+      const planes = root.querySelectorAll("[data-layer-plane]");
+      if (planes.length) {
+        const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        planes.forEach((plane, i) =>
+          gsap.to(plane, {
+            x: i === index ? 28 : 0,
+            y: i < index ? -8 : i > index ? 8 : 0,
+            opacity: i === index ? 1 : 0.55,
+            duration: reduced ? 0 : 0.6,
+            ease: "power3.inOut",
+            overwrite: true,
+          }),
+        );
+      }
+      root.dispatchEvent(new CustomEvent("choice-change", { detail: index }));
+      ScrollTrigger.refresh();
+    };
+    buttons.forEach((button, i) =>
+      button.addEventListener("click", () => activate(i)),
+    );
+    root.classList.add("is-interactive");
+    activate(0);
+  });
+  document.querySelectorAll<HTMLElement>("[data-journey]").forEach((scene) => {
+    const board = scene.querySelector<HTMLElement>(".journey-board")!;
+    const token = scene.querySelector<HTMLElement>(".journey-traveller")!;
+    const stations = Array.from(
+      scene.querySelectorAll<HTMLElement>("[data-station]"),
+    );
+    const progress = scene.querySelector(".journey-wire span");
+    const scrollRoot = scene.closest<HTMLElement>("[data-journey-scroll]");
+    const choiceRoot = scene.closest("[data-choice]");
+    const controls = Array.from(
+      scene.querySelectorAll<HTMLButtonElement>("[data-journey-select]"),
+    );
+    let selected = 0;
+    let manual = false;
+    const reduced = matchMedia("(prefers-reduced-motion: reduce)");
+    const show = (index: number, immediate = false) => {
+      selected = index;
+      scene.dataset.step = String(index);
+      controls.forEach((button, i) => {
+        button.disabled = false;
+        button.setAttribute("aria-pressed", String(i === index));
+      });
+      const duration = immediate || reduced.matches ? 0 : 0.8;
+      const stop = stations[index].querySelector<HTMLElement>(".station-stop")!;
+      const a = stop.getBoundingClientRect(),
+        b = board.getBoundingClientRect();
+      gsap.to(token, {
+        x: Math.min(a.left - b.left, board.clientWidth - token.offsetWidth),
+        y: a.top - b.top - 35,
+        visibility: "visible",
+        duration,
+        ease: "power3.inOut",
+        overwrite: true,
+      });
+      gsap.to(progress, {
+        scaleX: (a.left - b.left) / (board.clientWidth - 32),
+        duration,
+        ease: "power3.inOut",
+        overwrite: true,
+      });
+      stations.forEach((station, i) => {
+        const visual =
+          station.querySelector<HTMLElement>(".station-interface")!;
+        gsap.to(visual, {
+          y: i === index ? -8 : 0,
+          duration,
+          overwrite: true,
+        });
+        station.dataset.current = String(i === index);
+      });
+    };
+    controls.forEach((button, i) =>
+      button.addEventListener("click", () => {
+        manual = true;
+        if (choiceRoot)
+          choiceRoot
+            .querySelectorAll<HTMLButtonElement>("[data-select]")
+            [i]?.click();
+        else show(i);
+      }),
+    );
+    choiceRoot?.addEventListener("choice-change", ((
+      event: CustomEvent<number>,
+    ) => show(event.detail)) as EventListener);
+    const mm = gsap.matchMedia();
+    if (scrollRoot)
+      mm.add(
+        "(min-width: 701px) and (prefers-reduced-motion: no-preference)",
+        () => {
+          ScrollTrigger.create({
+            trigger: board,
+            start: "top 85%",
+            end: "bottom 35%",
+            onUpdate: (self) => {
+              if (!manual) {
+                const next = Math.min(3, Math.floor(self.progress * 4));
+                if (next !== selected) show(next);
+              }
+            },
+          });
+        },
+      );
+    reduced.addEventListener("change", () => show(selected, true));
+    window.addEventListener("resize", () => show(selected, true));
+    document.fonts.ready.then(() => show(selected, true));
+    show(0, true);
+  });
+  // A runtime preference change must also stop in-flight reveals and layer motion.
+  matchMedia("(prefers-reduced-motion: reduce)").addEventListener(
+    "change",
+    (event) => {
+      if (!event.matches) return;
+      const parts = document.querySelectorAll<HTMLElement>(
+        ".premium [data-panel], .premium [data-chain-step], .premium figure, .premium .service-map, .premium [data-layer-plane]",
+      );
+      gsap.killTweensOf(parts);
+      requestAnimationFrame(() =>
+        parts.forEach((part) => {
+          for (const prop of ["transform", "opacity", "clip-path"])
+            part.style.removeProperty(prop);
+        }),
+      );
+    },
+  );
+  const normalize = (text: string) =>
+    text
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  document.querySelectorAll<HTMLElement>("[data-filter]").forEach((root) => {
+    const input = root.querySelector<HTMLInputElement>("input[type=search]");
+    const buttons = Array.from(
+      root.querySelectorAll<HTMLButtonElement>("[data-category]"),
+    );
+    const items = Array.from(root.querySelectorAll<HTMLElement>("[data-item]"));
+    let category = "all";
+    const update = () => {
+      let count = 0;
+      items.forEach((item) => {
+        const show =
+          (category === "all" ||
+            (item.dataset.item || "").split("|").includes(category)) &&
+          normalize(item.textContent || "").includes(
+            normalize(input?.value.trim() || ""),
+          );
+        item.hidden = !show;
+        if (show) count++;
+      });
+      const status = root.querySelector<HTMLElement>("[data-count]");
+      if (status)
+        status.textContent = count
+          ? `${count} résultat${count > 1 ? "s" : ""}`
+          : "Aucun résultat. Essayez un autre mot ou toutes les catégories.";
+      buttons.forEach((b) =>
+        b.setAttribute("aria-pressed", String(b.dataset.category === category)),
+      );
+    };
+    buttons.forEach((button) =>
+      button.addEventListener("click", () => {
+        category = button.dataset.category!;
+        update();
+      }),
+    );
+    input?.addEventListener("input", update);
+    root.addEventListener("reset-filter", () => {
+      category = "all";
+      if (input) input.value = "";
+      update();
+    });
+    root
+      .querySelectorAll<HTMLElement>("[data-filter-controls]")
+      .forEach((el) => (el.hidden = false));
+    update();
+  });
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+    const search = document.querySelector(".search-scene .searchbox");
+    if (search)
+      gsap.from(search, {
+        clipPath: "inset(0 100% 0 0)",
+        duration: 0.85,
+        ease: "power2.out",
+        clearProps: "clipPath",
+      });
+    document.querySelectorAll<HTMLElement>("[data-draw]").forEach((line) => {
+      gsap.from(line, {
+        scaleX: 0,
+        transformOrigin: "left",
+        ease: "none",
+        scrollTrigger: {
+          trigger: line.closest("section"),
+          start: "top 75%",
+          end: "bottom 65%",
+          scrub: 0.4,
+        },
+      });
+    });
+  });
+</script>

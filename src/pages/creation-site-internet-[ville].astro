@@ -1,0 +1,364 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BocageMap from "../components/BocageMap.astro";
+import ProjectPreview from "../components/ProjectPreview.astro";
+import TrustSection from "../components/TrustSection.astro";
+import FAQ from "../components/FAQ.astro";
+import Reviews from "../components/Reviews.astro";
+import { googleReviews } from "../data/reviews";
+import { cities, type City } from "../data/cities";
+import { site } from "../lib/site";
+export const getStaticPaths = () =>
+  cities.map((city) => ({ params: { ville: city.slug }, props: { city } }));
+const { city } = Astro.props as { city: City };
+const services = [
+  {
+    href: "/creation-de-sites-internet/",
+    title: "Création de sites internet",
+    text: "Vitrine, boutique ou refonte, pensés pour votre métier.",
+  },
+  {
+    href: "/referencement-seo/",
+    title: "Référencement SEO local",
+    text: `Être trouvé quand on cherche votre activité ${city.at}.`,
+  },
+  {
+    href: "/publicites-sea/",
+    title: "Publicité Google et Meta",
+    text: "Des campagnes locales pour accélérer les demandes.",
+  },
+  {
+    href: "/maintenance-et-securite/",
+    title: "Maintenance et sécurité",
+    text: "Un site à jour, sauvegardé et rapide dans la durée.",
+  },
+];
+---
+
+<BaseLayout title={city.title} description={city.description} faq={city.faq}>
+  <section class="city-hero">
+    <div class="container city-hero-layout">
+      <div>
+        <h1>
+          <span class="h1-kicker">
+            Agence web · {city.department} ({city.short})
+          </span>
+          Création de site internet <em>{city.at}</em>
+        </h1>
+        <p class="city-headline">{city.headline}</p>
+        <p class="city-lead">{city.lead}</p>
+        <div class="city-actions">
+          <a class="city-cta" href="/contact/">
+            Demander mon devis gratuit <span aria-hidden="true">↗</span>
+          </a>
+          <a class="city-phone" href={`tel:${site.tel}`}>
+            <span aria-hidden="true">✆</span>
+            {site.phone}
+          </a>
+        </div>
+        <p class="city-reassure">
+          <span aria-hidden="true"></span>
+          {googleReviews.rating} ★ sur Google · Devis gratuit sous 24 h
+        </p>
+      </div>
+      <ul class="city-needs" aria-label={`Projets fréquents ${city.at}`}>
+        {city.needs.map((need, i) => (
+          <li>
+            <span aria-hidden="true">0{i + 1}</span>
+            {need}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="city-context container" aria-labelledby="city-context-title">
+    <h2 id="city-context-title">
+      Pourquoi un site pensé pour <em>{city.name}</em> ?
+    </h2>
+    <div class="city-cards">
+      {city.context.map((item) => (
+        <article>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="city-services" aria-labelledby="city-services-title">
+    <div class="container">
+      <h2 id="city-services-title">Tout ce qu’il faut pour être choisi.</h2>
+      <div class="city-service-grid">
+        {services.map((s) => (
+          <a href={s.href}>
+            <h3>{s.title}</h3>
+            <p>{s.text}</p>
+            <span aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <BocageMap current={city.slug} heading={`Proche ${city.of}.`} />
+  <div class="city-proof">
+    <ProjectPreview />
+    <TrustSection />
+  </div>
+  <Reviews />
+
+  <section class="city-faq container" aria-labelledby="city-faq-title">
+    <h2 id="city-faq-title">Vos questions, {city.at}.</h2>
+    <FAQ items={city.faq} />
+  </section>
+
+  <section class="city-closing">
+    <div class="container">
+      <p>Votre projet {city.at} commence par un échange.</p>
+      <a class="city-cta" href="/contact/">
+        Parlons de votre site <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .city-hero {
+    background: radial-gradient(
+      ellipse at 85% 40%,
+      #123b59 0,
+      #08192b 45%,
+      #050d1a 80%
+    );
+    color: #edf6ff;
+    padding-block: clamp(4rem, 9vw, 8rem);
+    margin-top: -1px;
+  }
+  .city-hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: end;
+  }
+  .city-hero h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 6vw, 5.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+  .city-hero h1 em {
+    display: block;
+    font-style: normal;
+    color: #69caff;
+  }
+  .city-headline {
+    margin: 2rem 0 0.8rem;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+  .city-lead {
+    max-width: 48ch;
+    color: #b6cbd8;
+    line-height: 1.65;
+  }
+  .city-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.6rem;
+    align-items: center;
+    margin-top: 2.2rem;
+  }
+  .city-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.4rem;
+    min-height: 56px;
+    padding: 0 1.6rem;
+    border-radius: 100px;
+    background: #0670ad;
+    color: #fff;
+    font-weight: 700;
+    transition:
+      background 0.2s,
+      transform 0.2s;
+  }
+  .city-cta:hover {
+    background: #055a8c;
+    transform: translateY(-2px);
+  }
+  .city-phone {
+    font-weight: 700;
+    border-bottom: 1px solid #69caff;
+  }
+  .city-reassure {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+    font-size: 0.8rem;
+    color: #9bb5ce;
+  }
+  .city-reassure span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3ddc97;
+    box-shadow: 0 0 12px #3ddc97;
+  }
+  .city-needs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #2b425a;
+  }
+  .city-needs li {
+    display: flex;
+    gap: 1rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid #2b425a;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .city-needs li span {
+    font:
+      0.68rem ui-monospace,
+      monospace;
+    color: #69caff;
+    padding-top: 0.3rem;
+  }
+  .city-context {
+    padding-block: clamp(4.5rem, 9vw, 7.5rem);
+  }
+  .city-context h2,
+  .city-services h2,
+  .city-faq h2 {
+    margin: 0 0 2.6rem;
+    max-width: 18ch;
+    font-size: clamp(2rem, 4vw, 3.3rem);
+    line-height: 1.04;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+  }
+  .city-context h2 em {
+    font-style: normal;
+    color: #0670ad;
+  }
+  .city-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+  .city-cards article {
+    padding: 1.8rem;
+    border: 1px solid #c3d4df;
+    border-radius: 1.2rem;
+    background: #fff;
+    transition:
+      transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+      box-shadow 0.4s;
+  }
+  .city-cards article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 50px -30px #07172644;
+  }
+  .city-cards h3 {
+    margin: 0 0 0.8rem;
+    font-size: 1.25rem;
+    letter-spacing: -0.03em;
+  }
+  .city-cards p {
+    margin: 0;
+    color: #476173;
+    line-height: 1.65;
+    font-size: 0.95rem;
+  }
+  .city-services {
+    padding-block: clamp(4.5rem, 9vw, 7.5rem);
+    background: #071726;
+    color: #edf6ff;
+  }
+  .city-service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .city-service-grid a {
+    position: relative;
+    display: block;
+    min-height: 200px;
+    padding: 1.6rem;
+    border: 1px solid #2b425a;
+    border-radius: 1.2rem;
+    transition:
+      border-color 0.3s,
+      background 0.3s;
+  }
+  .city-service-grid a:hover {
+    border-color: #69caff;
+    background: #0d2236;
+  }
+  .city-service-grid h3 {
+    margin: 0 0 0.7rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+  }
+  .city-service-grid p {
+    margin: 0;
+    color: #9bb5ce;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+  .city-service-grid span {
+    position: absolute;
+    right: 1.4rem;
+    bottom: 1.2rem;
+    color: #69caff;
+    font-size: 1.3rem;
+  }
+  .city-proof {
+    background: linear-gradient(#f5f7f8, #e5eff6);
+  }
+  .city-faq {
+    padding-block: clamp(4.5rem, 9vw, 7.5rem);
+  }
+  .city-closing {
+    padding-block: clamp(4rem, 8vw, 6rem);
+    background: #071726;
+    color: #edf6ff;
+  }
+  .city-closing .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem 3rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .city-closing p {
+    margin: 0;
+    max-width: 20ch;
+    font-size: clamp(1.8rem, 3.6vw, 3rem);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    font-weight: 600;
+  }
+  @media (max-width: 1000px) {
+    .city-service-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 760px) {
+    .city-hero-layout,
+    .city-cards {
+      grid-template-columns: 1fr;
+    }
+    .city-service-grid {
+      grid-template-columns: 1fr;
+    }
+    .city-service-grid a {
+      min-height: 0;
+    }
+  }
+</style>

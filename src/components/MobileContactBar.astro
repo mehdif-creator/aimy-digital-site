@@ -1,0 +1,78 @@
+---
+import { site } from "../lib/site";
+---
+
+<nav class="contact-bar" aria-label="Contact rapide">
+  <a class="contact-bar-call" href={`tel:${site.tel}`}>
+    <span aria-hidden="true">✆</span> Appeler
+  </a>
+  <a class="contact-bar-project" href="/contact/">
+    Parler de mon projet <span aria-hidden="true">↗</span>
+  </a>
+</nav>
+
+<style>
+  .contact-bar {
+    display: none;
+  }
+  @media (max-width: 1000px) {
+    .contact-bar {
+      position: fixed;
+      z-index: 40;
+      left: 12px;
+      right: 12px;
+      max-width: 520px;
+      margin-inline: auto;
+      bottom: max(12px, env(safe-area-inset-bottom));
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 8px;
+      padding: 6px;
+      border-radius: 100px;
+      background: #071425ee;
+      box-shadow: 0 14px 40px #050d1a55;
+      backdrop-filter: blur(10px);
+    }
+    /* Apparition après le premier écran, sans JavaScript. */
+    @supports (animation-timeline: scroll()) {
+      .contact-bar {
+        animation: contact-bar-in linear both;
+      }
+      /* Règle distincte : le minifieur ne doit pas fusionner la frise dans le raccourci. */
+      nav.contact-bar {
+        animation-timeline: scroll(root);
+        animation-range: 40vh 70vh;
+      }
+    }
+    .contact-bar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      min-height: 48px;
+      padding: 0 1.1rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #edf6ff;
+    }
+    .contact-bar-call {
+      border: 1px solid #2f4d68;
+    }
+    .contact-bar-project {
+      background: #0670ad;
+      color: #fff;
+    }
+    :global(body:has(.contact-bar)) {
+      padding-bottom: 84px;
+    }
+  }
+  @keyframes contact-bar-in {
+    from {
+      transform: translateY(140%);
+    }
+    to {
+      transform: none;
+    }
+  }
+</style>

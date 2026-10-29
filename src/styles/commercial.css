@@ -1,0 +1,138 @@
+.commercial {
+  color: #173040;
+  background: #edf5fa;
+}
+.commercial-wrap {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+.commercial h1,
+.commercial h2,
+.commercial h3,
+.commercial p,
+.commercial figure {
+  margin-top: 0;
+}
+.commercial p {
+  line-height: 1.8;
+}
+.commercial h2 {
+  font-size: clamp(32px, 4.5vw, 62px);
+  line-height: 1.12;
+  letter-spacing: -0.05em;
+}
+.commercial h3 {
+  font-size: clamp(25px, 2.6vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+.commercial img {
+  width: 100%;
+  height: auto;
+}
+.commercial a:focus-visible,
+.commercial summary:focus-visible {
+  outline: 3px solid #149ee9;
+  outline-offset: 5px;
+}
+.commercial-breadcrumb {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  align-items: center;
+  padding: 26px 0;
+}
+.commercial-breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.commercial-kicker {
+  font-size: 14px;
+}
+.commercial-lead {
+  font-size: clamp(17px, 1.5vw, 20px);
+  max-width: 52ch;
+}
+.commercial-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #d5efff;
+  color: #071426;
+  border-radius: 99px;
+  padding: 17px 24px;
+  min-height: 54px;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 14px 20px 14px 0;
+}
+.commercial-text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  font-weight: 600;
+}
+.commercial-section-heading {
+  margin-bottom: 55px;
+}
+.commercial-section-heading p {
+  margin-bottom: 18px;
+}
+.commercial-faq {
+  padding-block: 95px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 65px;
+}
+.commercial-faq .faq-list {
+  min-width: 0;
+}
+.commercial-faq .faq-list p {
+  color: #344e60;
+}
+.commercial-finish {
+  padding: 90px 0;
+  background: #071426;
+  color: #f2f8fc;
+}
+.commercial-finish h2 {
+  margin: 25px 0;
+}
+.commercial-finish > div > p {
+  max-width: 58ch;
+}
+.commercial-related {
+  border-top: 1px solid #aabfce;
+  padding-top: 25px;
+  margin-top: 50px !important;
+}
+.commercial-related a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 759px) {
+  .commercial-faq {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding-block: 60px;
+  }
+  .commercial-finish {
+    padding-block: 60px;
+  }
+  .commercial-section-heading {
+    margin-bottom: 35px;
+  }
+  .commercial-cta {
+    margin-right: 0;
+  }
+  .commercial-breadcrumb {
+    padding-block: 16px;
+    gap: 8px;
+  }
+}

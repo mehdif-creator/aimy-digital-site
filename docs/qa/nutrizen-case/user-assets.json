@@ -1,0 +1,62 @@
+[
+  {
+    "name": "dashboard",
+    "source": "Pièce jointe d7cbfaca-c6cc-4b31-a338-56b1792a80cf",
+    "native": [
+      1920,
+      3550
+    ],
+    "crop": {
+      "left": 36,
+      "top": 630,
+      "width": 1230,
+      "height": 2570
+    },
+    "processing": "Recadrage PNG sans redimensionnement ni modification de pixels ; informations de compte exclues."
+  },
+  {
+    "name": "recipe",
+    "source": "Pièce jointe 79c407ee-7585-4bc7-9fb2-9b34aa42ec57",
+    "native": [
+      1920,
+      1749
+    ],
+    "crop": {
+      "left": 445,
+      "top": 150,
+      "width": 1030,
+      "height": 1230
+    },
+    "processing": "Recadrage PNG sans redimensionnement ni modification de pixels ; informations de compte exclues."
+  },
+  {
+    "name": "week-mobile",
+    "source": "Pièce jointe bc7cc6b8-b9fb-40b1-aaab-26e38f9d34ba",
+    "native": [
+      531,
+      3074
+    ],
+    "crop": {
+      "left": 0,
+      "top": 1400,
+      "width": 531,
+      "height": 950
+    },
+    "processing": "Recadrage PNG sans redimensionnement ni modification de pixels ; informations de compte exclues."
+  },
+  {
+    "name": "recipe-mobile",
+    "source": "Pièce jointe 636ead4a-fb4a-4b83-9a7e-d625ee3fe4dc",
+    "native": [
+      531,
+      2633
+    ],
+    "crop": {
+      "left": 0,
+      "top": 75,
+      "width": 531,
+      "height": 1880
+    },
+    "processing": "Recadrage PNG sans redimensionnement ni modification de pixels ; informations de compte exclues."
+  }
+]

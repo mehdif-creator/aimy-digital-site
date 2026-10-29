@@ -1,0 +1,206 @@
+---
+import "../styles/cinematic-hero.css";
+import { googleReviews } from "../data/reviews";
+import { Image, Picture } from "astro:assets";
+import sc from "../../public/images/showcase/sc-renovation.webp";
+import nutri from "../../public/images/showcase/my-nutrizen.webp";
+import games from "../../public/images/showcase/ht-crea-jeux.webp";
+import phone from "../../public/images/hero/sc-renovation-mobile.webp";
+---
+
+<section
+  class="cinema"
+  aria-labelledby="cinema-title"
+  data-cinematic-hero
+  data-scene="1"
+>
+  <div class="cinema-stage">
+    <div class="cinema-light" aria-hidden="true"></div>
+    <div class="cinema-watermark" aria-hidden="true">
+      AIMY
+    </div>
+    <div class="cinema-topline container">
+      <span>STUDIO WEB · MAULÉON / CHOLET</span>
+      <span>LE SENS DU DÉTAIL. L’ENVIE D’ALLER PLUS LOIN.</span>
+    </div>
+    <div class="cinema-layout container">
+      <div class="cinema-copy">
+        <h1 id="cinema-title">
+          <span class="cinema-eyebrow">
+            Création de sites internet · Mauléon, Cholet, Bressuire
+          </span>
+          <span class="cinema-line">
+            <span>Votre savoir-faire</span>
+          </span>
+          <span class="cinema-line">
+            <span>mérite un site</span>
+          </span>
+          <span class="cinema-line cinema-line-light">
+            <span>à sa hauteur.</span>
+          </span>
+        </h1>
+        <p class="cinema-description">
+          Artisans, entrepreneurs, entreprises locales : un site qui montre
+          votre travail, explique votre offre et facilite les demandes de vos
+          futurs clients.
+        </p>
+        <div class="cinema-scenes" aria-label="Du design à la prise de contact">
+          <p class="cinema-scene-copy" data-copy="1">
+            <span>01 / IMPACT</span> Votre métier, au premier plan.
+          </p>
+          <p class="cinema-scene-copy" data-copy="2" aria-hidden="true">
+            <span>02 / TRANSFORMATION</span> Du grand écran à la prise de
+            contact.
+          </p>
+          <p class="cinema-scene-copy" data-copy="3" aria-hidden="true">
+            <span>03 / RÉALISATIONS</span> Des idées incarnées dans de vrais
+            projets.
+          </p>
+        </div>
+        <div class="cinema-actions">
+          <a class="cinema-cta" href="/contact/">
+            <span>Discuter de mon projet</span>
+            <span class="cinema-cta-arrow" aria-hidden="true">
+              ↗
+            </span>
+          </a>
+          <a class="cinema-link" href="#realisations-accueil">
+            Voir les réalisations <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+        <p class="cinema-reassure">
+          <span aria-hidden="true"></span>
+          {googleReviews.rating} ★ sur Google · Devis gratuit sous 24 h
+        </p>
+      </div>
+      <div class="cinema-art-hit">
+        <div class="cinema-art">
+          <div class="cinema-axis" aria-hidden="true">
+            <span>LE MÉTIER</span>
+            <i></i>
+            <span>LA PRÉSENCE</span>
+            <i></i>
+            <span>LE CONTACT</span>
+          </div>
+          <figure class="project-shot shot-nutri">
+            <div class="shot-window">
+              <Image
+                src={nutri}
+                fetchpriority="low"
+                width={720}
+                widths={[360, 480, 720, 1000]}
+                sizes="(max-width: 759px) 360px, 490px"
+                format="webp"
+                quality={90}
+                alt="Capture du site My NutriZen"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <figcaption>
+              MY NUTRIZEN <span>Application web</span>
+            </figcaption>
+          </figure>
+          <figure class="project-shot shot-games">
+            <div class="shot-window">
+              <Image
+                src={games}
+                fetchpriority="low"
+                width={720}
+                widths={[360, 480, 720, 1000]}
+                sizes="(max-width: 759px) 200px, 490px"
+                format="webp"
+                quality={90}
+                alt="Capture de la boutique HT Créa Jeux"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <figcaption>
+              HT CRÉA JEUX <span>E-commerce</span>
+            </figcaption>
+          </figure>
+          <figure class="project-shot shot-main">
+            <div class="shot-browser" aria-hidden="true">
+              <span>↗</span> sc-renovation.com <i></i>
+              <i></i>
+            </div>
+            <div class="shot-window">
+              <Picture
+                src={sc}
+                width={720}
+                widths={[360, 480, 560, 720, 1000]}
+                sizes="(max-width: 360px) 250px, (max-width: 759px) 280px, 490px"
+                formats={["avif", "webp"]}
+                fallbackFormat="webp"
+                quality={65}
+                alt="Site SC Rénovation : présentation du métier, réalisations et demande de devis"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </div>
+            <figcaption>
+              SC RÉNOVATION{" "}
+              <span>Le savoir-faire d’un artisan, mis en lumière.</span>
+            </figcaption>
+          </figure>
+          <figure class="shot-phone">
+            <div class="phone-speaker" aria-hidden="true"></div>
+            <Image
+              src={phone}
+              width={390}
+              widths={[160, 288, 390]}
+              sizes="(max-width: 759px) 80px, 144px"
+              format="webp"
+              quality={90}
+              fetchpriority="low"
+              alt="Version mobile réelle de SC Rénovation avec les accès au devis et à l’appel"
+              loading="eager"
+              decoding="async"
+            />
+            <figcaption>LE CONTACT, À PORTÉE DE MAIN.</figcaption>
+          </figure>
+          <div class="cinema-contact-note" aria-hidden="true">
+            <span>↗</span> Présenter. Rassurer. Être contacté.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cinema-bottom container">
+      <a href="#realisations-accueil" class="cinema-scroll">
+        <span aria-hidden="true">↓</span> Du premier regard au premier contact
+      </a>
+      <div class="cinema-chapters" aria-hidden="true">
+        <span data-chapter="1">01 Impact</span>
+        <i></i>
+        <span data-chapter="2">02 Transformation</span>
+        <i></i>
+        <span data-chapter="3">03 Réalisations</span>
+      </div>
+      <button
+        class="cinema-motion-toggle"
+        type="button"
+        aria-pressed="false"
+        hidden
+      >
+        Réduire les animations
+      </button>
+    </div>
+  </div>
+</section>
+<div class="cinema-bridge" aria-label="La suite : les réalisations">
+  <div class="container">
+    <span>CHAQUE MÉTIER A SON UNIVERS.</span>
+    <p>
+      Découvrez leurs univers.<span aria-hidden="true">↘</span>
+    </p>
+    <a href="/portfolio/">
+      Découvrir les quatre projets <span aria-hidden="true">↓</span>
+    </a>
+  </div>
+</div>
+<script>
+  import { initCinematicHero } from "../lib/cinematic-hero";
+  initCinematicHero();
+</script>

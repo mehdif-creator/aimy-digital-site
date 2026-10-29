@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "ht-crea-jeux",
+    "url": "https://htcreajeux.fr/",
+    "date": "2026-10-10T18:34:13.036Z",
+    "status": 200,
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "dpr": 2,
+    "width": 2880,
+    "height": 3600,
+    "path": "public/images/showcase/ht-crea-jeux.webp"
+  },
+  {
+    "slug": "my-nutrizen",
+    "url": "https://mynutrizen.fr/",
+    "date": "2026-10-10T18:34:18.861Z",
+    "status": 200,
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "dpr": 2,
+    "width": 2880,
+    "height": 3600,
+    "path": "public/images/showcase/my-nutrizen.webp"
+  },
+  {
+    "slug": "sc-renovation",
+    "url": "https://sc-renovation.com/",
+    "date": "2026-10-10T18:34:33.490Z",
+    "status": 200,
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "dpr": 2,
+    "width": 2880,
+    "height": 3600,
+    "path": "public/images/showcase/sc-renovation.webp"
+  },
+  {
+    "slug": "lambert-digital-pulse",
+    "url": "https://aimy-digital.fr/wp-content/uploads/2026/09/lambertdigitalpulse.fr-1.png",
+    "verifiedOn": "https://aimy-digital.fr/",
+    "date": "2026-10-10T18:36:16.070Z",
+    "status": 200,
+    "width": 1920,
+    "height": 945,
+    "method": "Original published screenshot; no upscale. Live recapture rejected: incomplete CSS."
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "route": "faq",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "faq",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "faq",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "faq",
+      "width": 768,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "faq",
+      "width": 1024,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "faq",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 320,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 375,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 390,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 768,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 1024,
+      "overflow": false,
+      "axe": 0
+    },
+    {
+      "route": "blog",
+      "width": 1440,
+      "overflow": false,
+      "axe": 0
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CinematicPortfolio from "../../components/CinematicPortfolio.astro";
+import CTA from "../../components/CTA.astro";
+---
+
+<BaseLayout
+  title="Réalisations : sites internet créés dans le Bocage"
+  description="Découvrez HT Créa Jeux, My NutriZen, SC Rénovation et Lambert Digital Pulse, quatre projets présentés par Aimy Digital."
+>
+  <div class="container">
+    <header class="page-intro">
+      <p class="breadcrumb">
+        <a href="/">Accueil</a> / Réalisations
+      </p>
+      <h1>
+        <span class="h1-kicker">
+          Réalisations : sites internet par Aimy Digital
+        </span>
+        Un métier. Un univers. Un site qui lui ressemble.
+      </h1>
+      <p class="lead">
+        Quatre projets pour découvrir différentes façons de présenter une
+        activité, un catalogue ou une application.
+      </p>
+    </header>
+  </div>
+  <CinematicPortfolio />
+  <div id="apres-realisations">
+    <CTA />
+  </div>
+</BaseLayout>

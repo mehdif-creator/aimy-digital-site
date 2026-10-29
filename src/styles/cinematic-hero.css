@@ -1,0 +1,676 @@
+.cinematic-header-shell {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 10;
+  color: #edf6ff;
+  background: #050d1a;
+}
+.cinematic-header .header-phone:hover {
+  color: #6fcfff;
+}
+.cinematic-header .desktop-nav a:hover {
+  color: #6fcfff;
+}
+.cinematic-header .button {
+  background: #142d45;
+  border: 1px solid #426783;
+}
+.cinematic-header .mobile-nav summary {
+  color: #edf6ff;
+}
+.cinematic-header .mobile-nav nav {
+  color: #173040;
+}
+.cinema {
+  position: relative;
+  isolation: isolate;
+  background: #050d1a;
+  color: #edf6ff;
+}
+.cinema[data-motion="full"] {
+  height: 165svh;
+}
+.cinema-stage {
+  position: relative;
+  height: 100svh;
+  min-height: 760px;
+  overflow: clip;
+  background: radial-gradient(
+    ellipse at 80% 48%,
+    #123b59 0,
+    #08192b 38%,
+    #050d1a 73%
+  );
+}
+.cinema[data-motion="full"] .cinema-stage {
+  position: sticky;
+  top: 0;
+}
+.cinema-light {
+  position: absolute;
+  top: 20%;
+  right: -14%;
+  width: 80%;
+  height: 54%;
+  transform: rotate(-25deg);
+  background: linear-gradient(
+    transparent,
+    #14aaff08 30%,
+    #41baff1c 49.5%,
+    #b4eaff77 50%,
+    #0686ce1c 50.5%,
+    transparent 75%
+  );
+  pointer-events: none;
+}
+.cinema-watermark {
+  position: absolute;
+  bottom: -11%;
+  left: -1%;
+  font-size: 37vw;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  color: transparent;
+  -webkit-text-stroke: 1px #2a5679;
+  opacity: 0.55;
+  pointer-events: none;
+}
+.cinema-topline {
+  position: absolute;
+  top: 132px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #2b425a;
+  padding-top: 18px;
+  color: #9bb5ce;
+  font:
+    0.58rem ui-monospace,
+    monospace;
+  letter-spacing: 0.12em;
+}
+.cinema-layout {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  padding: 190px 0 105px;
+}
+.cinema-copy {
+  position: relative;
+  z-index: 4;
+}
+.cinema-eyebrow {
+  display: block;
+  color: #b3cce2;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+.cinema h1 {
+  font-size: clamp(3rem, 5.15vw, 5rem);
+  line-height: 1.07;
+  font-weight: 800;
+  letter-spacing: -0.068em;
+  margin-bottom: 25px;
+  text-wrap: nowrap;
+}
+.cinema-line {
+  display: block;
+  overflow: clip;
+  padding-bottom: 0.09em;
+  margin-bottom: -0.09em;
+}
+.cinema-line > span {
+  display: inline-block;
+}
+.cinema-line-light {
+  color: #62cbff;
+}
+.cinema-description {
+  max-width: 42ch;
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: #c0d2e2;
+  margin-bottom: 24px;
+}
+.cinema-scenes {
+  position: relative;
+  height: 62px;
+  margin-bottom: 22px;
+  overflow: hidden;
+}
+.cinema-scene-copy {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  color: #edf6ff;
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+.cinema-scene-copy > span {
+  display: block;
+  font:
+    0.58rem ui-monospace,
+    monospace;
+  letter-spacing: 0.12em;
+  color: #6fcdff;
+  margin-bottom: 10px;
+}
+.cinema-scene-copy:not([data-copy="1"]) {
+  visibility: hidden;
+}
+.cinema-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  z-index: 6;
+}
+.cinema-reassure {
+  position: relative;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 22px 0 0;
+  font-size: 0.78rem;
+  color: #9bb5ce;
+}
+.cinema-reassure span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3ddc97;
+  box-shadow: 0 0 12px #3ddc97;
+}
+.cinema-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #beeaff;
+  color: #061426;
+  font-size: 0.78rem;
+  font-weight: 800;
+  min-height: 56px;
+  padding: 8px 8px 8px 20px;
+  border-radius: 3px;
+  transition: background 250ms;
+}
+.cinema-cta-arrow {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: #0a2033;
+  color: #edf6ff;
+  font-size: 1.3rem;
+  transition: transform 250ms;
+}
+.cinema-cta:hover {
+  background: #fff;
+}
+.cinema-cta:hover .cinema-cta-arrow {
+  transform: rotate(45deg);
+}
+.cinema-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-size: 0.72rem;
+  color: #e5f3ff;
+}
+.cinema a:focus-visible,
+.cinema button:focus-visible,
+.cinematic-header :focus-visible {
+  outline-color: #a8e0ff;
+}
+.cinema-art-hit {
+  position: relative;
+  height: 530px;
+  z-index: 2;
+  perspective: 1200px;
+}
+.cinema-art {
+  position: absolute;
+  width: 660px;
+  height: 580px;
+  left: 0;
+  top: -25px;
+  transform-style: flat;
+}
+.cinema-axis {
+  position: absolute;
+  top: -10px;
+  left: 70px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font:
+    0.52rem ui-monospace,
+    monospace;
+  color: #99b8d0;
+  letter-spacing: 0.1em;
+}
+.cinema-axis i {
+  height: 1px;
+  flex: 1;
+  background: #3e708f;
+}
+.project-shot {
+  position: absolute;
+  margin: 0;
+  width: 490px;
+  border: 1px solid #5888a4;
+  border-radius: 5px;
+  background: #0c1e30;
+  box-shadow: 0 22px 55px #0007;
+  transform-origin: 50% 50%;
+}
+.shot-window {
+  overflow: hidden;
+  height: 285px;
+  background: #eef4f8;
+}
+.shot-window img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.shot-browser {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+  font:
+    0.55rem ui-monospace,
+    monospace;
+  color: #b0c9da;
+  border-bottom: 1px solid #325371;
+}
+.shot-browser > span {
+  color: #63c6ff;
+}
+.shot-browser i {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  background: #6c91ab;
+}
+.shot-browser i:first-of-type {
+  margin-left: auto;
+}
+.project-shot figcaption {
+  min-height: 35px;
+  padding: 12px;
+  font:
+    0.52rem ui-monospace,
+    monospace;
+  letter-spacing: 0.05em;
+  color: #e1f3ff;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.project-shot figcaption span {
+  color: #a9c4d9;
+  font-size: 0.5rem;
+}
+.shot-main {
+  top: 134px;
+  left: 22px;
+  z-index: 3;
+  transform: perspective(1200px) rotateY(-14deg) rotateX(7deg) rotateZ(-8deg);
+}
+.shot-nutri {
+  width: 350px;
+  top: 48px;
+  left: 282px;
+  z-index: 1;
+  transform: rotate(9deg);
+}
+.shot-nutri .shot-window {
+  height: 215px;
+}
+.shot-games {
+  width: 320px;
+  top: 292px;
+  left: 306px;
+  z-index: 2;
+  transform: rotate(9deg);
+}
+.shot-games .shot-window {
+  height: 195px;
+}
+.shot-phone {
+  position: absolute;
+  width: 144px;
+  top: 160px;
+  left: 455px;
+  margin: 0;
+  z-index: 5;
+  background: #102132;
+  border: 4px solid #29465a;
+  outline: 1px solid #8cb3c8;
+  border-radius: 22px;
+  overflow: visible;
+  box-shadow: 0 18px 45px #0006;
+  visibility: hidden;
+}
+.shot-phone img {
+  border-radius: 17px;
+  width: 100%;
+  height: auto;
+}
+.phone-speaker {
+  position: absolute;
+  width: 42px;
+  height: 8px;
+  border-radius: 0 0 7px 7px;
+  top: 0;
+  left: calc(50% - 21px);
+  background: #102132;
+}
+.shot-phone figcaption {
+  position: absolute;
+  bottom: -30px;
+  left: -35px;
+  white-space: nowrap;
+  font:
+    0.5rem ui-monospace,
+    monospace;
+  color: #bce8ff;
+}
+.cinema-contact-note {
+  position: absolute;
+  bottom: 1px;
+  left: 100px;
+  font:
+    0.68rem ui-monospace,
+    monospace;
+  color: #c9eaff;
+  visibility: hidden;
+}
+.cinema-contact-note span {
+  color: #60cfff;
+  padding-right: 14px;
+}
+.cinema-bottom {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.cinema-scroll {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: #b5cfe3;
+  font:
+    0.56rem ui-monospace,
+    monospace;
+}
+.cinema-scroll > span {
+  font-size: 1.4rem;
+  color: #63c6ff;
+}
+.cinema-chapters {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font:
+    0.55rem ui-monospace,
+    monospace;
+  color: #90abc1;
+}
+.cinema-chapters i {
+  width: 28px;
+  height: 1px;
+  background: #345b78;
+}
+.cinema[data-scene="1"] [data-chapter="1"],
+.cinema[data-scene="2"] [data-chapter="2"],
+.cinema[data-scene="3"] [data-chapter="3"] {
+  color: #edf6ff;
+}
+.cinema-motion-toggle {
+  font:
+    0.55rem ui-monospace,
+    monospace;
+  color: #cfe4f3;
+  border: 1px solid #48647d;
+  background: transparent;
+  border-radius: 3px;
+  min-height: 40px;
+  padding: 10px;
+}
+.cinema-motion-toggle[hidden] {
+  display: none;
+}
+.cinema-bridge {
+  position: relative;
+  background: linear-gradient(
+    #050d1a 0%,
+    #102b40 25%,
+    #d4e1e9 68%,
+    #f5f7f8 100%
+  );
+  padding: 130px 0 45px;
+  background-size: 100% 110px;
+  background-repeat: no-repeat;
+  background-color: #f5f7f8;
+}
+.cinema-bridge > div > span {
+  color: #142f42;
+  font:
+    0.6rem ui-monospace,
+    monospace;
+  letter-spacing: 0.12em;
+}
+.cinema-bridge p {
+  font-size: clamp(2rem, 4.8vw, 4.4rem);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  color: #102c3f;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.cinema-bridge p span {
+  color: #007bbb;
+}
+.cinema-bridge a {
+  display: inline-flex;
+  gap: 20px;
+  align-items: center;
+  min-height: 44px;
+  color: #15374b;
+  font-size: 0.8rem;
+}
+@media (max-width: 1150px) and (min-width: 760px) {
+  .cinema-art {
+    transform: scale(0.8);
+    transform-origin: left center;
+  }
+  .cinema-layout {
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .cinema-actions {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .cinema-chapters {
+    display: none;
+  }
+  .cinema-description {
+    max-width: 34ch;
+  }
+}
+@media (max-width: 759px) {
+  .cinematic-header {
+    min-height: 82px;
+  }
+  .cinema[data-motion="full"] {
+    height: 150svh;
+  }
+  .cinema-stage {
+    min-height: 820px;
+  }
+  .cinema-topline {
+    top: 98px;
+    font-size: 0.49rem;
+    padding-top: 12px;
+  }
+  .cinema-topline > span:last-child {
+    display: none;
+  }
+  .cinema-layout {
+    display: block;
+    padding-top: 142px;
+    padding-bottom: 0;
+  }
+  .cinema-eyebrow {
+    font-size: 0.63rem;
+    margin-bottom: 14px;
+  }
+  .cinema h1 {
+    font-size: clamp(2rem, 9.5vw, 4rem);
+    line-height: 1.05;
+    margin-bottom: 17px;
+  }
+  .cinema-description {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    max-width: 42ch;
+    margin-bottom: 14px;
+  }
+  .cinema-scenes {
+    height: 48px;
+    margin-bottom: 15px;
+  }
+  .cinema-scene-copy {
+    font-size: 0.72rem;
+  }
+  .cinema-scene-copy > span {
+    font-size: 0.5rem;
+    margin-bottom: 6px;
+  }
+  .cinema-actions {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .cinema-cta {
+    min-height: 49px;
+    font-size: 0.68rem;
+    padding-left: 13px;
+    gap: 14px;
+  }
+  .cinema-cta-arrow {
+    width: 33px;
+    height: 33px;
+  }
+  .cinema-link {
+    font-size: 0.6rem;
+  }
+  .cinema-art-hit {
+    height: 275px;
+    margin-top: 25px;
+  }
+  .cinema-art {
+    transform: scale(0.48);
+    transform-origin: top left;
+    left: calc(50% - 162px);
+    top: 0;
+  }
+  .cinema-axis {
+    display: none;
+  }
+  .shot-main {
+    top: 60px;
+    left: 0;
+  }
+  .shot-nutri {
+    top: 0;
+    left: 260px;
+  }
+  .shot-games {
+    top: 205px;
+    left: 310px;
+  }
+  .shot-phone {
+    top: 65px;
+    left: 470px;
+  }
+  .cinema-contact-note {
+    bottom: 68px;
+    left: 20px;
+  }
+  .cinema-watermark {
+    font-size: 55vw;
+    bottom: 0;
+  }
+  .cinema-bottom {
+    bottom: 12px;
+    gap: 10px;
+  }
+  .cinema-scroll {
+    font-size: 0.46rem;
+    max-width: 26ch;
+    line-height: 1.5;
+  }
+  .cinema-chapters {
+    display: none;
+  }
+  .cinema-motion-toggle {
+    font-size: 0.46rem;
+    padding: 8px;
+  }
+  .cinema-bridge {
+    padding-top: 125px;
+  }
+}
+@media (max-width: 360px) {
+  .cinema-stage {
+    min-height: 860px;
+  }
+  .cinema-art {
+    transform: scale(0.42);
+    left: 0;
+  }
+  .cinema-link {
+    gap: 5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cinema[data-motion="full"] {
+    height: auto;
+  }
+  .cinema[data-motion="full"] .cinema-stage {
+    position: relative;
+  }
+  .cinema-cta,
+  .cinema-cta-arrow {
+    transition: none;
+  }
+}
+
+@media (max-width: 759px) {
+  .cinema-watermark {
+    display: none;
+  }
+}

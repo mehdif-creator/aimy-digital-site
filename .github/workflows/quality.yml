@@ -1,0 +1,31 @@
+name: Qualité et artefact de préproduction
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+      PUBLIC_SITE_ENV: staging
+      PUBLIC_CONTACT_ENABLED: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - run: npm run format:check
+      - run: npm run build
+      - run: npm run audit
+      - run: php -l public/api/contact.php
+      - uses: actions/upload-artifact@v4
+        with:
+          name: aimy-staging
+          path: dist/
+          include-hidden-files: true
+          retention-days: 7
+# Aucun transfert vers o2switch et aucun secret de production dans ce workflow.

@@ -1,0 +1,280 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CommercialJourney from "../components/CommercialJourney.astro";
+import CommercialInteractions from "../components/CommercialInteractions.astro";
+import "../styles/commercial-premium.css";
+const stages = [
+  {
+    label: "L’annonce",
+    title: "Capter une intention.",
+    text: "Une recherche, une zone géographique, un message. Le ciblage et le texte de l’annonce doivent correspondre à ce que vous pouvez réellement proposer.",
+    eyebrow: "Annonce illustrative · entreprise fictive",
+    heading: "Votre projet de rénovation, parlons-en.",
+    body: "Rénovation intérieure à Cholet. Découvrez les prestations et présentez votre projet.",
+    detail:
+      "Le message précise le service et le lieu. Aucun classement ou résultat publicitaire n’est reproduit.",
+  },
+  {
+    label: "La destination",
+    title: "Tenir la promesse du clic.",
+    text: "La page d’arrivée prolonge le message de l’annonce. Une offre précise, des preuves authentiques et une action identifiable évitent de perdre le visiteur.",
+    eyebrow: "Page de destination illustrative",
+    heading: "Une pièce à rénover ?",
+    body: "Décrire les travaux. Montrer des réalisations réelles. Expliquer comment prendre contact.",
+    detail:
+      "Une page cohérente avec l’annonce aide le visiteur à comprendre ce qu’il peut demander.",
+  },
+  {
+    label: "L’action",
+    title: "Rendre le prochain pas évident.",
+    text: "Appel, demande de devis ou achat : choisir l’action utile à votre activité et retirer les obstacles. Un clic n’est pas encore une demande qualifiée.",
+    eyebrow: "Interaction illustrative · aucun envoi",
+    heading: "Présenter mon projet",
+    body: "Un formulaire court, des coordonnées visibles et une explication claire de la suite.",
+    detail:
+      "L’action doit rester accessible sur téléphone et au clavier. Elle ne doit pas imposer des informations inutiles.",
+  },
+  {
+    label: "La mesure",
+    title: "Apprendre de ce qui se passe.",
+    text: "Définir les événements pertinents, vérifier le suivi et distinguer les clics des demandes effectivement reçues. Les outils de mesure et le consentement se configurent selon le contexte.",
+    eyebrow: "Schéma de mesure · aucune donnée client",
+    heading: "Clic → demande → qualification",
+    body: "Observer les signaux disponibles, examiner la qualité des demandes et adapter la campagne.",
+    detail:
+      "Un budget, une période d’observation et des objectifs définis ensemble. Aucun retour sur investissement garanti.",
+  },
+];
+---
+
+<BaseLayout
+  title="Publicité digitale et Google Ads pour votre entreprise"
+  description="Aimy Digital construit votre parcours d’acquisition : ciblage Google Ads, annonces, pages de destination et mesure des demandes autour de Mauléon et Cholet."
+>
+  <div class="premium sea-page">
+    <header class="hero wrap">
+      <span class="eyebrow">Publicité digitale · acquisition</span>
+      <div class="split">
+        <h1>
+          <span class="h1-kicker">Publicité Google Ads et Meta Ads</span>
+          Faire du clic
+          <br />
+          <em>un début.</em>
+        </h1>
+        <div>
+          <p class="intro">
+            L’attention se gagne. Une opportunité se construit. Relions vos
+            annonces à une expérience qui donne envie de vous contacter.
+          </p>
+          <a class="action" href="/contact/">
+            Parler de ma stratégie d’acquisition ↗
+          </a>
+        </div>
+      </div>
+      <div class="sea-ribbon" aria-hidden="true">
+        ATTENTION <span>↗</span> INTENTION <span>↗</span> ACTION
+      </div>
+    </header>
+    <section class="campaign wrap" data-choice data-motion="campaign">
+      <div class="campaign-top">
+        <span class="eyebrow">Dans les coulisses d’une campagne</span>
+        <p class="caption">
+          Démonstration illustrative. Aucun chiffre ni résultat client.
+        </p>
+      </div>
+      <div class="choices">
+        {stages.map((s, i) => (
+          <button type="button" data-select aria-controls={`campaign-${i}`}>
+            0{i + 1} · {s.label}
+          </button>
+        ))}
+      </div>
+      <CommercialJourney mode="ads" />
+      {stages.map((s, i) => (
+        <div class="campaign-panel" data-panel id={`campaign-${i}`}>
+          <div class="campaign-copy">
+            <span class="eyebrow">{s.label}</span>
+            <h2>{s.title}</h2>
+            <p>{s.text}</p>
+            <p class="caption">{s.detail}</p>
+          </div>
+        </div>
+      ))}
+    </section>
+    <section class="band wrap">
+      <div class="split">
+        <div>
+          <span class="eyebrow">Google Ads · une méthode avant un budget</span>
+          <h2>Chaque euro mérite une intention.</h2>
+          <p class="intro">
+            Le budget média et l’accompagnement sont deux postes distincts. Leur
+            périmètre se définit avant de lancer la campagne.
+          </p>
+          <a class="textual" href="/referencement-seo/">
+            Articuler publicité et référencement naturel
+          </a>
+        </div>
+        <ol class="editorial-list">
+          {[
+            [
+              "Cadrer",
+              "Activité, cible, territoire, offre, budget et action attendue.",
+            ],
+            [
+              "Construire",
+              "Recherches ciblées, textes d’annonces et page de destination cohérente.",
+            ],
+            [
+              "Vérifier",
+              "Parcours mobile, formulaire, événements de mesure et consentement lorsque nécessaire.",
+            ],
+            [
+              "Ajuster",
+              "Examiner les recherches, les dépenses et la qualité des demandes pour décider des évolutions.",
+            ],
+          ].map(([h, p]) => (
+            <li>
+              <h3>{h}</h3>
+              <p>{p}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+    <section class="closing night">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">Votre prochain levier</span>
+          <h2>Que doit-il se passer après le clic ?</h2>
+          <p>Commençons par votre offre, vos clients et vos objectifs.</p>
+        </div>
+        <a class="action" href="/contact/">
+          Construire mon parcours d’acquisition ↗
+        </a>
+      </div>
+    </section>
+  </div>
+  <CommercialInteractions />
+</BaseLayout>
+<style>
+  .sea-page {
+    background: #eef3f6;
+  }
+  .sea-page em {
+    font-style: normal;
+    color: #006da8;
+  }
+  .sea-ribbon {
+    font-size: clamp(0.8rem, 2.4vw, 2.3rem);
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    letter-spacing: 0.02em;
+    border-block: 1px solid #aec0ce;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+  }
+  .sea-ribbon span {
+    color: #0077b7;
+  }
+  .campaign {
+    padding-bottom: 3rem;
+  }
+  .campaign-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .campaign-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 230px;
+    border: 1px solid #aebfcb;
+  }
+  .ad-stage {
+    position: relative;
+    padding: clamp(2rem, 5vw, 5rem);
+    background: #10283e;
+    color: #fff;
+    overflow: hidden;
+  }
+  .ad-stage h2 {
+    font-size: clamp(2rem, 3.7vw, 3.4rem);
+    max-width: 17ch;
+    position: relative;
+    margin-top: 3rem;
+  }
+  .ad-stage p {
+    color: #d3e4ef;
+    position: relative;
+  }
+  .ad-stage .caption {
+    position: relative;
+    z-index: 1;
+  }
+  .ad-index {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    font-size: 13rem;
+    line-height: 1;
+    color: #62869f;
+    letter-spacing: -0.1em;
+  }
+  .ad-route {
+    border-top: 1px solid #48718c;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    font-size: 0.9rem;
+  }
+  .campaign-copy {
+    padding: clamp(2rem, 4vw, 4rem);
+    align-self: center;
+    max-width: 1000px;
+  }
+  .campaign-copy h2 {
+    font-size: 2rem;
+  }
+  .ad-stage-1 {
+    background: #d5e9f5;
+    color: #12273a;
+  }
+  .ad-stage-1 p {
+    color: #263e50;
+  }
+  .ad-stage-1 .ad-index {
+    color: #52788f;
+  }
+  .ad-stage-2 {
+    background: #075e8d;
+  }
+  .ad-stage-2 .ad-index {
+    color: #80b6d4;
+  }
+  .ad-stage-3 {
+    background: #152e35;
+  }
+  .ad-stage-3 .ad-index {
+    color: #7caaa9;
+  }
+  @media (max-width: 800px) {
+    .campaign-panel {
+      grid-template-columns: 1fr;
+    }
+    .campaign-top {
+      display: block;
+    }
+    .ad-stage {
+      min-height: 350px;
+    }
+    .ad-index {
+      font-size: 10rem;
+    }
+    .campaign .choices button {
+      flex: 1 1 40%;
+    }
+    .sea-ribbon {
+      margin-top: 2rem;
+    }
+  }
+</style>

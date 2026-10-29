@@ -1,0 +1,360 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CommercialInteractions from "../components/CommercialInteractions.astro";
+import "../styles/commercial-premium.css";
+const layers = [
+  [
+    "Sécurité",
+    "Réduire l’exposition.",
+    "Examiner les accès, les composants et les configurations. Appliquer les correctifs pertinents et limiter les droits aux besoins réels. Aucun dispositif n’élimine tout risque.",
+    "Accès · correctifs · configuration",
+  ],
+  [
+    "Sauvegardes",
+    "Préparer la restauration.",
+    "Définir ce qui doit être sauvegardé, où et à quelle fréquence. Vérifier qu’une restauration est possible ; la présence d’un fichier de sauvegarde ne suffit pas.",
+    "Copie · conservation · restauration",
+  ],
+  [
+    "Mises à jour",
+    "Faire évoluer sans déséquilibrer.",
+    "Évaluer les versions et compatibilités, préparer un retour arrière puis vérifier les fonctionnalités après intervention. Le périmètre dépend de la technologie du site.",
+    "Préparation · mise à jour · recette",
+  ],
+  [
+    "Disponibilité",
+    "Repérer les interruptions.",
+    "Définir les vérifications et le circuit d’alerte adaptés au site. Les horaires de prise en charge et délais d’intervention doivent être fixés dans la proposition.",
+    "Vérification · alerte · diagnostic",
+  ],
+  [
+    "Performance",
+    "Surveiller les points de friction.",
+    "Examiner le chargement, le poids des médias et le fonctionnement mobile. Les améliorations sont priorisées selon les problèmes mesurés et les usages.",
+    "Mesure · priorité · amélioration",
+  ],
+  [
+    "Assistance",
+    "Savoir à qui s’adresser.",
+    "Qualifier les demandes, distinguer incident et évolution, puis prévoir l’intervention adaptée. Les prestations couvertes sont définies ensemble, pas présumées incluses.",
+    "Demande · qualification · intervention",
+  ],
+];
+---
+
+<BaseLayout
+  title="Maintenance et sécurité de votre site internet"
+  description="Sauvegardes, mises à jour, sécurité et vérifications : Aimy Digital définit un suivi adapté à votre site, à sa technologie et à vos besoins."
+>
+  <div class="premium maintenance-page">
+    <header class="hero wrap">
+      <span class="eyebrow">Maintenance & sécurité · continuité</span>
+      <div class="split">
+        <div>
+          <h1>
+            <span class="h1-kicker">Maintenance et sécurité de sites web</span>
+            Un site performant doit <em>le rester.</em>
+          </h1>
+          <p class="intro">
+            Votre site évolue dans un environnement qui change. Son entretien
+            mérite autant d’attention que sa création.
+          </p>
+          <a class="action" href="/contact/">
+            Demander une évaluation du site ↗
+          </a>
+        </div>
+        <div class="system-mark" aria-hidden="true">
+          <div>VOTRE SITE</div>
+          <span>PRÉVENIR</span>
+          <span>VÉRIFIER</span>
+          <span>FAIRE ÉVOLUER</span>
+        </div>
+      </div>
+    </header>
+    <section class="system-lab band night" data-choice data-motion="layers">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <span class="eyebrow">Sous la surface</span>
+            <h2>
+              Six couches.
+              <br />
+              Un même équilibre.
+            </h2>
+          </div>
+          <p>
+            Explorez les responsabilités à prévoir autour d’un site. Ce schéma
+            est illustratif : il n’affiche aucun état de surveillance réel.
+          </p>
+        </div>
+        <div class="system-layout">
+          <div class="choices layer-stack">
+            {layers.map(([label], i) => (
+              <button type="button" data-select aria-controls={`layer-${i}`}>
+                <span class="layer-num">0{i + 1}</span>
+                {label}
+                <span aria-hidden="true">↗</span>
+              </button>
+            ))}
+          </div>
+          <div class="system-readout">
+            <div class="layer-model" aria-hidden="true">
+              <svg viewBox="0 0 420 230" fill="none">
+                {layers.map(([label], i) => (
+                  <g data-layer-plane>
+                    <path
+                      d={`M40 ${20 + i * 27} L270 ${20 + i * 27} L375 ${48 + i * 27} L145 ${48 + i * 27} Z`}
+                      fill="#1c4750"
+                      stroke="#91cbd0"
+                    />
+                    <text x="158" y={40 + i * 27} fill="#e4f8fa" font-size="12">
+                      {label}
+                    </text>
+                  </g>
+                ))}
+              </svg>
+              <span class="caption">
+                Architecture de responsabilités · schéma explicatif
+              </span>
+            </div>
+            {layers.map(([label, title, copy, chain], i) => (
+              <article data-panel id={`layer-${i}`}>
+                <span class="eyebrow">
+                  Couche 0{i + 1} · {label}
+                </span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+                <ol class="system-chain">
+                  {chain.split(" · ").map((t) => (
+                    <li data-chain-step>{t}</li>
+                  ))}
+                </ol>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="band wrap">
+      <span class="eyebrow">Clarifier les responsabilités</span>
+      <h2>Héberger n’est pas entretenir.</h2>
+      <div class="hosting-compare">
+        <article>
+          <span class="number">L’infrastructure</span>
+          <h3>L’hébergement</h3>
+          <p>
+            Il fournit l’environnement qui rend le site accessible : serveur,
+            ressources et services prévus par l’hébergeur.
+          </p>
+          <p>
+            Ses sauvegardes ou protections éventuelles dépendent de l’offre
+            souscrite.
+          </p>
+        </article>
+        <span class="compare-sign" aria-hidden="true">
+          ≠
+        </span>
+        <article>
+          <span class="number">Le fonctionnement du site</span>
+          <h3>La maintenance</h3>
+          <p>
+            Elle concerne les composants, les contenus techniques et les
+            fonctionnalités : mises à jour, contrôles, corrections et
+            accompagnement selon le périmètre convenu.
+          </p>
+          <p>
+            Ces responsabilités doivent être identifiées, même si l’hébergement
+            est déjà en place.
+          </p>
+        </article>
+      </div>
+      <div class="rule" data-draw></div>
+      <div class="two">
+        <h3>Commencer par un état des lieux.</h3>
+        <p>
+          Technologie, accès, versions, sauvegardes et besoins critiques : nous
+          examinons l’existant avant de proposer un suivi. Fréquences,
+          exclusions et délais sont précisés avant engagement.
+        </p>
+      </div>
+    </section>
+    <section class="closing">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">Prévoir la suite</span>
+          <h2>Votre site a besoin de quel suivi ?</h2>
+          <a class="textual" href="/faq/">
+            Comprendre la maintenance et la propriété du site
+          </a>
+        </div>
+        <a class="action" href="/contact/">
+          Faire le point sur mon site ↗
+        </a>
+      </div>
+    </section>
+  </div>
+  <CommercialInteractions />
+</BaseLayout>
+<style>
+  .maintenance-page {
+    background: #e9eff1;
+  }
+  .maintenance-page em {
+    font-style: normal;
+    color: #006e87;
+  }
+  .system-mark {
+    width: min(100%, 440px);
+    aspect-ratio: 1;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #829fab;
+    border-radius: 50%;
+    outline: 1px solid #b8ccd3;
+    outline-offset: -30px;
+    gap: 1.5rem;
+    background: radial-gradient(circle, #d6e8ed 45%, transparent 46%);
+  }
+  .system-mark div {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+  }
+  .system-mark span {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+  }
+  .maintenance-page .night {
+    background: #10292f;
+  }
+  .system-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+  .maintenance-page .layer-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    perspective: 900px;
+  }
+  .maintenance-page .layer-stack button {
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-color: #54757a;
+    color: #d9edf0;
+    background: #15373e;
+    box-shadow: 0 7px 0 #071e24;
+    transition:
+      transform 0.25s,
+      background 0.25s;
+  }
+  .maintenance-page .layer-stack button[aria-pressed="true"] {
+    background: #c4e9ee;
+    color: #10292f;
+    transform: translateX(16px);
+    border-color: #c4e9ee;
+  }
+  .layer-num {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+  }
+  .system-readout {
+    align-self: center;
+    border-left: 1px solid #557980;
+    padding: 1rem 0 1rem 3rem;
+  }
+  .layer-model {
+    max-width: 420px;
+    margin-bottom: 1.5rem;
+  }
+  .layer-model svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .system-chain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-left: 1.2rem;
+  }
+  .system-chain li {
+    padding-left: 0.2rem;
+  }
+  .system-readout h3 {
+    font-size: 2.5rem;
+  }
+  .system-chain {
+    border-top: 1px solid #557980;
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+  }
+  .signal {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 2rem 0;
+  }
+  .signal span {
+    width: 8px;
+    height: 25%;
+    background: #84cdd7;
+  }
+  .signal span:nth-child(2n) {
+    height: 80%;
+  }
+  .signal span:nth-child(3n) {
+    height: 45%;
+  }
+  .hosting-compare {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .hosting-compare article {
+    border-top: 2px solid #547d89;
+    padding-top: 2rem;
+  }
+  .hosting-compare h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  .compare-sign {
+    align-self: center;
+    text-align: center;
+    font-size: 4rem;
+    color: #547d89;
+  }
+  @media (max-width: 800px) {
+    .system-layout {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .system-readout {
+      padding: 1rem 0;
+      border-left: 0;
+    }
+    .maintenance-page .layer-stack button[aria-pressed="true"] {
+      transform: translateX(5px);
+    }
+    .hosting-compare {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+    .compare-sign {
+      font-size: 2rem;
+    }
+    .system-mark {
+      max-width: 320px;
+    }
+  }
+</style>

@@ -1,0 +1,339 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CaseImage from "../components/CaseImage.astro";
+import CommercialInteractions from "../components/CommercialInteractions.astro";
+import sc from "../../public/images/cases/sc/services.webp";
+import mobile from "../../public/images/cases/sc/mobile.webp";
+import ht from "../../public/images/cases/ht/product.webp";
+import "../styles/commercial-premium.css";
+const needs = [
+  [
+    "Créer ma présence",
+    "Une première impression qui vous ressemble.",
+    "Un site vitrine pour présenter votre métier, vos prestations et les raisons de vous contacter. Nous cadrons ensemble les contenus et le parcours.",
+    "Création de sites internet",
+    "/creation-de-sites-internet/",
+    "SC Rénovation",
+    "/portfolio/sc-renovation/",
+    sc,
+  ],
+  [
+    "Moderniser mon site",
+    "Faire évoluer ce qui compte.",
+    "Repartir de vos contenus utiles, clarifier l’offre et améliorer l’expérience mobile. Les adresses existantes et la migration font partie du cadrage.",
+    "Refonte de sites internet",
+    "/creation-de-sites-internet/refonte-de-sites-internet/",
+    "SC Rénovation · exemple mobile réalisé, sans comparaison avant/après",
+    "/portfolio/sc-renovation/",
+    mobile,
+  ],
+  [
+    "Être trouvé sur Google",
+    "Rapprocher la recherche de votre offre.",
+    "Examiner la technique, les contenus et la cohérence locale pour rendre vos services plus faciles à trouver et à comprendre.",
+    "Référencement naturel",
+    "/referencement-seo/",
+    "SC Rénovation · exemple de contenu métier, sans résultat SEO attribué",
+    "/portfolio/sc-renovation/",
+    sc,
+  ],
+  [
+    "Développer mes contacts",
+    "Relier l’annonce à la demande.",
+    "Construire un parcours publicitaire : ciblage, texte, page de destination et mesure. Les objectifs et le budget sont définis avant le lancement.",
+    "Publicité digitale",
+    "/publicites-sea/",
+    "SC Rénovation · exemple d’interface, sans campagne attribuée",
+    "/portfolio/sc-renovation/",
+    sc,
+  ],
+  [
+    "Vendre en ligne",
+    "Du produit au choix d’achat.",
+    "Organiser votre catalogue, rendre l’offre lisible et préparer les fonctionnalités nécessaires à votre boutique. Paiement et livraison sont cadrés selon votre activité.",
+    "Création e-commerce",
+    "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+    "HT Créa Jeux",
+    "/portfolio/ht-crea-jeux/",
+    ht,
+  ],
+  [
+    "Entretenir mon site",
+    "Garder une base saine.",
+    "Faire le point sur les mises à jour, les sauvegardes, la sécurité et les vérifications. Le suivi dépend de la technologie et du périmètre convenu.",
+    "Maintenance et sécurité",
+    "/maintenance-et-securite/",
+    "SC Rénovation · interface réalisée, sans contrat de maintenance attribué",
+    "/portfolio/sc-renovation/",
+    sc,
+  ],
+] as const;
+---
+
+<BaseLayout
+  title="Nos prestations web : trouvez la solution adaptée"
+  description="Explorez les solutions Aimy Digital selon votre besoin : site vitrine, refonte, e-commerce, SEO, publicité ou maintenance à Mauléon et dans le Bocage."
+>
+  <div class="premium services-page">
+    <header class="hero wrap">
+      <span class="eyebrow">L’explorateur de solutions</span>
+      <h1>
+        <span class="h1-kicker">
+          Agence web : création de sites, SEO et publicité
+        </span>
+        Votre ambition.
+        <br />
+        <em>Sa prochaine forme.</em>
+      </h1>
+      <p class="intro">
+        Commencez par ce que vous voulez faire évoluer. Nous vous aidons à
+        choisir les moyens utiles.
+      </p>
+    </header>
+    <section
+      class="solutions wrap"
+      data-choice
+      data-motion="solutions"
+      aria-label="Trouver une prestation"
+    >
+      <div class="choices needs-nav">
+        {needs.map(([label], i) => (
+          <button type="button" data-select aria-controls={`need-${i}`}>
+            <span>0{i + 1}</span>
+            {label}
+            <span aria-hidden="true">↗</span>
+          </button>
+        ))}
+      </div>
+      <div class="solution-content">
+        {needs.map(
+          ([label, title, copy, service, url, project, caseUrl, img], i) => (
+            <article data-panel id={`need-${i}`}>
+              <span class="eyebrow">{label}</span>
+              <h2>{title}</h2>
+              <p class="intro">{copy}</p>
+              <a class="action" href={url}>
+                Explorer : {service} ↗
+              </a>
+              {[0, 1, 4].includes(i) ? (
+                <figure class="solution-image">
+                  <div class:list={["screen", { "mobile-proof": i === 1 }]}>
+                    <CaseImage
+                      src={img}
+                      alt={`Capture authentique : ${project}`}
+                      width={1100}
+                      widths={[480, 768, 1100, 1600]}
+                      sizes="(max-width: 800px) 90vw, 58vw"
+                    />
+                  </div>
+                  <figcaption>
+                    <span>{project}</span>
+                    <a href={caseUrl}>Voir le projet ↗</a>
+                  </figcaption>
+                </figure>
+              ) : (
+                <div class:list={["service-map", `service-map-${i}`]}>
+                  <span class="caption">
+                    Schéma de méthode · aucune mission client attribuée
+                  </span>
+                  <div class="service-map-route">
+                    {(i === 2
+                      ? [
+                          "Une recherche locale",
+                          "Une page métier",
+                          "Une prise de contact",
+                        ]
+                      : i === 3
+                        ? [
+                            "Une annonce ciblée",
+                            "Une destination cohérente",
+                            "Une demande à qualifier",
+                          ]
+                        : [
+                            "L’état du site",
+                            "Les priorités",
+                            "Les vérifications",
+                          ]
+                    ).map((text, n) => (
+                      <div data-chain-step>
+                        <span aria-hidden="true">0{n + 1}</span>
+                        <strong>{text}</strong>
+                        {n < 2 && <b aria-hidden="true">↓</b>}
+                      </div>
+                    ))}
+                  </div>
+                  <a class="textual" href={url}>
+                    Comprendre la démarche ↗
+                  </a>
+                </div>
+              )}
+            </article>
+          ),
+        )}
+      </div>
+    </section>
+    <section class="closing">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">Le bon point de départ</span>
+          <h2>
+            Plusieurs besoins ?<br />
+            Une seule discussion.
+          </h2>
+          <p>
+            Création, visibilité, suivi : définissons ensemble les priorités
+            plutôt que d’empiler les prestations.
+          </p>
+        </div>
+        <a class="action" href="/contact/">
+          Présenter ma situation ↗
+        </a>
+      </div>
+    </section>
+  </div>
+  <CommercialInteractions />
+</BaseLayout>
+<style>
+  .services-page {
+    background: #e9f1f5;
+  }
+  .services-page h1 {
+    max-width: 19ch;
+  }
+  .services-page em {
+    font-style: normal;
+    color: #00689e;
+  }
+  .solutions {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 5rem;
+    padding-bottom: 5rem;
+    align-items: start;
+  }
+  .services-page .needs-nav {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 120px;
+    margin: 0;
+    gap: 0;
+  }
+  .services-page .needs-nav button {
+    border-width: 0 0 1px;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    text-align: left;
+    padding: 1.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  .needs-nav button span:first-child {
+    font-size: 0.7rem;
+    align-self: center;
+  }
+  .solution-content h2 {
+    font-size: clamp(2rem, 3.7vw, 3.5rem);
+  }
+  .solution-image {
+    margin-top: 2.5rem !important;
+  }
+  .solution-image .screen {
+    aspect-ratio: 1.6;
+    overflow: hidden;
+  }
+  .solution-image figcaption {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.8rem;
+    font-size: 0.78rem;
+  }
+  .solution-image figcaption span {
+    max-width: 42ch;
+  }
+  .solution-image a {
+    white-space: nowrap;
+    text-decoration: underline;
+  }
+  .solution-image .mobile-proof {
+    max-width: 300px;
+    aspect-ratio: 0.48;
+    margin: auto;
+  }
+  .service-map-3 .service-map-route > div:nth-child(2) {
+    margin-left: 10%;
+  }
+  .service-map-3 .service-map-route > div:nth-child(3) {
+    margin-left: 20%;
+  }
+  .service-map-5 .service-map-route > div {
+    border: 1px solid #7894a8;
+    padding: 1rem;
+  }
+  .service-map {
+    background: #10283e;
+    color: #edf7ff;
+    padding: clamp(1.2rem, 3vw, 2.5rem);
+    margin-top: 2.5rem;
+  }
+  .service-map-3 {
+    background: #e0eaf1;
+    color: #10283e;
+  }
+  .service-map-5 {
+    background: #10292f;
+  }
+  .service-map-route {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .service-map-route > div {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.4rem 1rem;
+    border-top: 1px solid #7894a8;
+    padding-top: 1rem;
+  }
+  .service-map-route b {
+    grid-column: 2;
+    color: inherit;
+  }
+  .service-map-route span {
+    font-size: 0.75rem;
+  }
+  .services-page .closing {
+    background: #f6f8f9;
+  }
+  @media (max-width: 1000px) {
+    .solutions {
+      grid-template-columns: 260px 1fr;
+      gap: 2rem;
+    }
+  }
+  @media (max-width: 800px) {
+    .solutions {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .services-page .needs-nav {
+      position: static;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .services-page .needs-nav button {
+      font-size: 0.78rem;
+      padding: 1rem 0.4rem;
+    }
+    .needs-nav button span:first-child {
+      display: none;
+    }
+    .solution-image figcaption {
+      flex-direction: column;
+    }
+    .solution-content .action {
+      font-size: 0.8rem;
+    }
+  }
+</style>

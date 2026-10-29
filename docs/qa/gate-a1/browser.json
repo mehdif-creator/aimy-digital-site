@@ -1,0 +1,125 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "frames": [
+        "inset(0px round 4px)",
+        "inset(0px 4px 0px 2.003px round 9.0133px)",
+        "inset(0px 4px round 18px)",
+        "inset(0px 4px round 18px)",
+        "inset(0px round 4px)"
+      ],
+      "details": [
+        "matrix(1, 0, 0, 1, -200, 0)",
+        "matrix(1, 0, 0, 1, 0, -65)",
+        "matrix(1, 0, 0, 1, 0, -230)"
+      ],
+      "selected": [
+        "/creation-de-sites-internet/creation-de-sites-vitrines/",
+        "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+        "/creation-de-sites-internet/refonte-de-sites-internet/"
+      ]
+    },
+    {
+      "width": 375,
+      "frames": [
+        "inset(0px round 4px)",
+        "inset(0px 17.7704px 0px 15.7733px round 9.0133px)",
+        "inset(0px 31.5px round 18px)",
+        "inset(0px 31.5px round 18px)",
+        "inset(0px round 4px)"
+      ],
+      "details": [
+        "matrix(1, 0, 0, 1, -200, 0)",
+        "matrix(1, 0, 0, 1, 0, -65)",
+        "matrix(1, 0, 0, 1, 0, -230)"
+      ],
+      "selected": [
+        "/creation-de-sites-internet/creation-de-sites-vitrines/",
+        "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+        "/creation-de-sites-internet/refonte-de-sites-internet/"
+      ]
+    },
+    {
+      "width": 390,
+      "frames": [
+        "inset(0px round 4px)",
+        "inset(0px 21.5259px 0px 19.5289px round 9.0133px)",
+        "inset(0px 39px round 18px)",
+        "inset(0px 39px round 18px)",
+        "inset(0px round 4px)"
+      ],
+      "details": [
+        "matrix(1, 0, 0, 1, -200, 0)",
+        "matrix(1, 0, 0, 1, 0, -65)",
+        "matrix(1, 0, 0, 1, 0, -230)"
+      ],
+      "selected": [
+        "/creation-de-sites-internet/creation-de-sites-vitrines/",
+        "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+        "/creation-de-sites-internet/refonte-de-sites-internet/"
+      ]
+    },
+    {
+      "width": 740,
+      "frames": [
+        "inset(0px round 4px)",
+        "inset(0px 109.155px 0px 107.158px round 9.0133px)",
+        "inset(0px 214px round 18px)",
+        "inset(0px 214px round 18px)",
+        "inset(0px round 4px)"
+      ],
+      "details": [
+        "matrix(1, 0, 0, 1, -200, 0)",
+        "matrix(1, 0, 0, 1, 0, -65)",
+        "matrix(1, 0, 0, 1, 0, -230)"
+      ],
+      "selected": [
+        "/creation-de-sites-internet/creation-de-sites-vitrines/",
+        "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+        "/creation-de-sites-internet/refonte-de-sites-internet/"
+      ]
+    },
+    {
+      "width": 768,
+      "frames": [
+        "inset(0px round 4px)",
+        "inset(0px 114.271px 0px 112.276px round 9.0222px)",
+        "inset(0px 224px round 18px)",
+        "inset(0px 224px round 18px)",
+        "inset(0px round 4px)"
+      ],
+      "details": [
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, -100)",
+        "matrix(1, 0, 0, 1, 0, -360)"
+      ],
+      "selected": [
+        "/creation-de-sites-internet/creation-de-sites-vitrines/",
+        "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+        "/creation-de-sites-internet/refonte-de-sites-internet/"
+      ]
+    },
+    {
+      "width": 1440,
+      "frames": [
+        "inset(0px round 4px)",
+        "inset(0px 193.531px 0px 191.526px round 8.9778px)",
+        "inset(0px 384px round 18px)",
+        "inset(0px 384px round 18px)",
+        "inset(0px round 4px)"
+      ],
+      "details": [
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, -100)",
+        "matrix(1, 0, 0, 1, 0, -360)"
+      ],
+      "selected": [
+        "/creation-de-sites-internet/creation-de-sites-vitrines/",
+        "/creation-de-sites-internet/creation-de-sites-e-commerce/",
+        "/creation-de-sites-internet/refonte-de-sites-internet/"
+      ]
+    }
+  ],
+  "errors": []
+}

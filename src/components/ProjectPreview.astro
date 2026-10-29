@@ -1,0 +1,179 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import sc from "../../public/images/showcase/sc-renovation.webp";
+import games from "../../public/images/showcase/ht-crea-jeux.webp";
+const cases = await getCollection("cases");
+const selected = [
+  { slug: "sc-renovation", image: sc },
+  { slug: "ht-crea-jeux", image: games },
+].map((item) => ({
+  ...item,
+  project: cases.find((p) => p.data.path === item.slug)!.data,
+}));
+---
+
+<section
+  class="project-preview container"
+  id="realisations-accueil"
+  aria-labelledby="preview-title"
+>
+  <header>
+    <h2 id="preview-title">
+      Deux métiers.
+      <br />
+      Deux univers à découvrir.
+    </h2>
+    <p>
+      Un artisan, une boutique : un aperçu de notre travail, avant de découvrir
+      toutes les réalisations.
+    </p>
+  </header>
+  <div class="preview-selection">
+    {selected.map(({ slug, image, project }) => (
+      <article>
+        <a
+          class="preview-image"
+          href={`/portfolio/${slug}/`}
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <Image
+            src={image}
+            width={1440}
+            widths={[480, 800, 1200, 1600]}
+            sizes="(max-width: 759px) 90vw, (min-width: 1440px) 720px, 50vw"
+            quality={90}
+            loading="lazy"
+            alt=""
+          />
+        </a>
+        <div class="preview-caption">
+          <h3>
+            <a href={`/portfolio/${slug}/`}>{project.title} ↗</a>
+          </h3>
+          <p>{project.description}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+  <a class="preview-all" href="/portfolio/">
+    Découvrir toutes nos réalisations <span aria-hidden="true">↗</span>
+  </a>
+</section>
+<style>
+  .project-preview {
+    padding-block: 65px 80px;
+  }
+  .project-preview header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 35px;
+    margin-bottom: 40px;
+  }
+  .project-preview h2 {
+    font-size: clamp(2rem, 3.4vw, 3.6rem);
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    margin: 0;
+  }
+  .project-preview header p {
+    max-width: 38ch;
+    line-height: 1.65;
+  }
+  .preview-selection {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+    gap: 5%;
+  }
+  .preview-selection article:nth-child(2) {
+    margin-top: 60px;
+  }
+  .preview-image {
+    display: block;
+    aspect-ratio: 1.7;
+    overflow: hidden;
+    border: 1px solid #bacbd5;
+    background: #e7eff3;
+  }
+  .preview-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .preview-image {
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0 #07172600;
+    transition:
+      box-shadow 0.5s,
+      transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  article:hover .preview-image {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -24px #07172655;
+  }
+  article:hover .preview-image img {
+    transform: scale(1.035);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .preview-image,
+    .preview-image img {
+      transition: none;
+    }
+    article:hover .preview-image,
+    article:hover .preview-image img {
+      transform: none;
+    }
+  }
+  .preview-caption h3 {
+    font-size: 1.4rem;
+    letter-spacing: -0.035em;
+    margin: 18px 0 8px;
+  }
+  .preview-caption p {
+    font-size: 0.9rem;
+    max-width: 48ch;
+    line-height: 1.6;
+  }
+  .preview-all {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: #102c3f;
+    color: #fff;
+    padding: 19px 25px;
+    margin-top: 36px;
+    font-weight: 600;
+    min-height: 52px;
+  }
+  @media (max-width: 759px) {
+    .project-preview {
+      padding-block: 40px 50px;
+    }
+    .project-preview header {
+      display: block;
+      margin-bottom: 24px;
+    }
+    .project-preview header p {
+      margin-top: 20px;
+    }
+    .preview-selection {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+    .preview-selection article:nth-child(2) {
+      margin-top: 0;
+    }
+    .preview-all {
+      width: 100%;
+      gap: 15px;
+      padding: 17px;
+      font-size: 0.85rem;
+    }
+  }
+</style>

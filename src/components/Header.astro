@@ -1,0 +1,51 @@
+---
+import { navigation, site } from "../lib/site";
+import MobileNav from "./MobileNav.astro";
+import Button from "./Button.astro";
+import Logo from "./Logo.astro";
+interface Props {
+  cinematic?: boolean;
+}
+---
+
+<a class="skip-link" href="#main">
+  Aller au contenu
+</a>
+<div
+  class:list={[
+    "site-header-shell",
+    { "cinematic-header-shell": Astro.props.cinematic },
+  ]}
+>
+  <header
+    class:list={[
+      "site-header",
+      "container",
+      { "cinematic-header": Astro.props.cinematic },
+    ]}
+  >
+    <a class="brand" href="/" aria-label="Aimy Digital, accueil">
+      <Logo />
+    </a>
+    <nav class="desktop-nav" aria-label="Navigation principale">
+      {navigation.map((link) => (
+        <a
+          href={link.href}
+          aria-current={
+            Astro.url.pathname.startsWith(link.href) ? "page" : undefined
+          }
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+    <div class="header-cta">
+      <a class="header-phone" href={`tel:${site.tel}`}>
+        <span aria-hidden="true">✆</span>
+        {site.phone}
+      </a>
+      <Button href="/contact/">Parlons de votre projet</Button>
+    </div>
+    <MobileNav />
+  </header>
+</div>

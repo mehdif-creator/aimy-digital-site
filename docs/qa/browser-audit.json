@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "violations": []
+    },
+    {
+      "route": "/creation-de-sites-internet/",
+      "status": 200,
+      "violations": []
+    },
+    {
+      "route": "/portfolio/",
+      "status": 200,
+      "violations": []
+    },
+    {
+      "route": "/contact/",
+      "status": 200,
+      "violations": []
+    },
+    {
+      "route": "/maintenance-site-web-essentielle-2025/",
+      "status": 200,
+      "violations": []
+    },
+    {
+      "route": "/creation-site-internet-cholet/",
+      "status": 200,
+      "violations": []
+    },
+    {
+      "route": "/faq/",
+      "status": 200,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

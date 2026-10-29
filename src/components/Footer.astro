@@ -1,0 +1,71 @@
+---
+import { site, navigation } from "../lib/site";
+import { company } from "../lib/company";
+import CookieConsent from "./CookieConsent.astro";
+import { cities } from "../data/cities";
+import { googleReviews } from "../data/reviews";
+interface Props {
+  cinematic?: boolean;
+}
+---
+
+<footer class:list={["site-footer", { "home-footer": Astro.props.cinematic }]}>
+  {Astro.props.cinematic && (
+    <div class="container footer-signature">
+      <a href="/" aria-label="Aimy Digital, accueil">
+        aimy digital.
+      </a>
+      <p>
+        Le sens du détail.
+        <br />
+        L’envie d’aller plus loin.
+      </p>
+    </div>
+  )}
+  <div class="container footer-grid">
+    <div>
+      <a class="footer-name" href="/">
+        Aimy Digital
+      </a>
+      <p>
+        Des sites pensés pour votre métier.
+        <br />
+        Mauléon, Cholet, Bressuire, Les Herbiers.
+      </p>
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <br />
+      <a href={`tel:${site.tel}`}>{site.phone}</a>
+      <br />
+      <a href={googleReviews.url} rel="noopener" target="_blank">
+        ★ {googleReviews.rating} · {googleReviews.count} avis Google
+      </a>
+    </div>
+    <nav aria-label="Pages du site">
+      {navigation.map((l) => (
+        <a href={l.href}>{l.label}</a>
+      ))}
+      <a href="/contact/">Contact</a>
+    </nav>
+    <nav aria-label="Services complémentaires">
+      <a href="/nos-prestations/">Toutes les prestations</a>
+      <a href="/publicites-sea/">Publicité digitale</a>
+      <a href="/maintenance-et-securite/">Maintenance</a>
+      <a href="/faq/">Questions fréquentes</a>
+    </nav>
+    <nav aria-label="Zones d’intervention">
+      {cities.map((c) => (
+        <a href={`/creation-site-internet-${c.slug}/`}>
+          Site internet {c.name}
+        </a>
+      ))}
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <span>
+      © {new Date().getFullYear()} {company.legalName} · SASU
+    </span>
+    <a href="/mentions-legales/">Mentions légales</a>
+    <a href="/politique-de-confidentialite/">Confidentialité</a>
+    <CookieConsent />
+  </div>
+</footer>

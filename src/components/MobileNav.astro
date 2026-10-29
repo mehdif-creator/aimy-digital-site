@@ -1,0 +1,35 @@
+---
+import { navigation } from "../lib/site";
+---
+
+<details class="mobile-nav">
+  <summary>
+    Menu <span aria-hidden="true">☰</span>
+  </summary>
+  <nav aria-label="Navigation mobile">
+    {navigation.map((link) => (
+      <a href={link.href}>{link.label}</a>
+    ))}
+    <a href="/contact/">Discuter de mon projet</a>
+  </nav>
+</details>
+<!-- Script classique : actif dès l'affichage du menu, sans attendre les modules (GSAP). -->
+<script is:inline>
+  (() => {
+    const menu = document.querySelector(".mobile-nav");
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu?.open) {
+        menu.open = false;
+        menu.querySelector("summary")?.focus();
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if (
+        menu?.open &&
+        event.target instanceof Node &&
+        !menu.contains(event.target)
+      )
+        menu.open = false;
+    });
+  })();
+</script>

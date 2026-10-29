@@ -1,0 +1,217 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import { googleReviews } from "../data/reviews";
+import { company } from "../lib/company";
+import { site } from "../lib/site";
+import "../styles/commercial-premium.css";
+---
+
+<BaseLayout
+  title="Contact Aimy Digital : parlons de votre projet web"
+  description="Présentez votre projet de site, référencement ou publicité à Aimy Digital. Contact direct : 06 52 59 77 80, contact@aimy-digital.fr. Agence à Saint-Amand-sur-Sèvre."
+>
+  <div class="premium contact-page">
+    <div class="wrap contact-stage">
+      <header>
+        <span class="eyebrow">Le prochain chapitre commence ici</span>
+        <h1>
+          <span class="h1-kicker">Contact et devis gratuit</span>
+          Parlons de
+          <br />
+          <em>votre projet.</em>
+        </h1>
+        <p class="intro">
+          Une idée précise ou un besoin à clarifier : quelques lignes suffisent
+          pour ouvrir la discussion.
+        </p>
+        <a
+          class="contact-rating"
+          href={googleReviews.url}
+          rel="noopener"
+          target="_blank"
+        >
+          <span aria-hidden="true">★★★★★</span>
+          {googleReviews.rating} sur Google · {googleReviews.count} avis clients
+          ↗
+        </a>
+        <a class="action form-shortcut" href="#presenter-projet">
+          Accéder au formulaire ↓
+        </a>
+        <div class="direct-contact">
+          <span class="eyebrow">Vous préférez un échange direct ?</span>
+          <a href={`tel:${site.tel}`}>
+            {site.phone} <span aria-hidden="true">↗</span>
+          </a>
+          <a href={`mailto:${site.email}`}>
+            {site.email} <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="contact-next">
+          <span class="eyebrow">Et ensuite ?</span>
+          <p>
+            Nous clarifions votre besoin, les contenus disponibles et les
+            prochaines étapes. Le périmètre et le calendrier sont définis avant
+            engagement.
+          </p>
+        </div>
+        <address>
+          {company.legalName} · SASU
+          <br />
+          {company.street}
+          <br />
+          {company.postalCode} {company.city}, France
+        </address>
+        <p class="caption">Deux-Sèvres · Vendée · Maine-et-Loire</p>
+      </header>
+      <section
+        id="presenter-projet"
+        tabindex="-1"
+        class="contact-sheet"
+        aria-label="Présenter votre projet"
+      >
+        <div class="sheet-heading">
+          <span class="eyebrow">Votre point de départ</span>
+          <span aria-hidden="true">↗</span>
+        </div>
+        <ContactForm />
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+<style>
+  .contact-rating {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 1.6rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid #b9cbd6;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .contact-rating span {
+    color: #a86f00;
+    letter-spacing: 0.12em;
+  }
+  .contact-rating:hover {
+    border-color: #0670ad;
+  }
+  .form-shortcut {
+    display: none !important;
+  }
+  .contact-sheet {
+    scroll-margin-top: 110px;
+  }
+  .contact-page {
+    background: #dcebf3;
+  }
+  .contact-stage {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 6rem;
+    padding-block: 5rem;
+  }
+  .contact-stage header {
+    align-self: start;
+    position: sticky;
+    top: 120px;
+  }
+  .contact-page h1 {
+    font-size: clamp(3rem, 5.8vw, 6rem);
+    max-width: 12ch;
+  }
+  .contact-page em {
+    font-style: normal;
+    color: #00669d;
+  }
+  .direct-contact {
+    border-top: 1px solid #8ca7b7;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+  .direct-contact a {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
+    padding: 0.75rem 0;
+    letter-spacing: -0.03em;
+  }
+  .contact-next {
+    margin-top: 2rem;
+  }
+  .contact-next p {
+    font-size: 0.9rem;
+  }
+  .contact-stage address {
+    font-style: normal;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-top: 2rem;
+  }
+  .contact-sheet {
+    background: #f8fafb;
+    padding: clamp(1.4rem, 3.2vw, 3.5rem);
+    box-shadow: 0 24px 70px #1a3c5010;
+    border-top: 3px solid #0874ac;
+  }
+  .sheet-heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sheet-heading > span:last-child {
+    font-size: 2rem;
+  }
+  .contact-sheet :global(.contact-form) {
+    background: transparent;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+  .contact-sheet :global(input),
+  .contact-sheet :global(textarea) {
+    background: white;
+    border-radius: 2px;
+  }
+  .contact-sheet :global(.form-foot p) {
+    font-size: 0.8rem;
+  }
+  .contact-sheet :global(.notice) {
+    border-left: 3px solid #0472a9;
+    padding: 1rem;
+    background: #e4f0f6;
+    color: #16364c;
+  }
+  @media (max-width: 1000px) {
+    .contact-stage {
+      gap: 3rem;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 800px) {
+    .form-shortcut {
+      display: inline-flex !important;
+    }
+    .contact-stage {
+      grid-template-columns: 1fr;
+      padding-block: 3rem;
+    }
+    .contact-stage header {
+      position: static;
+    }
+    .contact-sheet {
+      padding: 1.5rem;
+    }
+    .contact-next {
+      max-width: 50ch;
+    }
+  }
+  @media (max-width: 400px) {
+    .contact-sheet {
+      padding: 1rem;
+    }
+  }
+</style>

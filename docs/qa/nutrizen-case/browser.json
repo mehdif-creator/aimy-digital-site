@@ -1,0 +1,155 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/week-mobile.BWY3zD1G_ZbXQmw.webp",
+          "width": 230,
+          "encodedWidth": 531
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/dashboard.DrKIau7t_Ynj8X.webp",
+          "width": 278,
+          "encodedWidth": 615
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe.WbqX5OBw_1QDysv.webp",
+          "width": 280,
+          "encodedWidth": 780
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe-mobile.Dv42qY5E_19RfhS.webp",
+          "width": 240,
+          "encodedWidth": 531
+        }
+      ],
+      "transforms": [
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 375,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/week-mobile.BWY3zD1G_ZbXQmw.webp",
+          "width": 230,
+          "encodedWidth": 531
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/dashboard.DrKIau7t_ZrOGXK.webp",
+          "width": 333,
+          "encodedWidth": 920
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe.WbqX5OBw_1QDysv.webp",
+          "width": 335,
+          "encodedWidth": 780
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe-mobile.Dv42qY5E_19RfhS.webp",
+          "width": 240,
+          "encodedWidth": 531
+        }
+      ],
+      "transforms": [
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 390,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/week-mobile.BWY3zD1G_ZbXQmw.webp",
+          "width": 230,
+          "encodedWidth": 531
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/dashboard.DrKIau7t_ZrOGXK.webp",
+          "width": 348,
+          "encodedWidth": 920
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe.WbqX5OBw_1QDysv.webp",
+          "width": 350,
+          "encodedWidth": 780
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe-mobile.Dv42qY5E_19RfhS.webp",
+          "width": 240,
+          "encodedWidth": 531
+        }
+      ],
+      "transforms": [
+        "none",
+        "none",
+        "none"
+      ]
+    },
+    {
+      "width": 768,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/week-mobile.BWY3zD1G_ZbXQmw.webp",
+          "width": 250,
+          "encodedWidth": 531
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/dashboard.DrKIau7t_ZrOGXK.webp",
+          "width": 351.453125,
+          "encodedWidth": 920
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe.WbqX5OBw_1iV7Bj.webp",
+          "width": 411.34375,
+          "encodedWidth": 1030
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe-mobile.Dv42qY5E_19RfhS.webp",
+          "width": 211.65625,
+          "encodedWidth": 531
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, -286)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    },
+    {
+      "width": 1440,
+      "images": [
+        {
+          "src": "http://127.0.0.1:4322/_astro/week-mobile.BWY3zD1G_ZbXQmw.webp",
+          "width": 250,
+          "encodedWidth": 531
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/dashboard.DrKIau7t_cnbwV.webp",
+          "width": 598,
+          "encodedWidth": 1230
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe.WbqX5OBw_1iV7Bj.webp",
+          "width": 515,
+          "encodedWidth": 1030
+        },
+        {
+          "src": "http://127.0.0.1:4322/_astro/recipe-mobile.Dv42qY5E_19RfhS.webp",
+          "width": 265,
+          "encodedWidth": 531
+        }
+      ],
+      "transforms": [
+        "matrix(1, 0, 0, 1, 0, 0)",
+        "matrix(1, 0, 0, 1, 0, -691)",
+        "matrix(1, 0, 0, 1, 0, 0)"
+      ]
+    }
+  ],
+  "errors": []
+}
