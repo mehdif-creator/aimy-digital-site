@@ -44,3 +44,10 @@ Commit 7a1be11 : pages villes, carte du Bocage, SEO local, maillage (voir `docs/
 - Version précédente mise de côté dans `/home/venu0261/aimy-release-previous/` (retour arrière : inverser les déplacements entre ce dossier et `public_html`, en conservant `.well-known`, `cgi-bin`, `o2-qc-*.php`, `f61ab…txt`).
 - Vérifié : 139/139 redirections, 4 pages villes en 200, `llms.txt`, sitemap, www et HTTP redirigés. Lighthouse mobile : accueil 99/100/92/100 (LCP 1,5 s), Cholet 100/100/96/100 (LCP 1,3 s).
 - Search Console : indexation demandée pour Cholet et Bressuire ; Mauléon refusé (« Un problème est survenu », probablement quota), Les Herbiers non tenté. Les deux sont dans le sitemap.
+
+## Troisième mise en production — 29 octobre 2026
+
+Commit cf912d0 : avis Google (3, note 5,0) sur l'accueil, les villes, Lambert et le contact ; fiche Google reliée (geo, hasMap) ; tracés SVG et image NutriZen corrigés ; menu mobile indépendant des modules.
+
+- Archive dans `/home/venu0261/aimy-release-v3/`, droits corrigés avant bascule, aucune interruption. Version précédente dans `/home/venu0261/aimy-release-previous-v2/` (v1 toujours dans `aimy-release-previous/`, WordPress dans `wordpress-archive-20261028/`).
+- Vérifié : 139/139 redirections, avis présents sur 4 pages testées, données geo/hasMap en ligne. Lighthouse mobile accueil : 98/100/100/100, LCP 2,0 s.
