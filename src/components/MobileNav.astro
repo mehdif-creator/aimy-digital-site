@@ -13,20 +13,23 @@ import { navigation } from "../lib/site";
     <a href="/contact/">Discuter de mon projet</a>
   </nav>
 </details>
-<script>
-  const menu = document.querySelector<HTMLDetailsElement>(".mobile-nav");
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && menu?.open) {
-      menu.open = false;
-      menu.querySelector("summary")?.focus();
-    }
-  });
-  document.addEventListener("click", (event) => {
-    if (
-      menu?.open &&
-      event.target instanceof Node &&
-      !menu.contains(event.target)
-    )
-      menu.open = false;
-  });
+<!-- Script classique : actif dès l'affichage du menu, sans attendre les modules (GSAP). -->
+<script is:inline>
+  (() => {
+    const menu = document.querySelector(".mobile-nav");
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menu?.open) {
+        menu.open = false;
+        menu.querySelector("summary")?.focus();
+      }
+    });
+    document.addEventListener("click", (event) => {
+      if (
+        menu?.open &&
+        event.target instanceof Node &&
+        !menu.contains(event.target)
+      )
+        menu.open = false;
+    });
+  })();
 </script>

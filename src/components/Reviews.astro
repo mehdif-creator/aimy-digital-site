@@ -1,0 +1,174 @@
+---
+import { googleReviews as g } from "../data/reviews";
+---
+
+<section class="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <header class="reviews-head">
+      <div>
+        <p class="reviews-kicker">Avis clients vérifiables sur Google</p>
+        <h2 id="reviews-title">
+          Ils en parlent
+          <span>mieux que nous.</span>
+        </h2>
+      </div>
+      <a class="reviews-score" href={g.url} rel="noopener" target="_blank">
+        <strong>{g.rating}</strong>
+        <span class="reviews-stars" aria-hidden="true">
+          ★★★★★
+        </span>
+        <span>{g.count} avis Google · tout lire ↗</span>
+      </a>
+    </header>
+    <ul class="reviews-list">
+      {g.items.map((r) => (
+        <li>
+          <figure>
+            <span class="reviews-stars" aria-label="5 étoiles sur 5">
+              ★★★★★
+            </span>
+            <blockquote>
+              <p>{r.quote}</p>
+            </blockquote>
+            <figcaption>
+              <strong>{r.author}</strong>
+              <span>
+                {r.href ? <a href={r.href}>{r.context}</a> : r.context} ·{" "}
+                {r.date}
+              </span>
+            </figcaption>
+          </figure>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .reviews {
+    padding-block: clamp(4.5rem, 9vw, 8rem);
+    background:
+      radial-gradient(ellipse at 15% 0%, #123b59 0, transparent 55%), #071726;
+    color: #edf6ff;
+  }
+  .reviews-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+  .reviews-kicker {
+    margin: 0 0 1rem;
+    font-size: 0.85rem;
+    color: #9bb5ce;
+  }
+  .reviews h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4.6vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+    font-weight: 600;
+  }
+  .reviews h2 span {
+    display: block;
+    color: #69caff;
+  }
+  .reviews-score {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.2rem 1rem;
+    align-items: center;
+    padding: 1.2rem 1.6rem;
+    border: 1px solid #2b425a;
+    border-radius: 1.2rem;
+    transition:
+      border-color 0.3s,
+      background 0.3s;
+  }
+  .reviews-score:hover {
+    border-color: #69caff;
+    background: #0d2236;
+  }
+  .reviews-score strong {
+    grid-row: span 2;
+    font-size: 3rem;
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+  .reviews-score span:last-child {
+    font-size: 0.8rem;
+    color: #b6cbd8;
+  }
+  .reviews-stars {
+    color: #ffc94d;
+    letter-spacing: 0.15em;
+  }
+  .reviews-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 1.2rem;
+  }
+  .reviews-list figure {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: clamp(1.6rem, 3vw, 2.2rem);
+    border: 1px solid #2b425a;
+    border-radius: 1.4rem;
+    background: #0a1d30;
+    transition:
+      transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1),
+      border-color 0.4s;
+  }
+  .reviews-list figure:hover {
+    transform: translateY(-6px);
+    border-color: #3d6a8e;
+  }
+  .reviews-list blockquote {
+    flex: 1;
+    margin: 1.2rem 0 1.6rem;
+  }
+  .reviews-list blockquote p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .reviews-list li:first-child blockquote p {
+    font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+    letter-spacing: -0.01em;
+  }
+  .reviews-list figcaption {
+    display: grid;
+    gap: 0.2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid #2b425a;
+    font-size: 0.85rem;
+    color: #9bb5ce;
+  }
+  .reviews-list figcaption strong {
+    color: #edf6ff;
+    font-size: 0.95rem;
+  }
+  .reviews-list figcaption a {
+    border-bottom: 1px solid #69caff;
+  }
+  @media (max-width: 900px) {
+    .reviews-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reviews-list figure {
+      transition: none;
+    }
+    .reviews-list figure:hover {
+      transform: none;
+    }
+  }
+</style>

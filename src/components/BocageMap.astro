@@ -23,7 +23,7 @@ const labels: Record<string, [number, number, string]> = {
   bressuire: [10, 34, "end"],
   "les-herbiers": [-10, 34, "start"],
 };
-const agency = project(46.869, -0.796);
+const agency = project(46.8736, -0.7993);
 const points = cities.map((c) => ({ ...c, ...project(...coords[c.slug]) }));
 const arc = (p: { x: number; y: number }) => {
   const mx = (agency.x + p.x) / 2;
@@ -66,9 +66,9 @@ const arc = (p: { x: number; y: number }) => {
           </radialGradient>
         </defs>
         <g class="bocage-hedges">
-          <path d="M-10 120 C80 100 140 150 230 120 S380 80 470 130 610 110"></path>
-          <path d="M-10 200 C70 220 160 180 250 210 S420 240 520 200 610 220"></path>
-          <path d="M-10 300 C90 280 150 330 260 300 S400 270 500 320 610 290"></path>
+          <path d="M-10 120 C80 100 140 150 230 120 S380 80 470 130 S560 100 610 110"></path>
+          <path d="M-10 200 C70 220 160 180 250 210 S420 240 520 200 S590 230 610 220"></path>
+          <path d="M-10 300 C90 280 150 330 260 300 S400 270 500 320 S590 290 610 290"></path>
           <path d="M-10 390 C120 370 200 410 300 380 S470 360 610 400"></path>
           <path d="M110 -10 C130 90 90 170 130 260 S110 380 140 440"></path>
           <path d="M360 -10 C340 80 390 160 360 250 S390 360 370 440"></path>

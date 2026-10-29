@@ -34,9 +34,12 @@ Le « pack local » (carte + 3 entreprises) capte l’essentiel des clics sur «
 - Publier un post par mois (nouvelle réalisation, conseil).
 
 ### 2. Avis Google réels (hors site)
-Demander un avis à chacun des 4 clients, puis à chaque nouveau client à la livraison. **Ne jamais publier de faux avis** (pratique commerciale trompeuse, Code de la consommation). Une fois 3 avis obtenus, les afficher sur le site avec lien vers la fiche.
+**Fait le 29 octobre** : les 3 avis Google (5,0) sont affichés sur l’accueil, les pages villes et l’étude de cas Lambert, note rappelée près des boutons d’action et sur la page contact (`src/data/reviews.ts`, citations exactes). Pas de `aggregateRating` en données structurées : Google n’affiche pas d’étoiles pour les avis d’une entreprise sur son propre site.
+Continuer à demander un avis à chaque nouveau client à la livraison, et l’ajouter à `reviews.ts`. **Ne jamais publier de faux avis**.
 
-### 3. Prix affichés
+À corriger sur la fiche Google : catégorie principale « Agence de marketing » → « Concepteur de sites Web » (ajouter « Agence de marketing » en secondaire).
+
+### 3. Prix affichés (écarté par le propriétaire le 29 octobre)
 Les concurrents affichent « pack dès 1 500 € ». Les prospects veulent un ordre de grandeur avant d’appeler. Fournir vos fourchettes réelles (vitrine, boutique, refonte, maintenance) : une section « À partir de » sera ajoutée sur les pages de prestations.
 
 ### 4. Études de cas avec résultats

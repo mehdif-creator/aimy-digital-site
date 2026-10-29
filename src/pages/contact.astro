@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
+import { googleReviews } from "../data/reviews";
 import { company } from "../lib/company";
 import { site } from "../lib/site";
 import "../styles/commercial-premium.css";
@@ -24,6 +25,16 @@ import "../styles/commercial-premium.css";
           Une idée précise ou un besoin à clarifier : quelques lignes suffisent
           pour ouvrir la discussion.
         </p>
+        <a
+          class="contact-rating"
+          href={googleReviews.url}
+          rel="noopener"
+          target="_blank"
+        >
+          <span aria-hidden="true">★★★★★</span>
+          {googleReviews.rating} sur Google · {googleReviews.count} avis clients
+          ↗
+        </a>
         <a class="action form-shortcut" href="#presenter-projet">
           Accéder au formulaire ↓
         </a>
@@ -69,6 +80,25 @@ import "../styles/commercial-premium.css";
   </div>
 </BaseLayout>
 <style>
+  .contact-rating {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 1.6rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid #b9cbd6;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .contact-rating span {
+    color: #a86f00;
+    letter-spacing: 0.12em;
+  }
+  .contact-rating:hover {
+    border-color: #0670ad;
+  }
   .form-shortcut {
     display: none !important;
   }

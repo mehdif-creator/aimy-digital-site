@@ -1,5 +1,6 @@
 ---
 import "../styles/cinematic-hero.css";
+import { googleReviews } from "../data/reviews";
 import { Image, Picture } from "astro:assets";
 import sc from "../../public/images/showcase/sc-renovation.webp";
 import nutri from "../../public/images/showcase/my-nutrizen.webp";
@@ -69,7 +70,7 @@ import phone from "../../public/images/hero/sc-renovation-mobile.webp";
         </div>
         <p class="cinema-reassure">
           <span aria-hidden="true"></span>
-          Devis gratuit sous 24 h · Mauléon, Cholet, Bressuire, Les Herbiers
+          {googleReviews.rating} ★ sur Google · Devis gratuit sous 24 h
         </p>
       </div>
       <div class="cinema-art-hit">
@@ -88,7 +89,7 @@ import phone from "../../public/images/hero/sc-renovation-mobile.webp";
                 fetchpriority="low"
                 width={720}
                 widths={[360, 480, 720, 1000]}
-                sizes="(max-width: 759px) 200px, 490px"
+                sizes="(max-width: 759px) 360px, 490px"
                 format="webp"
                 quality={90}
                 alt="Capture du site My NutriZen"

@@ -4,6 +4,8 @@ import BocageMap from "../components/BocageMap.astro";
 import ProjectPreview from "../components/ProjectPreview.astro";
 import TrustSection from "../components/TrustSection.astro";
 import FAQ from "../components/FAQ.astro";
+import Reviews from "../components/Reviews.astro";
+import { googleReviews } from "../data/reviews";
 import { cities, type City } from "../data/cities";
 import { site } from "../lib/site";
 export const getStaticPaths = () =>
@@ -56,7 +58,7 @@ const services = [
         </div>
         <p class="city-reassure">
           <span aria-hidden="true"></span>
-          Réponse et devis gratuit sous 24 h
+          {googleReviews.rating} ★ sur Google · Devis gratuit sous 24 h
         </p>
       </div>
       <ul class="city-needs" aria-label={`Projets fréquents ${city.at}`}>
@@ -104,6 +106,7 @@ const services = [
     <ProjectPreview />
     <TrustSection />
   </div>
+  <Reviews />
 
   <section class="city-faq container" aria-labelledby="city-faq-title">
     <h2 id="city-faq-title">Vos questions, {city.at}.</h2>

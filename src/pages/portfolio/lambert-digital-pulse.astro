@@ -2,8 +2,12 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import LambertCaseStudy from "../../components/LambertCaseStudy.astro";
+import { googleReviews } from "../../data/reviews";
 const { data } = (await getCollection("cases")).find(
   (p) => p.data.path === "lambert-digital-pulse",
+)!;
+const review = googleReviews.items.find(
+  (r) => r.href === "/portfolio/lambert-digital-pulse/",
 )!;
 ---
 
@@ -13,4 +17,51 @@ const { data } = (await getCollection("cases")).find(
   image={data.image}
 >
   <LambertCaseStudy />
+  <section class="case-review" aria-label="Avis du client">
+    <figure class="container">
+      <span aria-hidden="true">★★★★★</span>
+      <blockquote>
+        <p>« {review.quote} »</p>
+      </blockquote>
+      <figcaption>
+        {review.author}, avis publié sur{" "}
+        <a href={googleReviews.url} rel="noopener" target="_blank">
+          Google ↗
+        </a>
+      </figcaption>
+    </figure>
+  </section>
 </BaseLayout>
+
+<style>
+  .case-review {
+    padding-block: clamp(4rem, 8vw, 6.5rem);
+    background: #071726;
+    color: #edf6ff;
+  }
+  .case-review figure {
+    margin-inline: auto;
+    max-width: 920px;
+  }
+  .case-review span {
+    color: #ffc94d;
+    letter-spacing: 0.15em;
+  }
+  .case-review blockquote {
+    margin: 1.4rem 0 1.6rem;
+  }
+  .case-review p {
+    margin: 0;
+    font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+  }
+  .case-review figcaption {
+    color: #9bb5ce;
+  }
+  .case-review a {
+    color: #edf6ff;
+    border-bottom: 1px solid #69caff;
+  }
+</style>
